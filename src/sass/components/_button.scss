@@ -1,0 +1,22 @@
+.header--btn {
+  display: inline-block;
+  &-main {
+    text-decoration: none;
+    color: #fff;
+    background-color: #777;
+    border-radius: 1.5rem;
+    padding: .7rem 2rem;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    display: inline-block;
+  }
+
+  &-second {
+    text-decoration: none;
+    background-color: #fff;
+    color: #777;
+    margin: 1.2rem;
+    font-size: .7rem;
+    display: block;
+  }
+}
