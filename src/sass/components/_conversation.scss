@@ -1,5 +1,4 @@
 .conversation {
-
   img {
     margin: auto;
     display: block;
@@ -8,56 +7,74 @@
   }
 
   .conversation-box {
-    
-    font-family: "Lato", sans-serif;
+    width: 55%;
+    padding: .3rem .2rem 2.5rem .3rem;
+    border: .1rem solid;
+    border-radius: .5rem;
     margin: auto;
-
-    .h3-1 {
-      width: 40rem;
-      border-right: .02em solid;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 2s steps(40), caret 1s steps(1) infinite;
-    }
-
-    .h3-2 {
-      width: 44.5rem;
-      border-right: .02em solid;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 2s steps(45), caret 1s steps(1) infinite;
-    }
-
-    .h3-3 {
-      width: 20rem;
-      border-right: .02em solid;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 1s steps(20), caret 1s steps(1) infinite;
-    }
-
-    .h3-4 {
-      width: 32.5rem;
-      border-right: .02em solid;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 2s steps(33), caret 1s steps(1) infinite;
-    }
-
-    .h3-5 {
-      width: 29.3rem;
-      border-right: .02em solid;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 1.5s steps(29), caret 1s steps(1) infinite;
-    }
-
-    .h3-6 {
-      width: 36rem;
-      border-right: .02em solid;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 1.7s steps(36), caret 1s steps(1) infinite;
-    }
   }
+}
+
+.h3-1 {
+  font-family: "Lato", sans-serif;
+  width: 95vh;
+  border-right: .02em solid;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1.5s steps(40), caret 1s steps(1) infinite;
+  padding: .5rem .5rem;
+}
+
+.h3-2 {
+  font-family: "Lato", sans-serif;
+  width: 95vh;
+  width: 44.5rem;
+  border-right: .02em solid;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1.7s steps(40), caret 1s steps(1) infinite;
+  padding: .5rem .5rem;
+}
+
+.h3-3 {
+  font-family: "Lato", sans-serif;
+  width: 95vh;
+  width: 20rem;
+  border-right: .02em solid;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing .8s steps(20) , caret 1s steps(1) infinite;
+  padding: .5rem .5rem;
+}
+
+.h3-4 {
+  font-family: "Lato", sans-serif;
+  width: 95vh;
+  width: 32.5rem;
+  border-right: .02em solid;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1s steps(33), caret 1s steps(1) infinite;
+  padding: .5rem .5rem;
+}
+
+.h3-5 {
+  font-family: "Lato", sans-serif;
+  width: 95vh;
+  width: 29.3rem;
+  border-right: .02em solid;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1s steps(29), caret 1s steps(1) infinite;
+  padding: .5rem .5rem;
+}
+
+.h3-6 {
+  font-family: "Lato", sans-serif;
+  width: 95vh;
+  border-right: .02em solid;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1.2s steps(36), caret 1s steps(1) infinite;
+  padding: .5rem .5rem;
 }
