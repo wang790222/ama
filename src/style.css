@@ -71,19 +71,21 @@
     font-size: .7rem;
     display: block; }
 
-.conversation img {
-  margin: auto;
-  display: block;
-  width: 95vh;
-  height: 80vh; }
-
-.conversation .conversation-box {
-  width: 55%;
-  padding: .3rem .2rem 2.5rem .3rem;
-  border: .1rem solid;
-  border-radius: .5rem;
-  margin: auto;
-  position: relative; }
+.conversation {
+  width: 100vh;
+  height: 100vh;
+  margin: 0 auto; }
+  .conversation img {
+    margin: auto;
+    display: block;
+    width: 95%;
+    height: 80%; }
+  .conversation .conversation-box {
+    padding: .3rem .2rem 2.5rem .3rem;
+    border: .1rem solid;
+    border-radius: .5rem;
+    margin: auto;
+    position: relative; }
 
 .conversation-box__btn {
   font-size: 20px;
@@ -147,7 +149,6 @@
   padding: .5rem .5rem; }
 
 .header {
-  height: 95vh;
   text-align: center; }
   .header img {
     display: block;

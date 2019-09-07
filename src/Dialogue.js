@@ -56,7 +56,7 @@ class Dialogue extends React.Component {
 
   render() {
     return (
-      <div>
+      <div onClick={this.setCount}>
         {this.renderBlock()}
       </div>
     );
