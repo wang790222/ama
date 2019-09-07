@@ -35,12 +35,34 @@ class Conversation extends React.Component {
       "",
     ];
 
+    let roles = [
+      "",
+      "主角",
+      "",
+      "阿嬤",
+      "",
+      "阿嬤"
+    ];
+
+    const showIdentity = (index) => {
+      if (roles[index]) {
+        return (
+          <div className="identity">
+            {roles[index]}
+          </div>
+        );
+      }
+
+      return null;
+    }
+
     const h3ClassName = `h3-${this.props.index}`;
 
     return (
       <div className="conversation" onClick={this.props.handleOnClick} onKeyDown={this.props.handleOnClick} >
         <img src={images[this.props.index - 1]} />
         <div className="conversation-box">
+          {showIdentity(this.props.index - 1)}
           <div key={this.props.index} className={h3ClassName}>
             {sentences[this.props.index - 1]}
           </div>

@@ -94,6 +94,15 @@
   top: 68%;
   left: 95%; }
 
+.identity {
+  font-family: "Lato", sans-serif;
+  background-color: #eee;
+  padding: 2px 3px;
+  border-radius: 2px;
+  position: absolute;
+  top: -18%;
+  left: 2%; }
+
 .h3-1 {
   font-family: "Lato", sans-serif;
   width: 40rem;
