@@ -45,7 +45,7 @@ class Dialogue extends React.Component {
       return <TheDay />;
     }
     
-    return <Conversation index={this.state.count}/>;
+    return <Conversation index={this.state.count} handleOnClick={this.setCount} />;
   }
 
   render() {

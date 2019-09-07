@@ -12,7 +12,14 @@
     border: .1rem solid;
     border-radius: .5rem;
     margin: auto;
+    position: relative;
   }
+}
+
+.conversation-box__btn {
+  position: absolute;
+  top: 70%;
+  left: 96%;
 }
 
 .h3-1 {

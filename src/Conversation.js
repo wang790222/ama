@@ -30,11 +30,14 @@ class Conversation extends React.Component {
     const h3ClassName = `h3-${this.props.index}`;
 
     return (
-      <div className="conversation">
+      <div className="conversation" onClick={this.props.handleOnClick}>
         <img src={images[this.props.index - 1]} />
         <div className="conversation-box">
           <div key={this.props.index} className={h3ClassName}>
             {sentences[this.props.index - 1]}
+          </div>
+          <div className="conversation-box__btn">
+            >
           </div>
         </div>
       </div>
