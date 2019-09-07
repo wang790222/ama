@@ -50,7 +50,7 @@
     border-right: .05em solid;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 1s steps(10), caret 1s steps(1) infinite; }
+    animation: typing 0.5s steps(9), caret 1s steps(1) infinite; }
 
 .header--btn {
   display: inline-block; }
@@ -86,9 +86,11 @@
   position: relative; }
 
 .conversation-box__btn {
+  font-size: 20px;
+  color: #777;
   position: absolute;
-  top: 70%;
-  left: 96%; }
+  top: 68%;
+  left: 95%; }
 
 .h3-1 {
   font-family: "Lato", sans-serif;

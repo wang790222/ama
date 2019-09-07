@@ -14,12 +14,16 @@ class Dialogue extends React.Component {
     };
   }
 
-  componentDidMount() {
-    setTimeout(this.closeTheDay, 2000);
+  setTimer = () => {
     let intervalId = setInterval(this.setCount, 8000);
     this.setState({
       intervalId: intervalId
     });
+  }
+
+  componentDidMount() {
+    setTimeout(this.closeTheDay, 1500);
+    this.setTimer();
   }
 
   componentWillUnmount() {
@@ -32,6 +36,8 @@ class Dialogue extends React.Component {
         count: this.state.count + 1
       });
     }
+    clearInterval(this.state.intervalId);
+    this.setTimer();
   }
 
   closeTheDay = () => {

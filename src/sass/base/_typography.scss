@@ -38,6 +38,6 @@
     border-right: .05em solid;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 1s steps(10), caret 1s steps(1) infinite;
+    animation: typing .5s steps(9), caret 1s steps(1) infinite;
   }
 }
