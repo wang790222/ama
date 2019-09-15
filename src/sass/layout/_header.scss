@@ -1,9 +1,15 @@
 .header {
   text-align: center;
-  
-  img {
-    display: block;
-    margin: auto;
-    width: 50%;
+  background-color: #FFF5D8;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  &--img {
+    width: 642px;
+    height: 342px;
+    margin: 0;
+    padding: 70px 0 68px 0;
   }
 }

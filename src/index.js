@@ -31,7 +31,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="body">
         {this.renderPage()}
       </div>
     );

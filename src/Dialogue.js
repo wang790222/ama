@@ -1,66 +1,65 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import style from './style.css';
 import TheDay from "./TheDay"
 import Conversation from "./Conversation"
+import InfoInsertHead from './InfoInsertHead';
 
-class Dialogue extends React.Component {
+var timerId = null;
 
-  constructor (props) {
-    super(props);
-    this.state = {
-      count: 0,
-      intervalId: null
-    };
-  }
+const Dialogue = () => {
+  const [count, setCount] = useState(0);
+  const [opening, setOpening] = useState(true);
 
-  setTimer = () => {
-    let intervalId = setInterval(this.setCount, 8000);
-    this.setState({
-      intervalId: intervalId
-    });
-  }
-
-  componentDidMount() {
-    setTimeout(this.closeTheDay, 1500);
-    this.setTimer();
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.state.intervalId);
-  }
-
-  setCount = () => {
-    if (this.state.count < 6) {
-      this.setState({
-        count: this.state.count + 1
-      });
+  useEffect(() => {
+    if (count === 0) {
+      timerId = setTimeout(closeTheDay, 1500);
+    } else {
+      if (timerId) {
+        clearTimeout(timerId);
+      }
+      
+      timerId = setTimeout(handleSetCount, 8000);
     }
-    clearInterval(this.state.intervalId);
-    this.setTimer();
+  }, [count]);
+
+  const handleSetCount = () => {
+    if (count < 7 || ( count > 7 && count < 10)) {
+      setCount(count + 1);
+    } else if (count === 10) {
+      setOpening(false);
+    }
   }
 
-  closeTheDay = () => {
-    this.setState({
-      count: 1
-    });
+  const closeTheDay = () => {
+    setCount(1);
   }
 
-  renderBlock = () => {
-    if(!this.state.count) {
+  const selectRoute = () => {
+    if (count === 7) {
+      setCount(count + 1);
+    }
+  };
+
+  const renderBlock = () => {
+    if(!count) {
       return <TheDay />;
+    } else {
+      if (opening) {
+        return (
+          <Conversation 
+            index={count}
+            handleOnClick={handleSetCount}
+            selectRoute={selectRoute}
+          />
+        );
+      } else {
+        return (<InfoInsertHead />);
+      }
     }
-    
-    return <Conversation index={this.state.count} handleOnClick={this.setCount} />;
   }
 
-  render() {
-    return (
-      <div onClick={this.setCount}>
-        {this.renderBlock()}
-      </div>
-    );
-  }
+  return (renderBlock());
 }
 
 export default Dialogue;

@@ -1,97 +1,91 @@
 .conversation {
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
-  margin: 0 auto;
-  img {
-    margin: auto;
+  margin: 0;
+  padding: 0;
+
+  &__img {
+    margin: 0 auto;
     display: block;
-    width: 95%;
-    height: 80%;
+    width: 700px;
+    height: 500px;
+    padding-top: 70px;
   }
 
-  .conversation-box {
-    padding: .3rem .2rem 2.5rem .3rem;
+  .conversation__box {
+    width: 840px;
+    height: 170px;
     border: .1rem solid;
     border-radius: .5rem;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
+    padding: 42px 67px 44px 47px;
+
+    & p {
+      font-family: "Lato", sans-serif;
+      width: 725px;
+      font-size: 25px;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    &-text-1 {
+      opacity: 0;
+      animation: type 1s steps(40, end);
+      animation-fill-mode: forwards;
+    }
+
+    &-text-2 {
+      opacity: 0;
+      animation: type 1s steps(40, end);
+      animation-delay: 1.2s;
+      animation-fill-mode: forwards;
+    }
+
+    &-option {
+      position: absolute;
+      margin: auto 0;
+      top: 0;
+      bottom: 0;
+      background-color: #828282;
+      width: 340px;
+      height: 85px;
+      color: white;
+      font-size: 19px;
+      text-align: center;
+      border-radius: 10px;
+      cursor: pointer;
+      
+      &-1 {
+        left: 55px;
+        line-height: 85px;
+      }
+
+      &-2 {
+        left: 445px;
+        line-height: 85px;
+      }
+    }
   }
 }
 
 .conversation-box__btn {
-  font-size: 20px;
-  color: #777;
+  font-size: 32px;
+  color: #C8C8C8;
   position: absolute;
-  top: 68%;
-  left: 95%;
+  top: 106px;
+  right: 30px;
 }
 
 .identity {
   font-family: "Lato", sans-serif;
-  background-color: #eee;
-  padding: 2px 3px;
-  border-radius: 2px;
+  font-size: 25px;
+  background-color: #BDBDBD; 
+  color: white;
+  padding: 10px 22px;
+  border-radius: 10px;
   position: absolute;
   top: -18%;
   left: 2%;
-}
-
-.h3-1 {
-  font-family: "Lato", sans-serif;
-  width: 40rem;
-  border-right: .02em solid;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 1.5s steps(40), caret 1s steps(1) infinite;
-  padding: .5rem .5rem;
-}
-
-.h3-2 {
-  font-family: "Lato", sans-serif;
-  width: 44.5rem;
-  border-right: .02em solid;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 1.7s steps(40), caret 1s steps(1) infinite;
-  padding: .5rem .5rem;
-}
-
-.h3-3 {
-  font-family: "Lato", sans-serif;
-  width: 20rem;
-  border-right: .02em solid;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing .8s steps(20) , caret 1s steps(1) infinite;
-  padding: .5rem .5rem;
-}
-
-.h3-4 {
-  font-family: "Lato", sans-serif;
-  width: 32.5rem;
-  border-right: .02em solid;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 1s steps(33), caret 1s steps(1) infinite;
-  padding: .5rem .5rem;
-}
-
-.h3-5 {
-  font-family: "Lato", sans-serif;
-  width: 29.3rem;
-  border-right: .02em solid;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 1s steps(29), caret 1s steps(1) infinite;
-  padding: .5rem .5rem;
-}
-
-.h3-6 {
-  font-family: "Lato", sans-serif;
-  width: 36.5rem;
-  border-right: .02em solid;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 1.2s steps(36), caret 1s steps(1) infinite;
-  padding: .5rem .5rem;
 }
