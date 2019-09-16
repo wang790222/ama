@@ -772,8 +772,8 @@ body {
           background-color: #BDBDBD; }
     .page__block-55 {
       width: 100vw;
-      height: 1183px;
-      background-color: #FFF5D8; }
+      height: 1250px;
+      background-color: white; }
       .page__block-55-title {
         width: 667px;
         text-align: center;
@@ -796,8 +796,29 @@ body {
         grid-template-columns: 541px 541px;
         grid-template-rows: 235px 235px 235px;
         grid-gap: 80px; }
-        .page__block-55-grid-person {
-          background-color: grey; }
+        .page__block-55-grid-person-left {
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+          background-color: grey;
+          float: left; }
+        .page__block-55-grid-person-right {
+          float: right;
+          width: 331px; }
+          .page__block-55-grid-person-right-span-1 {
+            font-size: 30px; }
+          .page__block-55-grid-person-right-span-2 {
+            font-size: 20px; }
+          .page__block-55-grid-person-right-text {
+            margin: 20px 0 30px 0; }
+          .page__block-55-grid-person-right-btn {
+            width: 166px;
+            height: 41px;
+            background-color: grey;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 41px; }
     .page__block-56 {
       width: 100vw;
       height: 850px;

@@ -864,8 +864,8 @@
 
     &-55 {
       width: 100vw;
-      height: 1183px;
-      background-color: #FFF5D8;
+      height: 1250px;
+      background-color: white;
 
       &-title {
         width: 667px;
@@ -900,7 +900,43 @@
         grid-gap: 80px;
 
         &-person {
-          background-color: grey;
+          
+          &-left {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background-color: grey;
+            float: left;
+          }
+
+          &-right {
+            float: right;
+            width: 331px;
+
+            &-span {
+              &-1 {
+                font-size: 30px;
+              }
+
+              &-2 {
+                font-size: 20px;
+              }
+            }
+
+            &-text {
+              margin: 20px 0 30px 0;
+            }
+
+            &-btn {
+              width: 166px;
+              height: 41px;
+              background-color: grey;
+              border-radius: 10px;
+              font-size: 20px;
+              text-align: center;
+              line-height: 41px;
+            }
+          }
         }
       }
     }

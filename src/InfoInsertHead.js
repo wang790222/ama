@@ -359,19 +359,94 @@ const InfoInsertHead = () => {
             </div>
             <div className="page__block-55-grid">
               <div className="page__block-55-grid-person">
-                One
+                <div className="page__block-55-grid-person-left">
+                </div>
+                <div className="page__block-55-grid-person-right">
+                  <div>
+                    <span className="page__block-55-grid-person-right-span-1">李志德</span>
+                    <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
+                  </div>
+                  <div className="page__block-55-grid-person-right-text">
+                    <p>
+                    在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。
+                    </p>
+                  </div>
+                  <div className="page__block-55-grid-person-right-btn">
+                    看全文
+                  </div>
+                </div>
               </div>
               <div className="page__block-55-grid-person">
-                Two
+                <div className="page__block-55-grid-person-left">
+                </div>
+                <div className="page__block-55-grid-person-right">
+                  <div>
+                    <span className="page__block-55-grid-person-right-span-1">李志德</span>
+                    <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
+                  </div>
+                  <div className="page__block-55-grid-person-right-text">
+                    <p>
+                    在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。
+                    </p>
+                  </div>
+                  <div className="page__block-55-grid-person-right-btn">
+                    看全文
+                  </div>
+                </div>
               </div>
               <div className="page__block-55-grid-person">
-                Thre
+                <div className="page__block-55-grid-person-left">
+                </div>
+                <div className="page__block-55-grid-person-right">
+                  <div>
+                    <span className="page__block-55-grid-person-right-span-1">李志德</span>
+                    <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
+                  </div>
+                  <div className="page__block-55-grid-person-right-text">
+                    <p>
+                    在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。
+                    </p>
+                  </div>
+                  <div className="page__block-55-grid-person-right-btn">
+                    看全文
+                  </div>
+                </div>
               </div>
               <div className="page__block-55-grid-person">
-                Four
+                <div className="page__block-55-grid-person-left">
+                </div>
+                <div className="page__block-55-grid-person-right">
+                  <div>
+                    <span className="page__block-55-grid-person-right-span-1">李志德</span>
+                    <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
+                  </div>
+                  <div className="page__block-55-grid-person-right-text">
+                    <p>
+                    在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。
+                    </p>
+                  </div>
+                  <div className="page__block-55-grid-person-right-btn">
+                    看全文
+                  </div>
+                </div>
               </div>
               <div className="page__block-55-grid-person">
-                Five
+                <div className="page__block-55-grid-person-left">
+                </div>
+                <div className="page__block-55-grid-person-right">
+                  <div>
+                    <span className="page__block-55-grid-person-right-span-1">李志德</span>
+                    <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
+                  </div>
+                  <div className="page__block-55-grid-person-right-text">
+                    <p>
+                    在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。
+                    </p>
+                  </div>
+                  <div className="page__block-55-grid-person-right-btn">
+                    看全文
+                  </div>
+                </div>
               </div>
             </div>
           </div>
