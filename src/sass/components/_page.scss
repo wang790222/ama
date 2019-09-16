@@ -360,5 +360,399 @@
         }
       }
     }
+
+    &-21 {
+      width: 674px;
+      text-align: left;
+      margin-top: 100px;
+
+      & p {
+        font-size: 37px;
+      }
+    }
+
+    &-22 {
+      width: 860px;
+      height: 500px;
+      background-color: #C8C8C8;
+      margin-top: 60px;
+    }
+
+    &-23 {
+      width: 750px;
+      text-align: left;
+      margin-top: 60px;
+      
+      & p {
+        font-size: 25px;
+      }
+    }
+
+    &-24 {
+      margin: 80px auto 0;
+      width: 1220px;
+      border-top: .63px solid;
+      color: #BDBDBD;
+    }
+
+    &-25 {
+      width: 712px;
+      text-align: left;
+      margin-top: 100px;
+
+      & p {
+        font-size: 37px;
+      }
+    }
+
+    &-26 {
+      width: 860px;
+      height: 500px;
+      background-color: #C8C8C8;
+      margin-top: 60px;
+    }
+
+    &-27 {
+      width: 750px;
+      text-align: left;
+      margin-top: 60px;
+      
+      & p {
+        font-size: 25px;
+      }
+    }
+
+    &-28 {
+      width: 100vw;
+      height: 250px;
+      background-color: #828282;
+      margin-top: 100px;
+      position: relative;
+
+      &-content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 490px;
+        height: 100px;
+        margin: auto;
+
+        &-cube {
+          width: 100px;
+          height: 100px;
+          background-color: #C8C8C8;
+          float: left;
+        }
+  
+        &-text {
+          width: 360px;
+          height: 100px;
+          float: right;
+
+          & p {
+            font-size: 40px;
+            text-align: center;
+            line-height: 100px; 
+            color: white;
+          }
+        }
+      }
+    }
+
+    &-29 {
+      width: 674px;
+      text-align: center;
+      margin-top: 100px;
+
+      & p {
+        font-size: 37px;
+      }
+    }
+
+    &-30 {
+      width: 525px;
+      text-align: left;
+      margin-top: 60px;
+
+      & p {
+        font-size: 25px;
+      }
+    }
+
+    &-31 {
+      width: 496px;
+      text-align: left;
+      margin-top: 15px;
+
+      & p {
+        font-size: 16px;
+        color: #828282;
+      }
+    }
+
+    &-32 {
+      width: 860px;
+      height: 199px;
+      background-color: #C8C8C8;
+      margin-top: 40px;
+    }
+
+    &-33 {
+      margin-top: 50px;
+
+      &-btn {
+        width: 170px;
+        height: 50px;
+        background-color: #C8C8C8;
+        color: black;
+        border-radius: 10px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+      }
+    }
+
+    &-34 {
+      width: 860px;
+      height: 400px;
+      background-color: #C8C8C8;
+      margin-top: 60px;
+    }
+
+    &-35 {
+      width: 750px;
+      text-align: left;
+      margin-top: 60px;
+      
+      & p {
+        font-size: 25px;
+      }
+    }
+
+    &-36 {
+      margin: 80px auto 0;
+      width: 1220px;
+      border-top: .63px solid;
+      color: #BDBDBD;
+    }
+
+    &-37 {
+      width: 674px;
+      text-align: center;
+      margin-top: 100px;
+
+      & p {
+        font-size: 37px;
+      }
+    }
+
+    &-38 {
+      width: 825px;
+      text-align: left;
+      margin-top: 60px;
+
+      & p {
+        font-size: 25px;
+      }
+    }
+
+    &-39 {
+      width: 496px;
+      text-align: left;
+      margin-top: 15px;
+
+      & p {
+        font-size: 16px;
+        color: #828282;
+      }
+    }
+
+    &-40 {
+      margin-top: 40px;
+
+      &-img {
+        width: 170px;
+        height: 199px;
+        background-color: #C8C8C8;
+      }
+    }
+
+    &-41 {
+      margin-top: 50px;
+
+      &-btn {
+        width: 170px;
+        height: 50px;
+        background-color: #C8C8C8;
+        color: black;
+        border-radius: 10px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+      }
+    }
+
+    &-42 {
+      width: 860px;
+      height: 400px;
+      background-color: #C8C8C8;
+      margin-top: 60px;
+    }
+
+    &-43 {
+      width: 750px;
+      text-align: left;
+      margin-top: 60px;
+      
+      & p {
+        font-size: 25px;
+      }
+    }
+
+    &-44 {
+      margin: 80px auto 0;
+      width: 1220px;
+      border-top: .63px solid;
+      color: #BDBDBD;
+    }
+
+    &-45 {
+      width: 860px;
+      height: 150px;
+      margin-top: 100px;
+
+      &-cube {
+        margin: auto;
+        width: 140px;
+        height: 140px;
+        background-color: #C8C8C8;
+        float: left;
+      }
+
+      &-text-box {
+        width: 680px;
+        height: 150px;
+        border: 3px solid;
+        border-radius: 10px;
+        float: right;
+        padding: 20px 35px;
+
+        &-text {
+          width: 600px;
+          height: 100px;
+        }
+
+        & p {
+          font-size: 26px;
+          text-align: left;
+        }
+      }
+    }
+
+    &-46 {
+      width: 860px;
+      height: 450px;
+      background-color: #C8C8C8;
+      margin-top: 60px;
+    }
+
+    &-47 {
+      width: 518px;
+      text-align: left;
+      margin-top: 60px;
+
+      & p {
+        font-size: 37px;
+      }
+    }
+
+    &-48 {
+      width: 750px;
+      text-align: left;
+      margin-top: 40px;
+      
+      & p {
+        font-size: 25px;
+      }
+    }
+
+    &-49 {
+      width: 100vw;
+      height: 825px;
+      margin-top: 80px;
+      background-color: #F2F2F2;
+
+      &-title {
+        width: 750px;
+        text-align: center;
+        padding-top: 100px;
+        margin: 0 auto;
+
+        & p {
+          font-size: 37px;
+        }
+      } 
+      
+      &-text {
+        width: 750px;
+        text-align: left;
+        margin: 40px auto 0;
+
+        & p {
+          font-size: 25px;
+        }
+      }
+
+      &-video {
+        width: 650px;
+        height: 365px;
+        background-color: #C8C8C8;
+        color: black;
+        margin: 60px auto 0;
+      }
+    }
+
+    &-50 {
+      width: 100vw;
+      height: 250px;
+      background-color: #828282;
+      margin-top: 100px;
+      position: relative;
+
+      &-content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 530px;
+        height: 100px;
+        margin: auto;
+
+        &-cube {
+          width: 100px;
+          height: 100px;
+          background-color: #C8C8C8;
+          float: left;
+        }
+  
+        &-text {
+          width: 400px;
+          height: 100px;
+          float: right;
+
+          & p {
+            font-size: 40px;
+            text-align: center;
+            line-height: 100px; 
+            color: white;
+          }
+        }
+      }
+    }
   }
 }

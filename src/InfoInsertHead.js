@@ -31,6 +31,10 @@ const InfoInsertHead = () => {
     setAfterNine(true);
   }
 
+  const handleOnClickFor33 = () => {
+
+  }
+
   const showPopup = () => {
     if (popup) {
       return (
@@ -120,6 +124,177 @@ const InfoInsertHead = () => {
               </div>
             </div>
           </div>
+          <div className="page__block page__block-21">
+            <p>超過七成高中職生對兩岸關係的不確定性「感到焦慮」</p>
+          </div>
+          <div className="page__block page__block-22">
+          </div>
+          <div className="page__block page__block-23">
+            <p>我們用0~10分量表的方式(0完全不焦慮、10非常焦慮)詢問高中職生：「你是否會因為兩岸關係的不確定性感到焦慮？」。結果，0分的選項無人選擇，但有76.1%的人集中選填4-8分。這可說明，充滿不確定性的兩岸關係，讓大多受訪者感到「焦慮」甚至接近「非常焦慮」的狀態。</p>
+          </div>
+          <div className="page__block page__block-24"></div>
+          <div className="page__block page__block-25">
+            <p>兩岸下一步怎麼走? 超過４０％高中職生：希望維持現狀，以後走向獨立
+            </p>
+          </div>
+          <div className="page__block page__block-26"></div>
+          <div className="page__block page__block-27">
+            <p>關於兩岸未來的政治關係，在六個不同的選項中，有40.3%的受訪者希望：「維持現狀，以後走向獨立」。其次是「維持現狀，看情形再決定獨立或統一」(25.2％)，以及「永遠維持現狀」(14%)。
+            </p>
+            <br />
+            <br />
+            <p>
+            相比美國杜克大學於2019年發布的《台灣國家安全調查》，同樣一個問題，20歲以上的成年人對兩岸關係的期望，前四高依序是：「維持現狀，看情形再決定獨立或統一」(33.4%)、「永遠維持現狀」(23.7%)、「維持現狀，以後走向獨立(16.2%)」、「維持現狀，以後走向統一」(10.8%)。
+            </p>
+            <br />
+            <br />
+            <p>
+            若從這兩份調查來看，無論是高中職生或成年人，都有超過8成的人選擇與「維持現狀」有關的選項。但多數高中職生傾向『維持現狀，以後走向獨立』，成年人則以『維持現狀，看情形再決定獨立或統一』的意見佔多數。
+            </p>
+          </div>
+          <div className="page__block page__block-28">
+            <div className="page__block page__block-28-content">
+              <div className="page__block-28-content-cube">
+              </div>
+              <div className="page__block-28-content-text">
+                <p>對台灣的愛恨情仇？</p>
+              </div>
+            </div>
+          </div>
+          <div className="page__block page__block-29">
+            <p>高中職生：擁有民主自由，我驕傲！</p>
+          </div>
+          <div className="page__block page__block-30">
+            <p>對於身為我們國家的一份子，你是否感到光榮？</p>
+          </div>
+          <div className="page__block page__block-31">
+            <p>顯示統計結果，每個結果可以點按鈕，看看覺得光榮或不光榮的原因。</p>
+          </div>
+          <div className="page__block page__block-32"></div>
+          <div className="page__block page__block-33">
+            <div className="row-4">
+              <div 
+                className="col-1-of-4 page__block-33-btn"
+                onClick={handleOnClickFor33}>
+                一點也不光榮
+              </div>
+              <div 
+                className="col-1-of-4 page__block-33-btn"
+                onClick={handleOnClickFor33}>
+                很少感到光榮
+              </div>
+              <div 
+                className="col-1-of-4 page__block-33-btn"
+                onClick={handleOnClickFor33}>
+                有時感到光榮
+              </div>
+              <div 
+                className="col-1-of-4 page__block-33-btn"
+                onClick={handleOnClickFor33}>
+                時常感到光榮
+              </div>
+            </div>
+          </div>
+          <div className="page__block page__block-34"></div>
+          <div className="page__block page__block-35">
+            <p>為了多了解青少年對國家和這塊土地的情感，在這份問卷中，設計了這項提問：「對於身為我們國家的一份子，你是否感到光榮？」，結果有47.5%的受訪者認為「有時感到光榮」，33.9%選擇「時常感到光榮」，兩者合計共81.4%。
+            </p>
+            <br />
+            <br />
+            <p>
+            此外，該題也進一步請同學們寫下對我們國家「感到光榮」或「不感到光榮」的原因。其中，「感到光榮」的理由，同學們的答案高度雷同，都是認為台灣的「自由民主」以及「社會安定」，是很值得驕傲的事。而「不感到光榮」的原因，則包括「國際地位低落」、「政治混亂」等。
+            </p>
+          </div>
+          <div className="page__block page__block-36"></div>
+          <div className="page__block page__block-37">
+            <p>「擔心」是多數高中職生對台灣的感受</p>
+          </div>
+          <div className="page__block page__block-38">
+            <p>當我們講到台灣時，你認為以下哪個負面性形容詞適合描述你心理上感受？</p>
+          </div>
+          <div className="page__block page__block-39">
+            <p>顯示統計結果，每個結果可以點按鈕，看看覺得負面形容詞的原因。</p>
+          </div>
+          <div className="page__block page__block-40">
+            <div className="row-4">
+              <div className="col-1-of-4 page__block-40-img"></div>
+              <div className="col-1-of-4 page__block-40-img"></div>
+              <div className="col-1-of-4 page__block-40-img"></div>
+              <div className="col-1-of-4 page__block-40-img"></div>
+            </div>
+          </div>
+          <div className="page__block page__block-41">
+            <div className="row-4">
+              <div className="col-1-of-4 page__block-41-btn">
+                沮喪的
+              </div>
+              <div className="col-1-of-4 page__block-41-btn">
+                難過的
+              </div>
+              <div className="col-1-of-4 page__block-41-btn">
+                憤怒的
+              </div>
+              <div className="col-1-of-4 page__block-41-btn">
+                擔心的
+              </div>
+            </div>
+          </div>
+          <div className="page__block page__block-42">
+          </div>
+          <div className="page__block page__block-43">
+            <p>問完青少年是否會對自己的國家感到光榮後，問卷中進一步提問：「當我們講到台灣時，你認為以下哪個負面性形容詞適合描述你心理上感受？」。負面形容詞的選項包括：「沮喪的」、「難過的」、「憤怒的」、「擔心的」、以及「沒有」。
+            </p>
+            <br />
+            <br />
+            <p>
+            結果顯示，有5成以上的受訪者認為講到台灣時，他們是「擔心的」。該題進一步請他們寫下擔心的原因時，答案則圍繞在「擔心台灣失去自由」以及「國際地位遭打壓」。
+            </p>
+          </div>
+          <div className="page__block page__block-44"></div>
+          <div className="page__block page__block-45">
+            <div className="page__block-45-cube">
+              &nbsp;
+            </div>
+            <div className="page__block-45-text-box">
+              <div className="page__block-45-box-text">
+                <p>高中職生沒有選票，但他們代表的卻是台灣的未來。阿嬤我很好奇，當討論到國家未來10年的目標時，高中職生會認為哪一項社會目標是最重要的呢？
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="page__block page__block-46"></div>
+          <div className="page__block page__block-47">
+            <p>談到未來，高中職生選擇務實：經濟繁榮最重要</p>
+          </div>
+          <div className="page__block page__block-48">
+            <p>這份問卷列出9項人們認為重要的社會目標，讓受訪者選擇。其中有32.7%受訪者認為「維持經濟繁榮」最重要，佔比最高。其次則是佔14.7%的「保障言論自由」、以及佔13.3%「讓人民對政府重大決策有更多表達意見的機會」。
+            </p>
+            <br />
+            <br />
+            <p>
+            在這個數據中，第一高的「維持經濟繁榮」比第二高「保障言論自由」多了兩倍以上，可見年輕世代對於台灣未來的共識，還是著重在民生方面，相當務實。但從「保障言論自由」和「讓人民對政府重大決策有更多表達意見的機會」分據重要性的第二、第三來看，「民主自由」同樣是當前青少年們相當重視的社會發展目標。
+            </p>
+          </div>
+          <div className="page__block page__block-49">
+            <div className="page__block-49-title">
+              <p>政治立場不同的世代  有對話的可能嗎？</p>
+            </div>
+            <div className="page__block-49-text">
+              <p>看到這裡，你有更理解高中職生們怎麼看待自己的國家和土地嗎？你是否有過因為國族立場的不同，導致世代衝突的經驗呢？「青春發言人」特別邀請政治立場有所差異的青少年和成年人一起坐下來對話，嘗試找尋彼此溝通的可能。</p>
+            </div>
+            <div className="page__block-49-video">
+              Video
+            </div>
+          </div>
+          <div className="page__block page__block-50">
+            <div className="page__block page__block-50-content">
+              <div className="page__block-50-content-cube">
+              </div>
+              <div className="page__block-50-content-text">
+                <p>高中職生的愛恨情仇？</p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     } else {
@@ -185,7 +360,7 @@ const InfoInsertHead = () => {
           <div className="page__block page__block-8">
           </div>
           <div className="page__block page__block-9">
-            <div className="row">
+            <div className="row-3">
               <div 
                 className="col-1-of-3 page__block-9-btn"
                 onClick={handleOnClickFor9}>
