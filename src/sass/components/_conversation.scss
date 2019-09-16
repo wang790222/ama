@@ -3,6 +3,7 @@
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: #FFF5D8;
 
   &__img {
     margin: 0 auto;
@@ -15,18 +16,21 @@
   .conversation__box {
     width: 840px;
     height: 170px;
-    border: .1rem solid;
-    border-radius: .5rem;
+    border: 5px solid;
+    border-radius: 20px;
+    background-color: white;
+    color: #C89E67;
     margin: 0 auto;
     position: relative;
     padding: 42px 67px 44px 47px;
 
     & p {
-      font-family: "Lato", sans-serif;
+      font-family: "Arial";
       width: 725px;
       font-size: 25px;
       white-space: nowrap;
       overflow: hidden;
+      color: #5E3F15;
       opacity: 0;
     }
 
@@ -72,16 +76,16 @@
 
 .conversation-box__btn {
   font-size: 32px;
-  color: #C8C8C8;
+  color: #F06F04;
   position: absolute;
   top: 106px;
   right: 30px;
 }
 
 .identity {
-  font-family: "Lato", sans-serif;
+  font-family: "Arial";
   font-size: 25px;
-  background-color: #BDBDBD; 
+  background-color: #F06F04; 
   color: white;
   padding: 10px 22px;
   border-radius: 10px;

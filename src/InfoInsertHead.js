@@ -29,11 +29,17 @@ const InfoInsertHead = () => {
 
   const handleOnClickFor9 = () => {
     setAfterNine(true);
-  }
+  };
 
   const handleOnClickFor33 = () => {
 
-  }
+  };
+
+  let pageBackgroundColor =  (popup) ? "#333333" : "white";
+
+  const dynamicPageStyle = {
+    backgroundColor: pageBackgroundColor,
+  };
 
   const showPopup = () => {
     if (popup) {
@@ -414,7 +420,7 @@ const InfoInsertHead = () => {
       );
     } else {
       return (
-        <div className="page">
+        <div style={dynamicPageStyle}>
           <div className="page__block page__block-1">
             <h1>嘿！你是哪裡人？</h1>
             <h2>青少年國族認同大調查</h2>
