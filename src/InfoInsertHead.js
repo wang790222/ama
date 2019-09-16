@@ -295,6 +295,100 @@ const InfoInsertHead = () => {
               </div>
             </div>
           </div>
+          <div className="page__block page__block-51">
+            <div className="page__block-51-content">
+              <div className="page__block-51-content-cube">
+                &nbsp;
+              </div>
+              <div className="page__block-51-content-text-box">
+                <div className="page__block-51-content-box-text">
+                  <p>了解青少年如何看待國族認同的問題後，你想不想知道，高中職生們對於民主政治參與的態度和想法呢？
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="page__block-51-img"></div>
+          </div>
+          <div className="page__block page__block-52">
+            <p>高中職生：關心政治與讀書都不可分割！</p>
+          </div>
+          <div className="page__block page__block-53">
+            <p>從以上三個問句的調查結果觀察，高中職生們其實高度認同民主參與，同時也捍衛自己說話的權利。不但高達95.6%的受訪者不同意「政府自然會為人民解決困難，我們人民不要發表太多的意見。」這句話，也有92%的受訪高中職生認為「學生仍需花時間關心政治」。可見對他們而言，現階段除了讀書以外，公民參與也是一件很重要的事。
+            </p>
+            <br />
+            <br />
+            <p>
+            此外，也有51%的受訪高中職生「不太同意或非常不同意」高中生「對政府的政策是沒有什麼影響力的」，可見高中職生們對自己的政治參與，多數是抱持正面、肯定的想法。
+            </p>
+            <br />
+            <br />
+            <p>
+            然而，做為青少年節目，策劃此問卷的製作單位特別想指出的是：在本次調查中，仍可以看到有39.4%的受訪者是「有點同意」自己「對政府的政策沒有什麼影響力的」。這個數字提醒我們，即便高中職生們對政治發聲有高度期盼，但仍有趨近四成的學生是感到無力，認為自己恐怕「沒有什麼影響力」。如何讓青少年們有機會為自己發聲，同時讓他們對參與民主、改變社會抱持正面態度，是身處社會共同體的我們應該努力思考並盡力達成的。
+            </p>
+          </div>
+          <div className="page__block page__block-54">
+            <div className="page__block-54-title">
+              <p>想瞭解更多青少年如何看待我們的國家、族群和文化嗎？</p>
+            </div>
+            <div className="page__block-54-text">
+              <p>因為製作「嘿！你是哪裡人？─高中職生國族認同」的專題，「青春發言人」接觸許多來自不同家庭背景的台灣青少年，他們每個人對於自己的身分認同，或者台灣的族群、文化和未來，都各自有非常精采的思考。製作單位精選出幾位青少年的生命故事和想法，邀請你一起聽聽看台灣年輕世代的心聲。
+              </p>
+            </div>
+            <div className="page__block-54-video-grid">
+              <div className="page__block-54-video-grid-img">One</div>
+              <div className="page__block-54-video-grid-img">Two</div>
+              <div className="page__block-54-video-grid-img">Thre</div>
+              <div className="page__block-54-video-grid-img">Four</div>
+              <div className="page__block-54-video-grid-img">Five</div>
+              <div className="page__block-54-video-grid-img">Six</div>
+            </div>
+          </div>
+          <div className="page__block page__block-55">
+            <div className="page__block-55-title">
+              <p>他們怎麼看這份調查？</p>
+            </div>
+            <div className="page__block-55-text">
+              <p>我們邀請了五位政治界、媒體界的朋友，和大家分享他們看過這份青少年的國族調查後，有什麼觀察和思考！
+              </p>
+            </div>
+            <div className="page__block-55-grid">
+              <div className="page__block-55-grid-person">
+                One
+              </div>
+              <div className="page__block-55-grid-person">
+                Two
+              </div>
+              <div className="page__block-55-grid-person">
+                Thre
+              </div>
+              <div className="page__block-55-grid-person">
+                Four
+              </div>
+              <div className="page__block-55-grid-person">
+                Five
+              </div>
+            </div>
+          </div>
+          <div className="page__block page__block-56"></div>
+          <div className="page__block page__block-57">
+            <div className="page__block-57-title">
+              <p>問卷下載</p>
+            </div>
+            <div className="page__block-57-text">
+              <p>這份「高中職生國族認同調查」的問卷，總共包含36個問題，我們僅挑選其中10個問題呈現於網頁中。若您對整份問卷結果有興趣，歡迎直接下載。另外，我們也邀請了五位政治界、媒體界的朋友，和大家分享他們看過這份青少年的國族調查後，有什麼觀察和思考。
+              </p>
+            </div>
+            <div className="page__block-57-btn">
+              下載報告
+            </div>
+          </div>
+          <div className="page__block page__block-58">
+            <div className="page__block-58-pic">
+            </div>
+            <div className="page__block-58-btn">
+              分享
+            </div>
+          </div>
         </div>
       );
     } else {

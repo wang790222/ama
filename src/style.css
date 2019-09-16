@@ -696,6 +696,161 @@ body {
             text-align: center;
             line-height: 100px;
             color: white; }
+    .page__block-51 {
+      width: 100vw;
+      height: 990px;
+      background-color: #F2F2F2; }
+      .page__block-51-content {
+        width: 860px;
+        height: 150px;
+        padding-top: 100px;
+        margin: 0 auto; }
+        .page__block-51-content-cube {
+          margin: auto;
+          width: 140px;
+          height: 140px;
+          background-color: #C8C8C8;
+          float: left; }
+        .page__block-51-content-text-box {
+          width: 680px;
+          height: 150px;
+          border: 3px solid;
+          border-radius: 10px;
+          float: right;
+          padding: 20px 35px; }
+          .page__block-51-content-text-box-text {
+            width: 600px;
+            height: 100px; }
+          .page__block-51-content-text-box p {
+            font-size: 26px;
+            text-align: left; }
+      .page__block-51-img {
+        width: 860px;
+        height: 600px;
+        background-color: #C8C8C8;
+        margin: 160px auto 0; }
+    .page__block-52 {
+      width: 750px;
+      text-align: center;
+      margin-top: 100px; }
+      .page__block-52 p {
+        font-size: 37px; }
+    .page__block-53 {
+      width: 750px;
+      text-align: left;
+      margin-top: 40px; }
+      .page__block-53 p {
+        font-size: 25px; }
+    .page__block-54 {
+      width: 100vw;
+      height: 1017px;
+      margin-top: 80px;
+      background-color: #9DDDE3; }
+      .page__block-54-title {
+        width: 556px;
+        text-align: left;
+        padding-top: 100px;
+        margin: 0 auto; }
+        .page__block-54-title p {
+          font-size: 37px; }
+      .page__block-54-text {
+        width: 750px;
+        text-align: left;
+        margin: 40px auto 0; }
+        .page__block-54-text p {
+          font-size: 25px; }
+      .page__block-54-video-grid {
+        width: 1110px;
+        height: 422px;
+        color: black;
+        margin: 60px auto 0;
+        display: grid;
+        grid-template-columns: 350px 350px 350px;
+        grid-gap: 30px; }
+        .page__block-54-video-grid-img {
+          background-color: #BDBDBD; }
+    .page__block-55 {
+      width: 100vw;
+      height: 1183px;
+      background-color: #FFF5D8; }
+      .page__block-55-title {
+        width: 667px;
+        text-align: center;
+        padding-top: 100px;
+        margin: 0 auto; }
+        .page__block-55-title p {
+          font-size: 37px; }
+      .page__block-55-text {
+        width: 750px;
+        text-align: left;
+        margin: 40px auto 0; }
+        .page__block-55-text p {
+          font-size: 25px; }
+      .page__block-55-grid {
+        width: 1162px;
+        height: 865px;
+        color: black;
+        margin: 60px auto 0;
+        display: grid;
+        grid-template-columns: 541px 541px;
+        grid-template-rows: 235px 235px 235px;
+        grid-gap: 80px; }
+        .page__block-55-grid-person {
+          background-color: grey; }
+    .page__block-56 {
+      width: 100vw;
+      height: 850px;
+      background-color: #FFF5D8; }
+    .page__block-57 {
+      width: 100vw;
+      height: 497px;
+      background-color: #F06F04;
+      color: white; }
+      .page__block-57-title {
+        width: 156px;
+        text-align: center;
+        padding-top: 100px;
+        margin: 0 auto; }
+        .page__block-57-title p {
+          font-size: 37px; }
+      .page__block-57-text {
+        width: 750px;
+        text-align: left;
+        margin: 36px auto 0; }
+        .page__block-57-text p {
+          font-size: 25px; }
+      .page__block-57-btn {
+        cursor: pointer;
+        width: 255px;
+        height: 70px;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 70px;
+        background-color: #FFFFFF;
+        margin: 57px auto 0;
+        color: #F06F04;
+        font-size: 29px; }
+    .page__block-58 {
+      width: 100vw;
+      height: 800px;
+      background-color: #FFF5D8;
+      padding-top: 171px; }
+      .page__block-58-pic {
+        width: 750px;
+        height: 409px;
+        background-color: #C8C8C8;
+        margin: 0 auto; }
+      .page__block-58-btn {
+        cursor: pointer;
+        width: 317px;
+        height: 88px;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 88px;
+        background-color: #C8C8C8;
+        margin: 95px auto 0;
+        color: black;
+        font-size: 37px; }
 
 .header {
   text-align: center;
