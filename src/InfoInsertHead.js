@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 import style from './style.css';
+import Hamburger from './Hamburger';
 
-const InfoInsertHead = () => {
+const InfoInsertHead = (props) => {
 
   const thisDiv = useRef(null);
   const [intro, setIntro] = useState(true);
@@ -121,7 +122,7 @@ const InfoInsertHead = () => {
               Video
             </div>
           </div>
-          <div className="page__block page__block-20">
+          <div className="page__block page__block-20" id="s3">
             <div className="page__block page__block-20-content">
               <div className="page__block-20-content-cube">
               </div>
@@ -158,7 +159,7 @@ const InfoInsertHead = () => {
             若從這兩份調查來看，無論是高中職生或成年人，都有超過8成的人選擇與「維持現狀」有關的選項。但多數高中職生傾向『維持現狀，以後走向獨立』，成年人則以『維持現狀，看情形再決定獨立或統一』的意見佔多數。
             </p>
           </div>
-          <div className="page__block page__block-28">
+          <div className="page__block page__block-28" id="s4">
             <div className="page__block page__block-28-content">
               <div className="page__block-28-content-cube">
               </div>
@@ -292,12 +293,12 @@ const InfoInsertHead = () => {
               Video
             </div>
           </div>
-          <div className="page__block page__block-50">
+          <div className="page__block page__block-50" id="s5">
             <div className="page__block page__block-50-content">
               <div className="page__block-50-content-cube">
               </div>
               <div className="page__block-50-content-text">
-                <p>高中職生的愛恨情仇？</p>
+                <p>高中職生對政治冷感嗎？</p>
               </div>
             </div>
           </div>
@@ -349,7 +350,7 @@ const InfoInsertHead = () => {
               <div className="page__block-54-video-grid-img">Six</div>
             </div>
           </div>
-          <div className="page__block page__block-55">
+          <div className="page__block page__block-55" id="s6">
             <div className="page__block-55-title">
               <p>他們怎麼看這份調查？</p>
             </div>
@@ -496,7 +497,8 @@ const InfoInsertHead = () => {
     } else {
       return (
         <div style={dynamicPageStyle}>
-          <div className="page__block page__block-1">
+          <Hamburger backToHomePage={props.backToHomePage}/>
+          <div className="page__block page__block-1" id="#s1">
             <h1>嘿！你是哪裡人？</h1>
             <h2>青少年國族認同大調查</h2>
           </div>
@@ -511,7 +513,7 @@ const InfoInsertHead = () => {
               className="page__block page__block-4 page__block-4-btn">看研究方法
             </div>
           </div>
-          <div className="page__block page__block-5">
+          <div className="page__block page__block-5" id="s2">
             <div className="page__block page__block-5-content">
               <div className="page__block-5-content-cube">
               </div>

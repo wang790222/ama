@@ -7,7 +7,7 @@ import InfoInsertHead from './InfoInsertHead';
 
 var timerId = null;
 
-const Dialogue = () => {
+const Dialogue = (props) => {
   const [count, setCount] = useState(0);
   const [opening, setOpening] = useState(true);
 
@@ -54,7 +54,7 @@ const Dialogue = () => {
           />
         );
       } else {
-        return (<InfoInsertHead />);
+        return (<InfoInsertHead backToHomePage={props.backToHomePage} />);
       }
     }
   }

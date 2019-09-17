@@ -121,7 +121,7 @@ const Conversation = (props) => {
             {setence}
           </p>
           <div className="conversation-box__btn">
-            <ion-icon name="play"></ion-icon>
+            <ion-icon name="arrow-dropdown"></ion-icon>
           </div>
         </div>
       );

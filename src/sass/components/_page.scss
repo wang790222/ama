@@ -726,7 +726,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        width: 530px;
+        width: 580px;
         height: 100px;
         margin: auto;
 
@@ -738,7 +738,7 @@
         }
   
         &-text {
-          width: 400px;
+          width: 450px;
           height: 100px;
           float: right;
 
@@ -935,6 +935,7 @@
               font-size: 20px;
               text-align: center;
               line-height: 41px;
+              cursor: pointer;
             }
           }
         }

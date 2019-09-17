@@ -21,20 +21,22 @@ class App extends React.Component {
     });
   };
 
+  backToHomePage = () => {
+    this.setState({
+      listenToAma: false
+    });
+  };
+
   renderPage() {
     if(this.state.listenToAma) {
-      return <Dialogue />;
+      return <Dialogue backToHomePage={this.backToHomePage} />;
     } else {
-      return <Home btnCallback={this.btnCallback} />;
+      return <Home btnCallback={this.btnCallback}/>;
     }
   } 
 
   render() {
-    return (
-      <div className="body">
-        {this.renderPage()}
-      </div>
-    );
+    return (this.renderPage());
   };
 }
 
