@@ -8,10 +8,6 @@ const Hamburger = (props) => {
     checkBoxRef.current.checked = false;
   };
 
-  const handleGoToHomePage = () => {
-    props.backToHomePage();
-  };
-
   return (
     <div className="hamburger">
       <input 

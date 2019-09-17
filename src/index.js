@@ -21,15 +21,9 @@ class App extends React.Component {
     });
   };
 
-  backToHomePage = () => {
-    this.setState({
-      listenToAma: false
-    });
-  };
-
   renderPage() {
     if(this.state.listenToAma) {
-      return <Dialogue backToHomePage={this.backToHomePage} />;
+      return <Dialogue />;
     } else {
       return <Home btnCallback={this.btnCallback}/>;
     }

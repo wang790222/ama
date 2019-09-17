@@ -497,7 +497,7 @@ const InfoInsertHead = (props) => {
     } else {
       return (
         <div style={dynamicPageStyle}>
-          <Hamburger backToHomePage={props.backToHomePage}/>
+          <Hamburger />
           <div className="page__block page__block-1" id="#s1">
             <h1>嘿！你是哪裡人？</h1>
             <h2>青少年國族認同大調查</h2>

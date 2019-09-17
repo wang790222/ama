@@ -54,7 +54,7 @@ const Dialogue = (props) => {
           />
         );
       } else {
-        return (<InfoInsertHead backToHomePage={props.backToHomePage} />);
+        return (<InfoInsertHead />);
       }
     }
   }
