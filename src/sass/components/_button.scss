@@ -1,17 +1,5 @@
 .header--btn {
   display: inline-block;
-  &-main {
-    width: 270px;
-    height: 70px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #F06F04;
-    border-radius: 1.5rem;
-    display: inline-block;
-    font-size: 32px;
-    letter-spacing: .8px;
-    line-height: 70px;
-  }
 
   &-second {
     text-decoration: none;
@@ -21,6 +9,4 @@
     font-size: .7rem;
     display: block;
   }
-
-  
 }

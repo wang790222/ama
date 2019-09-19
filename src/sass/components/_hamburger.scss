@@ -6,11 +6,11 @@
 
   &__button {
     background-color: #C8C8C8;
-    height: 50px;
-    width: 50px;
+    height: 5rem;
+    width: 5rem;
     position: fixed;
-    top: 36px;
-    right: 36px;
+    top: 3.6rem;
+    right: 3.6rem;
     border-radius: 50%;
     z-index: 2000;
     text-align: center;
@@ -19,12 +19,12 @@
 
   &__background {
     background-color: #4F4F4F;
-    height: 50px;
-    width: 50px;
+    height: 5rem;
+    width: 5rem;
     border-radius: 50%;
     position: fixed;
-    top: 36px;
-    right: 36px;
+    top: 3.6rem;
+    right: 3.6rem;
     z-index: 1000;
   }
 
@@ -40,20 +40,20 @@
 
   &__list {
     text-align: right;
-    margin-top: 100px;
+    margin-top: 10rem;
     list-style-type: none;
   }
 
   &__item {
-    margin-top: 24px;
-    font-size: 22px;
+    margin-top: 2.4rem;
+    font-size: 2.2rem;
   }
 
   &__link {
     &:link,
     &:visited {
       display: inline-block;
-      font-size: 22px;
+      font-size: 2.2rem;
       color: #666; 
       text-decoration: none;
       text-transform: uppercase;
@@ -81,13 +81,13 @@
 
   &__icon {
     position: relative;
-    margin-top: 25px;
+    margin-top: 2.5rem;
 
     &,
     &::before,
     &::after {
-      width: 25px;
-      height: 2.5px;
+      width: 2.5rem;
+      height: .25rem;
       background-color: #333;
       display: inline-block;
     }
@@ -125,11 +125,11 @@
 }
 
 .bull {
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   background-color: #666;
-  margin-right: 50px;
-  margin-left: 15px;
+  margin-right: 5rem;
+  margin-left: 1.5rem;
   display: inline-block;
 }

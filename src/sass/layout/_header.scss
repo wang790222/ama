@@ -16,9 +16,15 @@
       &-img {
         width: 642px;
         height: 342px;
-        margin-top: 70px;
+        margin-top: 7rem;
         position: absolute;
         z-index: 2;
+
+        @include respond(phone) {
+          width: 360px;
+          height: 191px;
+          margin-top: 11rem;
+        }
       }
 
       &-shade {
@@ -26,9 +32,14 @@
         height: 345px;
         background-color: #E8CF8F;
         position: absolute;
-        transform: rotate(1deg) translateX(20px);
+        transform: rotate(1deg) translateX(2rem);
         z-index: 1;
-        margin-top: 80px;
+        margin-top: 8rem;
+
+        @include respond(phone) {
+          width: 0;
+          height: 0;
+        }
       }
     }
 
@@ -36,34 +47,60 @@
       font-family: "Arial";
       text-transform: uppercase;
       backface-visibility: hidden;
-      padding-top: 480px;
+      padding-top: 48rem;
+
+      @include respond(phone) {
+        padding-top: 33.9rem;
+      }
 
       &-main {
         color: #5E3F15;
-        font-size: 30px;
+        font-size: 3rem;
         letter-spacing: .159rem;
+
+        @include respond(phone) {
+          font-size: 2.5rem;
+          letter-spacing: .062rem;
+          margin: 0 3.9rem;
+        }
       }
       
       &-sub {
-        padding-top: 28.95px;
+        padding-top: 2.895rem;
         color: #86663C;
-        font-size: 23px;
+        font-size: 2.3rem;
         letter-spacing: .057rem;
+
+        @include respond(phone) {
+          font-size: 1.8rem;
+          letter-spacing: .045rem;
+          margin: 0 6.85rem;
+        }
       }
     }
 
     &-btn {
-      margin-top: 31.35px;
-      width: 270px;
-      height: 70px;
-      text-decoration: none;
-      color: #fff;
+      margin-top: 3.135rem;
+      width: 27rem;
+      height: 7rem;
       background-color: #F06F04;
       border-radius: 1.5rem;
       display: inline-block;
-      font-size: 32px;
-      letter-spacing: .8px;
-      line-height: 70px;
+      font-size: 3.2rem;
+      letter-spacing: .08rem;
+      line-height: 7rem;
+      text-decoration: none;
+      color: #fff;
+      cursor: pointer;
+      
+      @include respond(phone) {
+        margin: 3.9rem 7.25rem 0;
+        width: 21.5rem;
+        height: 5.6rem;
+        font-size: 2.5rem;
+        letter-spacing: .063rem;
+        line-height: 5.6rem;
+      }
     }
   }
 }
