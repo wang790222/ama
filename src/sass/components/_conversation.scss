@@ -68,15 +68,15 @@
 
     &-text-3 {
       opacity: 0;
-      animation: type 1s steps(40, end);
-      animation-delay: 1.2s;
+      animation: type 1.2s steps(40, end);
+      animation-delay: 2.3s;
       animation-fill-mode: forwards;
     }
 
     &-text-4 {
       opacity: 0;
       animation: type 1s steps(40, end);
-      animation-delay: 1.2s;
+      animation-delay: 3.6s;
       animation-fill-mode: forwards;
     }
 
