@@ -11,6 +11,12 @@
     width: 70rem;
     height: 50rem;
     padding-top: 7rem;
+
+    @include respond(phone) {
+      padding-top: 5.5rem;
+      width: 36rem;
+      height: 25.6rem;
+    }
   }
 
   .conversation__box {
@@ -24,6 +30,14 @@
     position: relative;
     padding: 4.2rem 6.7rem 4.4rem 4.7rem;
 
+    @include respond(phone) {
+      margin-top: 3.8rem;
+      width: 33rem;
+      height: 23rem;
+      padding: 0;
+      padding: 5.5rem 2.4rem;
+    }
+
     & p {
       font-family: "Arial";
       width: 72.5rem;
@@ -32,6 +46,11 @@
       overflow: hidden;
       color: #5E3F15;
       opacity: 0;
+
+      @include respond(phone) {
+        font-size: 1.8rem;
+        width: 27rem;
+      }
     }
 
     &-text-1 {
@@ -41,6 +60,20 @@
     }
 
     &-text-2 {
+      opacity: 0;
+      animation: type 1s steps(40, end);
+      animation-delay: 1.2s;
+      animation-fill-mode: forwards;
+    }
+
+    &-text-3 {
+      opacity: 0;
+      animation: type 1s steps(40, end);
+      animation-delay: 1.2s;
+      animation-fill-mode: forwards;
+    }
+
+    &-text-4 {
       opacity: 0;
       animation: type 1s steps(40, end);
       animation-delay: 1.2s;
@@ -60,15 +93,42 @@
       text-align: center;
       border-radius: 1rem;
       cursor: pointer;
+
+      @include respond(phone) {
+        width: 26rem;
+        height: 6.5rem;
+        position: relative;
+        font-size: 1.8rem;
+        margin: 0;
+      }
       
       &-1 {
         left: 5.5rem;
         line-height: 8.5rem;
+
+        @include respond(phone) {
+          line-height: 2rem;
+          left: 0;
+          color: white;
+          text-align: left;
+          padding: 1.2rem 3.8rem;
+          //margin: 3.7rem 0 0 3rem;
+          transform: translateX(.7rem) translateY(-1.8rem);
+        }
       }
 
       &-2 {
         left: 44.5rem;
         line-height: 8.5rem;
+
+        @include respond(phone) {
+          line-height: 2rem;
+          left: 0;
+          padding: 1.2rem 3.8rem;
+          text-align: left;
+          margin-top: 2.6rem;
+          transform: translateX(.7rem) translateY(-1.8rem);
+        }
       }
     }
   }
@@ -80,6 +140,12 @@
   position: absolute;
   top: 9rem;
   right: 1rem;
+
+  @include respond(phone) {
+    top: 16.5rem;
+    right: .5rem;
+    font-size: 6rem;
+  }
 }
 
 .identity {
@@ -92,4 +158,11 @@
   position: absolute;
   top: -18%;
   left: 2%;
+
+  @include respond(phone) {
+    font-size: 2rem;
+    padding: .6rem 1.7rem;
+    top: -10%;
+    left: 5%;
+  }
 }

@@ -7,11 +7,11 @@
 }
 
 @mixin respond-phone {
-  @media (max-width: 36rem) { @content };
+  @media (max-width: 37.5rem) { @content };
 }
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width: 36rem) { @content };
+    @media (max-width: 37.5rem) { @content };
   }
 }

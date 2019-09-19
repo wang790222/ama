@@ -52,9 +52,10 @@ html {
     white-space: nowrap;
     animation: typing 0.5s steps(15);
     font-size: 3rem; }
-    @media (max-width: 36rem) {
+    @media (max-width: 37.5rem) {
       .one-line__the-day {
-        font-size: 2.5rem; } }
+        font-size: 2.5rem;
+        left: 21.5%; } }
   .one-line__info-insert {
     position: absolute;
     margin: auto 0;
@@ -68,16 +69,6 @@ html {
     white-space: nowrap;
     animation: typing 0.8s steps(18); }
 
-.header--btn {
-  display: inline-block; }
-  .header--btn-second {
-    text-decoration: none;
-    background-color: #fff;
-    color: #777;
-    margin: 1.2rem;
-    font-size: .7rem;
-    display: block; }
-
 .conversation {
   width: 100vw;
   height: 100vh;
@@ -90,6 +81,11 @@ html {
     width: 70rem;
     height: 50rem;
     padding-top: 7rem; }
+    @media (max-width: 37.5rem) {
+      .conversation__img {
+        padding-top: 5.5rem;
+        width: 36rem;
+        height: 25.6rem; } }
   .conversation .conversation__box {
     width: 84rem;
     height: 17rem;
@@ -100,6 +96,13 @@ html {
     margin: 0 auto;
     position: relative;
     padding: 4.2rem 6.7rem 4.4rem 4.7rem; }
+    @media (max-width: 37.5rem) {
+      .conversation .conversation__box {
+        margin-top: 3.8rem;
+        width: 33rem;
+        height: 23rem;
+        padding: 0;
+        padding: 5.5rem 2.4rem; } }
     .conversation .conversation__box p {
       font-family: "Arial";
       width: 72.5rem;
@@ -108,11 +111,25 @@ html {
       overflow: hidden;
       color: #5E3F15;
       opacity: 0; }
+      @media (max-width: 37.5rem) {
+        .conversation .conversation__box p {
+          font-size: 1.8rem;
+          width: 27rem; } }
     .conversation .conversation__box-text-1 {
       opacity: 0;
       animation: type 1s steps(40, end);
       animation-fill-mode: forwards; }
     .conversation .conversation__box-text-2 {
+      opacity: 0;
+      animation: type 1s steps(40, end);
+      animation-delay: 1.2s;
+      animation-fill-mode: forwards; }
+    .conversation .conversation__box-text-3 {
+      opacity: 0;
+      animation: type 1s steps(40, end);
+      animation-delay: 1.2s;
+      animation-fill-mode: forwards; }
+    .conversation .conversation__box-text-4 {
       opacity: 0;
       animation: type 1s steps(40, end);
       animation-delay: 1.2s;
@@ -130,12 +147,35 @@ html {
       text-align: center;
       border-radius: 1rem;
       cursor: pointer; }
+      @media (max-width: 37.5rem) {
+        .conversation .conversation__box-option {
+          width: 26rem;
+          height: 6.5rem;
+          position: relative;
+          font-size: 1.8rem;
+          margin: 0; } }
       .conversation .conversation__box-option-1 {
         left: 5.5rem;
         line-height: 8.5rem; }
+        @media (max-width: 37.5rem) {
+          .conversation .conversation__box-option-1 {
+            line-height: 2rem;
+            left: 0;
+            color: white;
+            text-align: left;
+            padding: 1.2rem 3.8rem;
+            transform: translateX(0.7rem) translateY(-1.8rem); } }
       .conversation .conversation__box-option-2 {
         left: 44.5rem;
         line-height: 8.5rem; }
+        @media (max-width: 37.5rem) {
+          .conversation .conversation__box-option-2 {
+            line-height: 2rem;
+            left: 0;
+            padding: 1.2rem 3.8rem;
+            text-align: left;
+            margin-top: 2.6rem;
+            transform: translateX(0.7rem) translateY(-1.8rem); } }
 
 .conversation-box__btn {
   font-size: 7.2rem;
@@ -143,6 +183,11 @@ html {
   position: absolute;
   top: 9rem;
   right: 1rem; }
+  @media (max-width: 37.5rem) {
+    .conversation-box__btn {
+      top: 16.5rem;
+      right: .5rem;
+      font-size: 6rem; } }
 
 .identity {
   font-family: "Arial";
@@ -154,6 +199,12 @@ html {
   position: absolute;
   top: -18%;
   left: 2%; }
+  @media (max-width: 37.5rem) {
+    .identity {
+      font-size: 2rem;
+      padding: .6rem 1.7rem;
+      top: -10%;
+      left: 5%; } }
 
 .page {
   width: 100%;
@@ -977,7 +1028,7 @@ html {
       margin-top: 7rem;
       position: absolute;
       z-index: 2; }
-      @media (max-width: 36rem) {
+      @media (max-width: 37.5rem) {
         .header__block-img_shade-img {
           width: 360px;
           height: 191px;
@@ -990,7 +1041,7 @@ html {
       transform: rotate(1deg) translateX(2rem);
       z-index: 1;
       margin-top: 8rem; }
-      @media (max-width: 36rem) {
+      @media (max-width: 37.5rem) {
         .header__block-img_shade-shade {
           width: 0;
           height: 0; } }
@@ -999,16 +1050,16 @@ html {
       text-transform: uppercase;
       backface-visibility: hidden;
       padding-top: 48rem; }
-      @media (max-width: 36rem) {
+      @media (max-width: 37.5rem) {
         .header__block-tittle {
           padding-top: 33.9rem; } }
       .header__block-tittle-main {
         color: #5E3F15;
         font-size: 3rem;
         letter-spacing: .159rem; }
-        @media (max-width: 36rem) {
+        @media (max-width: 37.5rem) {
           .header__block-tittle-main {
-            font-size: 2.5rem;
+            font-size: 2.0rem;
             letter-spacing: .062rem;
             margin: 0 3.9rem; } }
       .header__block-tittle-sub {
@@ -1016,7 +1067,7 @@ html {
         color: #86663C;
         font-size: 2.3rem;
         letter-spacing: .057rem; }
-        @media (max-width: 36rem) {
+        @media (max-width: 37.5rem) {
           .header__block-tittle-sub {
             font-size: 1.8rem;
             letter-spacing: .045rem;
@@ -1034,7 +1085,7 @@ html {
       text-decoration: none;
       color: #fff;
       cursor: pointer; }
-      @media (max-width: 36rem) {
+      @media (max-width: 37.5rem) {
         .header__block-btn {
           margin: 3.9rem 7.25rem 0;
           width: 21.5rem;

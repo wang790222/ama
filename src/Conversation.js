@@ -3,9 +3,15 @@ import style from './style.css';
 
 const Conversation = (props) => {
   const [route, setRoute] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
   const thisDiv = useRef(null);
   useEffect(() => {
     thisDiv.current.focus();
+    console.log("width: " + thisDiv.current.clientWidth);
+    if (thisDiv.current.clientWidth <= 375) {
+      setIsMobile(true);
+    }
   }, [route]);
   
   let images = [
