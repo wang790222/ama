@@ -67,7 +67,12 @@ html {
     height: 3.6rem;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 0.8s steps(18); }
+    animation: typing 0.8s steps(18);
+    font-size: 3rem; }
+    @media (max-width: 37.5rem) {
+      .one-line__info-insert {
+        font-size: 2rem;
+        left: 9%; } }
 
 .conversation {
   width: 100vw;

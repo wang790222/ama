@@ -36,5 +36,11 @@
     overflow: hidden;
     white-space: nowrap;
     animation: typing .8s steps(18);
+    font-size: 3rem;
+
+    @include respond(phone) {
+      font-size: 2rem;
+      left: 9%;
+    }
   }
 }
