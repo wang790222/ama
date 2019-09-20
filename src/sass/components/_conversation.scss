@@ -13,7 +13,9 @@
     padding-top: 7rem;
 
     @include respond(tablet) {
-      width: 95%;
+      padding-top: 5rem;
+      width: 70vw;
+      height: 50vh;
     }
 
     @include respond(phone) {
@@ -36,9 +38,9 @@
 
     @include respond(tablet) {
       margin-top: 3.8rem;
-      width: 70vw;
-      height: 27vh;
-      padding: 4.5rem 2.2rem;
+      width: 60rem;
+      height: 25rem;
+      padding: 5.5rem 9rem;
     }
 
     @include respond(phone) {
@@ -57,6 +59,11 @@
       overflow: hidden;
       color: #5E3F15;
       opacity: 0;
+
+      @include respond(tablet) {
+        font-size: 2.5rem;
+        width: 50rem;
+      }
 
       @include respond(phone) {
         font-size: 1.8rem;
@@ -107,8 +114,9 @@
 
       @include respond(tablet) {
         position: relative;
-        width: 100%;
-        font-size: 2.4rem;
+        width: 36rem;
+        font-size: 2rem;
+        height: 6rem;
       }
 
       @include respond(phone) {
@@ -126,6 +134,9 @@
         @include respond(tablet) {
           left: 0;
           margin-bottom: 2.5rem;
+          line-height: 6rem;
+          padding: 0;
+          transform: translateX(2.8rem);
         }
 
         @include respond(phone) {
@@ -145,6 +156,9 @@
 
         @include respond(tablet) {
           left: 0;
+          line-height: 6rem;
+          padding: 0;
+          transform: translateX(2.8rem);
         }
 
         @include respond(phone) {
@@ -168,8 +182,9 @@
   right: 1rem;
 
   @include respond(tablet) {
-    top: 20rem;
+    top: 18.5rem;
     right: 1.5rem;
+    font-size: 5rem;
   }
 
   @include respond(phone) {
@@ -191,8 +206,10 @@
   left: 2%;
 
   @include respond(tablet) {
-    top: -12.5%;
-    left: 3%;
+    font-size: 2rem;
+    padding: .6rem 1.7rem;
+    top: -10%;
+    left: 5%;
   }
 
   @include respond(phone) {
