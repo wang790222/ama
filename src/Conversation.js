@@ -8,7 +8,7 @@ const Conversation = (props) => {
   const thisDiv = useRef(null);
   useEffect(() => {
     thisDiv.current.focus();
-    if (thisDiv.current.clientWidth <= 375) {
+    if (thisDiv.current.clientWidth <= 900) {
       setIsMobile(true);
     }
   }, [route]);

@@ -18,6 +18,11 @@
     animation: typing .5s steps(15);
     font-size: 3rem;
 
+    @include respond(tablet) {
+      font-size: 2.75rem;
+      left: 35%;
+    }
+
     @include respond(phone) {
       font-size: 2.5rem;
       left: 21.5%;
@@ -37,6 +42,11 @@
     white-space: nowrap;
     animation: typing .8s steps(18);
     font-size: 3rem;
+
+    @include respond(tablet) {
+      font-size: 2.6rem;
+      left: 25%;
+    }
 
     @include respond(phone) {
       font-size: 2rem;
