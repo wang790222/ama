@@ -278,19 +278,20 @@ html {
       text-align: center;
       padding-top: 10rem; }
       .page__block-1 h1 {
-        font-size: 6.4rem; }
+        font-size: 4.8rem; }
       .page__block-1 h2 {
-        font-size: 4rem; }
+        font-size: 3rem; }
     .page__block-2 {
       width: 75rem;
       height: 30rem;
       background-color: grey;
       margin-top: 6rem; }
     .page__block-3 {
-      width: 75rem;
-      font-size: 2.5rem;
+      width: 70rem;
+      font-size: 1.8rem;
       padding: 0;
-      margin-top: 6rem; }
+      margin-top: 6rem;
+      line-height: 3.5rem; }
     .page__block-4 {
       width: 20rem;
       height: 5rem;
@@ -299,6 +300,8 @@ html {
       margin-top: 5rem; }
       .page__block-4-btn {
         font-size: 2rem;
+        letter-spacing: .1rem;
+        line-height: 1.9rem;
         text-align: center;
         line-height: 5rem;
         cursor: pointer; }
@@ -314,7 +317,7 @@ html {
         bottom: 0;
         left: 0;
         right: 0;
-        width: 37rem;
+        width: 37.6rem;
         height: 10rem;
         margin: auto; }
         .page__block-5-content-cube {
@@ -328,12 +331,15 @@ html {
           float: right; }
           .page__block-5-content-text p {
             font-size: 4rem;
+            letter-spacing: .1rem;
             text-align: center;
             line-height: 10rem;
             color: white; }
     .page__block-6 {
       width: 100rem;
+      height: 80rem;
       position: fixed;
+      top: 100px;
       left: 0;
       right: 0;
       bottom: 0;
@@ -343,8 +349,8 @@ html {
       overflow: scroll; }
       .page__block-6-close {
         position: absolute;
-        top: 1.6rem;
-        left: 91.4rem;
+        top: 3rem;
+        left: 91.2rem;
         background-color: #C8C8C8;
         width: 5rem;
         height: 5rem;
@@ -359,7 +365,8 @@ html {
       .page__block-6-text {
         width: 75rem; }
       .page__block-6 p {
-        font-size: 2.5rem; }
+        font-size: 1.8rem;
+        line-height: 3.5rem; }
     .page__block-7 {
       width: 86rem;
       height: 15rem;
@@ -376,12 +383,14 @@ html {
         border: .3rem solid;
         border-radius: 1rem;
         float: right;
-        padding: 2.5rem 4rem; }
+        padding: 2.5rem 4rem;
+        margin-top: -.5rem; }
         .page__block-7-text-box-text {
-          width: 60rem;
           height: 10rem; }
         .page__block-7-text-box p {
-          font-size: 2.6rem;
+          width: 60rem;
+          font-size: 2.4rem;
+          line-height: 3.5rem;
           text-align: left; }
     .page__block-8 {
       width: 86rem;
@@ -396,14 +405,15 @@ html {
         background-color: #C8C8C8;
         color: black;
         border-radius: 1rem;
-        font-size: 2.4rem;
+        font-size: 2rem;
         text-align: center;
         line-height: 6rem;
+        letter-spacing: .1rem;
         cursor: pointer; }
     .page__block-10 {
       margin: 8rem auto;
       width: 122rem;
-      border-top: .063rem solid;
+      border-top: .3rem solid;
       color: #BDBDBD; }
     .page__block-11 {
       width: 86rem;
@@ -415,17 +425,19 @@ html {
       text-align: center;
       margin-top: 6rem; }
       .page__block-12 p {
-        font-size: 3.7rem; }
+        font-size: 3rem;
+        letter-spacing: .1rem; }
     .page__block-13 {
-      width: 75rem;
+      width: 70rem;
       text-align: left;
       margin-top: 4rem; }
       .page__block-13 p {
-        font-size: 2.5rem; }
+        font-size: 1.8rem;
+        line-height: 3.5rem; }
     .page__block-14 {
       margin: 8rem auto 0;
       width: 122rem;
-      border-top: .063rem solid;
+      border-top: .3rem solid;
       color: #BDBDBD; }
     .page__block-15 {
       width: 86rem;
@@ -443,12 +455,12 @@ html {
         border: .3rem solid;
         border-radius: 1rem;
         float: right;
-        padding: 2.5rem 4rem; }
-        .page__block-15-text-box-text {
-          width: 60rem;
-          height: 10rem; }
+        padding: 2.5rem 4rem;
+        margin-top: -.5rem; }
         .page__block-15-text-box p {
-          font-size: 2.6rem;
+          width: 60rem;
+          font-size: 2.4rem;
+          line-height: 3.5rem;
           text-align: left; }
     .page__block-16 {
       width: 86rem;
@@ -456,17 +468,19 @@ html {
       background-color: #C8C8C8;
       margin-top: 6rem; }
     .page__block-17 {
-      width: 59.8rem;
+      width: 80rem;
       text-align: left;
       margin-top: 6rem; }
       .page__block-17 p {
-        font-size: 3.7rem; }
+        font-size: 3rem;
+        letter-spacing: .1rem; }
     .page__block-18 {
-      width: 75rem;
+      width: 70rem;
       text-align: left;
       margin-top: 4rem; }
       .page__block-18 p {
-        font-size: 2.5rem; }
+        font-size: 1.8rem;
+        line-height: 3.5rem; }
     .page__block-19 {
       width: 100vw;
       height: 82.5rem;
@@ -478,13 +492,15 @@ html {
         padding-top: 10rem;
         margin: 0 auto; }
         .page__block-19-title p {
-          font-size: 3.7rem; }
+          font-size: 3rem;
+          letter-spacing: .1rem; }
       .page__block-19-text {
-        width: 75rem;
+        width: 70rem;
         text-align: left;
         margin: 4rem auto 0; }
         .page__block-19-text p {
-          font-size: 2.5rem; }
+          font-size: 1.8rem;
+          line-height: 3.5rem; }
       .page__block-19-video {
         width: 65rem;
         height: 36.5rem;
@@ -511,53 +527,58 @@ html {
           background-color: #C8C8C8;
           float: left; }
         .page__block-20-content-text {
-          width: 36rem;
+          width: 36.9rem;
           height: 10rem;
           float: right; }
           .page__block-20-content-text p {
             font-size: 4rem;
+            letter-spacing: .1rem;
             text-align: center;
             line-height: 10rem;
             color: white; }
     .page__block-21 {
-      width: 67.4rem;
+      width: 74.4rem;
       text-align: left;
       margin-top: 10rem; }
       .page__block-21 p {
-        font-size: 3.7rem; }
+        font-size: 3rem;
+        letter-spacing: .1rem; }
     .page__block-22 {
       width: 86rem;
       height: 50rem;
       background-color: #C8C8C8;
       margin-top: 6rem; }
     .page__block-23 {
-      width: 75rem;
+      width: 70rem;
       text-align: left;
       margin-top: 6rem; }
       .page__block-23 p {
-        font-size: 2.5rem; }
+        font-size: 1.8rem;
+        line-height: 3.5rem; }
     .page__block-24 {
       margin: 8rem auto 0;
       width: 122rem;
-      border-top: .063rem solid;
+      border-top: .3rem solid;
       color: #BDBDBD; }
     .page__block-25 {
-      width: 71.2rem;
+      width: 63.4rem;
       text-align: left;
       margin-top: 10rem; }
       .page__block-25 p {
-        font-size: 3.7rem; }
+        font-size: 3rem;
+        letter-spacing: .1rem; }
     .page__block-26 {
       width: 86rem;
       height: 50rem;
       background-color: #C8C8C8;
       margin-top: 6rem; }
     .page__block-27 {
-      width: 75rem;
+      width: 70rem;
       text-align: left;
       margin-top: 6rem; }
       .page__block-27 p {
-        font-size: 2.5rem; }
+        font-size: 1.8rem;
+        line-height: 3.5rem; }
     .page__block-28 {
       width: 100vw;
       height: 25rem;
@@ -579,11 +600,12 @@ html {
           background-color: #C8C8C8;
           float: left; }
         .page__block-28-content-text {
-          width: 36rem;
           height: 10rem;
           float: right; }
           .page__block-28-content-text p {
+            width: 36.9rem;
             font-size: 4rem;
+            letter-spacing: .1rem;
             text-align: center;
             line-height: 10rem;
             color: white; }
@@ -592,7 +614,8 @@ html {
       text-align: center;
       margin-top: 10rem; }
       .page__block-29 p {
-        font-size: 3.7rem; }
+        font-size: 3rem;
+        letter-spacing: .1rem; }
     .page__block-30 {
       width: 52.5rem;
       text-align: left;
@@ -629,31 +652,33 @@ html {
       background-color: #C8C8C8;
       margin-top: 6rem; }
     .page__block-35 {
-      width: 75rem;
+      width: 70rem;
       text-align: left;
       margin-top: 6rem; }
       .page__block-35 p {
-        font-size: 2.5rem; }
+        font-size: 1.8rem;
+        line-height: 3.5rem; }
     .page__block-36 {
       margin: 8rem auto 0;
       width: 122rem;
-      border-top: .063rem solid;
+      border-top: .3rem solid;
       color: #BDBDBD; }
     .page__block-37 {
       width: 67.4rem;
       text-align: center;
       margin-top: 10rem; }
       .page__block-37 p {
-        font-size: 3.7rem; }
+        font-size: 3rem;
+        letter-spacing: .1rem; }
     .page__block-38 {
       width: 82.5rem;
-      text-align: left;
+      text-align: center;
       margin-top: 6rem; }
       .page__block-38 p {
-        font-size: 2.5rem; }
+        font-size: 2.2rem; }
     .page__block-39 {
       width: 49.6rem;
-      text-align: left;
+      text-align: center;
       margin-top: 1.5rem; }
       .page__block-39 p {
         font-size: 1.6rem;
@@ -682,15 +707,16 @@ html {
       background-color: #C8C8C8;
       margin-top: 6rem; }
     .page__block-43 {
-      width: 75rem;
+      width: 70rem;
       text-align: left;
       margin-top: 6rem; }
       .page__block-43 p {
-        font-size: 2.5rem; }
+        font-size: 1.8rem;
+        line-height: 3.5rem; }
     .page__block-44 {
       margin: 8rem auto 0;
       width: 122rem;
-      border-top: .063rem solid;
+      border-top: .3rem solid;
       color: #BDBDBD; }
     .page__block-45 {
       width: 86rem;
@@ -708,12 +734,11 @@ html {
         border: .3rem solid;
         border-radius: 1rem;
         float: right;
-        padding: 2rem 3.5rem; }
-        .page__block-45-text-box-text {
-          width: 60rem;
-          height: 10rem; }
+        padding: 2rem 3.5rem;
+        margin-top: -.5rem; }
         .page__block-45-text-box p {
-          font-size: 2.6rem;
+          width: 60rem;
+          font-size: 2.4rem;
           text-align: left; }
     .page__block-46 {
       width: 86rem;
@@ -721,17 +746,20 @@ html {
       background-color: #C8C8C8;
       margin-top: 6rem; }
     .page__block-47 {
-      width: 51.8rem;
-      text-align: left;
+      width: 65.8rem;
+      text-align: center;
       margin-top: 6rem; }
       .page__block-47 p {
-        font-size: 3.7rem; }
+        font-size: 3rem;
+        letter-spacing: .1rem; }
     .page__block-48 {
-      width: 75rem;
+      width: 70rem;
       text-align: left;
       margin-top: 4rem; }
       .page__block-48 p {
-        font-size: 2.5rem; }
+        font-size: 1.8rem;
+        letter-spacing: .1rem;
+        line-height: 3.5rem; }
     .page__block-49 {
       width: 100vw;
       height: 82.5rem;
@@ -743,13 +771,15 @@ html {
         padding-top: 10rem;
         margin: 0 auto; }
         .page__block-49-title p {
-          font-size: 3.7rem; }
+          font-size: 3rem;
+          letter-spacing: .1rem; }
       .page__block-49-text {
-        width: 75rem;
+        width: 70rem;
         text-align: left;
         margin: 4rem auto 0; }
         .page__block-49-text p {
-          font-size: 2.5rem; }
+          font-size: 1.8rem;
+          line-height: 3.5rem; }
       .page__block-49-video {
         width: 65rem;
         height: 36.5rem;
@@ -776,11 +806,12 @@ html {
           background-color: #C8C8C8;
           float: left; }
         .page__block-50-content-text {
-          width: 45rem;
+          width: 47rem;
           height: 10rem;
           float: right; }
           .page__block-50-content-text p {
             font-size: 4rem;
+            letter-spacing: .1rem;
             text-align: center;
             line-height: 10rem;
             color: white; }
@@ -805,12 +836,13 @@ html {
           border: .3rem solid;
           border-radius: 1rem;
           float: right;
-          padding: 2rem 3.5rem; }
+          padding: 2rem 3.5rem;
+          margin-top: -.5rem; }
           .page__block-51-content-text-box-text {
             width: 60rem;
             height: 10rem; }
           .page__block-51-content-text-box p {
-            font-size: 2.6rem;
+            font-size: 2.4rem;
             text-align: left; }
       .page__block-51-img {
         width: 86rem;
@@ -822,31 +854,35 @@ html {
       text-align: center;
       margin-top: 10rem; }
       .page__block-52 p {
-        font-size: 3.7rem; }
+        font-size: 3rem;
+        letter-spacing: .1rem; }
     .page__block-53 {
-      width: 75rem;
+      width: 70rem;
       text-align: left;
       margin-top: 4rem; }
       .page__block-53 p {
-        font-size: 2.5rem; }
+        font-size: 1.8rem;
+        line-height: 3.5rem; }
     .page__block-54 {
       width: 100vw;
       height: 101.7rem;
       margin-top: 8rem;
       background-color: #9DDDE3; }
       .page__block-54-title {
-        width: 55.6rem;
+        width: 55.8rem;
         text-align: left;
         padding-top: 10rem;
         margin: 0 auto; }
         .page__block-54-title p {
-          font-size: 3.7rem; }
+          font-size: 3rem;
+          letter-spacing: .1rem; }
       .page__block-54-text {
-        width: 75rem;
+        width: 70rem;
         text-align: left;
         margin: 4rem auto 0; }
         .page__block-54-text p {
-          font-size: 2.5rem; }
+          font-size: 1.8rem;
+          line-height: 3.5rem; }
       .page__block-54-video-grid {
         width: 111rem;
         height: 42.2rem;
@@ -859,21 +895,22 @@ html {
           background-color: #BDBDBD; }
     .page__block-55 {
       width: 100vw;
-      height: 125rem;
-      background-color: white; }
+      height: 125rem; }
       .page__block-55-title {
         width: 66.7rem;
         text-align: center;
         padding-top: 10rem;
         margin: 0 auto; }
         .page__block-55-title p {
-          font-size: 3.7rem; }
+          font-size: 3rem;
+          letter-spacing: .1rem; }
       .page__block-55-text {
-        width: 75rem;
-        text-align: left;
+        width: 70rem;
+        text-align: center;
         margin: 4rem auto 0; }
         .page__block-55-text p {
-          font-size: 2.5rem; }
+          font-size: 2.2rem;
+          letter-spacing: .1rem; }
       .page__block-55-grid {
         width: 116.2rem;
         height: 86.5rem;
@@ -908,31 +945,48 @@ html {
             text-align: center;
             line-height: 4.1rem;
             cursor: pointer; }
-    .page__block-56 {
-      width: 100vw;
-      height: 85rem;
-      background-color: #FFF5D8; }
     .page__block-57 {
       width: 100vw;
-      height: 49.7rem;
+      height: 67.3rem;
       background-color: #F06F04;
       color: white; }
-      .page__block-57-title {
-        width: 15.6rem;
-        text-align: center;
+      .page__block-57-content {
+        width: 78rem;
+        height: 15rem;
         padding-top: 10rem;
         margin: 0 auto; }
-        .page__block-57-title p {
-          font-size: 3.7rem; }
+        .page__block-57-content-cube {
+          margin: auto;
+          width: 14rem;
+          height: 14rem;
+          background-color: #C8C8C8;
+          float: left; }
+        .page__block-57-content-text-box {
+          width: 60rem;
+          height: 10rem;
+          border: .4rem solid #828282;
+          border-radius: 4rem;
+          float: right;
+          padding: 3rem 3.8rem;
+          margin-top: 15px; }
+          .page__block-57-content-text-box p {
+            width: 55rem;
+            font-size: 2.8rem;
+            letter-spacing: .1rem;
+            text-align: left;
+            font-weight: 500;
+            color: black; }
       .page__block-57-text {
         width: 75rem;
         text-align: left;
-        margin: 3.6rem auto 0; }
+        margin: 13rem auto 0; }
         .page__block-57-text p {
-          font-size: 2.5rem; }
+          font-size: 2.2rem;
+          line-height: 3.5rem;
+          letter-spacing: .1rem; }
       .page__block-57-btn {
         cursor: pointer;
-        width: 25.5rem;
+        width: 25rem;
         height: 7rem;
         border-radius: 1rem;
         text-align: center;
@@ -940,12 +994,13 @@ html {
         background-color: #FFFFFF;
         margin: 5.7rem auto 0;
         color: #F06F04;
-        font-size: 2.9rem; }
+        font-size: 2.8rem;
+        letter-spacing: .1rem; }
     .page__block-58 {
       width: 100vw;
       height: 80rem;
       background-color: #FFF5D8;
-      padding-top: 17.1rem; }
+      padding: 10rem 0; }
       .page__block-58-pic {
         width: 75rem;
         height: 40.9rem;
@@ -953,15 +1008,45 @@ html {
         margin: 0 auto; }
       .page__block-58-btn {
         cursor: pointer;
-        width: 31.7rem;
-        height: 8.8rem;
+        width: 25rem;
+        height: 7rem;
         border-radius: 1rem;
         text-align: center;
-        line-height: 8.8rem;
+        line-height: 7rem;
         background-color: #C8C8C8;
         margin: 9.5rem auto 0;
         color: black;
-        font-size: 3.7rem; }
+        font-size: 3rem;
+        letter-spacing: .1rem; }
+    .page__block-59 {
+      width: 100vw;
+      height: 65rem;
+      background-color: #1DAEDF;
+      padding-top: 6rem; }
+      .page__block-59-pic {
+        width: 25rem;
+        height: 22rem;
+        margin: 0 auto;
+        background-image: url("./img/logo-02.png"); }
+      .page__block-59-icon {
+        font-size: 5rem;
+        color: white;
+        text-align: center; }
+        .page__block-59-icon ion-icon {
+          cursor: pointer; }
+        .page__block-59-icon :not(:last-child) {
+          margin-right: 4rem; }
+      .page__block-59-line {
+        text-align: center;
+        width: 56rem;
+        border-top: .3rem solid #6DD5F9;
+        margin: 3rem auto; }
+      .page__block-59-name {
+        width: 44rem; }
+      .page__block-59-textbox {
+        font-size: 2rem;
+        line-height: 2.2rem;
+        color: white; }
 
 .hamburger__checkbox {
   display: none; }
@@ -1039,9 +1124,9 @@ html {
     position: absolute;
     left: 0; }
   .hamburger__icon::before {
-    top: -.5rem; }
+    top: -.8rem; }
   .hamburger__icon::after {
-    top: .5rem; }
+    top: .8rem; }
 
 .hamburger__checkbox:checked ~ .hamburger__button {
   background-color: transparent; }
@@ -1181,6 +1266,31 @@ html {
     .row-3 [class^="col-"]:not(:last-child) {
       margin-right: 13rem; }
   .row-3 .col-1-of-3 {
+    width: calc((100% - 2 * 13rem) / 3); }
+  .row-3-2 {
+    max-width: 44rem;
+    margin: 0 auto; }
+    .row-3-2 [class^="col-"] {
+      float: left; }
+      .row-3-2 [class^="col-"]:not(:last-child) {
+        margin-right: 0; }
+    .row-3-2-col-1-of-3 {
+      width: 12rem; }
+
+.row-3-2 {
+  max-width: 87rem;
+  margin: 0 auto; }
+  .row-3-2:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row-3-2:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row-3-2 [class^="col-"] {
+    float: left; }
+    .row-3-2 [class^="col-"]:not(:last-child) {
+      margin-right: 13rem; }
+  .row-3-2 .col-1-of-3 {
     width: calc((100% - 2 * 13rem) / 3); }
 
 .row-4 {

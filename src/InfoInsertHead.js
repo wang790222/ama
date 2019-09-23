@@ -36,7 +36,7 @@ const InfoInsertHead = (props) => {
 
   };
 
-  let pageBackgroundColor =  (popup) ? "#333333" : "white";
+  let pageBackgroundColor =  (popup) ? "#333333" : "#FFF5C5";
 
   const dynamicPageStyle = {
     backgroundColor: pageBackgroundColor,
@@ -451,10 +451,16 @@ const InfoInsertHead = (props) => {
               </div>
             </div>
           </div>
-          <div className="page__block page__block-56"></div>
           <div className="page__block page__block-57">
-            <div className="page__block-57-title">
-              <p>問卷下載</p>
+            <div className="page__block-57-content">
+              <div className="page__block-57-content-cube">
+                &nbsp;
+              </div>
+              <div className="page__block-57-content-text-box">
+                <div className="page__block-57-content-box-text">
+                  <p>想了解更多，趕緊來下載完整版問卷吧！</p>
+                </div>
+              </div>
             </div>
             <div className="page__block-57-text">
               <p>這份「高中職生國族認同調查」的問卷，總共包含36個問題，我們僅挑選其中10個問題呈現於網頁中。若您對整份問卷結果有興趣，歡迎直接下載。另外，我們也邀請了五位政治界、媒體界的朋友，和大家分享他們看過這份青少年的國族調查後，有什麼觀察和思考。
@@ -470,6 +476,32 @@ const InfoInsertHead = (props) => {
             <div className="page__block-58-btn">
               分享
             </div>
+          </div>
+          <div className="page__block page__block-59">
+            <div className="page__block-59-pic">
+            </div>
+            <div className="page__block-59-icon">
+              <ion-icon name="logo-facebook" className="page__block-59-icon-1"></ion-icon>
+              <ion-icon name="logo-youtube" className="page__block-59-icon-2"></ion-icon>
+              <ion-icon name="logo-instagram" className="page__block-59-icon-3"></ion-icon>
+            </div>
+            <div className="page__block-59-line">&nbsp;</div>
+            <div className="row-3-2">
+              <div className="row-3-2-col-1-of-3 page__block-59-textbox">
+                <p>監製：於蓓華</p>
+                <p>督導：舒逸琪</p>
+              </div>
+              <div className="row-3-2-col-1-of-3 page__block-59-textbox">
+                <p>製作人：賴彥如</p>
+                <p>影音導演：朱孝權</p>
+              </div>
+              <div className="row-3-2-col-1-of-3 page__block-59-textbox">
+                <p>企劃：王柔婷</p>
+                <p>社群：林孟勳</p>
+              </div>
+            </div>
+            <p>網頁設計工程：通點設計</p>
+            <p>財團法人公共電視文化事業基金會 版權所有 All Contents Copyright, Taiwan Public Television Service.</p>
           </div>
         </div>
       );

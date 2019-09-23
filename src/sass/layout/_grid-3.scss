@@ -17,6 +17,22 @@
   }
 
   .col-1-of-3 {
-   width: calc((100% - 2 * #{$gutter-horizontal-3}) / 3);
+    width: calc((100% - 2 * #{$gutter-horizontal-3}) / 3);
+  }
+
+  &-2 {
+    max-width: 44rem;
+    margin: 0 auto;
+    [class^="col-"] {
+      float: left;
+      
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    &-col-1-of-3 {
+      width: 12rem;
+    }
   }
 }
