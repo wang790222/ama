@@ -10,6 +10,7 @@ const Conversation = (props) => {
     thisDiv.current.focus();
     if (thisDiv.current.clientWidth <= 900) {
       setIsMobile(true);
+      props.setIsMobile(true);
     }
   }, [route]);
   

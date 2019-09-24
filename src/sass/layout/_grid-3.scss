@@ -1,6 +1,10 @@
 .row-3 {
   max-width: 86rem;
   margin: 0 auto;
+
+  @include respond(phone) {
+    margin: 4rem auto 6rem;
+  }
   
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
@@ -10,29 +14,26 @@
 
   [class^="col-"] {
     float: left;
+
+    @include respond(phone) {
+      float: none;
+      //margin: 0 auto;
+    }
     
     &:not(:last-child) {
       margin-right: $gutter-horizontal-3;
+
+      @include respond(phone) {
+        margin-right: inherit;
+      }
+    }
+
+    @include respond(phone) {
+      width: 20rem !important;
     }
   }
 
   .col-1-of-3 {
     width: calc((100% - 2 * #{$gutter-horizontal-3}) / 3);
-  }
-
-  &-2 {
-    max-width: 44rem;
-    margin: 0 auto;
-    [class^="col-"] {
-      float: left;
-      
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-    }
-
-    &-col-1-of-3 {
-      width: 12rem;
-    }
   }
 }

@@ -10,6 +10,7 @@ var timerId = null;
 const Dialogue = (props) => {
   const [count, setCount] = useState(0);
   const [opening, setOpening] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     if (count === 0) {
@@ -41,6 +42,12 @@ const Dialogue = (props) => {
     }
   };
 
+  const handleSetIsMobile = (flag) => {
+    if (flag) {
+      setIsMobile(true);
+    }
+  };
+
   const renderBlock = () => {
     if(!count) {
       return <TheDay />;
@@ -51,10 +58,11 @@ const Dialogue = (props) => {
             index={count}
             handleOnClick={handleSetCount}
             selectRoute={selectRoute}
+            setIsMobile={handleSetIsMobile}
           />
         );
       } else {
-        return (<InfoInsertHead />);
+        return (<InfoInsertHead isMobile={isMobile} />);
       }
     }
   }

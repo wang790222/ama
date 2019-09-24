@@ -1,10 +1,7 @@
 .row-3-2 {
-  max-width: 87rem;
-  margin: 0 auto;
-  
-  &:not(:last-child) {
-    margin-bottom: $gutter-vertical;
-  }
+  max-width: 49rem;
+  height: 4.8rem;
+  margin: 4.5rem auto 2rem;
 
   @include clearfix;
 
@@ -12,11 +9,19 @@
     float: left;
     
     &:not(:last-child) {
-      margin-right: $gutter-horizontal-3;
+      margin-right: 4rem;
     }
   }
 
-  .col-1-of-3 {
-   width: calc((100% - 2 * #{$gutter-horizontal-3}) / 3);
+  .col-1-of-3-1 {
+    width: 12rem;
+  }
+
+  .col-1-of-3-2 {
+    width: 16.2rem;
+  }
+
+  .col-1-of-3-3 {
+    width: 12rem;
   }
 }

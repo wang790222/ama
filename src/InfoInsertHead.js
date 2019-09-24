@@ -36,6 +36,35 @@ const InfoInsertHead = (props) => {
 
   };
 
+  const personalComment = (index) => {
+    if (props.isMobile) {
+      return ("在公共事務的討論、決策過程裡青少年不應該總是「被代表」。");
+    } else {
+      return ("在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。");
+    }
+  }
+
+  const showMutipleVideos = (index) => {
+    if (props.isMobile) {
+      return (
+        <div className="page__block-54-video-slides">
+          
+        </div>
+      );
+    } else {
+      return (
+        <div className="page__block-54-video-grid">
+          <div className="page__block-54-video-grid-img">One</div>
+          <div className="page__block-54-video-grid-img">Two</div>
+          <div className="page__block-54-video-grid-img">Thre</div>
+          <div className="page__block-54-video-grid-img">Four</div>
+          <div className="page__block-54-video-grid-img">Five</div>
+          <div className="page__block-54-video-grid-img">Six</div>
+        </div>
+      );
+    }
+  }
+
   let pageBackgroundColor =  (popup) ? "#333333" : "#FFF5C5";
 
   const dynamicPageStyle = {
@@ -341,14 +370,7 @@ const InfoInsertHead = (props) => {
               <p>因為製作「嘿！你是哪裡人？─高中職生國族認同」的專題，「青春發言人」接觸許多來自不同家庭背景的台灣青少年，他們每個人對於自己的身分認同，或者台灣的族群、文化和未來，都各自有非常精采的思考。製作單位精選出幾位青少年的生命故事和想法，邀請你一起聽聽看台灣年輕世代的心聲。
               </p>
             </div>
-            <div className="page__block-54-video-grid">
-              <div className="page__block-54-video-grid-img">One</div>
-              <div className="page__block-54-video-grid-img">Two</div>
-              <div className="page__block-54-video-grid-img">Thre</div>
-              <div className="page__block-54-video-grid-img">Four</div>
-              <div className="page__block-54-video-grid-img">Five</div>
-              <div className="page__block-54-video-grid-img">Six</div>
-            </div>
+            {showMutipleVideos()}
           </div>
           <div className="page__block page__block-55" id="s6">
             <div className="page__block-55-title">
@@ -369,7 +391,7 @@ const InfoInsertHead = (props) => {
                   </div>
                   <div className="page__block-55-grid-person-right-text">
                     <p>
-                    在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。
+                    {personalComment(1)}
                     </p>
                   </div>
                   <div className="page__block-55-grid-person-right-btn">
@@ -387,7 +409,7 @@ const InfoInsertHead = (props) => {
                   </div>
                   <div className="page__block-55-grid-person-right-text">
                     <p>
-                    在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。
+                    {personalComment(1)}
                     </p>
                   </div>
                   <div className="page__block-55-grid-person-right-btn">
@@ -405,7 +427,7 @@ const InfoInsertHead = (props) => {
                   </div>
                   <div className="page__block-55-grid-person-right-text">
                     <p>
-                    在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。
+                    {personalComment(1)}
                     </p>
                   </div>
                   <div className="page__block-55-grid-person-right-btn">
@@ -423,7 +445,7 @@ const InfoInsertHead = (props) => {
                   </div>
                   <div className="page__block-55-grid-person-right-text">
                     <p>
-                    在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。
+                    {personalComment(1)}
                     </p>
                   </div>
                   <div className="page__block-55-grid-person-right-btn">
@@ -441,7 +463,7 @@ const InfoInsertHead = (props) => {
                   </div>
                   <div className="page__block-55-grid-person-right-text">
                     <p>
-                    在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。
+                    {personalComment(1)}
                     </p>
                   </div>
                   <div className="page__block-55-grid-person-right-btn">
@@ -473,6 +495,9 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-58">
             <div className="page__block-58-pic">
             </div>
+            <div className="page__block-58-share">
+              <p>分享這份報告給更多人知道！</p>
+            </div>
             <div className="page__block-58-btn">
               分享
             </div>
@@ -487,21 +512,25 @@ const InfoInsertHead = (props) => {
             </div>
             <div className="page__block-59-line">&nbsp;</div>
             <div className="row-3-2">
-              <div className="row-3-2-col-1-of-3 page__block-59-textbox">
+              <div className="col-1-of-3-1 page__block-59-textbox">
                 <p>監製：於蓓華</p>
                 <p>督導：舒逸琪</p>
               </div>
-              <div className="row-3-2-col-1-of-3 page__block-59-textbox">
+              <div className="col-1-of-3-2 page__block-59-textbox">
                 <p>製作人：賴彥如</p>
                 <p>影音導演：朱孝權</p>
               </div>
-              <div className="row-3-2-col-1-of-3 page__block-59-textbox">
+              <div className="col-1-of-3-3 page__block-59-textbox">
                 <p>企劃：王柔婷</p>
                 <p>社群：林孟勳</p>
               </div>
             </div>
-            <p>網頁設計工程：通點設計</p>
-            <p>財團法人公共電視文化事業基金會 版權所有 All Contents Copyright, Taiwan Public Television Service.</p>
+            <div className="col-1-of-3-3 page__block-59-text page__block-59-text-1">
+                <p>網頁設計工程：通點設計</p>
+            </div>
+            <div className="col-1-of-3-3 page__block-59-text page__block-59-text-2">
+                <p>財團法人公共電視文化事業基金會 版權所有 All Contents Copyright, Taiwan Public Television Service.</p>
+            </div>
           </div>
         </div>
       );

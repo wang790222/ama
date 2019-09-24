@@ -13,12 +13,30 @@
       width: 51.3rem;
       text-align: center;
       padding-top: 10rem;
+
+
+      @include respond(phone) {
+        width: 36rem;
+      }
+
       & h1 {
         font-size: 4.8rem;
+
+        @include respond(phone) {
+          line-height: 4.8rem;
+          font-size: 3.6rem;
+          letter-spacing: .1rem;
+        }
       }
 
       & h2 {
         font-size: 3rem;
+
+        @include respond(phone) {
+          line-height: 4.8rem;
+          font-size: 2.6rem;
+          letter-spacing: .1rem;
+        }
       }
     }
 
@@ -27,6 +45,10 @@
       height: 30rem;
       background-color: grey; 
       margin-top: 6rem;
+
+      @include respond(phone) {
+        width: 36rem;
+      }
     }
 
     &-3 {
@@ -35,6 +57,10 @@
       padding: 0;
       margin-top: 6rem;
       line-height: 3.5rem;
+
+      @include respond(phone) {
+        width: 31.2rem;
+      }
     }
 
     &-4 {
@@ -71,11 +97,24 @@
         height: 10rem;
         margin: auto;
 
+        @include respond(phone) {
+          width: 19.8rem;
+          height: 15rem;
+          margin: auto;
+        }
+
         &-cube {
           width: 10rem;
           height: 10rem;
           background-color: #C8C8C8;
           float: left;
+
+          @include respond(phone) {
+            float: none;
+            width: 8rem;
+            height: 8rem;
+            margin: 0 auto;
+          }
         }
   
         &-text {
@@ -83,12 +122,26 @@
           height: 10rem;
           float: right;
 
+          @include respond(phone) {
+            float: none;
+            width: 19.8rem;
+            height: 4rem;
+            padding: 0;
+            text-align: left;
+            margin: 0;
+          }
+
           & p {
             font-size: 4rem;
             letter-spacing: .1rem;
             text-align: center;
             line-height: 10rem; 
             color: white;
+
+            @include respond(phone) {
+              height: 4rem;
+              font-size: 3.2rem;
+            }
           }
         }
       }
@@ -108,6 +161,12 @@
       background-color: white;
       overflow: scroll;
 
+      @include respond(phone) {
+        width: 36rem;
+        padding: 10rem 2.4rem;
+        top: 0;
+      }
+
       &-close {
         position: absolute;
         top: 3rem;
@@ -123,10 +182,19 @@
         margin: 0;
         padding: 0;
         cursor: pointer;
+
+        @include respond(phone) {
+          top: 0;
+          left: 0;
+        }
       }
 
       &-text {
         width: 75rem;
+
+        @include respond(phone) {
+          width: 31.2rem;
+        }
       }
       
       & p {
@@ -140,12 +208,24 @@
       height: 15rem;
       margin-top: 10rem;
 
+      @include respond(phone) {
+        width: 100vw;
+        height: 35rem;
+        margin-top: 8rem;
+      }
+
       &-cube {
         margin: auto;
         width: 14rem;
         height: 14rem;
         background-color: #C8C8C8;
         float: left;
+
+        @include respond(phone) {
+          float: none;
+          width: 12rem;
+          height: 12rem;
+        }
       }
 
       &-text-box {
@@ -157,6 +237,14 @@
         padding: 2.5rem 4rem;
         margin-top: -.5rem;
 
+        @include respond(phone) {
+          float: none;
+          width: 34rem;
+          height: 20rem;
+          margin: 3rem auto 0;
+          padding: 3.3rem 2.6rem;
+        }
+
         &-text {
           height: 10rem;
         }
@@ -166,6 +254,12 @@
           font-size: 2.4rem;
           line-height: 3.5rem;
           text-align: left;
+          
+          @include respond(phone) {
+            width: 28.8rem;
+            font-size: 2.2rem;
+            line-height: 3.2rem;
+          }
         }
       }
     }
@@ -175,11 +269,17 @@
       height: 35rem;
       margin-top: 6rem;
       background-color: #C8C8C8;
+
+      @include respond(phone) {
+        margin-top: 4rem;
+        width: 36rem;
+        height: 28rem;
+      }
     }
 
     &-9 {
       margin-top: 6rem;
-
+      
       &-btn {
         width: 20rem;
         height: 6rem;
@@ -191,6 +291,10 @@
         line-height: 6rem;
         letter-spacing: .1rem;
         cursor: pointer;
+
+        @include respond(phone) {
+          margin: 3rem auto 0;
+        }
       }
     }
 
@@ -199,6 +303,11 @@
       width: 122rem;
       border-top: .3rem solid;
       color: #BDBDBD;
+
+      @include respond(phone) {
+        margin: 6rem auto;
+        width: 32rem;
+      }
     }
 
     &-11 {
@@ -206,6 +315,12 @@
       height: 35rem;
       margin-top: 8rem;
       background-color: #C8C8C8;
+
+      @include respond(phone) {
+        width: 36rem;
+        height: 28rem;
+        margin-top: 6rem;
+      }
     }
 
     &-12 {
@@ -213,9 +328,20 @@
       text-align: center;
       margin-top: 6rem;
 
+      @include respond(phone) {
+        width: 26.3rem;
+        text-align: left;
+        margin-top: 4rem;
+      }
+
       & p {
         font-size: 3rem;
         letter-spacing: .1rem;
+
+        @include respond(phone) {
+          font-size: 2.6rem;
+          line-height: 4rem;
+        }
       }
     }
 
@@ -223,6 +349,10 @@
       width: 70rem;
       text-align: left;
       margin-top: 4rem;
+
+      @include respond(phone) {
+        width: 31.2rem;
+      }
       
       & p {
         font-size: 1.8rem;
@@ -235,6 +365,11 @@
       width: 122rem;
       border-top: .3rem solid;
       color: #BDBDBD;
+
+      @include respond(phone) {
+        width: 32rem;
+        margin: 6rem auto 0;
+      }
     }
 
     &-15 {
@@ -242,12 +377,24 @@
       height: 15rem;
       margin-top: 10rem;
 
+      @include respond(phone) {
+        width: 100vw;
+        height: 35rem;
+        margin-top: 8rem;
+      }
+
       &-cube {
         margin: auto;
         width: 14rem;
         height: 14rem;
         background-color: #C8C8C8;
         float: left;
+
+        @include respond(phone) {
+          float: none;
+          width: 12rem;
+          height: 12rem;
+        }
       }
 
       &-text-box {
@@ -259,11 +406,29 @@
         padding: 2.5rem 4rem;
         margin-top: -.5rem;
 
+        @include respond(phone) {
+          float: none;
+          width: 34rem;
+          height: 23rem;
+          margin: 3rem auto 0;
+          padding: 3.3rem 2.6rem;
+        }
+
+        &-text {
+          height: 10rem;
+        }
+
         & p {
           width: 60rem;
           font-size: 2.4rem;
           line-height: 3.5rem;
           text-align: left;
+          
+          @include respond(phone) {
+            width: 28.8rem;
+            font-size: 2.2rem;
+            line-height: 3.2rem;
+          }
         }
       }
     }
@@ -273,6 +438,12 @@
       height: 35rem;
       background-color: #C8C8C8;
       margin-top: 6rem;
+
+      @include respond(phone) {
+        margin-top: 6.5rem;
+        width: 36rem;
+        height: 58rem;
+      }
     }
 
     &-17 {
@@ -280,9 +451,19 @@
       text-align: left;
       margin-top: 6rem;
 
+      @include respond(phone) {
+        width: 29.8rem;
+        margin-top: 4rem;
+      }
+
       & p {
         font-size: 3rem;
         letter-spacing: .1rem;
+        
+        @include respond(phone) {
+          font-size: 2.6rem;
+          line-height: 4rem;
+        }
       }
     }
 
@@ -290,6 +471,10 @@
       width: 70rem;
       text-align: left;
       margin-top: 4rem;
+
+      @include respond(phone) {
+        width: 31.2rem;
+      }
       
       & p {
         font-size: 1.8rem;
@@ -309,9 +494,19 @@
         padding-top: 10rem;
         margin: 0 auto;
 
+        @include respond(phone) {
+          width: 26.3rem;
+          text-align: left;
+        }
+
         & p {
           font-size: 3rem;
           letter-spacing: .1rem;
+
+          @include respond(phone) {
+            font-size: 2.6rem;
+            line-height: 4rem;
+          }
         }
       } 
       
@@ -319,6 +514,10 @@
         width: 70rem;
         text-align: left;
         margin: 4rem auto 0;
+
+        @include respond(phone) {
+          width: 31.2rem;
+        }
 
         & p {
           font-size: 1.8rem;
@@ -332,6 +531,12 @@
         background-color: #C8C8C8;
         color: black;
         margin: 6rem auto 0;
+
+        @include respond(phone) {
+          margin: 4rem auto 0;
+          width: 36rem;
+          height: 20.2rem;
+        }
       }
     }
 
@@ -339,7 +544,12 @@
       width: 100vw;
       height: 25rem;
       background-color: #828282;
+      margin-top: 10rem;
       position: relative;
+
+      @include respond(phone) {
+        margin-top: -10rem;
+      }
 
       &-content {
         position: absolute;
@@ -347,21 +557,40 @@
         bottom: 0;
         left: 0;
         right: 0;
-        width: 49rem;
+        width: 37.6rem;
         height: 10rem;
         margin: auto;
+
+        @include respond(phone) {
+          width: 29.7rem;
+          height: 15rem;
+          margin: auto;
+        }
 
         &-cube {
           width: 10rem;
           height: 10rem;
           background-color: #C8C8C8;
           float: left;
+
+          @include respond(phone) {
+            float: none;
+            width: 8rem;
+            height: 8rem;
+            margin: 0 auto;
+          }
         }
   
         &-text {
-          width: 36.9rem;
+          width: 27rem;
           height: 10rem;
           float: right;
+
+          @include respond(phone) {
+            float: none;
+            width: 29.7rem;
+            height: 4rem;
+          }
 
           & p {
             font-size: 4rem;
@@ -369,6 +598,11 @@
             text-align: center;
             line-height: 10rem; 
             color: white;
+
+            @include respond(phone) {
+              height: 4rem;
+              font-size: 3.2rem;
+            }
           }
         }
       }
@@ -379,9 +613,19 @@
       text-align: left;
       margin-top: 10rem;
 
+      @include respond(phone) {
+        margin-top: 8rem;
+        width: 32.4rem;
+      }
+
       & p {
         font-size: 3rem;
         letter-spacing: .1rem;
+
+        @include respond(phone) {
+          font-size: 2.6rem;
+          line-height: 4rem;
+        }
       }
     }
 
@@ -390,16 +634,32 @@
       height: 50rem;
       background-color: #C8C8C8;
       margin-top: 6rem;
+
+      @include respond(phone) {
+        margin-top: 4rem;
+        width: 36rem;
+        height: 58rem;
+      }
     }
 
     &-23 {
       width: 70rem;
       text-align: left;
       margin-top: 6rem;
+
+      @include respond(phone) {
+        margin-top: 4rem;
+        width: 31.2rem;
+      }
       
       & p {
         font-size: 1.8rem;
         line-height: 3.5rem;
+
+        @include respond(phone) {
+          font-size: 2rem;
+          line-height: 3.4rem;
+        }
       }
     }
 
@@ -408,6 +668,11 @@
       width: 122rem;
       border-top: .3rem solid;
       color: #BDBDBD;
+
+      @include respond(phone) {
+        width: 32rem;
+        margin: 6rem auto 0;
+      }
     }
 
     &-25 {
@@ -415,9 +680,19 @@
       text-align: left;
       margin-top: 10rem;
 
+      @include respond(phone) {
+        width: 31.4rem;
+        margin-top: 8rem;
+      }
+
       & p {
         font-size: 3rem;
         letter-spacing: .1rem;
+
+        @include respond(phone) {
+          font-size: 2.6rem;
+          line-height: 4rem;
+        }
       }
     }
 
@@ -426,16 +701,32 @@
       height: 50rem;
       background-color: #C8C8C8;
       margin-top: 6rem;
+
+      @include respond(phone) {
+        width: 36rem;
+        height: 58rem;
+        margin-top: 4rem;
+      }
     }
 
     &-27 {
       width: 70rem;
       text-align: left;
       margin-top: 6rem;
+
+      @include respond(phone) {
+        width: 31.2rem;
+        margin-top: 4rem;
+      }
       
       & p {
         font-size: 1.8rem;
         line-height: 3.5rem;
+
+        @include respond(phone) {
+          font-size: 2rem;
+          line-height: 3.4rem;
+        }
       }
     }
 
@@ -452,28 +743,52 @@
         bottom: 0;
         left: 0;
         right: 0;
-        width: 49rem;
+        width: 37.6rem;
         height: 10rem;
         margin: auto;
+
+        @include respond(phone) {
+          width: 29.7rem;
+          height: 15rem;
+          margin: auto;
+        }
 
         &-cube {
           width: 10rem;
           height: 10rem;
           background-color: #C8C8C8;
           float: left;
+
+          @include respond(phone) {
+            float: none;
+            width: 8rem;
+            height: 8rem;
+            margin: 0 auto;
+          }
         }
   
-        &-text {  
+        &-text {
+          width: 27rem;
           height: 10rem;
           float: right;
 
+          @include respond(phone) {
+            float: none;
+            width: 29.7rem;
+            height: 4rem;
+          }
+
           & p {
-            width: 36.9rem;
             font-size: 4rem;
             letter-spacing: .1rem;
             text-align: center;
             line-height: 10rem; 
             color: white;
+
+            @include respond(phone) {
+              height: 4rem;
+              font-size: 3.2rem;
+            }
           }
         }
       }
@@ -484,9 +799,20 @@
       text-align: center;
       margin-top: 10rem;
 
+      @include respond(phone) {
+        width: 32.7rem;
+        text-align: left;
+        margin-top: 8rem;
+      }
+
       & p {
         font-size: 3rem;
         letter-spacing: .1rem;
+
+        @include respond(phone) {
+          font-size: 2.6rem;
+          line-height: 4rem;
+        }
       }
     }
 
@@ -495,8 +821,19 @@
       text-align: left;
       margin-top: 6rem;
 
+      @include respond(phone) {
+        width: 20.8rem;
+        text-align: center;
+        margin-top: 4.4rem;
+      }
+
       & p {
         font-size: 2.5rem;
+
+        @include respond(phone) {
+          font-size: 1.6rem;
+          line-height: 2.5rem;
+        }
       }
     }
 
@@ -505,9 +842,20 @@
       text-align: left;
       margin-top: 1.5rem;
 
+      @include respond(phone) {
+        width: 25.8rem;
+        text-align: center;
+        margin-top: 1.6rem;
+      }
+
       & p {
         font-size: 1.6rem;
         color: #828282;
+
+        @include respond(phone) {
+          font-size: 1.4rem;
+          line-height: 2.1rem;
+        }
       }
     }
 
@@ -516,6 +864,11 @@
       height: 19.9rem;
       background-color: #C8C8C8;
       margin-top: 4rem;
+
+      @include respond(phone) {
+        width: 36rem;
+        height: 105.7rem;
+      }
     }
 
     &-33 {
@@ -539,12 +892,23 @@
       height: 40rem;
       background-color: #C8C8C8;
       margin-top: 6rem;
+
+      @include respond(phone) {
+        width: 36rem;
+        height: 25rem;
+      }
     }
 
     &-35 {
       width: 70rem;
       text-align: left;
       margin-top: 6rem;
+
+      @include respond(phone) {
+        width: 31.2rem;
+        text-align: left;
+        margin-top: 3rem;
+      }
       
       & p {
         font-size: 1.8rem;
@@ -557,6 +921,11 @@
       width: 122rem;
       border-top: .3rem solid;
       color: #BDBDBD;
+
+      @include respond(phone) {
+        width: 32rem;
+        margin: 6rem auto 0;
+      }
     }
 
     &-37 {
@@ -564,9 +933,20 @@
       text-align: center;
       margin-top: 10rem;
 
+      @include respond(phone) {
+        width: 31.1rem;
+        text-align: left;
+        margin-top: 8rem;
+      }
+
       & p {
         font-size: 3rem;
         letter-spacing: .1rem;
+
+        @include respond(phone) {
+          font-size: 2.6rem;
+          line-height: 4rem;
+        }
       }
     }
 
@@ -575,8 +955,17 @@
       text-align: center;
       margin-top: 6rem;
 
+      @include respond(phone) {
+        width: 30.4rem;
+        margin-top: 4rem;
+      }
+
       & p {
         font-size: 2.2rem;
+        @include respond(phone) {
+          font-size: 1.6rem;
+          line-height: 2.5rem;
+        }
       }
     }
 
@@ -585,9 +974,18 @@
       text-align: center;
       margin-top: 1.5rem;
 
+      @include respond(phone) {
+        width: 25.8rem;
+      }
+
       & p {
         font-size: 1.6rem;
         color: #828282;
+
+        @include respond(phone) {
+          font-size: 1.4rem;
+          line-height: 2.1rem;
+        }
       }
     }
 
@@ -622,16 +1020,27 @@
       height: 40rem;
       background-color: #C8C8C8;
       margin-top: 6rem;
+
+      @include respond(phone) {
+        width: 36rem;
+        height: 40rem;
+      }
     }
 
     &-43 {
       width: 70rem;
       text-align: left;
       margin-top: 6rem;
+
+      @include respond(phone) {
+        width: 31.2rem;
+        margin-top: 4rem;
+      }
       
       & p {
         font-size: 1.8rem;
         line-height: 3.5rem;
+        
       }
     }
 
@@ -640,6 +1049,11 @@
       width: 122rem;
       border-top: .3rem solid;
       color: #BDBDBD;
+
+      @include respond(phone) {
+        margin: 6rem auto 0;
+        width: 32rem;
+      }
     }
 
     &-45 {
@@ -647,12 +1061,24 @@
       height: 15rem;
       margin-top: 10rem;
 
+      @include respond(phone) {
+        width: 100vw;
+        height: 35rem;
+        margin: 8rem auto;
+      }
+
       &-cube {
         margin: auto;
         width: 14rem;
         height: 14rem;
         background-color: #C8C8C8;
         float: left;
+
+        @include respond(phone) {
+          float: none;
+          width: 12rem;
+          height: 12rem;
+        }
       }
 
       &-text-box {
@@ -661,13 +1087,28 @@
         border: .3rem solid;
         border-radius: 1rem;
         float: right;
-        padding: 2rem 3.5rem;
+        padding: 2.5rem 4rem;
         margin-top: -.5rem;
+
+        @include respond(phone) {
+          float: none;
+          width: 34rem;
+          height: 25rem;
+          margin: 3rem auto 0;
+          padding: 3.3rem 2.6rem 2.8rem;
+        }
 
         & p {
           width: 60rem;
           font-size: 2.4rem;
+          line-height: 3.5rem;
           text-align: left;
+          
+          @include respond(phone) {
+            width: 28.8rem;
+            font-size: 2.2rem;
+            line-height: 3.2rem;
+          }
         }
       }
     }
@@ -677,6 +1118,11 @@
       height: 45rem;
       background-color: #C8C8C8;
       margin-top: 6rem;
+
+      @include respond(phone) {
+        width: 36rem;
+        height: 58rem;
+      }
     }
 
     &-47 {
@@ -684,9 +1130,19 @@
       text-align: center;
       margin-top: 6rem;
 
+      @include respond(phone) {
+        width: 29.8rem;
+        text-align: left;
+      }
+
       & p {
         font-size: 3rem;
         letter-spacing: .1rem;
+
+        @include respond(phone) {
+          font-size: 2.6rem;
+          line-height: 4rem;
+        }
       }
     }
 
@@ -694,11 +1150,19 @@
       width: 70rem;
       text-align: left;
       margin-top: 4rem;
+
+      @include respond(phone) {
+        width: 31.2rem;
+      }
       
       & p {
         font-size: 1.8rem;
         letter-spacing: .1rem;
         line-height: 3.5rem;
+
+        @include respond(phone) {
+          letter-spacing: 0;
+        }
       }
     }
 
@@ -714,9 +1178,20 @@
         padding-top: 10rem;
         margin: 0 auto;
 
+        @include respond(phone) {
+          width: 25.2rem;
+          text-align: left;
+          padding-top: 7.6rem;
+        }
+
         & p {
           font-size: 3rem;
           letter-spacing: .1rem;
+
+          @include respond(phone) {
+            font-size: 2.6rem;
+            line-height: 4rem;
+          }
         }
       } 
       
@@ -725,9 +1200,18 @@
         text-align: left;
         margin: 4rem auto 0;
 
+        @include respond(phone) {
+          margin: 2rem auto 0;
+          width: 31.2rem;
+        }
+
         & p {
           font-size: 1.8rem;
           line-height: 3.5rem;
+
+          @include respond(phone) {
+            letter-spacing: .1rem;
+          }
         }
       }
 
@@ -737,6 +1221,12 @@
         background-color: #C8C8C8;
         color: black;
         margin: 6rem auto 0;
+
+        @include respond(phone) {
+          margin: 4rem auto 0;
+          width: 36rem;
+          height: 20.2rem;
+        }
       }
     }
 
@@ -744,7 +1234,12 @@
       width: 100vw;
       height: 25rem;
       background-color: #828282;
+      margin-top: 10rem;
       position: relative;
+
+      @include respond(phone) {
+        margin-top: -10rem;
+      }
 
       &-content {
         position: absolute;
@@ -752,28 +1247,52 @@
         bottom: 0;
         left: 0;
         right: 0;
-        width: 58rem;
+        width: 37.6rem;
         height: 10rem;
         margin: auto;
+
+        @include respond(phone) {
+          width: 29.7rem;
+          height: 15rem;
+          margin: auto;
+        }
 
         &-cube {
           width: 10rem;
           height: 10rem;
           background-color: #C8C8C8;
           float: left;
+
+          @include respond(phone) {
+            float: none;
+            width: 8rem;
+            height: 8rem;
+            margin: 0 auto;
+          }
         }
   
         &-text {
-          width: 47rem;
+          width: 27rem;
           height: 10rem;
           float: right;
+
+          @include respond(phone) {
+            float: none;
+            width: 33rem;
+            height: 4rem;
+          }
 
           & p {
             font-size: 4rem;
             letter-spacing: .1rem;
-            text-align: center;
+            text-align: left;
             line-height: 10rem; 
             color: white;
+
+            @include respond(phone) {
+              height: 3.9rem;
+              font-size: 2.6rem;
+            }
           }
         }
       }
@@ -784,11 +1303,22 @@
       height: 99rem;
       background-color: #F2F2F2;
 
+      @include respond(phone) {
+        height: 111rem;
+      }
+
       &-content {
         width: 86rem;
         height: 15rem;
         padding-top: 10rem;
         margin: 0 auto;
+
+        @include respond(phone) {
+          width: 100vw;
+          height: 35rem;
+          margin: 0 auto;
+          padding-top: 8rem;
+        }
 
         &-cube {
           margin: auto;
@@ -796,16 +1326,30 @@
           height: 14rem;
           background-color: #C8C8C8;
           float: left;
+
+          @include respond(phone) {
+            float: none;
+            width: 12rem;
+            height: 12rem;
+          }
         }
 
         &-text-box {
-          width: 68rem;
+          width: 70rem;
           height: 15rem;
           border: .3rem solid;
           border-radius: 1rem;
           float: right;
           padding: 2rem 3.5rem;
           margin-top: -.5rem;
+
+          @include respond(phone) {
+            float: none;
+            width: 34rem;
+            height: 20rem;
+            margin: 3rem auto 0;
+            padding: 3.3rem 2.6rem;
+          }
 
           &-text {
             width: 60rem;
@@ -815,6 +1359,12 @@
           & p {
             font-size: 2.4rem;
             text-align: left;
+
+            @include respond(phone) {
+              width: 28.8rem;
+              font-size: 2.2rem;
+              line-height: 3.2rem;
+            }
           }
         }
       }
@@ -824,6 +1374,12 @@
         height: 60rem;
         background-color: #C8C8C8;
         margin: 16rem auto 0;
+
+        @include respond(phone) {
+          margin: 12rem auto 0;
+          width: 36rem;
+          height: 58rem;
+        }
       }
     }
 
@@ -831,6 +1387,11 @@
       width: 75rem;
       text-align: center;
       margin-top: 10rem;
+
+      @include respond(phone) {
+        width: 29.8rem;
+        margin-top: 8rem;
+      }
 
       & p {
         font-size: 3rem;
@@ -842,6 +1403,11 @@
       width: 70rem;
       text-align: left;
       margin-top: 4rem;
+
+      @include respond(phone) {
+        width: 31.2rem;
+        margin-top: 2rem;
+      }
       
       & p {
         font-size: 1.8rem;
@@ -861,9 +1427,19 @@
         padding-top: 10rem;
         margin: 0 auto;
 
+        @include respond(phone) {
+          width: 28.8rem;
+          padding-top: 8rem;
+        }
+
         & p {
           font-size: 3rem;
           letter-spacing: .1rem;
+
+          @include respond(phone) {
+            font-size: 2.6rem;
+            line-height: 4rem;
+          }
         }
       } 
       
@@ -871,6 +1447,11 @@
         width: 70rem;
         text-align: left;
         margin: 4rem auto 0;
+
+        @include respond(phone) {
+          width: 31.2rem;
+          margin: 2rem auto 0;
+        }
 
         & p {
           font-size: 1.8rem;
@@ -896,7 +1477,11 @@
 
     &-55 {
       width: 100vw;
-      height: 125rem;
+      height: 134.8rem;
+
+      @include respond(phone) {
+        height: 118.2rem;
+      }
 
       &-title {
         width: 66.7rem;
@@ -904,9 +1489,19 @@
         padding-top: 10rem;
         margin: 0 auto;
 
+        @include respond(phone) {
+          width: 33.6rem;
+          padding-top: 8rem;
+        }
+
         & p {
           font-size: 3rem;
           letter-spacing: .1rem;
+
+          @include respond(phone) {
+            font-size: 3.2rem;
+            line-height: 4rem;
+          }
         }
       } 
       
@@ -915,9 +1510,21 @@
         text-align: center;
         margin: 4rem auto 0;
 
+        @include respond(phone) {
+          width: 31.2rem;
+          text-align: left;
+          margin: 2rem auto 0;
+        }
+
         & p {
           font-size: 2.2rem;
           letter-spacing: .1rem;
+
+          @include respond(phone) {
+            font-size: 2rem;
+            line-height: 3.4rem;
+            letter-spacing: 0;
+          }
         }
       }
 
@@ -932,33 +1539,67 @@
         grid-template-rows: 23.5rem 23.5rem 23.5rem;
         grid-gap: 8rem;
 
+        @include respond(phone) {
+          display: block;
+          width: 100vw;
+        }
+
         &-person {
-          
+
+          @include respond(phone) {
+            width: 31.2rem;
+            height: 11.4rem;
+            margin: 5rem auto 0;
+          }
+
           &-left {
             width: 18rem;
             height: 18rem;
             border-radius: 50%;
             background-color: grey;
             float: left;
+
+            @include respond(phone) {
+              width: 8rem;
+              height: 8rem;
+              transform: translateY(2rem);
+            }
           }
 
           &-right {
             float: right;
             width: 33.1rem;
 
+            @include respond(phone) {
+              width: 21.7rem;
+            }
+
             &-span {
               &-1 {
                 font-size: 3rem;
+
+                @include respond(phone) {
+                  font-size: 2.2rem;
+                }
               }
 
               &-2 {
                 font-size: 2rem;
+
+                @include respond(phone) {
+                  font-size: 1.6rem;
+                }
               }
             }
 
             &-text {
               font-size: 2rem;
               margin: 2rem 0 3rem 0;
+
+              @include respond(phone) {
+                font-size: 1.5rem;
+                margin: 1rem 0 0;
+              }
             }
 
             &-btn {
@@ -970,6 +1611,14 @@
               text-align: center;
               line-height: 4.1rem;
               cursor: pointer;
+
+              @include respond(phone) {
+                width: 10.2rem;
+                height: 2.5rem;
+                font-size: 1.4rem;
+                line-height: 2.5rem;
+                margin-top: 1rem;
+              }
             }
           }
         }
@@ -982,11 +1631,22 @@
       background-color: #F06F04;
       color: white;
 
+      @include respond(phone) {
+        height: 88rem;
+      }
+
       &-content {
         width: 78rem;
         height: 15rem;
         padding-top: 10rem;
         margin: 0 auto;
+        
+        @include respond(phone) {
+          width: 100vw;
+          height: 28rem;
+          margin: 0 auto;
+          padding-top: 8rem;
+        }
 
         &-cube {
           margin: auto;
@@ -994,6 +1654,12 @@
           height: 14rem;
           background-color: #C8C8C8;
           float: left;
+
+          @include respond(phone) {
+            float: none;
+            width: 12rem;
+            height: 12rem;
+          }
         }
 
         &-text-box {
@@ -1005,6 +1671,14 @@
           padding: 3rem 3.8rem;
           margin-top: 15px;
 
+          @include respond(phone) {
+            float: none;
+            width: 34rem;
+            height: 13rem;
+            margin: 3rem auto 0;
+            padding: 2.9rem 2.6rem;
+          }
+
           & p {
             width: 55rem;
             font-size: 2.8rem;
@@ -1012,6 +1686,12 @@
             text-align: left;
             font-weight: 500;
             color: black;
+
+            @include respond(phone) {
+              width: 28.8rem;
+              font-size: 2.4rem;
+              line-height: 3.5rem;
+            }
           }
         }
       }
@@ -1021,25 +1701,40 @@
         text-align: left;
         margin: 13rem auto 0;
 
+        @include respond(phone) {
+          width: 30.5rem;
+          margin: 12rem auto 0;
+        }
+
         & p {
           font-size: 2.2rem;
           line-height: 3.5rem;
           letter-spacing: .1rem;
+
+          @include respond(phone) {
+            font-size: 2rem;
+            letter-spacing: .091rem;
+          }
         }
       }
 
       &-btn {
-       cursor: pointer;
-       width: 25rem;
-       height: 7rem;
-       border-radius: 1rem;
-       text-align: center;
-       line-height: 7rem;
-       background-color: #FFFFFF;
-       margin: 5.7rem auto 0;
-       color: #F06F04;
-       font-size: 2.8rem;
-       letter-spacing: .1rem;
+        cursor: pointer;
+        width: 25rem;
+        height: 7rem;
+        border-radius: 1rem;
+        text-align: center;
+        line-height: 7rem;
+        background-color: #FFFFFF;
+        margin: 5.7rem auto 0;
+        color: #F06F04;
+        font-size: 2.8rem;
+        letter-spacing: .1rem;
+
+        @include respond(phone) {
+          margin: 4rem auto 0;
+          width: 25.5rem;
+        }
       }
     }
 
@@ -1048,12 +1743,33 @@
       height: 80rem;
       background-color: #FFF5D8;
       padding: 10rem 0;
+      text-align: center;
 
       &-pic {
         width: 75rem;
         height: 40.9rem;
         background-color: #C8C8C8;
         margin: 0 auto;
+
+        @include respond(phone) {
+          width: 36rem;
+          height: 40.9rem;
+        }
+      }
+
+      &-share {
+        font-size: 3rem;
+        line-height: 4.2rem;
+        letter-spacing: .12rem;
+        color: #5E3F15;
+        margin-top: 6rem;
+
+        @include respond(phone) {
+          font-size: 2.4rem;
+          line-height: 3.4rem;
+          letter-spacing: .096rem;
+          margin-top: 5rem;
+        }
       }
 
       &-btn {
@@ -1064,10 +1780,14 @@
         text-align: center;
         line-height: 7rem;
         background-color: #C8C8C8;
-        margin: 9.5rem auto 0;
+        margin: 3rem auto 0;
         color: black;
         font-size: 3rem;
         letter-spacing: .1rem;
+
+        @include respond(phone) {
+          margin: 2rem auto 0;
+        }
       }
     }
 
@@ -1076,13 +1796,16 @@
       height: 65rem;
       background-color: #1DAEDF;
       padding-top: 6rem;
-      
 
+      @include respond(phone) {
+        height: 66.1rem;
+        padding-top: 4rem;
+      }
+      
       &-pic {
         width: 25rem;
         height: 22rem;
         margin: 0 auto;
-        //background-color: #C8C8C8;
         background-image: url('./img/logo-02.png');
       }
 
@@ -1105,6 +1828,10 @@
         width: 56rem;
         border-top: .3rem solid #6DD5F9;
         margin: 3rem auto;
+
+        @include respond(phone) {
+          width: 32rem;
+        }
       }
 
       &-name {
@@ -1115,6 +1842,27 @@
         font-size: 2rem;
         line-height: 2.2rem;
         color: white;
+        margin: 0;
+        padding: 0;
+      }
+
+      &-text {
+        color: white;
+
+        &-1 {
+          font-size: 2rem;
+          margin-bottom: 8rem;
+        }
+
+        &-2 {
+          font-size: 1.8rem;
+
+          @include respond(phone) {
+            text-align: left;
+            width: 31.2rem;
+            font-size: 1.6rem;
+          }
+        }
       }
     }
   }
