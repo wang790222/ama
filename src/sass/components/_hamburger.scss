@@ -42,6 +42,10 @@
     text-align: right;
     margin-top: 10rem;
     list-style-type: none;
+
+    @include respond(phone) {
+      text-align: center;
+    }
   }
 
   &__item {

@@ -20,6 +20,6 @@
   }
 
   @if $breakpoint == phone {
-    @media (max-width: 600px) { @content };
+    @media (max-width: 900px) { @content };
   }
 }

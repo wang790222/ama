@@ -1421,6 +1421,10 @@
       margin-top: 8rem;
       background-color: #9DDDE3;
 
+      @include respond(phone) {
+        height: 77.6rem;
+      }
+
       &-title {
         width: 55.8rem;
         text-align: left;
@@ -1471,6 +1475,58 @@
 
         &-img {
           background-color: #BDBDBD;
+        }
+      }
+
+      &-video-slides {
+        margin-top: 4rem;
+        text-align: center;
+
+        &-window {
+          margin: 0 auto;
+          width: 37rem;
+
+          &-left {
+            width: 2.5rem;
+            height: 5rem;
+            background-image: url('./img/left.png');
+            float: left;
+            margin: 0 .75rem;
+            transform: translateY(100%);
+          }
+  
+          &-right {
+            width: 2.5rem;
+            height: 5rem;
+            background-image: url('./img/right.png');
+            float: right;
+            margin-right: 1.25rem;
+            transform: translateY(100%);
+          }
+  
+          &-img {
+            width: 29rem;
+            height: 16.2rem;
+            background-color: grey;
+            margin: 0 auto;
+            display: inline-block;
+          }
+        }
+
+        &-dot {
+          &-group {
+            width: 15rem;
+            height: 1rem; 
+            margin-top: 2rem;
+            display: inline-block;
+          }
+
+          width: 1rem;
+          height: 1rem;          
+          border-radius: 50%;
+          background-color: white;
+          display: inline-block;
+          margin-right: 1rem;
         }
       }
     }
@@ -1827,7 +1883,7 @@
         text-align: center;
         width: 56rem;
         border-top: .3rem solid #6DD5F9;
-        margin: 3rem auto;
+        margin: 2rem auto;
 
         @include respond(phone) {
           width: 32rem;
@@ -1844,10 +1900,12 @@
         color: white;
         margin: 0;
         padding: 0;
+        text-align: center;
       }
 
       &-text {
         color: white;
+        text-align: center;
 
         &-1 {
           font-size: 2rem;
@@ -1861,7 +1919,29 @@
             text-align: left;
             width: 31.2rem;
             font-size: 1.6rem;
+            margin: 5rem 2.4rem 0;
           }
+        }
+      }
+
+      &-row {
+        width: 30.2rem;
+        height: 4.8rem;
+        margin: 0 auto 2rem;
+        color: white;
+        font-size: 2rem;
+        line-height: 2.2rem;
+
+        &-left {
+          float: left;
+          width: 12rem;
+          height: 4.8;
+        }
+
+        &-right {
+          float: right;
+          width: 16.2rem;
+          height: 4.8;
         }
       }
     }

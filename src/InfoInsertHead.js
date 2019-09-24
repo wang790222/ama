@@ -9,6 +9,7 @@ const InfoInsertHead = (props) => {
   const [intro, setIntro] = useState(true);
   const [popup, setPopup] = useState(false);
   const [afterNine, setAfterNine] = useState(false);
+  const [videoIndex, setVideoIndex] = useState(0);
 
   useEffect(() => {
     if(intro) {
@@ -44,11 +45,82 @@ const InfoInsertHead = (props) => {
     }
   }
 
+  const videoSlideLeft = () => {
+    if (videoIndex > 0 ) {
+      let temp = videoIndex - 1;
+      setVideoIndex(temp);
+    }
+  };
+
+  const videoSlideRight = () => {
+    if (videoIndex < 5 ) {
+      let temp = videoIndex + 1;
+      setVideoIndex(temp);
+    }
+  };
+
+  // based on page__block-54-video-slides-window-img
+  const videoCssStyle = (index) => { 
+
+    const color = ["grey", "red", "orange", "yellow", "green", "blue"];
+    return ({
+      width: "29rem",
+      height: "16.2rem",
+      backgroundColor: color[index],
+      margin: "0 auto",
+      display: "inline-block",
+    });
+  };
+
+  const dotCssStyle = (dotIndex, vIndex) => {
+    if (dotIndex === vIndex) {
+      return ({
+        width: "1rem",
+        height: "1rem",         
+        borderRadius: "50%",
+        backgroundColor: "#F06F04",
+        display: "inline-block",
+        marginRight: "1rem"
+      });
+    } else {
+      return ({
+        width: "1rem",
+        height: "1rem",         
+        borderRadius: "50%",
+        backgroundColor: "white",
+        display: "inline-block",
+        marginRight: "1rem"
+      });
+    }
+  };
+
   const showMutipleVideos = (index) => {
     if (props.isMobile) {
       return (
         <div className="page__block-54-video-slides">
-          
+          <div className="page__block-54-video-slides-window">
+            <div 
+              className="page__block-54-video-slides-window-left"
+              onClick={videoSlideLeft}
+            >
+            &nbsp;
+            </div>
+            <div style={videoCssStyle(videoIndex)}>&nbsp;</div>
+            <div 
+              className="page__block-54-video-slides-window-right"
+              onClick={videoSlideRight}
+            >
+            &nbsp;
+            </div>
+          </div>
+          <div className="page__block-54-video-slides-dot-group">
+            <div style={dotCssStyle(0, videoIndex)}>&nbsp;</div>
+            <div style={dotCssStyle(1, videoIndex)}>&nbsp;</div>
+            <div style={dotCssStyle(2, videoIndex)}>&nbsp;</div>
+            <div style={dotCssStyle(3, videoIndex)}>&nbsp;</div>
+            <div style={dotCssStyle(4, videoIndex)}>&nbsp;</div>
+            <div style={dotCssStyle(5, videoIndex)}>&nbsp;</div>
+          </div>
         </div>
       );
     } else {
@@ -60,6 +132,63 @@ const InfoInsertHead = (props) => {
           <div className="page__block-54-video-grid-img">Four</div>
           <div className="page__block-54-video-grid-img">Five</div>
           <div className="page__block-54-video-grid-img">Six</div>
+        </div>
+      );
+    }
+  }
+
+  const showFooter = () => {
+    if (props.isMobile) {
+      return (
+        <div>
+          <div className="page__block-59-row">
+            <div className="page__block-59-row-left">
+              <p>監製：於蓓華</p>
+              <p>督導：舒逸琪</p>
+            </div>
+            <div className="page__block-59-row-right">
+              <p>製作人：賴彥如</p>
+              <p>影音導演：朱孝權</p>
+            </div>
+          </div>
+          <div className="page__block-59-row">
+            <div className="page__block-59-row-left">
+              <p>企劃：王柔婷</p>
+              <p>社群：林孟勳</p>
+            </div>
+            <div className="page__block-59-row-right">
+                <p>網頁設計工程：</p>
+                <p>通點設計</p>
+            </div>
+          </div>
+          <div className="page__block-59-text page__block-59-text-2">
+              <p>財團法人公共電視文化事業基金會 版權所有 All Contents Copyright, Taiwan Public Television Service.</p>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <div className="row-3-2">
+            <div className="col-1-of-3-1 page__block-59-textbox">
+              <p>監製：於蓓華</p>
+              <p>督導：舒逸琪</p>
+            </div>
+            <div className="col-1-of-3-2 page__block-59-textbox">
+              <p>製作人：賴彥如</p>
+              <p>影音導演：朱孝權</p>
+            </div>
+            <div className="col-1-of-3-3 page__block-59-textbox">
+              <p>企劃：王柔婷</p>
+              <p>社群：林孟勳</p>
+            </div>
+          </div>
+          <div className="page__block-59-text page__block-59-text-1">
+              <p>網頁設計工程：通點設計</p>
+          </div>
+          <div className="page__block-59-text page__block-59-text-2">
+              <p>財團法人公共電視文化事業基金會 版權所有 All Contents Copyright, Taiwan Public Television Service.</p>
+          </div>
         </div>
       );
     }
@@ -511,26 +640,7 @@ const InfoInsertHead = (props) => {
               <ion-icon name="logo-instagram" className="page__block-59-icon-3"></ion-icon>
             </div>
             <div className="page__block-59-line">&nbsp;</div>
-            <div className="row-3-2">
-              <div className="col-1-of-3-1 page__block-59-textbox">
-                <p>監製：於蓓華</p>
-                <p>督導：舒逸琪</p>
-              </div>
-              <div className="col-1-of-3-2 page__block-59-textbox">
-                <p>製作人：賴彥如</p>
-                <p>影音導演：朱孝權</p>
-              </div>
-              <div className="col-1-of-3-3 page__block-59-textbox">
-                <p>企劃：王柔婷</p>
-                <p>社群：林孟勳</p>
-              </div>
-            </div>
-            <div className="col-1-of-3-3 page__block-59-text page__block-59-text-1">
-                <p>網頁設計工程：通點設計</p>
-            </div>
-            <div className="col-1-of-3-3 page__block-59-text page__block-59-text-2">
-                <p>財團法人公共電視文化事業基金會 版權所有 All Contents Copyright, Taiwan Public Television Service.</p>
-            </div>
+            {showFooter()}
           </div>
         </div>
       );
@@ -558,7 +668,7 @@ const InfoInsertHead = (props) => {
     } else {
       return (
         <div style={dynamicPageStyle}>
-          <Hamburger />
+          <Hamburger isMobile={props.isMobile} />
           <div className="page__block page__block-1" id="#s1">
             <h1>嘿！你是哪裡人？</h1>
             <h2>青少年國族認同大調查</h2>
