@@ -243,7 +243,7 @@ const InfoInsertHead = (props) => {
   };
 
   const showReadMoreContent = () => {
-    if (readMore) {
+    if (!props.isMobile || readMore) {
       return (
         <div className="page__block page__block-6-text">
         <p>
