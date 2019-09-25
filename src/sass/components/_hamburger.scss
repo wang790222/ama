@@ -42,6 +42,7 @@
     text-align: right;
     margin-top: 10rem;
     list-style-type: none;
+    padding: 0;
 
     @include respond(phone) {
       text-align: center;

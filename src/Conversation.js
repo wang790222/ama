@@ -8,24 +8,46 @@ const Conversation = (props) => {
   const thisDiv = useRef(null);
   useEffect(() => {
     thisDiv.current.focus();
-    if (thisDiv.current.clientWidth <= 900) {
+    if (thisDiv.current.clientWidth <= 1100) {
       setIsMobile(true);
       props.setIsMobile(true);
     }
   }, [route]);
   
-  let images = [
-    require('./img/1.png'),
-    require('./img/2.png'),
-    require('./img/3.png'),
-    require('./img/4.png'),
-    require('./img/5.png'),
-    require('./img/6.png'),
-    require('./img/7.png'),
-    require('./img/8.png'),
-    require('./img/9.png'),
-    require('./img/10.png'),
-  ];
+  const images = (index) => {
+
+    let image_normal = [
+      require('./img/1.png'),
+      require('./img/2.png'),
+      require('./img/3.png'),
+      require('./img/4.png'),
+      require('./img/5.png'),
+      require('./img/6.png'),
+      require('./img/7.png'),
+      require('./img/8.png'),
+      require('./img/9.png'),
+      require('./img/10-1.png'),
+    ];
+
+    let image_small = [
+      require('./img/1-small.png'),
+      require('./img/2-small.png'),
+      require('./img/3-small.png'),
+      require('./img/4-small.png'),
+      require('./img/5-small.png'),
+      require('./img/6-small.png'),
+      require('./img/7-small.png'),
+      require('./img/8-small.png'),
+      require('./img/9-small.png'),
+      require('./img/10-1-small.png'),
+    ];
+
+    if (isMobile) {
+      return (image_small[index]);
+    } else {
+      return (image_normal[index]);
+    }
+  }
 
   let sentences = () => {
     if (isMobile) {
@@ -116,11 +138,19 @@ const Conversation = (props) => {
 
   const showIdentity = (index) => {
     if (roles[index]) {
-      return (
-        <div className="identity">
-          {roles[index]}
-        </div>
-      );
+      if (index === 1 || index === 6) {
+        return (
+          <div className="identity identity-main_role">
+            {roles[index]}
+          </div>
+        );
+      } else {
+        return (
+          <div className="identity identity-ama">
+            {roles[index]}
+          </div>
+        );
+      }
     }
 
     return null;
@@ -178,6 +208,10 @@ const Conversation = (props) => {
       );
     });
   };
+
+  const gotoPage = () => {
+    props.gotoPage();
+  };
   
   return (
     <div
@@ -187,10 +221,14 @@ const Conversation = (props) => {
       tabIndex="0"
       ref={thisDiv}
     >
-      <img
-        src={images[props.index - 1]} 
-        className="conversation__img" 
-      />
+      <div className="conversation__img" >
+        <div 
+          className="conversation__img-goto-page"
+          onClick={gotoPage}
+        >
+          跳轉報告頁</div>
+        <img src={images(props.index - 1)} />
+      </div>
       <div className="conversation__box" >
         {showIdentity(props.index - 1)}
         {getLineOrBtn(props.index)}

@@ -13,7 +13,7 @@
       width: 51.3rem;
       text-align: center;
       padding-top: 10rem;
-
+      color: #5E3F15;
 
       @include respond(phone) {
         width: 36rem;
@@ -21,6 +21,7 @@
 
       & h1 {
         font-size: 4.8rem;
+        
 
         @include respond(phone) {
           line-height: 4.8rem;
@@ -57,6 +58,8 @@
       padding: 0;
       margin-top: 6rem;
       line-height: 3.5rem;
+      color: #5E3F15;
+      font-weight: 700;
 
       @include respond(phone) {
         width: 31.2rem;
@@ -66,17 +69,24 @@
     &-4 {
       width: 20rem;
       height: 5rem;
-      background-color: #C8C8C8;
-      border-radius: 1rem;
+      background-color: #F06F04;
+      border-radius: 2rem;
+      border: .5rem solid white;
       margin-top: 5rem;
+      font-size: 2rem;
+      letter-spacing: .1rem;
+      line-height: 4rem;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+      box-shadow: .5rem 1rem 1rem rgba(black, .2);
 
-      &-btn {
-        font-size: 2rem;
-        letter-spacing: .1rem;
-        line-height: 1.9rem;
-        text-align: center;
-        line-height: 5rem;
-        cursor: pointer;
+      &:hover {
+        background-color: #FF8622;
+      }
+
+      &:active {
+        box-shadow: none;
       }
     }
 
@@ -86,6 +96,7 @@
       background-color: #828282;
       margin-top: 10rem;
       position: relative;
+      background-color: #1DAEDF;
 
       &-content {
         position: absolute;
@@ -156,13 +167,12 @@
       right: 0;
       bottom: 0;
       padding: 15rem 0 17rem 0;
-      //margin-bottom: 17rem;
       z-index: 10;
-      background-color: white;
-      overflow: scroll;
+      background-color: #FFF5C5;
 
       @include respond(phone) {
         width: 36rem;
+        height: 66.7rem;
         padding: 10rem 2.4rem;
         top: 0;
       }
@@ -171,21 +181,21 @@
         position: absolute;
         top: 3rem;
         left: 91.2rem;
-        background-color: #C8C8C8;
+        background-color: #F06F04;
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
         text-align: center;
         font-size: 5rem;
-        color: #828282;
+        color: white;
         line-height: 5rem;
         margin: 0;
         padding: 0;
         cursor: pointer;
 
         @include respond(phone) {
-          top: 0;
-          left: 0;
+          top: 2rem;
+          left: 28.5rem;
         }
       }
 
@@ -194,12 +204,22 @@
 
         @include respond(phone) {
           width: 31.2rem;
+          height: 100vh;
+          overflow: scroll;
         }
       }
       
       & p {
+        display: inline-block;
         font-size: 1.8rem;
         line-height: 3.5rem;
+      }
+
+      & span {
+        font-size: 1.8rem;
+        line-height: 3.5rem;
+        color: #F06F04;
+        cursor: pointer;
       }
     }
 
@@ -231,11 +251,12 @@
       &-text-box {
         width: 68rem;
         height: 15rem;
-        border: .3rem solid;
+        border: .3rem solid #86663C;
         border-radius: 1rem;
         float: right;
         padding: 2.5rem 4rem;
         margin-top: -.5rem;
+        background-color: white;
 
         @include respond(phone) {
           float: none;
@@ -250,6 +271,8 @@
         }
 
         & p {
+          font-weight: 700;
+          color: #5E3F15;
           width: 60rem;
           font-size: 2.4rem;
           line-height: 3.5rem;
@@ -278,19 +301,30 @@
     }
 
     &-9 {
-      margin-top: 6rem;
+      margin-top: 2.5rem;
       
       &-btn {
         width: 20rem;
-        height: 6rem;
-        background-color: #C8C8C8;
-        color: black;
-        border-radius: 1rem;
+        height: 5rem;
+        background-color: #F06F04;
+        border-radius: 2rem;
+        border: .5rem solid white;
+        margin-top: 5rem;
         font-size: 2rem;
-        text-align: center;
-        line-height: 6rem;
         letter-spacing: .1rem;
+        line-height: 4rem;
+        text-align: center;
+        color: white;
         cursor: pointer;
+        box-shadow: .5rem 1rem 1rem rgba(black, .2);
+
+        &:hover {
+          background-color: #FF8622;
+        }
+
+        &:active {
+          box-shadow: none;
+        }
 
         @include respond(phone) {
           margin: 3rem auto 0;
@@ -337,6 +371,7 @@
       & p {
         font-size: 3rem;
         letter-spacing: .1rem;
+        color: #5E3F15;
 
         @include respond(phone) {
           font-size: 2.6rem;
@@ -355,6 +390,8 @@
       }
       
       & p {
+        font-weight: 700;
+        color: #5E3F15;
         font-size: 1.8rem;
         line-height: 3.5rem;
       }
@@ -398,9 +435,10 @@
       }
 
       &-text-box {
+        background-color: white;
         width: 68rem;
         height: 15rem;
-        border: .3rem solid;
+        border: .3rem solid #86663C;
         border-radius: 1rem;
         float: right;
         padding: 2.5rem 4rem;
@@ -414,15 +452,14 @@
           padding: 3.3rem 2.6rem;
         }
 
-        &-text {
-          height: 10rem;
-        }
-
         & p {
+          font-weight: 700;
           width: 60rem;
+          height: 10rem;
           font-size: 2.4rem;
-          line-height: 3.5rem;
+          line-height: 3.3rem;
           text-align: left;
+          color: #5E3F15;
           
           @include respond(phone) {
             width: 28.8rem;
@@ -459,6 +496,7 @@
       & p {
         font-size: 3rem;
         letter-spacing: .1rem;
+        color: #5E3F15;
         
         @include respond(phone) {
           font-size: 2.6rem;
@@ -477,6 +515,8 @@
       }
       
       & p {
+        color: #5E3F15;
+        font-weight: 700;
         font-size: 1.8rem;
         line-height: 3.5rem;
       }
@@ -486,7 +526,7 @@
       width: 100vw;
       height: 82.5rem;
       margin-top: 8rem;
-      background-color: #F2F2F2;
+      background-color: #9DDDE3;
 
       &-title {
         width: 66.7rem;
@@ -502,6 +542,7 @@
         & p {
           font-size: 3rem;
           letter-spacing: .1rem;
+          color: #333333;
 
           @include respond(phone) {
             font-size: 2.6rem;
@@ -520,6 +561,8 @@
         }
 
         & p {
+          font-weight: 700;
+          color: #333333;
           font-size: 1.8rem;
           line-height: 3.5rem;
         }
@@ -543,8 +586,7 @@
     &-20 {
       width: 100vw;
       height: 25rem;
-      background-color: #828282;
-      margin-top: 10rem;
+      background-color: #1DAEDF;
       position: relative;
 
       @include respond(phone) {
@@ -557,7 +599,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        width: 37.6rem;
+        width: 49.9rem;
         height: 10rem;
         margin: auto;
 
@@ -582,7 +624,7 @@
         }
   
         &-text {
-          width: 27rem;
+          width: 36.9rem;
           height: 10rem;
           float: right;
 
@@ -619,6 +661,7 @@
       }
 
       & p {
+        color: #5E3F15;
         font-size: 3rem;
         letter-spacing: .1rem;
 
@@ -653,6 +696,8 @@
       }
       
       & p {
+        color: #5E3F15;
+        font-weight: 700;
         font-size: 1.8rem;
         line-height: 3.5rem;
 
@@ -686,6 +731,7 @@
       }
 
       & p {
+        color: #5E3F15;
         font-size: 3rem;
         letter-spacing: .1rem;
 
@@ -720,6 +766,8 @@
       }
       
       & p {
+        color: #5E3F15;
+        font-weight: 700;
         font-size: 1.8rem;
         line-height: 3.5rem;
 
@@ -733,7 +781,7 @@
     &-28 {
       width: 100vw;
       height: 25rem;
-      background-color: #828282;
+      background-color: #1DAEDF;
       margin-top: 10rem;
       position: relative;
 
@@ -743,7 +791,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        width: 37.6rem;
+        width: 49.9rem;
         height: 10rem;
         margin: auto;
 
@@ -768,7 +816,7 @@
         }
   
         &-text {
-          width: 27rem;
+          width: 36.9rem;
           height: 10rem;
           float: right;
 
@@ -806,6 +854,7 @@
       }
 
       & p {
+        color: #5E3F15;
         font-size: 3rem;
         letter-spacing: .1rem;
 
@@ -828,6 +877,7 @@
       }
 
       & p {
+        color: #5E3F15;
         font-size: 2.5rem;
 
         @include respond(phone) {
@@ -911,6 +961,8 @@
       }
       
       & p {
+        color: #5E3F15;
+        font-weight: 700;
         font-size: 1.8rem;
         line-height: 3.5rem;
       }
@@ -942,6 +994,7 @@
       & p {
         font-size: 3rem;
         letter-spacing: .1rem;
+        color: #5E3F15;
 
         @include respond(phone) {
           font-size: 2.6rem;
@@ -961,7 +1014,9 @@
       }
 
       & p {
+        color: #5E3F15;
         font-size: 2.2rem;
+
         @include respond(phone) {
           font-size: 1.6rem;
           line-height: 2.5rem;
@@ -1038,6 +1093,8 @@
       }
       
       & p {
+        color: #5E3F15;
+        font-weight: 700;
         font-size: 1.8rem;
         line-height: 3.5rem;
         
@@ -1082,9 +1139,10 @@
       }
 
       &-text-box {
+        background-color: white;
         width: 68rem;
         height: 15rem;
-        border: .3rem solid;
+        border: .3rem solid #86663C;
         border-radius: 1rem;
         float: right;
         padding: 2.5rem 4rem;
@@ -1101,8 +1159,9 @@
         & p {
           width: 60rem;
           font-size: 2.4rem;
-          line-height: 3.5rem;
+          line-height: 3.3rem;
           text-align: left;
+          color: #5E3F15;
           
           @include respond(phone) {
             width: 28.8rem;
@@ -1136,6 +1195,7 @@
       }
 
       & p {
+        color: #5E3F15;
         font-size: 3rem;
         letter-spacing: .1rem;
 
@@ -1156,6 +1216,8 @@
       }
       
       & p {
+        color: #5E3F15;
+        font-weight: 700;
         font-size: 1.8rem;
         letter-spacing: .1rem;
         line-height: 3.5rem;
@@ -1170,7 +1232,7 @@
       width: 100vw;
       height: 82.5rem;
       margin-top: 8rem;
-      background-color: #F2F2F2;
+      background-color: #9DDDE3;
 
       &-title {
         width: 75rem;
@@ -1185,6 +1247,7 @@
         }
 
         & p {
+          color: #333333;
           font-size: 3rem;
           letter-spacing: .1rem;
 
@@ -1206,6 +1269,8 @@
         }
 
         & p {
+          color: #333333;
+          font-weight: 700;
           font-size: 1.8rem;
           line-height: 3.5rem;
 
@@ -1233,8 +1298,7 @@
     &-50 {
       width: 100vw;
       height: 25rem;
-      background-color: #828282;
-      margin-top: 10rem;
+      background-color: #1DAEDF;
       position: relative;
 
       @include respond(phone) {
@@ -1247,7 +1311,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        width: 37.6rem;
+        width: 59rem;
         height: 10rem;
         margin: auto;
 
@@ -1272,7 +1336,7 @@
         }
   
         &-text {
-          width: 27rem;
+          width: 46rem;
           height: 10rem;
           float: right;
 
@@ -1335,9 +1399,10 @@
         }
 
         &-text-box {
+          background-color: white;
           width: 70rem;
           height: 15rem;
-          border: .3rem solid;
+          border: .3rem solid #86663C;
           border-radius: 1rem;
           float: right;
           padding: 2rem 3.5rem;
@@ -1359,6 +1424,7 @@
           & p {
             font-size: 2.4rem;
             text-align: left;
+            color: #5E3F15;
 
             @include respond(phone) {
               width: 28.8rem;
@@ -1394,6 +1460,7 @@
       }
 
       & p {
+        color: #5E3F15;
         font-size: 3rem;
         letter-spacing: .1rem;
       }
@@ -1410,6 +1477,8 @@
       }
       
       & p {
+        color: #5E3F15;
+        font-weight: 700;
         font-size: 1.8rem;
         line-height: 3.5rem;
       }
@@ -1437,6 +1506,7 @@
         }
 
         & p {
+          color: #333333;
           font-size: 3rem;
           letter-spacing: .1rem;
 
@@ -1458,6 +1528,8 @@
         }
 
         & p {
+          color: #333333;
+          font-weight: 700;
           font-size: 1.8rem;
           line-height: 3.5rem;
         }
@@ -1534,6 +1606,7 @@
     &-55 {
       width: 100vw;
       height: 134.8rem;
+      color: #5E3F15;
 
       @include respond(phone) {
         height: 118.2rem;
@@ -1551,6 +1624,7 @@
         }
 
         & p {
+          color: #5E3F15;
           font-size: 3rem;
           letter-spacing: .1rem;
 
@@ -1573,6 +1647,7 @@
         }
 
         & p {
+          color: #5E3F15;
           font-size: 2.2rem;
           letter-spacing: .1rem;
 
@@ -1632,6 +1707,7 @@
 
             &-span {
               &-1 {
+                color: #5E3F15;
                 font-size: 3rem;
 
                 @include respond(phone) {
@@ -1640,6 +1716,7 @@
               }
 
               &-2 {
+                color: #5E3F15;
                 font-size: 2rem;
 
                 @include respond(phone) {
@@ -1649,6 +1726,7 @@
             }
 
             &-text {
+              color: #5E3F15;
               font-size: 2rem;
               margin: 2rem 0 3rem 0;
 
@@ -1661,12 +1739,17 @@
             &-btn {
               width: 16.6rem;
               height: 4.1rem;
-              background-color: grey;
-              border-radius: 1rem;
+              background-color: #1DAEDF;
+              color: white;
+              border-radius: 2rem;
               font-size: 2rem;
               text-align: center;
               line-height: 4.1rem;
               cursor: pointer;
+
+              &:hover {
+                background-color: #71D8E1;
+              }
 
               @include respond(phone) {
                 width: 10.2rem;
@@ -1721,7 +1804,8 @@
         &-text-box {
           width: 60rem;
           height: 10rem;
-          border: .4rem solid #828282;
+          border: .4rem solid #86663C;
+          background-color: white;
           border-radius: 4rem;
           float: right;
           padding: 3rem 3.8rem;
@@ -1741,7 +1825,7 @@
             letter-spacing: .1rem;
             text-align: left;
             font-weight: 500;
-            color: black;
+            color: #5E3F15;
 
             @include respond(phone) {
               width: 28.8rem;
@@ -1778,14 +1862,24 @@
         cursor: pointer;
         width: 25rem;
         height: 7rem;
-        border-radius: 1rem;
+        border-radius: 2rem;
+        border: .5rem solid white;
         text-align: center;
-        line-height: 7rem;
-        background-color: #FFFFFF;
+        line-height: 6rem;
+        background-color: #F2BB74;
         margin: 5.7rem auto 0;
-        color: #F06F04;
+        color: #5E3F15;
         font-size: 2.8rem;
         letter-spacing: .1rem;
+        box-shadow: .5rem 1rem 1rem rgba(black, .2);
+
+        &:hover {
+          background-color: #F4C88E;
+        }
+
+        &:active {
+          box-shadow: none;
+        }
 
         @include respond(phone) {
           margin: 4rem auto 0;
@@ -1832,14 +1926,24 @@
         cursor: pointer;
         width: 25rem;
         height: 7rem;
-        border-radius: 1rem;
+        border-radius: 2rem;
+        border: .5rem solid white;
         text-align: center;
-        line-height: 7rem;
-        background-color: #C8C8C8;
+        line-height: 6rem;
+        background-color: #F06F04;
         margin: 3rem auto 0;
-        color: black;
+        color: white;
         font-size: 3rem;
         letter-spacing: .1rem;
+        box-shadow: .5rem 1rem 1rem rgba(black, .2);
+
+        &:hover {
+          background-color: #FF8622;
+        }
+
+        &:active {
+          box-shadow: none;
+        }
 
         @include respond(phone) {
           margin: 2rem auto 0;
@@ -1871,6 +1975,7 @@
         text-align: center;
 
         & ion-icon {
+          background-color: transparent;
           cursor: pointer;
         }
 
@@ -1942,6 +2047,78 @@
           float: right;
           width: 16.2rem;
           height: 4.8;
+        }
+      }
+    }
+
+    &-60 {
+      margin: auto;
+      width: 20rem;
+      height: 20rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      background-color: white;
+
+      @include respond(phone) {
+        
+      }
+
+      &-close {
+        position: absolute;
+        top: 0;
+        left: 15rem;
+        background-color: red;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 5rem;
+        color: white;
+        line-height: 5rem;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+
+        @include respond(phone) {
+          
+        }
+      }
+
+      &-row {
+        //@include absCenter;
+        width: 10rem;
+        height: 5rem;
+        
+
+        &-line {
+          width: 5rem;
+          height: 5rem;
+          float: left;
+          cursor: pointer;
+        }
+
+        &-fb {
+          width: 5rem;
+          height: 5rem;
+          float: right;
+          cursor: pointer;
+        }
+
+        &-input {
+          width: 19rem;
+          border: .2rem solid black;
+        }
+
+        &-btn {
+          width: 5rem;
+          height: 2rem;
+          background-color: grey;
+          border-radius: 5rem;
+          cursor: pointer;
         }
       }
     }

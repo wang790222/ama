@@ -3,7 +3,7 @@
 *::after {
   margin: 0;
   border: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,4 +16,10 @@ body {
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
+
+.hydrated {
+  background-color: #FFF5C5;
+}
+  

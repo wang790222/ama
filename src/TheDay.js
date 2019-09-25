@@ -3,7 +3,13 @@ import React from 'react';
 const TheDay = () => {
   return (
     <div className="one-line">
-      <h3 className="one-line one-line__the-day">ㄧ如往常的這天 . . .</h3>
+      <div className="one-line__theday">
+        <div className="one-line__theday-box">
+          <div className="one-line__theday-box-typing">
+            一如往常的這天...
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

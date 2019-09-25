@@ -2,55 +2,74 @@
   
   width: 100vw;
   height: 100vh;
-  position: relative;
-
-  &__the-day {
-    position: absolute;
-    margin: auto 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 42%;
-    width: 28rem;
-    height: 3.6rem;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing .5s steps(15);
-    font-size: 3rem;
-
-    @include respond(tablet) {
-      font-size: 2.75rem;
-      left: 35%;
-    }
+  background-color: #FFF5C5;
+  
+  &__theday {
+    margin: auto;
+    width: 24.6rem;
+    height: 100vh;
 
     @include respond(phone) {
-      font-size: 2.5rem;
-      left: 21.5%;
+      width: 20.5rem;
+    }
+
+    &-box {
+      font-size: 3rem;
+      width: 24.6rem;
+      line-height: 100vh;
+      letter-spacing: .1rem;
+      font-weight: 700;
+
+      @include respond(phone) {
+        width: 20.5rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+      }
+
+      &-typing {
+        width: 24.6rem;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing .8s steps(18);
+
+        @include respond(phone) {
+          width: 20.5rem;
+        }
+      }
     }
   }
 
-  &__info-insert {
-    position: absolute;
-    margin: auto 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 36%;
-    width: 47rem;
-    height: 3.6rem;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing .8s steps(18);
-    font-size: 3rem;
-
-    @include respond(tablet) {
-      font-size: 2.6rem;
-      left: 25%;
-    }
+  &__infoinsert {
+    margin: auto;
+    width: 45.4rem;
+    height: 100vh;
 
     @include respond(phone) {
-      font-size: 2rem;
-      left: 9%;
+      width: 30.3rem;
+    }
+
+    &-box {
+      font-size: 3rem;
+      width: 45.4rem;
+      line-height: 100vh;
+      font-weight: 700;
+
+      @include respond(phone) {
+        width: 30.3rem;
+        font-size: 2rem;
+        font-weight: 500;
+      }
+
+      &-typing {
+        width: 45.4rem;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing .8s steps(35);
+
+        @include respond(phone) {
+          width: 30.3rem;
+        }
+      }
     }
   }
 }

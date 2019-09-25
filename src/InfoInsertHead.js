@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { FacebookShareButton, FacebookIcon } from 'react-share';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import style from './style.css';
 import Hamburger from './Hamburger';
@@ -6,16 +8,46 @@ import Hamburger from './Hamburger';
 const InfoInsertHead = (props) => {
 
   const thisDiv = useRef(null);
-  const [intro, setIntro] = useState(true);
+  const [intro, setIntro] = useState(!props.fromGotoPage);
   const [popup, setPopup] = useState(false);
   const [afterNine, setAfterNine] = useState(false);
   const [videoIndex, setVideoIndex] = useState(0);
+  const [readMore, setReadMore] = useState(false);
+  const [share, setShare] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if(intro) {
       thisDiv.current.focus();
     }
+
+    loadButtons();
   });
+
+  let scriptLoaded = false;
+  let scriptInjected = false;
+  const loadButton = () => {
+    window.LineIt && window.LineIt.loadButton();
+  };
+
+  const loadButtons = () => {
+    if ( scriptInjected ) {
+      if ( scriptLoaded ) {
+        loadButton();
+      }
+    } else {
+      const script = document.createElement( 'script' );
+      script.src = 'https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js';
+      script.type = 'text/javascript';
+      script.async = true;
+      script.defer = true;
+      script.onerror = function( error ) { throw error; };
+      script.onload = function() {
+        loadButton();
+      };
+      document.body.appendChild( script );
+    }
+  };
 
   const skipIntro = () => {
     setIntro(false);
@@ -194,6 +226,62 @@ const InfoInsertHead = (props) => {
     }
   }
 
+  const showHamburger = () => {
+    if (popup) {
+      return null;
+    } else {
+      return (<Hamburger isMobile={props.isMobile} />);
+    }
+  };
+
+  const handleReadMore = () => {
+    setReadMore(true);
+  };
+
+  const handleShareBtn = () => {
+    setShare(true);
+  };
+
+  const showReadMoreContent = () => {
+    if (readMore) {
+      return (
+        <div className="page__block page__block-6-text">
+        <p>
+          一：本次問卷調查期間為2019年6月21日至7月14日，考量到時間與經費的限制，最後以滾雪球取樣的方法，邀請全國高中職生自行填答，總計回收2223份有效問卷。調查結果最後依受訪者性別、學校性質、以及學校地理區域進行加權，使與母體一致。母體參數依據教育統計查詢網─107學年度高級中等學校校別資料檔。
+        </p>
+        <br />
+        <br />
+          <p>
+            有關滾雪球方式的操作，我們發放了紙本與網路問卷。在紙本問卷上，我們先透過在高中職任教的老師，詢問是否願意協助發放且回收問卷，並且透過老師再介紹其他願意協助發放問卷的老師。網路問卷亦同，我們透過Facebook、PTT、親朋好友以及有意願協助的老師轉傳問卷連結，同時寄出e-mail給已填答完成的學生，請他們幫忙將問卷轉傳給朋友或是同學填寫。在最後的2223份有效問卷中，紙本回收1200份，網路回收1023份。
+          </p>
+          <br />
+          <br />
+          <p>
+            二：問卷調查期間，香港反送中運動爆發。
+          </p>
+          <br />
+          <p>
+            三：本份問卷設計參考美國杜克大學亞太安全研究中心《台灣國家安全調查》以及國立政治大學選舉研究中心《我國大學生政治社會化之研究》兩份問卷的題型。
+          </p>
+        </div>
+      );
+    } else {
+      return (
+        <div className="page__block page__block-6-text">
+          <p>
+            一：本次問卷調查期間為2019年6月21日至7月14日，考量到時間與經費的限制，最後以滾雪球取樣的方法，邀請全國高中職生自行填答，總計回收2223份有效問卷。調查結果最後依受訪者性別、學校性質、以及學校地理區域進行加權，使與母體一致。母體參數依據教育統計查詢網─107學年度高級中等學校校別資料檔。
+          </p>
+          <br />
+          <br />
+          <p>
+            有關滾雪球方式的操作，
+          </p>
+          <span onClick={handleReadMore}>...繼續閱讀</span>
+        </div>
+      );
+    }
+  };
+
   let pageBackgroundColor =  (popup) ? "#333333" : "#FFF5C5";
 
   const dynamicPageStyle = {
@@ -210,30 +298,66 @@ const InfoInsertHead = (props) => {
           >
             &times;
           </div>
-          <div className="page__block page__block-6-text">
-            <p>
-            一：本次問卷調查期間為2019年6月21日至7月14日，考量到時間與經費的限制，最後以滾雪球取樣的方法，邀請全國高中職生自行填答，總計回收2223份有效問卷。調查結果最後依受訪者性別、學校性質、以及學校地理區域進行加權，使與母體一致。母體參數依據教育統計查詢網─107學年度高級中等學校校別資料檔。
-            </p>
-            <br />
-            <br />
-            <p>
-            有關滾雪球方式的操作，我們發放了紙本與網路問卷。在紙本問卷上，我們先透過在高中職任教的老師，詢問是否願意協助發放且回收問卷，並且透過老師再介紹其他願意協助發放問卷的老師。網路問卷亦同，我們透過Facebook、PTT、親朋好友以及有意願協助的老師轉傳問卷連結，同時寄出e-mail給已填答完成的學生，請他們幫忙將問卷轉傳給朋友或是同學填寫。在最後的2223份有效問卷中，紙本回收1200份，網路回收1023份。
-            </p>
-            <br />
-            <br />
-            <p>
-            二：問卷調查期間，香港反送中運動爆發。
-            </p>
-            <br />
-            <p>
-            三：本份問卷設計參考美國杜克大學亞太安全研究中心《台灣國家安全調查》以及國立政治大學選舉研究中心《我國大學生政治社會化之研究》兩份問卷的題型。
-            </p>
-          </div>
+          {showReadMoreContent()}
         </div>
       );
     } else {
       return null;
     }
+  };
+
+  const shareBtnPopup = () => {
+    if (share) {
+      return (
+        <div className="page__block page__block-60">
+          <div 
+            className="page__block page__block-60-close"
+            onClick={handleOnClickFor60}
+          >
+            &times;
+          </div>
+          <div className="page__block-60-row">
+            <div className="page__block-60-row-line">
+              <div 
+                className="line-it-button" 
+                data-lang={"zh_TW"}
+                data-type={"share-b"} 
+                data-ver={3}
+                data-url={"http://localhost:3000/"}
+                data-color={"default"}
+                data-size={"large"}
+                data-count={false}
+                style={{display: 'none'}}>
+              </div>
+            </div>
+            <div className="page__block-60-row-fb">
+              <FacebookShareButton url={"https://www.google.com"}>
+                <FacebookIcon borderRadius={10} size={45}/>
+              </FacebookShareButton>
+            </div>
+          </div>
+          <div className="page__block-60-row">
+            <input 
+              value="https://www.google.com" 
+              className="page__block-60-row-input" />
+      
+            <CopyToClipboard 
+              text="https://www.google.com"
+              onCopy={() => setCopied(true)}>
+              <button className="page__block-60-row-btn">
+                Copy
+              </button>
+            </CopyToClipboard>
+          </div>
+        </div>
+      );
+    } else {
+      return null;
+    };
+  };
+
+  const handleOnClickFor60 = () => {
+    setShare(false);
   };
 
   const showAfterNine = () => {
@@ -627,7 +751,7 @@ const InfoInsertHead = (props) => {
             <div className="page__block-58-share">
               <p>分享這份報告給更多人知道！</p>
             </div>
-            <div className="page__block-58-btn">
+            <div className="page__block-58-btn" onClick={handleShareBtn}>
               分享
             </div>
           </div>
@@ -642,6 +766,7 @@ const InfoInsertHead = (props) => {
             <div className="page__block-59-line">&nbsp;</div>
             {showFooter()}
           </div>
+          {shareBtnPopup()}
         </div>
       );
     } else {
@@ -662,13 +787,19 @@ const InfoInsertHead = (props) => {
           onKeyDown={skipIntro}
           tabIndex="0"
         >
-          <h3 className="one-line one-line__info-insert">有些資訊開始慢慢進入你的腦中....</h3>
+          <div className="one-line__infoinsert">
+            <div className="one-line__infoinsert-box">
+              <div className="one-line__infoinsert-box-typing">
+                有些資訊開始慢慢進入你的腦中....
+              </div>
+            </div>
+          </div>
         </div>
       );
     } else {
       return (
         <div style={dynamicPageStyle}>
-          <Hamburger isMobile={props.isMobile} />
+          {showHamburger()}
           <div className="page__block page__block-1" id="#s1">
             <h1>嘿！你是哪裡人？</h1>
             <h2>青少年國族認同大調查</h2>
@@ -678,11 +809,9 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-3">
             <p>2020總統大選將至，社會上對於總統選舉、國家認同和國家未來等議題，討論得沸沸揚揚。你會好奇代表著「未來」的青少年們究竟是怎麼想的嗎？公共電視青少年節目《青春發言人》委託政治大學「選舉研究中心」，針對全國高中職生進行國族認同 調查，分別從「你是哪裡人？」、「兩岸關係」、「對台灣的愛恨情仇？」、「高中職生對政治冷感嗎？」四大面向，帶你了解青少年如何看待自己的國家與土地。</p>
           </div>
-          <div className="page__block page__block-4">
-            <div 
-              onClick={handleOnClickFor4}
-              className="page__block page__block-4 page__block-4-btn">看研究方法
-            </div>
+          <div 
+            onClick={handleOnClickFor4}
+            className="page__block page__block-4">看研究方法
           </div>
           <div className="page__block page__block-5" id="s2">
             <div className="page__block page__block-5-content">

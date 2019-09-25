@@ -11,6 +11,8 @@ const Dialogue = (props) => {
   const [count, setCount] = useState(0);
   const [opening, setOpening] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [fromGotoPage, setFromGotoPage] = useState(false);
+  
 
   useEffect(() => {
     if (count === 0) {
@@ -48,6 +50,11 @@ const Dialogue = (props) => {
     }
   };
 
+  const gotoPage = () => {
+    setOpening(false);
+    setFromGotoPage(true);
+  };
+
   const renderBlock = () => {
     if(!count) {
       return <TheDay />;
@@ -59,10 +66,15 @@ const Dialogue = (props) => {
             handleOnClick={handleSetCount}
             selectRoute={selectRoute}
             setIsMobile={handleSetIsMobile}
+            gotoPage={gotoPage}
           />
         );
       } else {
-        return (<InfoInsertHead isMobile={isMobile} />);
+        return (
+          <InfoInsertHead 
+            isMobile={isMobile} 
+            fromGotoPage={fromGotoPage}
+          />);
       }
     }
   }
