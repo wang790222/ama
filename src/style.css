@@ -1865,12 +1865,12 @@ html {
         .page__block-60-row-icon-line {
           width: 10rem;
           height: 10rem;
-          float: left;
+          float: right;
           cursor: pointer; }
         .page__block-60-row-icon-fb {
           width: 10rem;
           height: 10rem;
-          float: right;
+          float: left;
           cursor: pointer; }
       .page__block-60-row-copied {
         width: 58rem;

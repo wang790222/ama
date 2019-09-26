@@ -292,15 +292,15 @@ const InfoInsertHead = (props) => {
             &times;
           </div>
           <div className="page__block-60-row-icon">
-            <div className="page__block-60-row-icon-line">
-              <LineShareButton url={"https://www.google.com"}>
-                <LineIcon borderRadius={10} size={100}/>
-              </LineShareButton>
-            </div>
             <div className="page__block-60-row-icon-fb">
               <FacebookShareButton url={"https://www.google.com"}>
                 <FacebookIcon borderRadius={10} size={100}/>
               </FacebookShareButton>
+            </div>
+            <div className="page__block-60-row-icon-line">
+              <LineShareButton url={"https://www.google.com"}>
+                <LineIcon borderRadius={10} size={100}/>
+              </LineShareButton>
             </div>
           </div>
           <div className="page__block-60-row-copied">
