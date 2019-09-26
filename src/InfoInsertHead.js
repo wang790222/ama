@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FacebookShareButton, FacebookIcon } from 'react-share';
+import { FacebookShareButton, FacebookIcon, LineShareButton, LineIcon } from 'react-share';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import style from './style.css';
@@ -20,34 +20,7 @@ const InfoInsertHead = (props) => {
     if(intro) {
       thisDiv.current.focus();
     }
-
-    loadButtons();
   });
-
-  let scriptLoaded = false;
-  let scriptInjected = false;
-  const loadButton = () => {
-    window.LineIt && window.LineIt.loadButton();
-  };
-
-  const loadButtons = () => {
-    if ( scriptInjected ) {
-      if ( scriptLoaded ) {
-        loadButton();
-      }
-    } else {
-      const script = document.createElement( 'script' );
-      script.src = 'https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js';
-      script.type = 'text/javascript';
-      script.async = true;
-      script.defer = true;
-      script.onerror = function( error ) { throw error; };
-      script.onload = function() {
-        loadButton();
-      };
-      document.body.appendChild( script );
-    }
-  };
 
   const skipIntro = () => {
     setIntro(false);
@@ -282,10 +255,9 @@ const InfoInsertHead = (props) => {
     }
   };
 
-  let pageBackgroundColor =  (popup) ? "#333333" : "#FFF5C5";
-
+  let pageBackgroundColor =  (popup || share) ? "#777777" : "#FFF5C5";
   const dynamicPageStyle = {
-    backgroundColor: pageBackgroundColor,
+    backgroundColor: pageBackgroundColor
   };
 
   const showPopup = () => {
@@ -310,42 +282,37 @@ const InfoInsertHead = (props) => {
     if (share) {
       return (
         <div className="page__block page__block-60">
+          <div className="page__block-60-text">
+            分享出去，功德無量！
+          </div>
           <div 
             className="page__block page__block-60-close"
             onClick={handleOnClickFor60}
           >
             &times;
           </div>
-          <div className="page__block-60-row">
-            <div className="page__block-60-row-line">
-              <div 
-                className="line-it-button" 
-                data-lang={"zh_TW"}
-                data-type={"share-b"} 
-                data-ver={3}
-                data-url={"http://localhost:3000/"}
-                data-color={"default"}
-                data-size={"large"}
-                data-count={false}
-                style={{display: 'none'}}>
-              </div>
+          <div className="page__block-60-row-icon">
+            <div className="page__block-60-row-icon-line">
+              <LineShareButton url={"https://www.google.com"}>
+                <LineIcon borderRadius={10} size={100}/>
+              </LineShareButton>
             </div>
-            <div className="page__block-60-row-fb">
+            <div className="page__block-60-row-icon-fb">
               <FacebookShareButton url={"https://www.google.com"}>
-                <FacebookIcon borderRadius={10} size={45}/>
+                <FacebookIcon borderRadius={10} size={100}/>
               </FacebookShareButton>
             </div>
           </div>
-          <div className="page__block-60-row">
+          <div className="page__block-60-row-copied">
             <input 
               value="https://www.google.com" 
-              className="page__block-60-row-input" />
+              className="page__block-60-row-copied-input" />
       
             <CopyToClipboard 
               text="https://www.google.com"
               onCopy={() => setCopied(true)}>
-              <button className="page__block-60-row-btn">
-                Copy
+              <button className="page__block-60-row-copied-btn">
+                複製連結
               </button>
             </CopyToClipboard>
           </div>
@@ -862,6 +829,7 @@ const InfoInsertHead = (props) => {
   }
 
   return (
+
     showContent()
   );
 }
