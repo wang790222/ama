@@ -204,7 +204,7 @@
 
         @include respond(phone) {
           width: 31.2rem;
-          height: 70vh;
+          height: 100%;
           overflow: scroll;
         }
       }
@@ -213,6 +213,8 @@
         display: inline-block;
         font-size: 1.8rem;
         line-height: 3.5rem;
+        color: #5E3F15;
+        font-weight: 700;
       }
 
       & span {
