@@ -8,6 +8,7 @@
   1% {
     opacity: 1; }
   100% {
+    width: 100%;
     opacity: 1; } }
 
 @keyframes type2 {
@@ -190,20 +191,31 @@ html {
           width: 27rem; } }
     .conversation__box-text-1 {
       opacity: 0;
+      -webkit-animation: type 1s steps(40, end);
+      -webkit-animation-fill-mode: forwards;
       animation: type 1s steps(40, end);
       animation-fill-mode: forwards; }
     .conversation__box-text-2 {
       opacity: 0;
+      -webkit-animation: type 1s steps(40, end);
+      -webkit-animation-delay: 1.2s;
+      -webkit-animation-fill-mode: forwards;
       animation: type 1s steps(40, end);
       animation-delay: 1.2s;
       animation-fill-mode: forwards; }
     .conversation__box-text-3 {
       opacity: 0;
+      -webkit-animation: type 1s steps(40, end);
+      -webkit-animation-delay: 2.1s;
+      -webkit-animation-fill-mode: forwards;
       animation: type 1s steps(40, end);
       animation-delay: 2.1s;
       animation-fill-mode: forwards; }
     .conversation__box-text-4 {
       opacity: 0;
+      -webkit-animation: type 0.8s steps(40, end);
+      -webkit-animation-delay: 3.2s;
+      -webkit-animation-fill-mode: forwards;
       animation: type 0.8s steps(40, end);
       animation-delay: 3.2s;
       animation-fill-mode: forwards; }
