@@ -303,6 +303,72 @@ const InfoInsertHead = (props) => {
     }
   };
 
+  const group32_33 = () => {
+    if (!props.isMobile) {
+      return (
+        <div>
+          <div className="page__block page__block-32">
+          </div>
+          <div className="page__block page__block-33">
+            <div className="row-4">
+              <div 
+                className="col-1-of-4 page__block-33-btn"
+                onClick={handleOnClickFor33}>
+                一點也不光榮
+              </div>
+              <div 
+                className="col-1-of-4 page__block-33-btn"
+                onClick={handleOnClickFor33}>
+                很少感到光榮
+              </div>
+              <div 
+                className="col-1-of-4 page__block-33-btn"
+                onClick={handleOnClickFor33}>
+                有時感到光榮
+              </div>
+              <div 
+                className="col-1-of-4 page__block-33-btn"
+                onClick={handleOnClickFor33}>
+                時常感到光榮
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="page__block page__block-33__two_col">
+          <div className="page__block-33__two_col-left">
+            <div className="page__block page__block-32">
+            </div>
+          </div>
+          <div className="page__block-33__two_col-right">
+            <div 
+              className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-1"
+              onClick={handleOnClickFor33}>
+              一點也不光榮
+            </div>
+            <div 
+              className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-2"
+              onClick={handleOnClickFor33}>
+              很少感到光榮
+            </div>
+            <div 
+              className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-3"
+              onClick={handleOnClickFor33}>
+              有時感到光榮
+            </div>
+            <div 
+              className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-4"
+              onClick={handleOnClickFor33}>
+              時常感到光榮
+            </div>
+          </div>
+        </div>
+      );
+    }
+  }
+
   const shareBtnPopup = () => {
     if (share) {
       return (
@@ -469,30 +535,9 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-31">
             <p>顯示統計結果，每個結果可以點按鈕，看看覺得光榮或不光榮的原因。</p>
           </div>
-          <div className="page__block page__block-32"></div>
-          <div className="page__block page__block-33">
-            <div className="row-4">
-              <div 
-                className="col-1-of-4 page__block-33-btn"
-                onClick={handleOnClickFor33}>
-                一點也不光榮
-              </div>
-              <div 
-                className="col-1-of-4 page__block-33-btn"
-                onClick={handleOnClickFor33}>
-                很少感到光榮
-              </div>
-              <div 
-                className="col-1-of-4 page__block-33-btn"
-                onClick={handleOnClickFor33}>
-                有時感到光榮
-              </div>
-              <div 
-                className="col-1-of-4 page__block-33-btn"
-                onClick={handleOnClickFor33}>
-                時常感到光榮
-              </div>
-            </div>
+          {group32_33()}
+          <div className="page__block page__block-33-1">
+            <span><ion-icon name="arrow-dropup"></ion-icon></span><span>點擊按鈕試試看！</span>
           </div>
           <div className="page__block page__block-34"></div>
           <div className="page__block page__block-35">

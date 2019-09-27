@@ -1000,8 +1000,8 @@ html {
       margin-top: 4rem; }
       @media (max-width: 1100px) {
         .page__block-32 {
-          width: 36rem;
-          height: 105.7rem; } }
+          width: 15rem;
+          height: 45rem; } }
     .page__block-33 {
       margin-top: 5rem; }
       .page__block-33-btn {
@@ -1014,6 +1014,41 @@ html {
         text-align: center;
         line-height: 5rem;
         cursor: pointer; }
+      .page__block-33__two_col {
+        width: 36rem;
+        height: 50rem; }
+        .page__block-33__two_col-left {
+          width: 36rem;
+          height: 105.7rem;
+          float: left; }
+        .page__block-33__two_col-right {
+          height: 25rem;
+          width: 14.4rem;
+          float: right; }
+          .page__block-33__two_col-right-btn {
+            width: 14.4rem;
+            height: 4rem;
+            color: white; }
+            .page__block-33__two_col-right-btn-1 {
+              background-color: #007AA5; }
+            .page__block-33__two_col-right-btn-2 {
+              background-color: #009DBB; }
+            .page__block-33__two_col-right-btn-3 {
+              background-color: #00B9D9; }
+            .page__block-33__two_col-right-btn-4 {
+              background-color: #54D0DD; }
+              .page__block-33__two_col-right-btn-4:hover {
+                background-color: #85E0EA; }
+    .page__block-33-1 {
+      width: 20rem;
+      height: 2.4rem;
+      padding-bottom: 4rem;
+      font-size: 1.7rem;
+      line-height: 2.4rem;
+      color: #86663C; }
+      .page__block-33-1 span ion-icon {
+        font-size: 5.5rem;
+        transform: translateY(2.25rem); }
     .page__block-34 {
       width: 86rem;
       height: 40rem;
@@ -2093,7 +2128,8 @@ html {
   background-color: #FFF5D8;
   width: 100vw;
   height: 100vh;
-  text-align: center; }
+  text-align: center;
+  overflow: scroll; }
   .header__img {
     width: 64.2rem;
     height: 34.2rem;

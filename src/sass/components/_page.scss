@@ -926,8 +926,8 @@
       margin-top: 4rem;
 
       @include respond(phone) {
-        width: 36rem;
-        height: 105.7rem;
+        width: 15rem;
+        height: 45rem;
       }
     }
 
@@ -944,6 +944,64 @@
         text-align: center;
         line-height: 5rem;
         cursor: pointer;
+      }
+
+      &__two_col {
+        width: 36rem;
+        height: 50rem;
+  
+        &-left {
+          width: 36rem;
+          height: 105.7rem;
+          float: left;
+        }
+  
+        &-right {
+          height: 25rem;
+          width: 14.4rem;
+          float: right;
+          &-btn {
+            width: 14.4rem;
+            height: 4rem;
+            color: white;
+  
+            &-1 {
+              background-color: #007AA5;
+            }
+  
+            &-2 {
+              background-color: #009DBB;
+            }
+  
+            &-3 {
+              background-color: #00B9D9;
+            }
+  
+            &-4 {
+              background-color: #54D0DD;
+  
+              &:hover {
+                background-color: #85E0EA;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-33-1 {
+      width: 20rem;
+      height: 2.4rem;
+      padding-bottom: 4rem;
+      font-size: 1.7rem;
+      line-height: 2.4rem;
+      color: #86663C;
+
+      & span {
+        & ion-icon {
+          font-size: 5.5rem;
+          transform: translateY(2.25rem);
+        }
       }
     }
 
