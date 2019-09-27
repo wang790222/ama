@@ -50,17 +50,21 @@
 *::after {
   margin: 0;
   border: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: Arial,'Noto Sans TC', Arial,sans-serif;
+  font-weight: 400; }
 
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: Arial,'Noto Sans TC', Arial,sans-serif;
+  font-weight: 400; }
 
 html {
   font-size: 10px;
   box-sizing: border-box;
-  font-family: Noto Sans TC, sans-serif;
+  font-family: Arial,'Noto Sans TC', Arial,sans-serif;
   font-weight: 400; }
 
 .hydrated {
