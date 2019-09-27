@@ -358,7 +358,7 @@ const Conversation = (props) => {
   const animateImg = () => {
     if (props.index === 9) {
       return ({
-        animation: "fadeOut 4s",
+        animation: "fadeOut 3.5s",
         animationIterationCount: "1",
       });
     } else {
