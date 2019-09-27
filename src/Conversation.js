@@ -15,7 +15,6 @@ const Conversation = (props) => {
   }, [route]);
   
   const images = (index) => {
-
     let image_normal = [
       require('./img/1.png'),
       require('./img/2.png'),
@@ -26,7 +25,10 @@ const Conversation = (props) => {
       require('./img/7.png'),
       require('./img/8.png'),
       require('./img/9.png'),
-      require('./img/10-1.png'),
+      require('./img/10-A.png'),
+      require('./img/10-B-1.png'),
+      require('./img/10-B-2.png'),
+      require('./img/10-B-3.png'),
     ];
 
     let image_small = [
@@ -39,7 +41,10 @@ const Conversation = (props) => {
       require('./img/7-small.png'),
       require('./img/8-small.png'),
       require('./img/9-small.png'),
-      require('./img/10-1-small.png'),
+      require('./img/10-A-small.png'),
+      require('./img/10-B-1-small.png'),
+      require('./img/10-B-2-small.png'),
+      require('./img/10-B-3-small.png'),
     ];
 
     if (isMobile) {
@@ -108,16 +113,16 @@ const Conversation = (props) => {
       return (
         [
           ["「哼哼，你以為你有得選嗎？」神", "秘阿嬤露出了冷笑。"],
-          ["阿嬤看著你，喃喃的說：「今日相", "遇，你我也算有緣....」", "只見阿嬤緩緩的閉上眼睛...."],
-          ["突然吹來了一陣冷風，四周突然風", "雨大作！你也不知不覺地暈了過", "去...."]
+          ["突然吹來了一陣冷風，同時開始", "響起雷鳴！"],
+          ["四周陷入一片黑暗，你也不知不覺", "地暈了過去...."]
         ]
       );
     } else {
       return (
         [
           ["「哼哼，你以為你有得選嗎？」神秘阿嬤露出了冷笑。"],
-          ["阿嬤看著你，喃喃的說：「今日相遇，你我也算有緣....」", "只見阿嬤緩緩的閉上眼睛...."],
-          ["突然吹來了一陣冷風，四周突然風雨大作！你也不知不覺地暈了過", "去...."]
+          ["突然吹來了一陣冷風，同時開始響起雷鳴！"],
+          ["四周陷入一片黑暗，你也不知不覺地暈了過去...."]
         ]
       );
     }
@@ -159,11 +164,13 @@ const Conversation = (props) => {
   const setRouteA = () => {
     setRoute(true);
     props.selectRoute();
+    props.handleRoute("A");
   };
 
   const setRouteB = () => {
     setRoute(false);
     props.selectRoute();
+    props.handleRoute("B");
   };
 
   const getLineOrBtn = (index) => {
@@ -212,6 +219,241 @@ const Conversation = (props) => {
   const gotoPage = () => {
     props.gotoPage();
   };
+
+  const putGoToBtn = () => {
+    if (props.index < 9) {
+      return (
+        <div 
+          className="conversation__img-goto-page"
+          onClick={gotoPage}
+        >
+          跳轉報告頁
+        </div>
+      );
+    } else {
+      return null;
+    }
+  }
+
+  const showImg10 = () => {
+    if (route) {
+      let style = {};
+
+      if (!isMobile) {
+        style = {
+          width: "70rem",
+          height: "45rem",
+          animation: "fadeIn 2.5s",
+          animationIterationCount: "1",
+          animationFillMode: "forwards",
+          zIndex: "100",
+          position: "fixed",
+          transform: "translateX(-700px)"
+        };
+      } else {
+        style = {
+          width: "37.5rem",
+          height: "24.1rem",
+          animation: "fadeIn 2.5s",
+          animationIterationCount: "1",
+          animationFillMode: "forwards",
+          zIndex: "100",
+          position: "fixed",
+          transform: "translateX(-375px)"
+        };
+      }
+
+      if (props.index === 9) {
+        return (
+          <img style={style} src={images(9)} />
+        );
+      }
+    } else {
+      let DivStyle = {};
+      let imgStyle1 = {};
+      let imgStyle2 = {};
+      let imgStyle3 = {};
+
+      if (!isMobile) {
+        DivStyle = {
+          width: "70rem",
+          height: "45rem",
+          zIndex: "100",
+          position: "fixed",
+          top: "7rem",
+        };
+
+        imgStyle1 = { // cloud
+          width: "70rem",
+          height: "45rem",
+          zIndex: "102",
+          position: "fixed",
+        };
+
+        imgStyle2 = {  // ama
+          width: "70rem",
+          height: "45rem",
+          zIndex: "101",
+          position: "fixed",
+          animation: "slideUp 2.5s",
+          animationIterationCount: "1",
+          animationFillMode: "forwards",
+          overflow: "hidden",
+        };
+
+        imgStyle3 = { // background
+          width: "70rem",
+          height: "45rem",
+          zIndex: "100",
+          position: "fixed",
+        };
+      } else {
+        DivStyle = {
+          width: "37.5rem",
+          height: "24.1rem",
+          zIndex: "100",
+          position: "fixed",
+          top: "5.5rem",
+        };
+
+        imgStyle1 = { // cloud
+          width: "37.5rem",
+          height: "24.1rem",
+          zIndex: "102",
+          position: "fixed",
+        };
+
+        imgStyle2 = {  // ama
+          width: "37.5rem",
+          height: "24.1rem",
+          zIndex: "101",
+          position: "fixed",
+          animation: "slideUp 2.5s",
+          animationIterationCount: "1",
+          animationFillMode: "forwards",
+          overflow: "hidden",
+        };
+
+        imgStyle3 = { // background
+          width: "37.5rem",
+          height: "24.1rem",
+          zIndex: "100",
+          position: "fixed",
+        };
+      }
+      
+
+      if (props.index === 9) {
+        return (
+          <div style={DivStyle}>
+            <img style={imgStyle1} src={images(10)} />
+            <img style={imgStyle2} src={images(11)} />
+            <img style={imgStyle3} src={images(12)} />
+          </div>
+        );
+      }
+    }
+  }
+
+  const animateImg = () => {
+    if (props.index === 9) {
+      return ({
+        animation: "fadeOut 3s",
+        animationIterationCount: "1",
+        animationFillMode: "forwards" 
+      });
+    } else {
+      return ({});
+    }
+  }
+
+  const showImg = () => {
+    if (!route && props.index === 10) {
+      let DivStyle = {};
+      let imgStyle1 = {};
+      let imgStyle2 = {};
+      let imgStyle3 = {};
+
+      if (!isMobile) {
+        DivStyle = {
+          width: "70rem",
+          height: "45rem",
+          zIndex: "100",
+          position: "fixed",
+          top: "7rem",
+        };
+
+        imgStyle1 = { // cloud
+          width: "70rem",
+          height: "45rem",
+          zIndex: "102",
+          position: "fixed",
+        };
+
+        imgStyle2 = {  // ama
+          width: "70rem",
+          height: "45rem",
+          zIndex: "101",
+          position: "fixed",
+        };
+
+        imgStyle3 = { // background
+          width: "70rem",
+          height: "45rem",
+          zIndex: "100",
+          position: "fixed",
+        };
+      } else {
+        DivStyle = {
+          width: "37.5rem",
+          height: "24.1rem",
+          zIndex: "100",
+          position: "fixed",
+          top: "5.5rem",
+        };
+
+        imgStyle1 = { // cloud
+          width: "37.5rem",
+          height: "24.1rem",
+          zIndex: "102",
+          position: "fixed",
+        };
+
+        imgStyle2 = {  // ama
+          width: "37.5rem",
+          height: "24.1rem",
+          zIndex: "101",
+          position: "fixed",
+        };
+
+        imgStyle3 = { // background
+          width: "37.5rem",
+          height: "24.1rem",
+          zIndex: "100",
+          position: "fixed",
+        };
+      }
+      
+
+      return (
+        <div className="conversation__img" >
+          <div style={DivStyle}>
+            <img style={imgStyle1} src={images(10)} />
+            <img style={imgStyle2} src={images(11)} />
+            <img style={imgStyle3} src={images(12)} />
+          </div>
+        </div>
+      );
+  } else {
+      return (
+        <div className="conversation__img" >
+          {putGoToBtn()}
+          <img style={animateImg()} src={images(props.index - 1)} />
+          {showImg10()}
+        </div>
+      );
+    }
+  }
   
   return (
     <div
@@ -221,14 +463,7 @@ const Conversation = (props) => {
       tabIndex="0"
       ref={thisDiv}
     >
-      <div className="conversation__img" >
-        <div 
-          className="conversation__img-goto-page"
-          onClick={gotoPage}
-        >
-          跳轉報告頁</div>
-        <img src={images(props.index - 1)} />
-      </div>
+      {showImg()}
       <div className="conversation__box" >
         {showIdentity(props.index - 1)}
         {getLineOrBtn(props.index)}

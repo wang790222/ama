@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FacebookShareButton, FacebookIcon, LineShareButton, LineIcon } from 'react-share';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+
 
 import style from './style.css';
 import Hamburger from './Hamburger';
@@ -15,23 +17,43 @@ const InfoInsertHead = (props) => {
   const [readMore, setReadMore] = useState(false);
   const [share, setShare] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const [readAll, setReadAll] = useState(false);
+  const [readAllIndex, setReadAllIndex] = useState(false);
+  const [singleColor, setSingleColor] = useState(true);
 
   useEffect(() => {
-    if(intro) {
+    if(intro && !singleColor) {
       thisDiv.current.focus();
     }
-  });
+
+    window.scrollTo(0, scrollY);
+  }, [popup, share]);
 
   const skipIntro = () => {
     setIntro(false);
   };
 
   const handleOnClickFor4 = () => {
+    setScrollY(window.pageYOffset);
     setPopup(true);
+  };
+
+  const handleShareBtn = () => {
+    setScrollY(window.pageYOffset);
+    setShare(true);
   };
 
   const handleOnClickFor6 = () => {
     setPopup(false);
+  };
+
+  const handleOnClickFor60 = () => {    
+    setShare(false);
+  };
+
+  const handleOnClickFor61 = () => {    
+    setReadAll(false);
   };
 
   const handleOnClickFor9 = () => {
@@ -39,6 +61,16 @@ const InfoInsertHead = (props) => {
   };
 
   const handleOnClickFor33 = () => {
+
+  };
+
+  // 看全文
+  const handleOnClickFor55 = (e) => {
+    setReadAll(true);
+    setReadAllIndex(e.target.id);
+  };
+
+  const handleOnClickFor57 = (index) => {
 
   };
 
@@ -211,14 +243,10 @@ const InfoInsertHead = (props) => {
     setReadMore(true);
   };
 
-  const handleShareBtn = () => {
-    setShare(true);
-  };
-
   const showReadMoreContent = () => {
     if (!props.isMobile || readMore) {
       return (
-        <div className="page__block page__block-6-text">
+        <div className="page__block page__block-6__content-text">
         <p>
           一：本次問卷調查期間為2019年6月21日至7月14日，考量到時間與經費的限制，最後以滾雪球取樣的方法，邀請全國高中職生自行填答，總計回收2223份有效問卷。調查結果最後依受訪者性別、學校性質、以及學校地理區域進行加權，使與母體一致。母體參數依據教育統計查詢網─107學年度高級中等學校校別資料檔。
         </p>
@@ -240,7 +268,7 @@ const InfoInsertHead = (props) => {
       );
     } else {
       return (
-        <div className="page__block page__block-6-text">
+        <div className="page__block page__block-6__content-text">
           <p>
             一：本次問卷調查期間為2019年6月21日至7月14日，考量到時間與經費的限制，最後以滾雪球取樣的方法，邀請全國高中職生自行填答，總計回收2223份有效問卷。調查結果最後依受訪者性別、學校性質、以及學校地理區域進行加權，使與母體一致。母體參數依據教育統計查詢網─107學年度高級中等學校校別資料檔。
           </p>
@@ -255,22 +283,19 @@ const InfoInsertHead = (props) => {
     }
   };
 
-  let pageBackgroundColor =  (popup || share) ? "#777777" : "#FFF5C5";
-  const dynamicPageStyle = {
-    backgroundColor: pageBackgroundColor
-  };
-
   const showPopup = () => {
     if (popup) {
       return (
         <div className="page__block page__block-6">
-          <div 
-            className="page__block page__block-6-close"
-            onClick={handleOnClickFor6}
-          >
-            &times;
+          <div className="page__block page__block-6__content">
+            <div 
+              className="page__block page__block-6__content-close"
+              onClick={handleOnClickFor6}
+            >
+              &times;
+            </div>
+            {showReadMoreContent()}
           </div>
-          {showReadMoreContent()}
         </div>
       );
     } else {
@@ -281,40 +306,42 @@ const InfoInsertHead = (props) => {
   const shareBtnPopup = () => {
     if (share) {
       return (
-        <div className="page__block page__block-60">
-          <div className="page__block-60-text">
-            分享出去，功德無量！
-          </div>
-          <div 
-            className="page__block page__block-60-close"
-            onClick={handleOnClickFor60}
-          >
-            &times;
-          </div>
-          <div className="page__block-60-row-icon">
-            <div className="page__block-60-row-icon-fb">
-              <FacebookShareButton url={"https://www.google.com"}>
-                <FacebookIcon borderRadius={10} size={100}/>
-              </FacebookShareButton>
+        <div className="page__block-60">
+          <div className="page__block-60__content">
+            <div className="page__block-60__content-text">
+              分享出去，功德無量！
             </div>
-            <div className="page__block-60-row-icon-line">
-              <LineShareButton url={"https://www.google.com"}>
-                <LineIcon borderRadius={10} size={100}/>
-              </LineShareButton>
+            <div 
+              className="page__block page__block-60__content-close"
+              onClick={handleOnClickFor60}
+            >
+              &times;
             </div>
-          </div>
-          <div className="page__block-60-row-copied">
-            <input 
-              value="https://www.google.com" 
-              className="page__block-60-row-copied-input" />
-      
-            <CopyToClipboard 
-              text="https://www.google.com"
-              onCopy={() => setCopied(true)}>
-              <button className="page__block-60-row-copied-btn">
-                複製連結
-              </button>
-            </CopyToClipboard>
+            <div className="page__block-60__content-row-icon">
+              <div className="page__block-60__content-row-icon-fb">
+                <FacebookShareButton url={"https://www.google.com"}>
+                  <FacebookIcon borderRadius={10} size={100}/>
+                </FacebookShareButton>
+              </div>
+              <div className="page__block-60__content-row-icon-line">
+                <LineShareButton url={"https://www.google.com"}>
+                  <LineIcon borderRadius={10} size={100}/>
+                </LineShareButton>
+              </div>
+            </div>
+            <div className="page__block-60__content-row-copied">
+              <input 
+                value="https://www.google.com" 
+                className="page__block-60__content-row-copied-input" />
+        
+              <CopyToClipboard 
+                text="https://www.google.com"
+                onCopy={() => setCopied(true)}>
+                <button className="page__block-60__content-row-copied-btn">
+                  複製連結
+                </button>
+              </CopyToClipboard>
+            </div>
           </div>
         </div>
       );
@@ -323,8 +350,24 @@ const InfoInsertHead = (props) => {
     };
   };
 
-  const handleOnClickFor60 = () => {
-    setShare(false);
+  const showReadAll = () => {
+    if (readAll) {
+      return (
+        <div className="page__block page__block-61">
+          <div className="page__block page__block-61__content">
+            <div 
+              className="page__block page__block-61__content-close"
+              onClick={handleOnClickFor61}
+            >
+              &times;
+            </div>
+            {readAllIndex}
+          </div>
+        </div>
+      );
+    } else {
+      return null;
+    }
   };
 
   const showAfterNine = () => {
@@ -614,7 +657,10 @@ const InfoInsertHead = (props) => {
                     {personalComment(1)}
                     </p>
                   </div>
-                  <div className="page__block-55-grid-person-right-btn">
+                  <div 
+                    className="page__block-55-grid-person-right-btn"
+                    onClick={handleOnClickFor55}
+                    id="1">
                     看全文
                   </div>
                 </div>
@@ -632,7 +678,10 @@ const InfoInsertHead = (props) => {
                     {personalComment(1)}
                     </p>
                   </div>
-                  <div className="page__block-55-grid-person-right-btn">
+                  <div 
+                    className="page__block-55-grid-person-right-btn"
+                    onClick={handleOnClickFor55}
+                    id="2">
                     看全文
                   </div>
                 </div>
@@ -650,7 +699,11 @@ const InfoInsertHead = (props) => {
                     {personalComment(1)}
                     </p>
                   </div>
-                  <div className="page__block-55-grid-person-right-btn">
+                  <div 
+                    className="page__block-55-grid-person-right-btn"
+                    onClick={handleOnClickFor55}
+                    id="3"
+                  >
                     看全文
                   </div>
                 </div>
@@ -668,7 +721,11 @@ const InfoInsertHead = (props) => {
                     {personalComment(1)}
                     </p>
                   </div>
-                  <div className="page__block-55-grid-person-right-btn">
+                  <div 
+                    className="page__block-55-grid-person-right-btn"
+                    onClick={handleOnClickFor55}
+                    id="4"
+                  >
                     看全文
                   </div>
                 </div>
@@ -686,13 +743,18 @@ const InfoInsertHead = (props) => {
                     {personalComment(1)}
                     </p>
                   </div>
-                  <div className="page__block-55-grid-person-right-btn">
+                  <div 
+                    className="page__block-55-grid-person-right-btn"
+                    onClick={handleOnClickFor55}
+                    id="5"
+                  >
                     看全文
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          {showReadAll()}
           <div className="page__block page__block-57">
             <div className="page__block-57-content">
               <div className="page__block-57-content-cube">
@@ -708,7 +770,10 @@ const InfoInsertHead = (props) => {
               <p>這份「高中職生國族認同調查」的問卷，總共包含36個問題，我們僅挑選其中10個問題呈現於網頁中。若您對整份問卷結果有興趣，歡迎直接下載。另外，我們也邀請了五位政治界、媒體界的朋友，和大家分享他們看過這份青少年的國族調查後，有什麼觀察和思考。
               </p>
             </div>
-            <div className="page__block-57-btn">
+            <div 
+              className="page__block-57-btn"
+              onClick={handleOnClickFor57}  
+            >
               下載報告
             </div>
           </div>
@@ -743,30 +808,93 @@ const InfoInsertHead = (props) => {
       );
     }
   };
+
+  const introStyle = (className) => {
+    if (className === "one-line") {
+      if (!props.route) {
+        return ({
+          width: "100vw",
+          height: "100vh",
+          backgroundColor: "white"
+        });
+      } else {
+        return ({
+          width: "100vw",
+          height: "100vh",
+          backgroundColor: "black"
+        });
+      }
+    } else if (className === "one-line__infoinsert-box-typing") {
+      if (!props.route) {
+        return ({
+          width: "24.6rem",
+          overflow: "hidden",
+          whiteSpace: "nowrap",
+          animation: "typing 1s steps(18) 1.5s",
+        });
+      } else {
+        return ({
+          
+        });
+      }
+
+    }
+  }
+
+  const singleColorStyle = () => {
+    if (!props.route) {
+      return ({
+        width: "100vw",
+        height: "100vh",
+        backgroundColor: "white",
+      });
+    } else {
+      return ({
+        width: "100vw",
+        height: "100vh",
+        backgroundColor: "black",
+        color: "white"
+      });
+    }
+  }
   
   const showContent = () => {
     if (intro) {
-      return (
-        <div 
-          ref={thisDiv}
-          className="one-line"
-          onClick={skipIntro}
-          onKeyDown={skipIntro}
-          tabIndex="0"
-        >
-          <div className="one-line__infoinsert">
-            <div className="one-line__infoinsert-box">
-              <div className="one-line__infoinsert-box-typing">
-                有些資訊開始慢慢進入你的腦中....
+
+      const finishSingleColor = () => {
+        setSingleColor(false)
+      };
+
+      setTimeout(finishSingleColor, 1000);
+  
+      if (singleColor) {
+        return (
+          <div style={singleColorStyle()}>
+          </div>
+        );
+      } else {
+        return (
+          <div 
+            ref={thisDiv}
+            style={singleColorStyle()}
+            onClick={skipIntro}
+            onKeyDown={skipIntro}
+            tabIndex="0"
+          >
+            <div className="one-line__infoinsert">
+              <div className="one-line__infoinsert-box">
+                <div className="one-line__infoinsert-box-typing">
+                  有些資訊開始慢慢進入你的腦中....
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      );
+        );
+      }
     } else {
       return (
-        <div style={dynamicPageStyle}>
-          {showHamburger()}
+        <div>
+          {showHamburger("one-line__infoinsert-box-typing")}
           <div className="page__block page__block-1" id="#s1">
             <h1>嘿！你是哪裡人？</h1>
             <h2>青少年國族認同大調查</h2>
@@ -828,9 +956,21 @@ const InfoInsertHead = (props) => {
     }
   }
 
-  return (
+  const fixBackground = () => {
+    if (popup || share) {
+      return ({
+        position: "fixed",
+        top: `-${scrollY}px`
+      });
+    } else {
+      return ({});
+    }
+  }
 
-    showContent()
+  return (
+    <div style={fixBackground()}>
+      {showContent()}
+    </div>
   );
 }
 

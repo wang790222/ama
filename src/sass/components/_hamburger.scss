@@ -5,7 +5,7 @@
   }
 
   &__button {
-    background-color: #C8C8C8;
+    background-color: #FF8622;
     height: 5rem;
     width: 5rem;
     position: fixed;
@@ -18,7 +18,7 @@
   }
 
   &__background {
-    background-color: #4F4F4F;
+    background-color: #FF8622;
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
@@ -93,7 +93,7 @@
     &::after {
       width: 2.5rem;
       height: .25rem;
-      background-color: #333;
+      background-color: white;
       display: inline-block;
     }
 

@@ -12,6 +12,9 @@ const Dialogue = (props) => {
   const [opening, setOpening] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [fromGotoPage, setFromGotoPage] = useState(false);
+
+  // 1-> routeA, 2-> routeB
+  const [route, setRoute] = useState(0);
   
 
   useEffect(() => {
@@ -21,13 +24,25 @@ const Dialogue = (props) => {
       if (timerId) {
         clearTimeout(timerId);
       }
+      if (count < 9) {
+        timerId = setTimeout(handleSetCountByTimer, 8000);
+      } else {
+        timerId = setTimeout(handleSetCountByTimer, 1800);
+      }
       
-      timerId = setTimeout(handleSetCount, 8000);
     }
   }, [count]);
 
-  const handleSetCount = () => {
-    if (count < 7 || ( count > 7 && count < 10)) {
+  const handleSetCountByTimer = () => {
+    if (count < 10) {
+      setCount(count + 1);
+    } else if (count === 10) {
+      setOpening(false);
+    }
+  }
+
+  const handleSetCountByClick = () => {
+    if (count < 7 || count === 8) {
       setCount(count + 1);
     } else if (count === 10) {
       setOpening(false);
@@ -55,6 +70,14 @@ const Dialogue = (props) => {
     setFromGotoPage(true);
   };
 
+  const handleRoute = (r) => {
+    if (r === "A") {
+      setRoute(0);
+    } else {
+      setRoute(1);
+    }
+  }
+
   const renderBlock = () => {
     if(!count) {
       return <TheDay />;
@@ -63,10 +86,11 @@ const Dialogue = (props) => {
         return (
           <Conversation 
             index={count}
-            handleOnClick={handleSetCount}
+            handleOnClick={handleSetCountByClick}
             selectRoute={selectRoute}
             setIsMobile={handleSetIsMobile}
             gotoPage={gotoPage}
+            handleRoute={handleRoute}
           />
         );
       } else {
@@ -74,6 +98,7 @@ const Dialogue = (props) => {
           <InfoInsertHead 
             isMobile={isMobile} 
             fromGotoPage={fromGotoPage}
+            route={route}
           />);
       }
     }

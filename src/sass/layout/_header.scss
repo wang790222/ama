@@ -2,115 +2,118 @@
   background-color: #FFF5D8;
   width: 100vw;
   height: 100vh;
-  position: relative;
   text-align: center;
   
-  &__block {
-    top: 0;
+  &__img {
+    width: 64.2rem;
+    height: 34.2rem;
+    z-index: 2;
+    position: fixed;
+    top: 7rem;
     left: 0;
-    bottom: 0;
     right: 0;
     margin: 0 auto;
 
-    &-img_shade {
-      &-img {
-        width: 642px;
-        height: 342px;
-        margin-top: 7rem;
-        position: absolute;
-        z-index: 2;
+    @include respond(phone) {
+      width: 360px;
+      height: 191px;
+      top: 11rem;
+    }
+  }
 
-        @include respond(phone) {
-          width: 360px;
-          height: 191px;
-          margin-top: 8rem;
-        }
-      }
+  &__shade {
+    display: inline-block;
+    width: 64.2rem;
+    height: 34.5rem;
+    background-color: #E8CF8F;
+    position: fixed;
+    transform: rotate(.8deg) translateX(2.5%);
+    top: 8.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 
-      &-shade {
-        width: 635px;
-        height: 345px;
-        background-color: #E8CF8F;
-        position: absolute;
-        transform: rotate(1deg) translateX(2rem);
-        z-index: 1;
-        margin-top: 8rem;
+    @include respond(phone) {
+      width: 0;
+      height: 0;
+    }
+  }
 
-        @include respond(phone) {
-          width: 0;
-          height: 0;
-        }
-      }
+  &__tittle {
+    font-family: "Arial";
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    position: fixed;
+    top: 48rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    @include respond(phone) {
+      top: 33.9rem;
     }
 
-    &-tittle {
-      font-family: "Arial";
-      text-transform: uppercase;
-      backface-visibility: hidden;
-      padding-top: 48rem;
+    &-main {
+      color: #5E3F15;
+      font-size: 3rem;
+      letter-spacing: .159rem;
 
       @include respond(phone) {
-        padding-top: 33.9rem;
-      }
-
-      &-main {
-        color: #5E3F15;
-        font-size: 3rem;
-        letter-spacing: .159rem;
-
-        @include respond(phone) {
-          font-size: 2.0rem;
-          letter-spacing: .062rem;
-          margin: 0 3.9rem;
-        }
-      }
-      
-      &-sub {
-        padding-top: 2.895rem;
-        color: #86663C;
-        font-size: 2.3rem;
-        letter-spacing: .057rem;
-
-        @include respond(phone) {
-          font-size: 1.8rem;
-          letter-spacing: .045rem;
-          margin: 0 6.85rem;
-        }
+        font-size: 2.0rem;
+        letter-spacing: .062rem;
+        margin: 0 3.9rem;
       }
     }
+    
+    &-sub {
+      padding-top: 2.895rem;
+      color: #86663C;
+      font-size: 2.3rem;
+      letter-spacing: .057rem;
 
-    &-btn {
-      margin-top: 3.135rem;
-      width: 27rem;
-      height: 7rem;
-      background-color: #F06F04;
-      border-radius: 2rem;
-      border: .5rem solid white;
-      display: inline-block;
-      font-size: 3.2rem;
-      letter-spacing: .08rem;
-      line-height: 6rem;
-      text-decoration: none;
-      color: #fff;
-      cursor: pointer;
-      box-shadow: .5rem 1rem 1rem rgba(black, .2);
-
-      &:hover {
-        background-color: #FF8622;
-      }
-
-      &:active {
-        box-shadow: none;
-      }
-      
       @include respond(phone) {
-        margin: 3.9rem 7.25rem 0;
-        width: 21.5rem;
-        height: 5.6rem;
-        font-size: 2.5rem;
-        letter-spacing: .063rem;
-        line-height: 4.6rem;
+        font-size: 1.8rem;
+        letter-spacing: .045rem;
+        margin: 0 6.85rem;
       }
+    }
+  }
+
+  &__btn {
+    position: fixed;
+    top: 60rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 27rem;
+    height: 7rem;
+    background-color: #F06F04;
+    border-radius: 2rem;
+    border: .5rem solid white;
+    display: inline-block;
+    font-size: 3.2rem;
+    letter-spacing: .08rem;
+    line-height: 6rem;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: .5rem 1rem 1rem rgba(black, .2);
+
+    &:hover {
+      background-color:#FF8622;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+    
+    @include respond(phone) {
+      top: 50rem;
+      width: 21.5rem;
+      height: 5.6rem;
+      font-size: 2.5rem;
+      letter-spacing: .063rem;
+      line-height: 4.6rem;
     }
   }
 }

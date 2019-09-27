@@ -44,6 +44,17 @@
 
 @keyframes fadeIn {
   0% { opacity: 0;}
-  99% { opacity: 0.99;}
+  1% { opacity: 0.01;}
   100% { opacity: 1;}
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0px);
+  }
 }
