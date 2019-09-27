@@ -2110,8 +2110,7 @@ html {
     @media (max-width: 1100px) {
       .header__img {
         width: 360px;
-        height: 191px;
-        top: 11rem; } }
+        height: 191px; } }
   .header__shade {
     display: inline-block;
     width: 64.2rem;

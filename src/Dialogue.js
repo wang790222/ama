@@ -26,8 +26,11 @@ const Dialogue = (props) => {
       }
       if (count < 9) {
         timerId = setTimeout(handleSetCountByTimer, 8000);
-      } else {
-        timerId = setTimeout(handleSetCountByTimer, 1800);
+      } else if (count === 9) {
+        timerId = setTimeout(handleSetCountByTimer, 4000);
+      }
+      else {
+        timerId = setTimeout(handleSetCountByTimer, 2000);
       }
       
     }

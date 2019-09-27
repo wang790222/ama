@@ -243,7 +243,7 @@ const Conversation = (props) => {
         style = {
           width: "70rem",
           height: "45rem",
-          animation: "fadeIn 2.5s",
+          animation: "fadeIn 3s",
           animationIterationCount: "1",
           animationFillMode: "forwards",
           zIndex: "100",
@@ -254,7 +254,7 @@ const Conversation = (props) => {
         style = {
           width: "37.5rem",
           height: "24.1rem",
-          animation: "fadeIn 2.5s",
+          animation: "fadeIn 3s",
           animationIterationCount: "1",
           animationFillMode: "forwards",
           zIndex: "100",
@@ -358,9 +358,8 @@ const Conversation = (props) => {
   const animateImg = () => {
     if (props.index === 9) {
       return ({
-        animation: "fadeOut 3s",
+        animation: "fadeOut 4s",
         animationIterationCount: "1",
-        animationFillMode: "forwards" 
       });
     } else {
       return ({});
