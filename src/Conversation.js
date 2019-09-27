@@ -238,28 +238,28 @@ const Conversation = (props) => {
   const showImg10 = () => {
     if (route) {
       let style = {};
-
       if (!isMobile) {
         style = {
           width: "70rem",
           height: "45rem",
-          animation: "fadeIn 3s",
+          animation: "fadeIn 5s",
           animationIterationCount: "1",
           animationFillMode: "forwards",
-          zIndex: "100",
+          animationDelay: "5s",
+          zIndex: "500",
           position: "fixed",
-          transform: "translateX(-700px)"
+          //transform: "translateX(-700px)"
         };
       } else {
         style = {
           width: "37.5rem",
           height: "24.1rem",
-          animation: "fadeIn 3s",
+          animation: "fadeIn 5s",
           animationIterationCount: "1",
           animationFillMode: "forwards",
-          zIndex: "100",
+          zIndex: "500",
           position: "fixed",
-          transform: "translateX(-375px)"
+          //transform: "translateX(-375px)"
         };
       }
 
@@ -357,9 +357,23 @@ const Conversation = (props) => {
 
   const animateImg = () => {
     if (props.index === 9) {
+      {/*
       return ({
-        animation: "fadeOut 3.5s",
+        animation: "fadeOut 3s",
         animationIterationCount: "1",
+        animationFillMode: "forwards",
+      });
+      */}
+      return ({
+        animation: "fadeOut 5s",
+        animationIterationCount: "1",
+        animationFillMode: "forwards",
+      });
+    } else if (route && props.index === 10) {
+      return ({
+        animation: "fadeIn 2s",
+        animationIterationCount: "1",
+        animationFillMode: "forwards",
       });
     } else {
       return ({});
@@ -368,6 +382,7 @@ const Conversation = (props) => {
 
   const showImg = () => {
     if (!route && props.index === 10) {
+
       let DivStyle = {};
       let imgStyle1 = {};
       let imgStyle2 = {};
@@ -380,6 +395,9 @@ const Conversation = (props) => {
           zIndex: "100",
           position: "fixed",
           top: "7rem",
+          left: "0",
+          right: "0",
+          margin: "0 auto",
         };
 
         imgStyle1 = { // cloud
@@ -387,6 +405,9 @@ const Conversation = (props) => {
           height: "45rem",
           zIndex: "102",
           position: "fixed",
+          left: "0",
+          right: "0",
+          margin: "0 auto",
         };
 
         imgStyle2 = {  // ama
@@ -394,6 +415,13 @@ const Conversation = (props) => {
           height: "45rem",
           zIndex: "101",
           position: "fixed",
+          animation: "slideUp 2.5s",
+          animationIterationCount: "1",
+          animationFillMode: "forwards",
+          overflow: "hidden",
+          left: "0",
+          right: "0",
+          margin: "0 auto",
         };
 
         imgStyle3 = { // background
@@ -401,6 +429,9 @@ const Conversation = (props) => {
           height: "45rem",
           zIndex: "100",
           position: "fixed",
+          left: "0",
+          right: "0",
+          margin: "0 auto",
         };
       } else {
         DivStyle = {
@@ -409,6 +440,9 @@ const Conversation = (props) => {
           zIndex: "100",
           position: "fixed",
           top: "5.5rem",
+          left: "0",
+          right: "0",
+          margin: "0 auto",
         };
 
         imgStyle1 = { // cloud
@@ -416,6 +450,9 @@ const Conversation = (props) => {
           height: "24.1rem",
           zIndex: "102",
           position: "fixed",
+          left: "0",
+          right: "0",
+          margin: "0 auto",
         };
 
         imgStyle2 = {  // ama
@@ -423,6 +460,13 @@ const Conversation = (props) => {
           height: "24.1rem",
           zIndex: "101",
           position: "fixed",
+          animation: "slideUp 2.5s",
+          animationIterationCount: "1",
+          animationFillMode: "forwards",
+          overflow: "hidden",
+          left: "0",
+          right: "0",
+          margin: "0 auto",
         };
 
         imgStyle3 = { // background
@@ -430,25 +474,26 @@ const Conversation = (props) => {
           height: "24.1rem",
           zIndex: "100",
           position: "fixed",
+          left: "0",
+          right: "0",
+          margin: "0 auto",
         };
       }
-      
 
-      return (
-        <div className="conversation__img" >
-          <div style={DivStyle}>
-            <img style={imgStyle1} src={images(10)} />
-            <img style={imgStyle2} src={images(11)} />
-            <img style={imgStyle3} src={images(12)} />
-          </div>
-        </div>
-      );
+    return (
+      <div style={DivStyle}>
+        <img style={imgStyle1} src={images(10)} />
+        <img style={imgStyle2} src={images(11)} />
+        <img style={imgStyle3} src={images(12)} />
+      </div>
+    );
   } else {
       return (
         <div className="conversation__img" >
           {putGoToBtn()}
+          {/*{showImg10()}*/}
           <img style={animateImg()} src={images(props.index - 1)} />
-          {showImg10()}
+          
         </div>
       );
     }

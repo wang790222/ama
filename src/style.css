@@ -27,18 +27,12 @@
 @keyframes fadeOut {
   0% {
     opacity: 1; }
-  98% {
-    opacity: 0.01; }
-  99% {
-    opacity: 0; }
   100% {
     opacity: 0; } }
 
 @keyframes fadeIn {
   0% {
     opacity: 0; }
-  1% {
-    opacity: 0.01; }
   100% {
     opacity: 1; } }
 
@@ -205,13 +199,13 @@ html {
       animation-fill-mode: forwards; }
     .conversation__box-text-3 {
       opacity: 0;
-      animation: type 1.2s steps(40, end);
-      animation-delay: 2.3s;
+      animation: type 1s steps(40, end);
+      animation-delay: 2.1s;
       animation-fill-mode: forwards; }
     .conversation__box-text-4 {
       opacity: 0;
-      animation: type 1s steps(40, end);
-      animation-delay: 3.6s;
+      animation: type 0.8s steps(40, end);
+      animation-delay: 3.2s;
       animation-fill-mode: forwards; }
     .conversation__box-option {
       position: absolute;
