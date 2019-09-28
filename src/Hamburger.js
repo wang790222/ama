@@ -29,26 +29,26 @@ const Hamburger = (props) => {
       return (
         <ul className="hamburger__list">
           <li className="hamburger__item">
-            <a href="#" className="hamburger__link" onClick={handleOnClick}><span>首頁</span></a>
+            <a href="#" className={addWhiteToLink(0)} onClick={handleOnClick}><span>首頁</span></a>
           </li>
           <li className="hamburger__item">
-            <a href="#s2" className="hamburger__link" onClick={handleOnClick}>
+            <a href="#s2" className={addWhiteToLink(1)} onClick={handleOnClick}>
               <span>你是哪裡人？</span></a>
           </li>
           <li className="hamburger__item">
-            <a href="#s3" className="hamburger__link" onClick={handleOnClick}>
+            <a href="#s3" className={addWhiteToLink(2)} onClick={handleOnClick}>
               <span>你怎麼看兩岸關係？</span></a>
           </li>
           <li className="hamburger__item">
-            <a href="#s4" className="hamburger__link" onClick={handleOnClick}>
+            <a href="#s4" className={addWhiteToLink(3)} onClick={handleOnClick}>
               <span>對台灣的愛恨情仇？</span></a>
           </li>
           <li className="hamburger__item">
-            <a href="#s5" className="hamburger__link" onClick={handleOnClick}>
+            <a href="#s5" className={addWhiteToLink(4)} onClick={handleOnClick}>
               <span>高中職生對政治冷感嗎？</span></a>
           </li>
           <li className="hamburger__item">
-            <a href="#s6" className="hamburger__link" onClick={handleOnClick}>
+            <a href="#s6" className={addWhiteToLink(5)} onClick={handleOnClick}>
               <span>調查結果，他們怎麼看？</span></a>
           </li>
         </ul>
