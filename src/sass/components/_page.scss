@@ -2,7 +2,6 @@
   width: 100%;
   height: 100%;
   position: relative;
-  font-family: Noto Sans TC, sans-serif;
   font-size: 10px;
 
   &__block {
@@ -951,30 +950,55 @@
         height: 50rem;
   
         &-left {
-          width: 36rem;
-          height: 105.7rem;
+          margin: 0;
+          width: 15rem;
+          height: 45rem;
           float: left;
         }
   
         &-right {
-          height: 25rem;
-          width: 14.4rem;
+          margin-top: 4rem;
+          width: 20rem;
+          height: 45rem;
           float: right;
+
           &-btn {
+            margin: 0 auto 3rem;
             width: 14.4rem;
             height: 4rem;
             color: white;
+            text-align: center;
+            line-height: 3.4rem;
+            box-shadow: .5rem 1rem 1rem rgba(black, .2);
+            border-radius: 2rem;
+            border: .3rem solid white;
+
+            &:active {
+              box-shadow: none;
+            }
   
             &-1 {
               background-color: #007AA5;
+
+              &:hover {
+                background-color: #009DBB;
+              }
             }
   
             &-2 {
               background-color: #009DBB;
+
+              &:hover {
+                background-color: #00B9D9;
+              }
             }
   
             &-3 {
               background-color: #00B9D9;
+
+              &:hover {
+                background-color: #54D0DD;
+              }
             }
   
             &-4 {
@@ -1128,13 +1152,98 @@
       &-btn {
         width: 17rem;
         height: 5rem;
-        background-color: #C8C8C8;
+        background-color: #FF8622;
         color: black;
         border-radius: 1rem;
         font-size: 2rem;
         text-align: center;
-        line-height: 5rem;
+        line-height: 4.4rem;
         cursor: pointer;
+        box-shadow: .5rem 1rem 1rem rgba(black, .2);
+        border-radius: 2rem;
+        border: .3rem solid white;
+        color: white;
+
+        &:active {
+          box-shadow: none;
+        }
+
+        &:hover {
+          background-color: #FFA55A;
+        }
+      }
+    }
+
+    &-41-1 {
+      width: 32rem;
+      height: 44rem;
+
+      @include respond(phone) {
+        height: 48rem;
+      }
+
+      &-row-2 {
+        width: 32rem;
+        height: 20rem;
+        margin: 2rem auto 0;
+
+        &-left {
+          float: left;
+        }
+
+        &-right {
+          float: right;
+        }
+      }
+
+      &-img__btn {
+        width: 14.4rem;
+        height: 20rem;
+
+        &-img {
+          width: 14.4rem;
+          height: 16rem;
+          background-color: grey;
+        }
+
+        &-btn {
+          width: 14.4rem;
+          height: 4rem;
+          box-shadow: .5rem 1rem 1rem rgba(black, .2);
+          border-radius: 1rem;
+          border: .3rem solid white;
+          line-height: 3.4rem;
+          color: white;
+          background-color: #FF8622;
+          text-align: center;
+          font-size: 1.8rem;
+          letter-spacing: .09rem;
+
+          &:active {
+            box-shadow: none;
+          }
+
+          &:hover {
+            background-color: #FFA55A;
+          }
+        }
+      }
+    }
+
+    &-41-2 {
+      width: 20rem;
+      height: 2.4rem;
+      padding-bottom: 4rem;
+      font-size: 1.7rem;
+      line-height: 2.4rem;
+      color: #86663C;
+      margin-bottom: 4rem;
+
+      & span {
+        & ion-icon {
+          font-size: 5.5rem;
+          transform: translateY(2.25rem);
+        }
       }
     }
 
@@ -1930,8 +2039,6 @@
         cursor: pointer;
         width: 25rem;
         height: 7rem;
-        border-radius: 2rem;
-        border: .5rem solid white;
         text-align: center;
         line-height: 6rem;
         background-color: #F2BB74;
@@ -1940,6 +2047,8 @@
         font-size: 2.8rem;
         letter-spacing: .1rem;
         box-shadow: .5rem 1rem 1rem rgba(black, .2);
+        border-radius: 2rem;
+        border: .5rem solid white;
 
         &:hover {
           background-color: #F4C88E;
@@ -2142,6 +2251,11 @@
         z-index: 10;
         background-color: #FFF5C5;
 
+        @include respond(phone) {
+          width: 36rem;
+          height: 64rem;
+        }
+
         &-text {
           margin: 6.9rem auto 0;
           width: 31.2rem;
@@ -2151,6 +2265,13 @@
           font-weight: 700;
           font-size: 3rem;
           letter-spacing: .12rem;
+
+          @include respond(phone) {
+            width: 26rem;
+            font-size: 2.5rem;
+            letter-spacing: .1rem;
+            margin: 15.9rem auto 0;
+          }
         }
   
         &-close {
@@ -2170,7 +2291,8 @@
           cursor: pointer;
   
           @include respond(phone) {
-            
+            top: 1.5rem;
+            left: 29.5rem;
           }
         }
   
@@ -2179,12 +2301,23 @@
           width: 26rem;
           height: 10rem;
           margin: 4rem auto 0;
+
+          @include respond(phone) {
+            width: 20rem;
+            height: 7.6rem;
+            margin: 3.3rem auto 0;
+          }
   
           &-line {
             width: 10rem;
             height: 10rem;
             float: right;
             cursor: pointer;
+
+            @include respond(phone) {
+              width: 7.6rem;
+              height: 7.6rem;
+            }
           }
   
           &-fb {
@@ -2192,6 +2325,11 @@
             height: 10rem;
             float: left;
             cursor: pointer;
+
+            @include respond(phone) {
+              width: 7.6rem;
+              height: 7.6rem;
+            }
           }
         }
   
@@ -2199,6 +2337,12 @@
           width: 58rem;
           height: 7rem;
           margin: 5rem auto 0;
+
+          @include respond(phone) {
+            width: 32.7rem;
+            height: 5.8rem;
+            margin: 5.3rem auto 0;
+          }
   
           &-input {
             width: 38.8rem;
@@ -2206,7 +2350,17 @@
             background-color: white;
             font-size: 2.8rem;
             letter-spacing: .1rem;
-            padding: 1.7rem 0 1.4rem 4rem;
+            padding: 1.7rem 1rem 1.4rem 4rem;
+            border-top-left-radius: 2rem;
+            border-bottom-left-radius: 2rem;
+
+            @include respond(phone) {
+              width: 18.5rem;
+              height: 5.8rem;
+              font-size: 1.5rem;
+              letter-spacing: .054rem;
+              padding: 1.7rem 1rem 1.7rem 2.3rem;
+            }
           }
   
           &-btn {
@@ -2221,6 +2375,14 @@
             font-size: 2.8rem;
             letter-spacing: .1rem;
             cursor: pointer;
+
+            @include respond(phone) {
+              width: 14.2rem;
+              height: 5.8rem;
+              font-size: 1.9rem;
+              letter-spacing: .068rem;
+              line-height: 5.8rem;
+            }
           }
         }
       }

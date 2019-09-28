@@ -10,6 +10,13 @@ import Hamburger from './Hamburger';
 const InfoInsertHead = (props) => {
 
   const thisDiv = useRef(null);
+  const s1Ref = useRef(null);
+  const s2Ref = useRef(null);
+  const s3Ref = useRef(null);
+  const s4Ref = useRef(null);
+  const s5Ref = useRef(null);
+  const s6Ref = useRef(null);
+
   const [intro, setIntro] = useState(!props.fromGotoPage);
   const [popup, setPopup] = useState(false);
   const [afterNine, setAfterNine] = useState(false);
@@ -21,6 +28,8 @@ const InfoInsertHead = (props) => {
   const [readAll, setReadAll] = useState(false);
   const [readAllIndex, setReadAllIndex] = useState(false);
   const [singleColor, setSingleColor] = useState(true);
+  const [curSec, setCurSec] = useState(0);
+  const [hambugerOn, setHambugerOn] = useState(false);
 
   useEffect(() => {
     if(intro && !singleColor) {
@@ -231,11 +240,64 @@ const InfoInsertHead = (props) => {
     }
   }
 
+  const getCurrentSection = () => {
+
+    let minDis = Number.MAX_SAFE_INTEGER;
+    let topOffsetArr = [];
+    let sec = null;
+
+    let s1Top = (s1Ref.current) ? s1Ref.current.offsetTop : Number.MAX_SAFE_INTEGER;
+    topOffsetArr.push(s1Top);
+
+    let s2Top = (s2Ref.current) ? s2Ref.current.offsetTop : Number.MAX_SAFE_INTEGER;
+    topOffsetArr.push(s2Top);
+
+    let s3Top = (s3Ref.current) ? s3Ref.current.offsetTop : Number.MAX_SAFE_INTEGER;
+    topOffsetArr.push(s3Top);
+
+    let s4Top = (s4Ref.current) ? s4Ref.current.offsetTop : Number.MAX_SAFE_INTEGER;
+    topOffsetArr.push(s4Top);
+
+    let s5Top = (s5Ref.current) ? s5Ref.current.offsetTop : Number.MAX_SAFE_INTEGER;
+    topOffsetArr.push(s5Top);
+
+    let s6Top = (s6Ref.current) ? s6Ref.current.offsetTop : Number.MAX_SAFE_INTEGER;
+    topOffsetArr.push(s6Top);
+
+    let i = 0;
+    for (; i < 6; i++) {
+      if (minDis > Math.abs(window.pageYOffset - topOffsetArr[i])) {
+        sec = i;
+        minDis = Math.abs(window.pageYOffset - topOffsetArr[i]);
+      }
+    }
+    
+    return sec;
+  };
+
+  const isHamburgerOn = (isOn) => {
+    let cur = getCurrentSection();
+    if (cur !== curSec) {
+      setCurSec(cur);
+    }
+
+    if (hambugerOn && !isOn) {
+      setHambugerOn(false);
+    } else if (!hambugerOn && isOn) {
+      setHambugerOn(true);
+    }
+  };
+
   const showHamburger = () => {
     if (popup) {
       return null;
     } else {
-      return (<Hamburger isMobile={props.isMobile} />);
+      return (<Hamburger 
+        isMobile={props.isMobile} 
+        currentSection={curSec}
+        isHamburgerOn={isHamburgerOn}
+        />
+      );
     }
   };
 
@@ -369,8 +431,127 @@ const InfoInsertHead = (props) => {
     }
   }
 
+  const group40_41 = () => {
+    if (!props.isMobile) {
+      return (
+        <div>
+          <div className="page__block page__block-40">
+            <div className="row-4">
+              <div className="col-1-of-4 page__block-40-img"></div>
+              <div className="col-1-of-4 page__block-40-img"></div>
+              <div className="col-1-of-4 page__block-40-img"></div>
+              <div className="col-1-of-4 page__block-40-img"></div>
+            </div>
+          </div>
+          <div className="page__block page__block-41">
+            <div className="row-4">
+              <div className="col-1-of-4 page__block-41-btn">
+                沮喪的
+              </div>
+              <div className="col-1-of-4 page__block-41-btn">
+                難過的
+              </div>
+              <div className="col-1-of-4 page__block-41-btn">
+                憤怒的
+              </div>
+              <div className="col-1-of-4 page__block-41-btn">
+                擔心的
+              </div>
+            </div>
+          </div>
+          <div className="page__block page__block-41-2">
+            <span><ion-icon name="arrow-dropup"></ion-icon></span><span>點擊按鈕試試看！</span>
+          </div>
+          <div className="page__block page__block-42"></div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="page__block page__block-41-1">
+          <div className="page__block-41-1-row-2">
+            <div className="page__block-41-1-row-2-left">
+              <div className="page__block-41-1-img__btn">
+                <div className="page__block-41-1-img__btn-img">
+                </div>
+                <div className="page__block-41-1-img__btn-btn">
+                  沮喪的
+                </div>
+              </div>
+            </div>
+            <div className="page__block-41-1-row-2-right">
+              <div className="page__block-41-1-img__btn">
+                <div className="page__block-41-1-img__btn-img">
+                </div>
+                <div className="page__block-41-1-img__btn-btn">
+                  難過的
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="page__block-41-1-row-2">
+            <div className="page__block-41-1-row-2-left">
+              <div className="page__block-41-1-img__btn">
+                <div className="page__block-41-1-img__btn-img">
+                </div>
+                <div className="page__block-41-1-img__btn-btn">
+                  憤怒的
+                </div>
+              </div>
+            </div>
+            <div className="page__block-41-1-row-2-right">
+              <div className="page__block-41-1-img__btn">
+                <div className="page__block-41-1-img__btn-img">
+                </div>
+                <div className="page__block-41-1-img__btn-btn">
+                  擔心的
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="page__block page__block-41-2">
+            <span><ion-icon name="arrow-dropup"></ion-icon></span><span>點擊按鈕試試看！</span>
+          </div>
+        </div>
+      );
+    }
+  }
+
   const shareBtnPopup = () => {
     if (share) {
+      const socialMediaIcon = () => {
+        if (!props.isMobile) {
+          return (
+            <div>
+              <div className="page__block-60__content-row-icon-fb">
+                <FacebookShareButton url={"https://www.google.com"}>
+                  <FacebookIcon borderRadius={10} size={100}/>
+                </FacebookShareButton>
+              </div>
+              <div className="page__block-60__content-row-icon-line">
+                <LineShareButton url={"https://www.google.com"}>
+                  <LineIcon borderRadius={10} size={100}/>
+                </LineShareButton>
+              </div>
+            </div>
+          ); 
+        } else {
+          return (
+            <div>
+              <div className="page__block-60__content-row-icon-fb">
+                <FacebookShareButton url={"https://www.google.com"}>
+                  <FacebookIcon borderRadius={10} size={76}/>
+                </FacebookShareButton>
+              </div>
+              <div className="page__block-60__content-row-icon-line">
+                <LineShareButton url={"https://www.google.com"}>
+                  <LineIcon borderRadius={10} size={76}/>
+                </LineShareButton>
+              </div>
+            </div>
+          ); 
+        }
+      };
+
       return (
         <div className="page__block-60">
           <div className="page__block-60__content">
@@ -384,16 +565,7 @@ const InfoInsertHead = (props) => {
               &times;
             </div>
             <div className="page__block-60__content-row-icon">
-              <div className="page__block-60__content-row-icon-fb">
-                <FacebookShareButton url={"https://www.google.com"}>
-                  <FacebookIcon borderRadius={10} size={100}/>
-                </FacebookShareButton>
-              </div>
-              <div className="page__block-60__content-row-icon-line">
-                <LineShareButton url={"https://www.google.com"}>
-                  <LineIcon borderRadius={10} size={100}/>
-                </LineShareButton>
-              </div>
+             {socialMediaIcon()}
             </div>
             <div className="page__block-60__content-row-copied">
               <input 
@@ -480,7 +652,7 @@ const InfoInsertHead = (props) => {
               Video
             </div>
           </div>
-          <div className="page__block page__block-20" id="s3">
+          <div className="page__block page__block-20" id="s3" ref={s3Ref}>
             <div className="page__block page__block-20-content">
               <div className="page__block-20-content-cube">
               </div>
@@ -517,7 +689,7 @@ const InfoInsertHead = (props) => {
             若從這兩份調查來看，無論是高中職生或成年人，都有超過8成的人選擇與「維持現狀」有關的選項。但多數高中職生傾向『維持現狀，以後走向獨立』，成年人則以『維持現狀，看情形再決定獨立或統一』的意見佔多數。
             </p>
           </div>
-          <div className="page__block page__block-28" id="s4">
+          <div className="page__block page__block-28" id="s4" ref={s4Ref}>
             <div className="page__block page__block-28-content">
               <div className="page__block-28-content-cube">
               </div>
@@ -559,32 +731,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-39">
             <p>顯示統計結果，每個結果可以點按鈕，看看覺得負面形容詞的原因。</p>
           </div>
-          <div className="page__block page__block-40">
-            <div className="row-4">
-              <div className="col-1-of-4 page__block-40-img"></div>
-              <div className="col-1-of-4 page__block-40-img"></div>
-              <div className="col-1-of-4 page__block-40-img"></div>
-              <div className="col-1-of-4 page__block-40-img"></div>
-            </div>
-          </div>
-          <div className="page__block page__block-41">
-            <div className="row-4">
-              <div className="col-1-of-4 page__block-41-btn">
-                沮喪的
-              </div>
-              <div className="col-1-of-4 page__block-41-btn">
-                難過的
-              </div>
-              <div className="col-1-of-4 page__block-41-btn">
-                憤怒的
-              </div>
-              <div className="col-1-of-4 page__block-41-btn">
-                擔心的
-              </div>
-            </div>
-          </div>
-          <div className="page__block page__block-42">
-          </div>
+          {group40_41()}
           <div className="page__block page__block-43">
             <p>問完青少年是否會對自己的國家感到光榮後，問卷中進一步提問：「當我們講到台灣時，你認為以下哪個負面性形容詞適合描述你心理上感受？」。負面形容詞的選項包括：「沮喪的」、「難過的」、「憤怒的」、「擔心的」、以及「沒有」。
             </p>
@@ -630,7 +777,7 @@ const InfoInsertHead = (props) => {
               Video
             </div>
           </div>
-          <div className="page__block page__block-50" id="s5">
+          <div className="page__block page__block-50" id="s5" ref={s5Ref}>
             <div className="page__block page__block-50-content">
               <div className="page__block-50-content-cube">
               </div>
@@ -680,7 +827,7 @@ const InfoInsertHead = (props) => {
             </div>
             {showMutipleVideos()}
           </div>
-          <div className="page__block page__block-55" id="s6">
+          <div className="page__block page__block-55" id="s6" ref={s6Ref}>
             <div className="page__block-55-title">
               <p>他們怎麼看這份調查？</p>
             </div>
@@ -940,7 +1087,7 @@ const InfoInsertHead = (props) => {
       return (
         <div>
           {showHamburger("one-line__infoinsert-box-typing")}
-          <div className="page__block page__block-1" id="#s1">
+          <div className="page__block page__block-1" id="#s1" ref={s1Ref}>
             <h1>嘿！你是哪裡人？</h1>
             <h2>青少年國族認同大調查</h2>
           </div>
@@ -953,7 +1100,7 @@ const InfoInsertHead = (props) => {
             onClick={handleOnClickFor4}
             className="page__block page__block-4">看研究方法
           </div>
-          <div className="page__block page__block-5" id="s2">
+          <div className="page__block page__block-5" id="s2" ref={s2Ref}>
             <div className="page__block page__block-5-content">
               <div className="page__block-5-content-cube">
               </div>
@@ -1012,8 +1159,17 @@ const InfoInsertHead = (props) => {
     }
   }
 
+  const handleOnWheel = () => {
+    if (hambugerOn) {
+      let cur = getCurrentSection();
+      if (cur !== curSec) {
+        setCurSec(cur);
+      }
+    }
+  };
+
   return (
-    <div style={fixBackground()}>
+    <div style={fixBackground()} onWheel={handleOnWheel}>
       {showContent()}
     </div>
   );
