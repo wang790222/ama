@@ -533,7 +533,7 @@
 
     &-19 {
       width: 100vw;
-      height: 82.5rem;
+      height: 76rem;
       margin-top: 8rem;
       background-color: #9DDDE3;
 
@@ -580,8 +580,6 @@
       &-video {
         width: 65rem;
         height: 36.5rem;
-        background-color: #C8C8C8;
-        color: black;
         margin: 6rem auto 0;
 
         @include respond(phone) {
@@ -921,7 +919,6 @@
     &-32 {
       width: 86rem;
       height: 19.9rem;
-      background-color: #C8C8C8;
       margin-top: 4rem;
 
       @include respond(phone) {
@@ -936,13 +933,51 @@
       &-btn {
         width: 17rem;
         height: 5rem;
-        background-color: #C8C8C8;
-        color: black;
         border-radius: 1rem;
+        color: white;
         font-size: 2rem;
         text-align: center;
-        line-height: 5rem;
+        line-height: 4.4rem;
         cursor: pointer;
+        box-shadow: .5rem 1rem 1rem rgba(black, .2);
+        border-radius: 2rem;
+        border: .3rem solid white;
+
+        &:active {
+          box-shadow: none;
+        }
+
+        &-1 {
+          background-color: #007AA5;
+
+          &:hover {
+            background-color: #009DBB;
+          }
+        }
+
+        &-2 {
+          background-color: #009DBB;
+
+          &:hover {
+            background-color: #00B9D9;
+          }
+        }
+
+        &-3 {
+          background-color: #00B9D9;
+
+          &:hover {
+            background-color: #54D0DD;
+          }
+        }
+
+        &-4 {
+          background-color: #54D0DD;
+
+          &:hover {
+            background-color: #85E0EA;
+          }
+        }
       }
 
       &__two_col {
@@ -1142,13 +1177,10 @@
       &-img {
         width: 17rem;
         height: 19.9rem;
-        background-color: #C8C8C8;
       }
     }
 
     &-41 {
-      margin-top: 5rem;
-
       &-btn {
         width: 17rem;
         height: 5rem;
@@ -1203,7 +1235,6 @@
         &-img {
           width: 14.4rem;
           height: 16rem;
-          background-color: grey;
         }
 
         &-btn {
@@ -1350,14 +1381,13 @@
     }
 
     &-46 {
-      width: 86rem;
-      height: 45rem;
-      background-color: #C8C8C8;
+      width: 85rem;
+      height: 68rem;
       margin-top: 6rem;
 
       @include respond(phone) {
         width: 36rem;
-        height: 58rem;
+        height: 115.9rem;
       }
     }
 
@@ -1663,7 +1693,7 @@
 
     &-54 {
       width: 100vw;
-      height: 101.7rem;
+      height: 92.8rem;
       margin-top: 8rem;
       background-color: #9DDDE3;
 
@@ -1733,23 +1763,21 @@
 
         &-window {
           margin: 0 auto;
-          width: 37rem;
+          width: 36rem;
 
           &-left {
-            width: 2.5rem;
+            width: 2.3rem;
             height: 5rem;
-            background-image: url('./img/left.png');
+            background-image: url('./img/arrow-left.svg');
             float: left;
-            margin: 0 .75rem;
             transform: translateY(100%);
           }
   
           &-right {
-            width: 2.5rem;
+            width: 2.3rem;
             height: 5rem;
-            background-image: url('./img/right.png');
+            background-image: url('./img/arrow-right.svg');
             float: right;
-            margin-right: 1.25rem;
             transform: translateY(100%);
           }
   
@@ -2267,7 +2295,7 @@
           letter-spacing: .12rem;
 
           @include respond(phone) {
-            width: 26rem;
+            width: 27rem;
             font-size: 2.5rem;
             letter-spacing: .1rem;
             margin: 15.9rem auto 0;
@@ -2464,4 +2492,8 @@
       }
     }
   }
+}
+
+.add_opacity {
+  opacity: .3 !important;
 }

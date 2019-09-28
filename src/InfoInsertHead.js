@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FacebookShareButton, FacebookIcon, LineShareButton, LineIcon } from 'react-share';
+import { Player } from 'video-react';
+import "../node_modules/video-react/dist/video-react.css";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
@@ -142,20 +144,36 @@ const InfoInsertHead = (props) => {
     }
   };
 
+  const addOpacityToArrowLeft = () => {
+    if (videoIndex === 0) {
+      return "page__block-54-video-slides-window-left add_opacity";
+    } else {
+      return "page__block-54-video-slides-window-left";
+    }
+  };
+
+  const addOpacityToArrowRight = () => {
+    if (videoIndex === 5) {
+      return "page__block-54-video-slides-window-right add_opacity";
+    } else {
+      return "page__block-54-video-slides-window-right";
+    }
+  };
+
   const showMutipleVideos = (index) => {
     if (props.isMobile) {
       return (
         <div className="page__block-54-video-slides">
           <div className="page__block-54-video-slides-window">
             <div 
-              className="page__block-54-video-slides-window-left"
+              className={addOpacityToArrowLeft()}
               onClick={videoSlideLeft}
             >
             &nbsp;
             </div>
             <div style={videoCssStyle(videoIndex)}>&nbsp;</div>
             <div 
-              className="page__block-54-video-slides-window-right"
+              className={addOpacityToArrowRight()}
               onClick={videoSlideRight}
             >
             &nbsp;
@@ -174,12 +192,68 @@ const InfoInsertHead = (props) => {
     } else {
       return (
         <div className="page__block-54-video-grid">
-          <div className="page__block-54-video-grid-img">One</div>
-          <div className="page__block-54-video-grid-img">Two</div>
-          <div className="page__block-54-video-grid-img">Thre</div>
-          <div className="page__block-54-video-grid-img">Four</div>
-          <div className="page__block-54-video-grid-img">Five</div>
-          <div className="page__block-54-video-grid-img">Six</div>
+          <div className="page__block-54-video-grid-img">
+            <Player
+              playsInline
+              poster={require('./img/video/v1.jpg')}
+              src={require('./img/video/v1.mp4')}
+              width={"100%"}
+              height={"100%"}
+              fluid={false}
+              autoPlay={true}
+              muted={true}
+            />
+          </div>
+          <div className="page__block-54-video-grid-img">
+            <Player
+              playsInline
+              poster={require('./img/video/v1.jpg')}
+              src={require('./img/video/v1.mp4')}
+              width={"100%"}
+              height={"100%"}
+              fluid={false}
+            />
+          </div>
+          <div className="page__block-54-video-grid-img">
+            <Player
+              playsInline
+              poster={require('./img/video/v1.jpg')}
+              src={require('./img/video/v1.mp4')}
+              width={"100%"}
+              height={"100%"}
+              fluid={false}
+            />
+          </div>
+          <div className="page__block-54-video-grid-img">
+            <Player
+              playsInline
+              poster={require('./img/video/v1.jpg')}
+              src={require('./img/video/v1.mp4')}
+              width={"100%"}
+              height={"100%"}
+              fluid={false}
+            />
+          </div>
+          <div className="page__block-54-video-grid-img">
+            <Player
+              playsInline
+              poster={require('./img/video/v1.jpg')}
+              src={require('./img/video/v1.mp4')}
+              width={"100%"}
+              height={"100%"}
+              fluid={false}
+            />
+          </div>
+          <div className="page__block-54-video-grid-img">
+            <Player
+              playsInline
+              poster={require('./img/video/v1.jpg')}
+              src={require('./img/video/v1.mp4')}
+              width={"100%"}
+              height={"100%"}
+              fluid={false}
+            />
+          </div>
         </div>
       );
     }
@@ -372,26 +446,27 @@ const InfoInsertHead = (props) => {
       return (
         <div>
           <div className="page__block page__block-32">
+            <img src={getImg(5)} style={{width:"100%", height:"100%"}} />
           </div>
           <div className="page__block page__block-33">
             <div className="row-4">
               <div 
-                className="col-1-of-4 page__block-33-btn"
+                className="col-1-of-4 page__block-33-btn page__block-33-btn-1"
                 onClick={handleOnClickFor33}>
                 一點也不光榮
               </div>
               <div 
-                className="col-1-of-4 page__block-33-btn"
+                className="col-1-of-4 page__block-33-btn page__block-33-btn-2"
                 onClick={handleOnClickFor33}>
                 很少感到光榮
               </div>
               <div 
-                className="col-1-of-4 page__block-33-btn"
+                className="col-1-of-4 page__block-33-btn page__block-33-btn-2"
                 onClick={handleOnClickFor33}>
                 有時感到光榮
               </div>
               <div 
-                className="col-1-of-4 page__block-33-btn"
+                className="col-1-of-4 page__block-33-btn page__block-33-btn-4"
                 onClick={handleOnClickFor33}>
                 時常感到光榮
               </div>
@@ -404,6 +479,7 @@ const InfoInsertHead = (props) => {
         <div className="page__block page__block-33__two_col">
           <div className="page__block-33__two_col-left">
             <div className="page__block page__block-32">
+              <img src={getImg(5)} style={{width:"100%", height:"100%"}} />
             </div>
           </div>
           <div className="page__block-33__two_col-right">
@@ -439,10 +515,18 @@ const InfoInsertHead = (props) => {
         <div>
           <div className="page__block page__block-40">
             <div className="row-4">
-              <div className="col-1-of-4 page__block-40-img"></div>
-              <div className="col-1-of-4 page__block-40-img"></div>
-              <div className="col-1-of-4 page__block-40-img"></div>
-              <div className="col-1-of-4 page__block-40-img"></div>
+              <div className="col-1-of-4 page__block-40-img">
+                <img src={require('./img/q6-1.png')} style={{width:"100%", height:"100%"}}/>
+              </div>
+              <div className="col-1-of-4 page__block-40-img">
+                <img src={require('./img/q6-2.png')} style={{width:"100%", height:"100%"}}/>
+              </div>
+              <div className="col-1-of-4 page__block-40-img">
+                <img src={require('./img/q6-3.png')} style={{width:"100%", height:"100%"}}/>
+              </div>
+              <div className="col-1-of-4 page__block-40-img">
+                <img src={require('./img/q6-4.png')} style={{width:"100%", height:"100%"}}/>
+              </div>
             </div>
           </div>
           <div className="page__block page__block-41">
@@ -474,6 +558,7 @@ const InfoInsertHead = (props) => {
             <div className="page__block-41-1-row-2-left">
               <div className="page__block-41-1-img__btn">
                 <div className="page__block-41-1-img__btn-img">
+                  <img src={require('./img/q6-1.png')} style={{width:"100%", height:"100%"}}/>
                 </div>
                 <div className="page__block-41-1-img__btn-btn">
                   沮喪的
@@ -483,6 +568,7 @@ const InfoInsertHead = (props) => {
             <div className="page__block-41-1-row-2-right">
               <div className="page__block-41-1-img__btn">
                 <div className="page__block-41-1-img__btn-img">
+                  <img src={require('./img/q6-2.png')} style={{width:"100%", height:"100%"}}/>
                 </div>
                 <div className="page__block-41-1-img__btn-btn">
                   難過的
@@ -494,6 +580,7 @@ const InfoInsertHead = (props) => {
             <div className="page__block-41-1-row-2-left">
               <div className="page__block-41-1-img__btn">
                 <div className="page__block-41-1-img__btn-img">
+                  <img src={require('./img/q6-3.png')} style={{width:"100%", height:"100%"}}/>
                 </div>
                 <div className="page__block-41-1-img__btn-btn">
                   憤怒的
@@ -503,6 +590,7 @@ const InfoInsertHead = (props) => {
             <div className="page__block-41-1-row-2-right">
               <div className="page__block-41-1-img__btn">
                 <div className="page__block-41-1-img__btn-img">
+                  <img src={require('./img/q6-4.png')} style={{width:"100%", height:"100%"}}/>
                 </div>
                 <div className="page__block-41-1-img__btn-btn">
                   擔心的
@@ -729,7 +817,16 @@ const InfoInsertHead = (props) => {
               <p>高中職生的國族認同，跟你的想像一致嗎？「青春發言人」邀請12位來自台灣各地、不同家庭背景的青少年，深入訪問他們對國家、族群，以及台灣未來的想法。</p>
             </div>
             <div className="page__block-19-video">
-              Video
+              <Player
+                playsInline
+                poster={require('./img/video/v1.jpg')}
+                src={require('./img/video/v1.mp4')}
+                width={"100%"}
+                height={"100%"}
+                fluid={false}
+                autoPlay={true}
+                muted={true}
+              />
             </div>
           </div>
           <div className="page__block page__block-20" id="s3" ref={s3Ref}>
@@ -791,7 +888,8 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-33-1">
             <span><ion-icon name="arrow-dropup"></ion-icon></span><span>點擊按鈕試試看！</span>
           </div>
-          <div className="page__block page__block-34"></div>
+          <div className="page__block page__block-34">
+          </div>
           <div className="page__block page__block-35">
             <p>為了多了解青少年對國家和這塊土地的情感，在這份問卷中，設計了這項提問：「對於身為我們國家的一份子，你是否感到光榮？」，結果有47.5%的受訪者認為「有時感到光榮」，33.9%選擇「時常感到光榮」，兩者合計共81.4%。
             </p>
@@ -833,7 +931,9 @@ const InfoInsertHead = (props) => {
               </div>
             </div>
           </div>
-          <div className="page__block page__block-46"></div>
+          <div className="page__block page__block-46">
+            <img src={getImg(7)} style={{width:"100%", height:"100%"}} />
+          </div>
           <div className="page__block page__block-47">
             <p>談到未來，高中職生選擇務實：經濟繁榮最重要</p>
           </div>
@@ -854,7 +954,16 @@ const InfoInsertHead = (props) => {
               <p>看到這裡，你有更理解高中職生們怎麼看待自己的國家和土地嗎？你是否有過因為國族立場的不同，導致世代衝突的經驗呢？「青春發言人」特別邀請政治立場有所差異的青少年和成年人一起坐下來對話，嘗試找尋彼此溝通的可能。</p>
             </div>
             <div className="page__block-49-video">
-              Video
+              <Player
+                playsInline
+                poster={require('./img/video/v1.jpg')}
+                src={require('./img/video/v1.mp4')}
+                width={650}
+                height={365}
+                fluid={false}
+                autoPlay={true}
+                muted={true}
+              />
             </div>
           </div>
           <div className="page__block page__block-50" id="s5" ref={s5Ref}>
@@ -1134,12 +1243,16 @@ const InfoInsertHead = (props) => {
     if (!props.isMobile) {
       let img = {
         1: require('./img/q1.png'),
+        5: require('./img/q5.png'),
+        7: require('./img/q7.png'),
       };
 
       return (img[index]);
     } else {
       let img = {
         1: require('./img/q1-small.png'),
+        5: require('./img/q5-small.png'),
+        7: require('./img/q7-small.png'),
       };
       return (img[index]);
     }

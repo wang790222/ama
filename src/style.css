@@ -718,7 +718,7 @@ html {
         line-height: 3.5rem; }
     .page__block-19 {
       width: 100vw;
-      height: 82.5rem;
+      height: 76rem;
       margin-top: 8rem;
       background-color: #9DDDE3; }
       .page__block-19-title {
@@ -753,8 +753,6 @@ html {
       .page__block-19-video {
         width: 65rem;
         height: 36.5rem;
-        background-color: #C8C8C8;
-        color: black;
         margin: 6rem auto 0; }
         @media (max-width: 1100px) {
           .page__block-19-video {
@@ -1010,7 +1008,6 @@ html {
     .page__block-32 {
       width: 86rem;
       height: 19.9rem;
-      background-color: #C8C8C8;
       margin-top: 4rem; }
       @media (max-width: 1100px) {
         .page__block-32 {
@@ -1021,13 +1018,33 @@ html {
       .page__block-33-btn {
         width: 17rem;
         height: 5rem;
-        background-color: #C8C8C8;
-        color: black;
         border-radius: 1rem;
+        color: white;
         font-size: 2rem;
         text-align: center;
-        line-height: 5rem;
-        cursor: pointer; }
+        line-height: 4.4rem;
+        cursor: pointer;
+        box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
+        border-radius: 2rem;
+        border: .3rem solid white; }
+        .page__block-33-btn:active {
+          box-shadow: none; }
+        .page__block-33-btn-1 {
+          background-color: #007AA5; }
+          .page__block-33-btn-1:hover {
+            background-color: #009DBB; }
+        .page__block-33-btn-2 {
+          background-color: #009DBB; }
+          .page__block-33-btn-2:hover {
+            background-color: #00B9D9; }
+        .page__block-33-btn-3 {
+          background-color: #00B9D9; }
+          .page__block-33-btn-3:hover {
+            background-color: #54D0DD; }
+        .page__block-33-btn-4 {
+          background-color: #54D0DD; }
+          .page__block-33-btn-4:hover {
+            background-color: #85E0EA; }
       .page__block-33__two_col {
         width: 36rem;
         height: 50rem; }
@@ -1161,28 +1178,25 @@ html {
       margin-top: 4rem; }
       .page__block-40-img {
         width: 17rem;
-        height: 19.9rem;
-        background-color: #C8C8C8; }
-    .page__block-41 {
-      margin-top: 5rem; }
-      .page__block-41-btn {
-        width: 17rem;
-        height: 5rem;
-        background-color: #FF8622;
-        color: black;
-        border-radius: 1rem;
-        font-size: 2rem;
-        text-align: center;
-        line-height: 4.4rem;
-        cursor: pointer;
-        box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
-        border-radius: 2rem;
-        border: .3rem solid white;
-        color: white; }
-        .page__block-41-btn:active {
-          box-shadow: none; }
-        .page__block-41-btn:hover {
-          background-color: #FFA55A; }
+        height: 19.9rem; }
+    .page__block-41-btn {
+      width: 17rem;
+      height: 5rem;
+      background-color: #FF8622;
+      color: black;
+      border-radius: 1rem;
+      font-size: 2rem;
+      text-align: center;
+      line-height: 4.4rem;
+      cursor: pointer;
+      box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
+      border-radius: 2rem;
+      border: .3rem solid white;
+      color: white; }
+      .page__block-41-btn:active {
+        box-shadow: none; }
+      .page__block-41-btn:hover {
+        background-color: #FFA55A; }
     .page__block-41-1 {
       width: 32rem;
       height: 44rem; }
@@ -1202,8 +1216,7 @@ html {
         height: 20rem; }
         .page__block-41-1-img__btn-img {
           width: 14.4rem;
-          height: 16rem;
-          background-color: grey; }
+          height: 16rem; }
         .page__block-41-1-img__btn-btn {
           width: 14.4rem;
           height: 4rem;
@@ -1310,14 +1323,13 @@ html {
               font-size: 2.2rem;
               line-height: 3.2rem; } }
     .page__block-46 {
-      width: 86rem;
-      height: 45rem;
-      background-color: #C8C8C8;
+      width: 85rem;
+      height: 68rem;
       margin-top: 6rem; }
       @media (max-width: 1100px) {
         .page__block-46 {
           width: 36rem;
-          height: 58rem; } }
+          height: 115.9rem; } }
     .page__block-47 {
       width: 65.8rem;
       text-align: center;
@@ -1546,7 +1558,7 @@ html {
         line-height: 3.5rem; }
     .page__block-54 {
       width: 100vw;
-      height: 101.7rem;
+      height: 92.8rem;
       margin-top: 8rem;
       background-color: #9DDDE3; }
       @media (max-width: 1100px) {
@@ -1597,20 +1609,18 @@ html {
         text-align: center; }
         .page__block-54-video-slides-window {
           margin: 0 auto;
-          width: 37rem; }
+          width: 36rem; }
           .page__block-54-video-slides-window-left {
-            width: 2.5rem;
+            width: 2.3rem;
             height: 5rem;
-            background-image: url("./img/left.png");
+            background-image: url("./img/arrow-left.svg");
             float: left;
-            margin: 0 .75rem;
             transform: translateY(100%); }
           .page__block-54-video-slides-window-right {
-            width: 2.5rem;
+            width: 2.3rem;
             height: 5rem;
-            background-image: url("./img/right.png");
+            background-image: url("./img/arrow-right.svg");
             float: right;
-            margin-right: 1.25rem;
             transform: translateY(100%); }
           .page__block-54-video-slides-window-img {
             width: 29rem;
@@ -1993,7 +2003,7 @@ html {
           letter-spacing: .12rem; }
           @media (max-width: 1100px) {
             .page__block-60__content-text {
-              width: 26rem;
+              width: 27rem;
               font-size: 2.5rem;
               letter-spacing: .1rem;
               margin: 15.9rem auto 0; } }
@@ -2148,6 +2158,9 @@ html {
           line-height: 3.5rem;
           color: #F06F04;
           cursor: pointer; }
+
+.add_opacity {
+  opacity: .3 !important; }
 
 .hamburger__checkbox {
   display: none; }
