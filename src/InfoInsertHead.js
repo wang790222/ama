@@ -3,6 +3,8 @@ import { FacebookShareButton, FacebookIcon, LineShareButton, LineIcon } from 're
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
+import q1 from './img/q1.png';
+
 
 import style from './style.css';
 import Hamburger from './Hamburger';
@@ -608,12 +610,90 @@ const InfoInsertHead = (props) => {
     }
   };
 
+  const showQuestion2 = () => {
+    if (!props.isMobile) {
+
+      let DivStyle = {};
+      let imgStyle1 = {};
+      let imgStyle2 = {};
+      let imgStyle3 = {};
+
+      DivStyle = {
+        width: "86rem",
+        height: "40rem",
+        zIndex: "100",
+        position: "absolute",
+        top: "0",
+        left: "0",
+        right: "0",
+        margin: "0 auto",
+      };
+
+      imgStyle1 = {
+        width: "86rem",
+        height: "40rem",
+        zIndex: "101",
+        position: "absolute",
+        left: "0",
+        right: "0",
+        margin: "0 auto",
+      };
+
+      imgStyle2 = {
+        width: "86rem",
+        height: "40rem",
+        zIndex: "102",
+        position: "absolute",
+        animationDelay: "2.5s",
+        animation: "fadeIn 3s",
+        animationIterationCount: "1",
+        animationFillMode: "forwards",
+        opacity: "0",
+        overflow: "hidden",
+        left: "0",
+        right: "0",
+        margin: "0 auto",
+      };
+
+      imgStyle3 = {
+        width: "86rem",
+        height: "40rem",
+        zIndex: "103",
+        position: "absolute",
+        animation: "fadeIn 3s",
+        animationDelay: "2s",
+        animationIterationCount: "1",
+        animationFillMode: "forwards",
+        opacity: "0",
+        overflow: "hidden",
+        left: "0",
+        right: "0",
+        margin: "0 auto",
+      };
+
+      return (
+        <div className="page__block page__block-11">
+          <div style={DivStyle}>
+            <img style={imgStyle1} src={require('./img/q2-1.png')} />
+            <img style={imgStyle2} src={require('./img/q2-2.png')} />
+            <img style={imgStyle3} src={require('./img/q2-3.png')} />
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="page__block page__block-11">
+          <img src={require('./img/q2-small.png')} style={{width:"100%",height:"100%"}}/>
+        </div>
+      );
+    }
+  };
+
   const showAfterNine = () => {
     if (afterNine) {
       return (
         <div>
-          <div className="page__block page__block-11">
-          </div>
+          {showQuestion2()}
           <div className="page__block page__block-12">
             <p>超過七成高中職生認為自己是「台灣人」</p>
           </div>
@@ -1049,6 +1129,21 @@ const InfoInsertHead = (props) => {
       });
     }
   }
+
+  const getImg = (index) => {
+    if (!props.isMobile) {
+      let img = {
+        1: require('./img/q1.png'),
+      };
+
+      return (img[index]);
+    } else {
+      let img = {
+        1: require('./img/q1-small.png'),
+      };
+      return (img[index]);
+    }
+  }
   
   const showContent = () => {
     if (intro) {
@@ -1122,6 +1217,7 @@ const InfoInsertHead = (props) => {
             </div>
           </div>
           <div className="page__block page__block-8">
+            <img src={getImg(1)} style={{width:"100%",height:"100%"}}/>
           </div>
           <div className="page__block page__block-9">
             <div className="row-3">

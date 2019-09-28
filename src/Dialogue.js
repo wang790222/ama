@@ -30,7 +30,7 @@ const Dialogue = (props) => {
         timerId = setTimeout(handleSetCountByTimer, 3000);
       }
       else {
-        timerId = setTimeout(handleSetCountByTimer, 2000);
+        timerId = setTimeout(handleSetCountByTimer, 8000);
       }
       
     }

@@ -136,6 +136,7 @@ html {
     margin: 0 auto;
     display: block;
     width: 70rem;
+    height: 45rem;
     position: fixed;
     top: 7rem;
     left: 0;
@@ -540,14 +541,13 @@ html {
               line-height: 3.2rem; } }
     .page__block-8 {
       width: 86rem;
-      height: 35rem;
-      margin-top: 6rem;
-      background-color: #C8C8C8; }
+      height: 40rem;
+      margin-top: 6rem; }
       @media (max-width: 1100px) {
         .page__block-8 {
           margin-top: 4rem;
           width: 36rem;
-          height: 28rem; } }
+          height: 40rem; } }
     .page__block-9 {
       margin-top: 2.5rem; }
       .page__block-9-btn {
@@ -582,13 +582,14 @@ html {
           width: 32rem; } }
     .page__block-11 {
       width: 86rem;
-      height: 35rem;
+      height: 40rem;
       margin-top: 8rem;
-      background-color: #C8C8C8; }
+      position: relative; }
       @media (max-width: 1100px) {
         .page__block-11 {
+          position: static;
           width: 36rem;
-          height: 28rem;
+          height: 64rem;
           margin-top: 6rem; } }
     .page__block-12 {
       width: 66.7rem;

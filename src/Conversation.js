@@ -15,7 +15,7 @@ const Conversation = (props) => {
   }, [route]);
   
   const images = (index) => {
-    let image_normal = [
+    let image = [
       require('./img/1.png'),
       require('./img/2.png'),
       require('./img/3.png'),
@@ -31,27 +31,7 @@ const Conversation = (props) => {
       require('./img/10-B-3.png'),
     ];
 
-    let image_small = [
-      require('./img/1-small.png'),
-      require('./img/2-small.png'),
-      require('./img/3-small.png'),
-      require('./img/4-small.png'),
-      require('./img/5-small.png'),
-      require('./img/6-small.png'),
-      require('./img/7-small.png'),
-      require('./img/8-small.png'),
-      require('./img/9-small.png'),
-      require('./img/10-A-small.png'),
-      require('./img/10-B-1-small.png'),
-      require('./img/10-B-2-small.png'),
-      require('./img/10-B-3-small.png'),
-    ];
-
-    if (isMobile) {
-      return (image_small[index]);
-    } else {
-      return (image_normal[index]);
-    }
+    return (image[index]);
   }
 
   let sentences = () => {
@@ -235,7 +215,7 @@ const Conversation = (props) => {
     }
   }
 
-  const showImg10 = () => {
+  {/*const showImg10 = () => {
     if (route) {
       let style = {};
       if (!isMobile) {
@@ -353,7 +333,7 @@ const Conversation = (props) => {
         );
       }
     }
-  }
+  }*/}
 
   const animateImg = () => {
     if (props.index === 9) {
@@ -365,18 +345,25 @@ const Conversation = (props) => {
       });
       */}
       return ({
+        width: "100%",
+        height: "100%",
         animation: "fadeOut 5s",
         animationIterationCount: "1",
         animationFillMode: "forwards",
       });
     } else if (route && props.index === 10) {
       return ({
+        width: "100%",
+        height: "100%",
         animation: "fadeIn 2s",
         animationIterationCount: "1",
         animationFillMode: "forwards",
       });
     } else {
-      return ({});
+      return ({
+        width: "100%",
+        height: "100%",
+      });
     }
   }
 
@@ -415,13 +402,13 @@ const Conversation = (props) => {
           height: "45rem",
           zIndex: "101",
           position: "fixed",
+          left: "0",
+          right: "0",
+          margin: "0 auto",
           animation: "slideUp 2.5s",
           animationIterationCount: "1",
           animationFillMode: "forwards",
           overflow: "hidden",
-          left: "0",
-          right: "0",
-          margin: "0 auto",
         };
 
         imgStyle3 = { // background
@@ -480,24 +467,23 @@ const Conversation = (props) => {
         };
       }
 
-    return (
-      <div style={DivStyle}>
-        <img style={imgStyle1} src={images(10)} />
-        <img style={imgStyle2} src={images(11)} />
-        <img style={imgStyle3} src={images(12)} />
-      </div>
-    );
+      return (
+        <div style={DivStyle}>
+          <img style={imgStyle1} src={images(10)} />
+          <img style={imgStyle2} src={images(11)} />
+          <img style={imgStyle3} src={images(12)} />
+        </div>
+      );
   } else {
       return (
         <div className="conversation__img" >
           {putGoToBtn()}
           {/*{showImg10()}*/}
           <img style={animateImg()} src={images(props.index - 1)} />
-          
         </div>
       );
     }
-  }
+  };
   
   return (
     <div

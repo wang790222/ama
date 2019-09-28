@@ -298,14 +298,13 @@
 
     &-8 {
       width: 86rem;
-      height: 35rem;
+      height: 40rem;
       margin-top: 6rem;
-      background-color: #C8C8C8;
 
       @include respond(phone) {
         margin-top: 4rem;
         width: 36rem;
-        height: 28rem;
+        height: 40rem;
       }
     }
 
@@ -355,13 +354,14 @@
 
     &-11 {
       width: 86rem;
-      height: 35rem;
+      height: 40rem;
       margin-top: 8rem;
-      background-color: #C8C8C8;
+      position: relative;
 
       @include respond(phone) {
+        position: static;
         width: 36rem;
-        height: 28rem;
+        height: 64rem;
         margin-top: 6rem;
       }
     }
