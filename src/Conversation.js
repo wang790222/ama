@@ -216,7 +216,6 @@ const Conversation = (props) => {
   }
 
   const showPreImg10 = () => {
-    console.log("props.index:" + props.index);
     if (route) {
       if (props.index === 9) {
         return (
@@ -313,7 +312,6 @@ const Conversation = (props) => {
   }
 
   const fadeOutImg = (index) => {
-    console.log(index);
     return (index === 8) ? "fadeout_img" : "normal_img";
   }
 
