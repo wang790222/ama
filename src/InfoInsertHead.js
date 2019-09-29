@@ -791,7 +791,7 @@ const InfoInsertHead = (props) => {
           </div>
           <div className="page__block page__block-15">
             <div className="page__block-15-cube">
-              &nbsp;
+              <img src={require('./img/q2-head.png')} style={{width: "100%", height: "100%"}} />
             </div>
             <div className="page__block-15-text-box">
               <div className="page__block-15-box-text">
@@ -831,6 +831,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-20" id="s3" ref={s3Ref}>
             <div className="page__block page__block-20-content">
               <div className="page__block-20-content-cube">
+                <img src={require('./img/finger-2.png')} style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-20-content-text">
                 <p>你怎麼看兩岸關係？</p>
@@ -868,6 +869,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-28" id="s4" ref={s4Ref}>
             <div className="page__block page__block-28-content">
               <div className="page__block-28-content-cube">
+                <img src={require('./img/finger-3.png')} style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-28-content-text">
                 <p>對台灣的愛恨情仇？</p>
@@ -921,7 +923,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-44"></div>
           <div className="page__block page__block-45">
             <div className="page__block-45-cube">
-              &nbsp;
+              <img src={require('./img/q7-head.png')} style={{width: "100%", height: "100%"}} />
             </div>
             <div className="page__block-45-text-box">
               <div className="page__block-45-box-text">
@@ -957,8 +959,8 @@ const InfoInsertHead = (props) => {
                 playsInline
                 poster={require('./img/video/v1.jpg')}
                 src={require('./img/video/v1.mp4')}
-                width={650}
-                height={365}
+                width={"100%"}
+                height={"100%"}
                 fluid={false}
                 autoPlay={true}
                 muted={true}
@@ -968,6 +970,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-50" id="s5" ref={s5Ref}>
             <div className="page__block page__block-50-content">
               <div className="page__block-50-content-cube">
+                <img src={require('./img/finger-4.png')} style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-50-content-text">
                 <p>高中職生對政治冷感嗎？</p>
@@ -977,7 +980,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-51">
             <div className="page__block-51-content">
               <div className="page__block-51-content-cube">
-                &nbsp;
+                <img src={require('./img/q8-head.png')} style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-51-content-text-box">
                 <div className="page__block-51-content-box-text">
@@ -1299,6 +1302,7 @@ const InfoInsertHead = (props) => {
           <div className={animateShowUpBlock(2, "page__block page__block-5")} id="s2" ref={s2Ref}>
             <div className="page__block page__block-5-content">
               <div className="page__block-5-content-cube">
+                <img src={require('./img/finger-1.png')} style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-5-content-text">
                 <p>你是哪裡人？</p>
@@ -1308,7 +1312,7 @@ const InfoInsertHead = (props) => {
           {showPopup()}
           <div className={animateShowUpBlock(7, "page__block page__block-7")} ref={s7Ref}>
             <div className="page__block-7-cube">
-              &nbsp;
+              <img src={require('./img/q1-head.png')} style={{width: "100%", height: "100%"}} />
             </div>
             <div className="page__block-7-text-box">
               <div className="page__block-7-box-text">

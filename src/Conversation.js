@@ -243,7 +243,7 @@ const Conversation = (props) => {
     }
   }
 
-  const showPreImg10 = () => {
+  const showPreImgA2 = () => {
     if (route === 2) {
       if (props.index === 9) {
         return (
@@ -328,7 +328,7 @@ const Conversation = (props) => {
         {preLoadImg()}
         {putGoToBtn()}
         {getImg()}
-        {showPreImg10()}
+        {showPreImgA2()}
       </div>
     );
   };
