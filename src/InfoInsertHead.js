@@ -758,54 +758,12 @@ const InfoInsertHead = (props) => {
         margin: "0 auto",
       };
 
-      imgStyle1 = {
-        width: "86rem",
-        height: "40rem",
-        zIndex: "101",
-        position: "absolute",
-        left: "0",
-        right: "0",
-        margin: "0 auto",
-      };
-
-      imgStyle2 = {
-        width: "86rem",
-        height: "40rem",
-        zIndex: "102",
-        position: "absolute",
-        animationDelay: "2.5s",
-        animation: "fadeIn 3s",
-        animationIterationCount: "1",
-        animationFillMode: "forwards",
-        opacity: "0",
-        overflow: "hidden",
-        left: "0",
-        right: "0",
-        margin: "0 auto",
-      };
-
-      imgStyle3 = {
-        width: "86rem",
-        height: "40rem",
-        zIndex: "103",
-        position: "absolute",
-        animation: "fadeIn 3s",
-        animationDelay: "2s",
-        animationIterationCount: "1",
-        animationFillMode: "forwards",
-        opacity: "0",
-        overflow: "hidden",
-        left: "0",
-        right: "0",
-        margin: "0 auto",
-      };
-
       return (
         <div className="page__block page__block-11">
           <div style={DivStyle}>
-            <img style={imgStyle1} src={require('./img/q2-1.png')} />
-            <img style={imgStyle2} src={require('./img/q2-2.png')} />
-            <img style={imgStyle3} src={require('./img/q2-3.png')} />
+            <img className="imgStyle imgStyle-1" src={require('./img/q2-1.png')} />
+            <img className="imgStyle imgStyle-2 delay3s" src={require('./img/q2-2.png')} />
+            <img className="imgStyle imgStyle-3 delay6s" src={require('./img/q2-3.png')} />
           </div>
         </div>
       );

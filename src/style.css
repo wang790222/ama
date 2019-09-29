@@ -130,7 +130,6 @@ html {
   font-size: 3rem;
   width: 38rem;
   height: 100vh;
-  font-weight: 700;
   margin: auto;
   display: table; }
   @media (max-width: 1100px) {
@@ -139,10 +138,10 @@ html {
   .twoline_box__twoline {
     display: table-cell;
     vertical-align: middle;
-    line-height: 3rem; }
+    line-height: 3.5rem; }
     .twoline_box__twoline p {
       width: 30rem;
-      font-weight: 700;
+      font-weight: 500;
       font-size: 3rem;
       white-space: nowrap;
       overflow: hidden;
@@ -152,7 +151,7 @@ html {
         .twoline_box__twoline p {
           width: 25rem;
           font-size: 2rem;
-          font-weight: 500; } }
+          font-weight: 300; } }
     .twoline_box__twoline-text-1 {
       opacity: 0;
       -webkit-animation: type 1s steps(40, end);
@@ -358,7 +357,7 @@ html {
       top: -10%;
       left: 5%; } }
 
-.pre_routeA_img10 {
+.pre_img_a2 {
   width: 70rem;
   height: 45rem;
   position: fixed;
@@ -369,7 +368,7 @@ html {
   animation-iteration-count: 1;
   animation-fill-mode: forwards; }
   @media (max-width: 1100px) {
-    .pre_routeA_img10 {
+    .pre_img_a2 {
       width: 37.5rem;
       height: 24.1rem; } }
 
@@ -395,10 +394,6 @@ html {
     .fadeout_img {
       width: 37.5rem;
       height: 24.1rem; } }
-
-.img10 {
-  width: 100%;
-  height: 100%; }
 
 .preload_img {
   position: fixed;
@@ -2290,10 +2285,51 @@ html {
   opacity: .3 !important; }
 
 .add_showup {
+  -webkit-animation: showUp .8s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
   animation: showUp .8s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   overflow: hidden; }
+
+.imgStyle {
+  width: 86rem;
+  height: 40rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+  .imgStyle-1 {
+    z-index: 101; }
+  .imgStyle-2 {
+    z-index: 102;
+    -webkit-animation: fadeIn 3s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation: fadeIn 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    overflow: hidden; }
+  .imgStyle-3 {
+    z-index: 103;
+    -webkit-animation: fadeIn 3s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation: fadeIn 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    overflow: hidden; }
+
+.delay3s {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s; }
+
+.delay6s {
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s; }
 
 .hamburger__checkbox {
   display: none; }

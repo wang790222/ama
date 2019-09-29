@@ -2503,8 +2503,60 @@
 }
 
 .add_showup {
+  -webkit-animation: showUp .8s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
   animation: showUp .8s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   overflow: hidden;
 }
+
+.imgStyle {
+
+  width: 86rem;
+  height: 40rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  &-1 {
+    z-index: 101;
+  }
+
+  &-2 {
+    z-index: 102;
+    -webkit-animation: fadeIn 3s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation: fadeIn 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  &-3 {
+    z-index: 103;
+    -webkit-animation: fadeIn 3s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation: fadeIn 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    overflow: hidden;
+  }
+}
+
+.delay3s {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.delay6s {
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+}
+

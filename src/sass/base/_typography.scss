@@ -78,7 +78,6 @@
   font-size: 3rem;
   width: 38rem;
   height: 100vh;
-  font-weight: 700;
   margin: auto;
   display: table;
 
@@ -89,11 +88,11 @@
   &__twoline {
     display: table-cell;
     vertical-align: middle;
-    line-height: 3rem;
+    line-height: 3.5rem;
 
     & p {
       width: 30rem;
-      font-weight: 700;
+      font-weight: 500;
       font-size: 3rem;
       white-space: nowrap;
       overflow: hidden;
@@ -103,7 +102,7 @@
       @include respond(phone) {
         width: 25rem;
         font-size: 2rem;
-        font-weight: 500;
+        font-weight: 300;
       }
     }
     

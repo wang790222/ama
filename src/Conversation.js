@@ -1,9 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 import style from './style.css';
-import img10RouteA from './img/10-A-2.png';
-import img10_3_RouteB from './img/10-B-3.png'; // background
-import img10_2_RouteB from './img/10-B-2.png'; // ama
-import img10_1_RouteB from './img/10-B-1.png'; // cloud
+
+import imgA from './img/A.jpg';
+import imgA1 from './img/A1.jpg';
+import imgA2 from './img/A2.jpg';
+import imgB from './img/B.jpg';
+import imgB1 from './img/B1.png'; // cloud
+import imgB2 from './img/B2.png'; // ama
+import imgB3 from './img/B3.png'; // background
 
 const Conversation = (props) => {
 
@@ -22,19 +26,13 @@ const Conversation = (props) => {
   
   const images = (index) => {
     let image = [
-      require('./img/1.png'),
-      require('./img/2.png'),
-      require('./img/3.png'),
-      require('./img/4.png'),
-      require('./img/5.png'),
-      require('./img/6.png'),
-      require('./img/7.png'),
-      require('./img/8.png'),
-      require('./img/9.png'),
-      require('./img/10-A.png'),
-      require('./img/10-B-1.png'),
-      require('./img/10-B-2.png'),
-      require('./img/10-B-3.png'),
+      require('./img/1.jpg'),
+      require('./img/2.jpg'),
+      require('./img/3.jpg'),
+      require('./img/4.jpg'),
+      require('./img/5.jpg'),
+      require('./img/6.jpg'),
+      require('./img/7.jpg'),
     ];
 
     return (image[index]);
@@ -158,7 +156,6 @@ const Conversation = (props) => {
   };
 
   const getLineOrBtn = (index) => {
-    
     if (index > 7) {
       if (route === 2) {
         return getAllLine(afterSelectOption((route === 2))[props.index - 8]);
@@ -250,175 +247,90 @@ const Conversation = (props) => {
     if (route === 2) {
       if (props.index === 9) {
         return (
-          <img className="pre_routeA_img10" src={img10RouteA} />
+          <img className="pre_img_a2" src={imgA2} />
         );
       }
     }
-  }
-
-  const fadeOutImg = (index) => {
-    return (index === 8) ? "fadeout_img" : "normal_img";
   }
 
   const getImg = () => {
-    if (route === 3) { // route B
-      if (props.index === 9) {
-        return (
-          <img className="normal_img" src={img10_3_RouteB} />
-        );
-      }
-
-      if (props.index === 10) {
-        return (
-          <div className="combine_3_img">
-            <img className="combine_3_img combine_3_img-1" src={img10_1_RouteB} />
-            <img className="combine_3_img combine_3_img-2" src={img10_2_RouteB} />
-            <img className="combine_3_img combine_3_img-3" src={img10_3_RouteB} />
-          </div>
-        );
-      }
-    }
-
-    if (props.index === 9) {
-      return (
-        <img 
-          className="fadeout_img" 
-          src={images(props.index - 2)} 
-        />
-      );
-    } else if (props.index === 10 && route === 2) {
-      return (
-        <img 
-          className= "normal_img"
-          src={img10RouteA} 
-        />
-      );
-    } else {
+    if (props.index <= 7) {
       return (
         <img 
           className= "normal_img"
           src={images(props.index - 1)} 
         />
       );
+    } else {
+      if (route === 2) {
+        if (props.index === 8) {
+          return (
+           <img className= "normal_img" src={imgA} />
+          );
+        }
+
+        if (props.index === 9) {
+          return (
+            <img 
+              className="fadeout_img" 
+              src={imgA1} 
+            />
+          );
+        }
+        
+        if (props.index === 10) {
+          return (
+            <img 
+              className= "normal_img"
+              src={imgA2} 
+            />
+          );
+        }
+      } else if (route === 3) { // route B
+        if (props.index === 8) {
+          return (
+            <img className="normal_img" src={imgB} />
+          );
+        }
+
+        if (props.index === 9) {
+          return (
+            <div className="combine_3_img">
+              <img className="combine_3_img combine_3_img-3" src={imgB3} />
+            </div>
+          );
+        }
+
+        if (props.index === 10) {
+          return (
+            <div className="combine_3_img">
+              <img className="combine_3_img combine_3_img-3" src={imgB3} />
+              <img className="combine_3_img combine_3_img-2" src={imgB2} />
+              <img className="combine_3_img combine_3_img-1" src={imgB1} />
+            </div>
+          );
+        }
+      }
     }
   };
 
   const preLoadImg = () => {
     if (route === 2 && props.index === 8) {
       return (
-        <img src={img10RouteA} className="preload_img" />
+        <img src={imgA} className="preload_img" />
       );
     }
   };
 
   const showImg = () => {
-{/*
-      let DivStyle = {};
-      let imgStyle1 = {};
-      let imgStyle2 = {};
-      let imgStyle3 = {};
-
-      if (!isMobile) {
-        DivStyle = {
-          
-        };
-
-        imgStyle1 = { // cloud
-          width: "70rem",
-          height: "45rem",
-          zIndex: "102",
-          position: "fixed",
-          left: "0",
-          right: "0",
-          margin: "0 auto",
-        };
-
-        imgStyle2 = {  // ama
-          width: "70rem",
-          height: "45rem",
-          zIndex: "101",
-          position: "fixed",
-          left: "0",
-          right: "0",
-          margin: "0 auto",
-          animation: "slideUp 2.5s",
-          animationIterationCount: "1",
-          animationFillMode: "forwards",
-          overflow: "hidden",
-        };
-
-        imgStyle3 = { // background
-          width: "70rem",
-          height: "45rem",
-          zIndex: "100",
-          position: "fixed",
-          left: "0",
-          right: "0",
-          margin: "0 auto",
-        };
-      } else {
-        DivStyle = {
-          width: "37.5rem",
-          height: "24.1rem",
-          zIndex: "100",
-          position: "fixed",
-          top: "5.5rem",
-          left: "0",
-          right: "0",
-          margin: "0 auto",
-        };
-
-        imgStyle1 = { // cloud
-          width: "37.5rem",
-          height: "24.1rem",
-          zIndex: "102",
-          position: "fixed",
-          left: "0",
-          right: "0",
-          margin: "0 auto",
-        };
-
-        imgStyle2 = {  // ama
-          width: "37.5rem",
-          height: "24.1rem",
-          zIndex: "101",
-          position: "fixed",
-          animation: "slideUp 2.5s",
-          animationIterationCount: "1",
-          animationFillMode: "forwards",
-          overflow: "hidden",
-          left: "0",
-          right: "0",
-          margin: "0 auto",
-        };
-
-        imgStyle3 = { // background
-          width: "37.5rem",
-          height: "24.1rem",
-          zIndex: "100",
-          position: "fixed",
-          left: "0",
-          right: "0",
-          margin: "0 auto",
-        };
-      }
-
-      return (
-        <div style={DivStyle}>
-          <img style={imgStyle1} src={images(10)} />
-          <img style={imgStyle2} src={images(11)} />
-          <img style={imgStyle3} src={images(12)} />
-        </div>
-      );
-*/}
-  return (
-    <div className="conversation__img" >
-      {preLoadImg()}
-      {putGoToBtn()}
-      {getImg()}
-      {showPreImg10()}
-    </div>
-  );
+    return (
+      <div className="conversation__img" >
+        {preLoadImg()}
+        {putGoToBtn()}
+        {getImg()}
+        {showPreImg10()}
+      </div>
+    );
   };
   
   return (
