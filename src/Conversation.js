@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import style from './style.css';
+import img10RouteA from './img/10-A-2.png';
 
 const Conversation = (props) => {
   const [route, setRoute] = useState(null);
@@ -323,12 +324,27 @@ const Conversation = (props) => {
           src={images(props.index - 2)} 
         />
       );
+    } else if (props.index === 10 && route) {
+      return (
+        <img 
+          className= "normal_img"
+          src={img10RouteA} 
+        />
+      );
     } else {
       return (
         <img 
           className= "normal_img"
           src={images(props.index - 1)} 
         />
+      );
+    }
+  };
+
+  const preLoadImg = () => {
+    if (route && props.index === 8) {
+      return (
+        <img src={img10RouteA} className="preload_img" />
       );
     }
   };
@@ -443,6 +459,7 @@ const Conversation = (props) => {
   } else {
       return (
         <div className="conversation__img" >
+          {preLoadImg()}
           {putGoToBtn()}
           {getImg()}
           {showPreImg10()}
