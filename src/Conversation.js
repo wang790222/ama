@@ -347,7 +347,7 @@ const Conversation = (props) => {
       return ({
         width: "100%",
         height: "100%",
-        animation: "fadeOut 5s",
+        animation: "fadeOut 12s",
         animationIterationCount: "1",
         animationFillMode: "forwards",
       });
@@ -355,7 +355,7 @@ const Conversation = (props) => {
       return ({
         width: "100%",
         height: "100%",
-        animation: "fadeIn 2s",
+        animation: "fadeIn 6s",
         animationIterationCount: "1",
         animationFillMode: "forwards",
       });

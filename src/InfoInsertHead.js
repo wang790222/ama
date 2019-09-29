@@ -5,9 +5,6 @@ import "../node_modules/video-react/dist/video-react.css";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
-import q1 from './img/q1.png';
-
-
 import style from './style.css';
 import Hamburger from './Hamburger';
 
@@ -34,6 +31,7 @@ const InfoInsertHead = (props) => {
   const [singleColor, setSingleColor] = useState(true);
   const [curSec, setCurSec] = useState(0);
   const [hambugerOn, setHambugerOn] = useState(false);
+  const [blockInPage, setBlockInPage] = useState([]);
 
   useEffect(() => {
     if(intro && !singleColor) {
@@ -363,6 +361,23 @@ const InfoInsertHead = (props) => {
       setHambugerOn(true);
     }
   };
+
+  const currentBlocksInPage = () => {
+
+    let topOffsetArr = [];
+    for (let i = 0; i < 50; i++) {
+      let snTop = (`s${i}Ref`.current) ? s1Ref.current.offsetTop : -1;
+      if (snTop !== -1 && (snTop >= window.pageYOffset && snTop < window.pageYOffset + window.innerHeight)) {
+        topOffsetArr.push(i);
+      }
+    }
+    
+    let i = 0;
+    for (; i < blockInPage.length; i++) {
+
+    }
+    
+  }
 
   const showHamburger = () => {
     if (popup) {

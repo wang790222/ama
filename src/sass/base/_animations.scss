@@ -15,18 +15,6 @@
   }
 }
 
-@keyframes type2 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes flicker {
   50% {
     opacity: 0;
@@ -57,3 +45,21 @@
     transform: translateY(0px);
   }
 }
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  50% {
+    opacity: .7;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity:1;
+    transform: translateY(0px);
+  }
+}
+

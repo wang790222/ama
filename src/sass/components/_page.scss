@@ -6,6 +6,10 @@
 
   &__block {
     margin: 0 auto;
+    animation: showUp .8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    overflow: hidden;
 
     &-1 {
       width: 51.3rem;
@@ -264,7 +268,6 @@
         border-radius: 1rem;
         float: right;
         padding: 2.5rem 4rem;
-        margin-top: -.5rem;
         background-color: white;
 
         @include respond(phone) {
