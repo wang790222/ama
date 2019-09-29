@@ -1336,18 +1336,18 @@ const InfoInsertHead = (props) => {
       return (
         <div>
           {showHamburger("one-line__infoinsert-box-typing")}
-          <div className="page__block page__block-1" id="#s1" ref={s1Ref}>
+          <div className="page__block page__block-1 add_showup" id="#s1" ref={s1Ref}>
             <h1>嘿！你是哪裡人？</h1>
             <h2>青少年國族認同大調查</h2>
           </div>
-          <div className="page__block page__block-2">
+          <div className="page__block page__block-2 add_showup">
           </div>
-          <div className="page__block page__block-3">
+          <div className="page__block page__block-3 add_showup">
             <p>2020總統大選將至，社會上對於總統選舉、國家認同和國家未來等議題，討論得沸沸揚揚。你會好奇代表著「未來」的青少年們究竟是怎麼想的嗎？公共電視青少年節目《青春發言人》委託政治大學「選舉研究中心」，針對全國高中職生進行國族認同 調查，分別從「你是哪裡人？」、「兩岸關係」、「對台灣的愛恨情仇？」、「高中職生對政治冷感嗎？」四大面向，帶你了解青少年如何看待自己的國家與土地。</p>
           </div>
           <div 
             onClick={handleOnClickFor4}
-            className="page__block page__block-4">看研究方法
+            className="page__block page__block-4 add_showup">看研究方法
           </div>
           <div className={animateShowUpBlock(2, "page__block page__block-5")} id="s2" ref={s2Ref}>
             <div className="page__block page__block-5-content">
