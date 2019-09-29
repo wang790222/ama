@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import style from './style.css';
 import TheDay from "./TheDay"
 import Conversation from "./Conversation"
 import InfoInsertHead from './InfoInsertHead';

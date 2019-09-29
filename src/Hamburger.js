@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 
 const Hamburger = (props) => {
 
@@ -29,7 +29,7 @@ const Hamburger = (props) => {
       return (
         <ul className="hamburger__list">
           <li className="hamburger__item">
-            <a href="#" className={addWhiteToLink(0)} onClick={handleOnClick}><span>首頁</span></a>
+            <a href="#s1" className={addWhiteToLink(0)} onClick={handleOnClick}><span>首頁</span></a>
           </li>
           <li className="hamburger__item">
             <a href="#s2" className={addWhiteToLink(1)} onClick={handleOnClick}>
@@ -57,7 +57,7 @@ const Hamburger = (props) => {
       return (
         <ul className="hamburger__list">
           <li className="hamburger__item">
-            <a href="#" className={addWhiteToLink(0)} onClick={handleOnClick}><span>首頁</span><span className={addWhiteToBull(0)}>&nbsp;</span></a>
+            <a href="#s1" className={addWhiteToLink(0)} onClick={handleOnClick}><span>首頁</span><span className={addWhiteToBull(0)}>&nbsp;</span></a>
           </li>
           <li className="hamburger__item">
             <a href="#s2" className={addWhiteToLink(1)} onClick={handleOnClick}><span>你是哪裡人？</span><span className={addWhiteToBull(1)}>&nbsp;</span></a>

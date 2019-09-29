@@ -1,14 +1,11 @@
 import React from 'react';
 
-import style from './style.css';
-
 const Home = (props) => {
-
   let imageAma = require('./img/ama.png');
 
   return (
     <div className="header">
-      <img className="header__img" src={imageAma} />
+      <img className="header__img" src={imageAma} alt="img_ama" />
       <div className="header__shade">&nbsp;</div>
       <div className="header__tittle">
         <h2 className="header__tittle-main">高中職生青少年國族認同大調查</h2>

@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from 'react';
-import style from './style.css';
 
 import imgA from './img/A.jpg';
 import imgA1 from './img/A1.jpg';
@@ -196,8 +195,8 @@ const Conversation = (props) => {
     return strArr.map((setence, index) => {
       let keyNum = Math.floor(Math.random() * (Number.MAX_SAFE_INTEGER - 1));
       return (
-        <div>
-          <p key={keyNum} className={`conversation__box-text-${index + 1}-notyping`}>
+        <div key={keyNum}>
+          <p className={`conversation__box-text-${index + 1}-notyping`}>
             {setence}
           </p>
           <div className="conversation-box__btn">
@@ -212,8 +211,8 @@ const Conversation = (props) => {
     return strArr.map((setence, index) => {
       let keyNum = Math.floor(Math.random() * (Number.MAX_SAFE_INTEGER - 1));
       return (
-        <div>
-          <p key={keyNum} className={`conversation__box-text-${index + 1}`}>
+        <div key={keyNum} >
+          <p className={`conversation__box-text-${index + 1}`}>
             {setence}
           </p>
           <div className="conversation-box__btn">
@@ -247,7 +246,7 @@ const Conversation = (props) => {
     if (route === 2) {
       if (props.index === 9) {
         return (
-          <img className="pre_img_a2" src={imgA2} />
+          <img className="pre_img_a2" src={imgA2} alt="imga2" />
         );
       }
     }
@@ -259,13 +258,14 @@ const Conversation = (props) => {
         <img 
           className= "normal_img"
           src={images(props.index - 1)} 
+          alt="img"
         />
       );
     } else {
       if (route === 2) {
         if (props.index === 8) {
           return (
-           <img className= "normal_img" src={imgA} />
+           <img className= "normal_img" src={imgA} alt="imgA" />
           );
         }
 
@@ -274,6 +274,7 @@ const Conversation = (props) => {
             <img 
               className="fadeout_img" 
               src={imgA1} 
+              alt="imgA1"
             />
           );
         }
@@ -283,20 +284,21 @@ const Conversation = (props) => {
             <img 
               className= "normal_img"
               src={imgA2} 
+              alt="imgA2"
             />
           );
         }
       } else if (route === 3) { // route B
         if (props.index === 8) {
           return (
-            <img className="normal_img" src={imgB} />
+            <img className="normal_img" src={imgB} alt="imgB" />
           );
         }
 
         if (props.index === 9) {
           return (
             <div className="combine_3_img">
-              <img className="combine_3_img combine_3_img-3" src={imgB3} />
+              <img className="combine_3_img combine_3_img-3" src={imgB3}        alt="imgA3"/>
             </div>
           );
         }
@@ -304,9 +306,12 @@ const Conversation = (props) => {
         if (props.index === 10) {
           return (
             <div className="combine_3_img">
-              <img className="combine_3_img combine_3_img-3" src={imgB3} />
-              <img className="combine_3_img combine_3_img-2" src={imgB2} />
-              <img className="combine_3_img combine_3_img-1" src={imgB1} />
+              <img className="combine_3_img combine_3_img-3" src={imgB3} 
+                   alt="imgB3" />
+              <img className="combine_3_img combine_3_img-2" src={imgB2} 
+                   alt="imgB2" />
+              <img className="combine_3_img combine_3_img-1" src={imgB1} 
+                   alt="imgB1" />
             </div>
           );
         }
@@ -317,7 +322,7 @@ const Conversation = (props) => {
   const preLoadImg = () => {
     if (route === 2 && props.index === 8) {
       return (
-        <img src={imgA} className="preload_img" />
+        <img src={imgA} className="preload_img" alt="imgA" />
       );
     }
   };

@@ -5,7 +5,6 @@ import "../node_modules/video-react/dist/video-react.css";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
-import style from './style.css';
 import Hamburger from './Hamburger';
 
 const InfoInsertHead = (props) => {
@@ -378,7 +377,6 @@ const InfoInsertHead = (props) => {
   };
 
   const animateShowUpBlock = (index, originClassName) => {
-    console.log("animateShowUpBlock:" + index);
     if (blockInPage[index]) {
       return `${originClassName} add_showup`;
     } else {
@@ -487,7 +485,7 @@ const InfoInsertHead = (props) => {
       return (
         <div style={{height: "250px"}}>
           <div className={animateShowUpBlock(32, "page__block page__block-32")}>
-            <img src={getImg(5)} style={{width:"100%", height:"100%"}} />
+            <img src={getImg(5)} style={{width:"100%", height:"100%"}}         alt="img_block32" />
           </div>
           <div className={animateShowUpBlock(33, "page__block page__block-33")}>
             <div className="row-4">
@@ -520,7 +518,7 @@ const InfoInsertHead = (props) => {
         <div className="page__block page__block-33__two_col">
           <div className="page__block-33__two_col-left">
             <div className="page__block page__block-32">
-              <img src={getImg(5)} style={{width:"100%", height:"100%"}} />
+              <img src={getImg(5)} style={{width:"100%", height:"100%"}}       alt="img_block33" />
             </div>
           </div>
           <div className="page__block-33__two_col-right">
@@ -557,16 +555,16 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-40">
             <div className="row-4">
               <div className="col-1-of-4 page__block-40-img">
-                <img src={require('./img/q6-1.png')} style={{width:"100%", height:"100%"}}/>
+                <img src={require('./img/q6-1.png')} style={{width:"100%", height:"100%"}} alt="img_block40" />
               </div>
               <div className="col-1-of-4 page__block-40-img">
-                <img src={require('./img/q6-2.png')} style={{width:"100%", height:"100%"}}/>
+                <img src={require('./img/q6-2.png')} style={{width:"100%", height:"100%"}} alt="img_block40" />
               </div>
               <div className="col-1-of-4 page__block-40-img">
-                <img src={require('./img/q6-3.png')} style={{width:"100%", height:"100%"}}/>
+                <img src={require('./img/q6-3.png')} style={{width:"100%", height:"100%"}} alt="img_block40" />
               </div>
               <div className="col-1-of-4 page__block-40-img">
-                <img src={require('./img/q6-4.png')} style={{width:"100%", height:"100%"}}/>
+                <img src={require('./img/q6-4.png')} style={{width:"100%", height:"100%"}} alt="img_block40" />
               </div>
             </div>
           </div>
@@ -599,7 +597,7 @@ const InfoInsertHead = (props) => {
             <div className="page__block-41-1-row-2-left">
               <div className="page__block-41-1-img__btn">
                 <div className="page__block-41-1-img__btn-img">
-                  <img src={require('./img/q6-1.png')} style={{width:"100%", height:"100%"}}/>
+                  <img src={require('./img/q6-1.png')} style={{width:"100%", height:"100%"}} alt="img_block41"/>
                 </div>
                 <div className="page__block-41-1-img__btn-btn">
                   沮喪的
@@ -609,7 +607,7 @@ const InfoInsertHead = (props) => {
             <div className="page__block-41-1-row-2-right">
               <div className="page__block-41-1-img__btn">
                 <div className="page__block-41-1-img__btn-img">
-                  <img src={require('./img/q6-2.png')} style={{width:"100%", height:"100%"}}/>
+                  <img src={require('./img/q6-2.png')} style={{width:"100%", height:"100%"}} alt="img_block41" />
                 </div>
                 <div className="page__block-41-1-img__btn-btn">
                   難過的
@@ -621,7 +619,7 @@ const InfoInsertHead = (props) => {
             <div className="page__block-41-1-row-2-left">
               <div className="page__block-41-1-img__btn">
                 <div className="page__block-41-1-img__btn-img">
-                  <img src={require('./img/q6-3.png')} style={{width:"100%", height:"100%"}}/>
+                  <img src={require('./img/q6-3.png')} style={{width:"100%", height:"100%"}} alt="img_block41" />
                 </div>
                 <div className="page__block-41-1-img__btn-btn">
                   憤怒的
@@ -631,7 +629,7 @@ const InfoInsertHead = (props) => {
             <div className="page__block-41-1-row-2-right">
               <div className="page__block-41-1-img__btn">
                 <div className="page__block-41-1-img__btn-img">
-                  <img src={require('./img/q6-4.png')} style={{width:"100%", height:"100%"}}/>
+                  <img src={require('./img/q6-4.png')} style={{width:"100%", height:"100%"}} alt="img_block41" />
                 </div>
                 <div className="page__block-41-1-img__btn-btn">
                   擔心的
@@ -743,9 +741,6 @@ const InfoInsertHead = (props) => {
     if (!props.isMobile) {
 
       let DivStyle = {};
-      let imgStyle1 = {};
-      let imgStyle2 = {};
-      let imgStyle3 = {};
 
       DivStyle = {
         width: "86rem",
@@ -761,16 +756,16 @@ const InfoInsertHead = (props) => {
       return (
         <div className="page__block page__block-11">
           <div style={DivStyle}>
-            <img className="imgStyle imgStyle-1" src={require('./img/q2-1.png')} />
-            <img className="imgStyle imgStyle-2 delay3s" src={require('./img/q2-2.png')} />
-            <img className="imgStyle imgStyle-3 delay6s" src={require('./img/q2-3.png')} />
+            <img className="imgStyle imgStyle-1" src={require('./img/q2-1.png')} alt="img_block11" />
+            <img className="imgStyle imgStyle-2 delay3s" src={require('./img/q2-2.png')} alt="img_block11" />
+            <img className="imgStyle imgStyle-3 delay6s" src={require('./img/q2-3.png')} alt="img_block11" />
           </div>
         </div>
       );
     } else {
       return (
         <div className="page__block page__block-11">
-          <img src={require('./img/q2-small.png')} style={{width:"100%",height:"100%"}}/>
+          <img src={require('./img/q2-small.png')} style={{width:"100%",height:"100%"}} alt="img_block11" />
         </div>
       );
     }
@@ -791,7 +786,7 @@ const InfoInsertHead = (props) => {
           </div>
           <div className="page__block page__block-15">
             <div className="page__block-15-cube">
-              <img src={require('./img/q2-head.png')} style={{width: "100%", height: "100%"}} />
+              <img src={require('./img/q2-head.png')} style={{width: "100%", height: "100%"}} alt="img_block13" />
             </div>
             <div className="page__block-15-text-box">
               <div className="page__block-15-box-text">
@@ -831,7 +826,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-20" id="s3" ref={s3Ref}>
             <div className="page__block page__block-20-content">
               <div className="page__block-20-content-cube">
-                <img src={require('./img/finger-2.png')} style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/finger-2.png')} style={{width: "100%", height: "100%"}} alt="img_block20" />
               </div>
               <div className="page__block-20-content-text">
                 <p>你怎麼看兩岸關係？</p>
@@ -869,7 +864,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-28" id="s4" ref={s4Ref}>
             <div className="page__block page__block-28-content">
               <div className="page__block-28-content-cube">
-                <img src={require('./img/finger-3.png')} style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/finger-3.png')} style={{width: "100%", height: "100%"}} alt="img_block28" />
               </div>
               <div className="page__block-28-content-text">
                 <p>對台灣的愛恨情仇？</p>
@@ -923,7 +918,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-44"></div>
           <div className="page__block page__block-45">
             <div className="page__block-45-cube">
-              <img src={require('./img/q7-head.png')} style={{width: "100%", height: "100%"}} />
+              <img src={require('./img/q7-head.png')} style={{width: "100%", height: "100%"}} alt="img_block45" />
             </div>
             <div className="page__block-45-text-box">
               <div className="page__block-45-box-text">
@@ -933,7 +928,7 @@ const InfoInsertHead = (props) => {
             </div>
           </div>
           <div className="page__block page__block-46">
-            <img src={getImg(7)} style={{width:"100%", height:"100%"}} />
+            <img src={getImg(7)} style={{width:"100%", height:"100%"}} alt="img_block46" />
           </div>
           <div className="page__block page__block-47">
             <p>談到未來，高中職生選擇務實：經濟繁榮最重要</p>
@@ -970,7 +965,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-50" id="s5" ref={s5Ref}>
             <div className="page__block page__block-50-content">
               <div className="page__block-50-content-cube">
-                <img src={require('./img/finger-4.png')} style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/finger-4.png')} style={{width: "100%", height: "100%"}} alt="img_block50" />
               </div>
               <div className="page__block-50-content-text">
                 <p>高中職生對政治冷感嗎？</p>
@@ -980,7 +975,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block page__block-51">
             <div className="page__block-51-content">
               <div className="page__block-51-content-cube">
-                <img src={require('./img/q8-head.png')} style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/q8-head.png')} style={{width: "100%", height: "100%"}} alt="img_block51" />
               </div>
               <div className="page__block-51-content-text-box">
                 <div className="page__block-51-content-box-text">
@@ -1302,7 +1297,7 @@ const InfoInsertHead = (props) => {
           <div className={animateShowUpBlock(2, "page__block page__block-5")} id="s2" ref={s2Ref}>
             <div className="page__block page__block-5-content">
               <div className="page__block-5-content-cube">
-                <img src={require('./img/finger-1.png')} style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/finger-1.png')} style={{width: "100%", height: "100%"}} alt="img_block5" />
               </div>
               <div className="page__block-5-content-text">
                 <p>你是哪裡人？</p>
@@ -1312,7 +1307,7 @@ const InfoInsertHead = (props) => {
           {showPopup()}
           <div className={animateShowUpBlock(7, "page__block page__block-7")} ref={s7Ref}>
             <div className="page__block-7-cube">
-              <img src={require('./img/q1-head.png')} style={{width: "100%", height: "100%"}} />
+              <img src={require('./img/q1-head.png')} style={{width: "100%", height: "100%"}} alt="img_block7" />
             </div>
             <div className="page__block-7-text-box">
               <div className="page__block-7-box-text">
@@ -1322,7 +1317,7 @@ const InfoInsertHead = (props) => {
             </div>
           </div>
           <div className={animateShowUpBlock(8, "page__block page__block-8")} ref={s8Ref}>
-            <img src={getImg(1)} style={{width:"100%",height:"100%"}}/>
+            <img src={getImg(1)} style={{width:"100%",height:"100%"}} alt="img_block8" />
           </div>
           <div className={animateShowUpBlock(9, "page__block page__block-9")} ref={s9Ref}>
             <div className="row-3">
