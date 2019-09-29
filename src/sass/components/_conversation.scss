@@ -84,6 +84,12 @@
       -webkit-animation-fill-mode: forwards;
       animation: type 1s steps(40, end);
       animation-fill-mode: forwards;
+
+      &-notyping {
+        opacity: 1 !important;
+        -webkit-animation: none;
+        animation: none;
+      }
     }
 
     &-text-2 {
@@ -95,6 +101,12 @@
       animation: type 1s steps(40, end);
       animation-delay: 1.2s;
       animation-fill-mode: forwards;
+
+      &-notyping {
+        opacity: 1 !important;
+        -webkit-animation: none;
+        animation: none;
+      }
     }
 
     &-text-3 {
@@ -247,8 +259,15 @@
 }
 
 .normal_img {
-  width: 100%;
-  height: 100%;
+ 
+  width: 70rem;
+  height: 45rem;
+
+  @include respond(phone) {
+    width: 37.5rem;
+    height: 24.1rem;
+    //transform: translateX(-375px);
+  }
 }
 
 .fadeout_img {
@@ -282,5 +301,35 @@
   @include respond(phone) {
     width: 37.5rem;
     height: 24.1rem;
+  }
+}
+
+.combine_3_img {
+  width: 70rem;
+  height: 45rem;
+  position: fixed;
+
+  @include respond(phone) {
+    width: 37.5rem;
+    height: 24.1rem;
+  }
+
+  &-1 {
+    z-index: 101;
+  }
+
+  &-2 {
+    z-index: 101;
+    -webkit-animation: slideUp 2.5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation: slideUp 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    overflow: "hidden",
+  }
+
+  &-3 {
+    z-index: 100;
   }
 }

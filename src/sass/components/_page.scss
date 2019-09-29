@@ -921,8 +921,9 @@
       margin-top: 4rem;
 
       @include respond(phone) {
-        width: 15rem;
-        height: 45rem;
+        width: 36rem;
+        height: 50rem;
+        margin-top: 2rem;
       }
     }
 
@@ -980,18 +981,19 @@
       &__two_col {
         width: 36rem;
         height: 50rem;
+        position: relative;
   
         &-left {
           margin: 0;
-          width: 15rem;
-          height: 45rem;
-          float: left;
+          position: absolute;
+          top: 0;
+          left: 0;
         }
   
         &-right {
-          margin-top: 4rem;
+          margin-top: 12.5rem;
           width: 20rem;
-          height: 45rem;
+          height: 30rem;
           float: right;
 
           &-btn {

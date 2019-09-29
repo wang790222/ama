@@ -49,10 +49,10 @@
     }
 
     &-box {
-      font-size: 3rem;
       width: 45.4rem;
       line-height: 100vh;
       font-weight: 700;
+      font-size: 3rem;
 
       @include respond(phone) {
         width: 30.3rem;
@@ -60,7 +60,7 @@
         font-weight: 500;
       }
 
-      &-typing {
+      &-short_typing {
         width: 45.4rem;
         overflow: hidden;
         white-space: nowrap;
@@ -70,6 +70,61 @@
           width: 30.3rem;
         }
       }
+    }
+  }
+}
+
+.twoline_box {
+  font-size: 3rem;
+  width: 38rem;
+  height: 100vh;
+  font-weight: 700;
+  margin: auto;
+  display: table;
+
+  @include respond(phone) {
+    width: 25rem;
+  }
+
+  &__twoline {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 3rem;
+
+    & p {
+      width: 30rem;
+      font-weight: 700;
+      font-size: 3rem;
+      white-space: nowrap;
+      overflow: hidden;
+      color: white;
+      opacity: 0;
+
+      @include respond(phone) {
+        width: 25rem;
+        font-size: 2rem;
+        font-weight: 500;
+      }
+    }
+    
+    &-text-1 {
+      opacity: 0;
+
+      -webkit-animation: type 1s steps(40, end);
+      -webkit-animation-fill-mode: forwards;
+      animation: type 1s steps(40, end);
+      animation-fill-mode: forwards;
+    }
+
+    &-text-2 {
+      opacity: 0;
+
+      -webkit-animation:type 1s steps(40, end);
+      -webkit-animation-delay: 1.2s;
+      -webkit-animation-fill-mode:forwards;
+      animation: type 1s steps(40, end);
+      animation-delay: 1.2s;
+      animation-fill-mode: forwards;
     }
   }
 }

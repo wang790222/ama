@@ -1231,46 +1231,14 @@ const InfoInsertHead = (props) => {
     }
   };
 
-  const introStyle = (className) => {
-    if (className === "one-line") {
-      if (!props.route) {
-        return ({
-          width: "100vw",
-          height: "100vh",
-          backgroundColor: "white"
-        });
-      } else {
-        return ({
-          width: "100vw",
-          height: "100vh",
-          backgroundColor: "black"
-        });
-      }
-    } else if (className === "one-line__infoinsert-box-typing") {
-      if (!props.route) {
-        return ({
-          width: "24.6rem",
-          overflow: "hidden",
-          whiteSpace: "nowrap",
-          animation: "typing 1s steps(18) 1.5s",
-        });
-      } else {
-        return ({
-          
-        });
-      }
-
-    }
-  }
-
   const singleColorStyle = () => {
-    if (!props.route) {
+    if (props.route === 2) {
       return ({
         width: "100vw",
         height: "100vh",
         backgroundColor: "white",
       });
-    } else {
+    } else if (props.route === 3) {
       return ({
         width: "100vw",
         height: "100vh",
@@ -1298,6 +1266,33 @@ const InfoInsertHead = (props) => {
       return (img[index]);
     }
   }
+
+  const routeALineOrBLine = () => {
+    if (props.route === 2) {
+      return (
+        <div className="one-line__infoinsert">
+          <div className="one-line__infoinsert-box">
+            <div className="one-line__infoinsert-box-short_typing">
+              有些資訊開始慢慢進入你的腦中....
+            </div>
+          </div>
+        </div>
+      );
+    } else if (props.route === 3) {
+      return (
+        <div className="twoline_box">
+          <div className="twoline_box__twoline">
+            <p className="twoline_box__twoline-text-1">
+              四周陷入一片黑暗，
+            </p>
+            <p className="twoline_box__twoline-text-2">
+              你也不知不覺地暈了過去....
+            </p>
+          </div>
+        </div>
+      );
+    }
+  };
   
   const showContent = () => {
     if (intro) {
@@ -1322,20 +1317,14 @@ const InfoInsertHead = (props) => {
             onKeyDown={skipIntro}
             tabIndex="0"
           >
-            <div className="one-line__infoinsert">
-              <div className="one-line__infoinsert-box">
-                <div className="one-line__infoinsert-box-typing">
-                  有些資訊開始慢慢進入你的腦中....
-                </div>
-              </div>
-            </div>
+            {routeALineOrBLine()}
           </div>
         );
       }
     } else {
       return (
         <div>
-          {showHamburger("one-line__infoinsert-box-typing")}
+          {showHamburger()}
           <div className="page__block page__block-1 add_showup" id="#s1" ref={s1Ref}>
             <h1>嘿！你是哪裡人？</h1>
             <h2>青少年國族認同大調查</h2>

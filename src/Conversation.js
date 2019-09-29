@@ -1,9 +1,14 @@
 import React, { useRef, useEffect, useState } from 'react';
 import style from './style.css';
 import img10RouteA from './img/10-A-2.png';
+import img10_3_RouteB from './img/10-B-3.png'; // background
+import img10_2_RouteB from './img/10-B-2.png'; // ama
+import img10_1_RouteB from './img/10-B-1.png'; // cloud
 
 const Conversation = (props) => {
-  const [route, setRoute] = useState(null);
+
+  // 2-> routeA, 3-> routeB
+  const [route, setRoute] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   const thisDiv = useRef(null);
@@ -95,7 +100,6 @@ const Conversation = (props) => {
         [
           ["「哼哼，你以為你有得選嗎？」神", "秘阿嬤露出了冷笑。"],
           ["突然吹來了一陣冷風，同時開始", "響起雷鳴！"],
-          ["四周陷入一片黑暗，你也不知不覺", "地暈了過去...."]
         ]
       );
     } else {
@@ -103,7 +107,6 @@ const Conversation = (props) => {
         [
           ["「哼哼，你以為你有得選嗎？」神秘阿嬤露出了冷笑。"],
           ["突然吹來了一陣冷風，同時開始響起雷鳴！"],
-          ["四周陷入一片黑暗，你也不知不覺地暈了過去...."]
         ]
       );
     }
@@ -143,20 +146,31 @@ const Conversation = (props) => {
   }
 
   const setRouteA = () => {
-    setRoute(true);
+    setRoute(2);
     props.selectRoute();
     props.handleRoute("A");
   };
 
   const setRouteB = () => {
-    setRoute(false);
+    setRoute(3);
     props.selectRoute();
     props.handleRoute("B");
   };
 
   const getLineOrBtn = (index) => {
+    
     if (index > 7) {
-      return getAllLine(afterSelectOption(route)[props.index - 8]);
+      if (route === 2) {
+        return getAllLine(afterSelectOption((route === 2))[props.index - 8]);
+      } else if (route === 3) {
+        if (index <= 9) {
+          return getAllLine(afterSelectOption((route === 2))[props.index - 8]);
+        }
+
+        if (index === 10) {
+          return (getLineWithoutTyping(routeB()[1]));
+        }
+      }
     } else if(index === 7) {
       return (
         <div>
@@ -181,6 +195,22 @@ const Conversation = (props) => {
     }
   }
 
+  const getLineWithoutTyping = (strArr) => {
+    return strArr.map((setence, index) => {
+      let keyNum = Math.floor(Math.random() * (Number.MAX_SAFE_INTEGER - 1));
+      return (
+        <div>
+          <p key={keyNum} className={`conversation__box-text-${index + 1}-notyping`}>
+            {setence}
+          </p>
+          <div className="conversation-box__btn">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      );
+    });
+  };
+
   const getAllLine = (strArr) => {
     return strArr.map((setence, index) => {
       let keyNum = Math.floor(Math.random() * (Number.MAX_SAFE_INTEGER - 1));
@@ -202,7 +232,7 @@ const Conversation = (props) => {
   };
 
   const putGoToBtn = () => {
-    if (props.index < 9) {
+    if (props.index < 8) {
       return (
         <div 
           className="conversation__img-goto-page"
@@ -217,99 +247,13 @@ const Conversation = (props) => {
   }
 
   const showPreImg10 = () => {
-    if (route) {
+    if (route === 2) {
       if (props.index === 9) {
         return (
-          <img className="pre_routeA_img10" src={images(9)} />
+          <img className="pre_routeA_img10" src={img10RouteA} />
         );
       }
     }
-    
-    {/* else { //route B
-      let DivStyle = {};
-      let imgStyle1 = {};
-      let imgStyle2 = {};
-      let imgStyle3 = {};
-
-      if (!isMobile) {
-        DivStyle = {
-          width: "70rem",
-          height: "45rem",
-          zIndex: "100",
-          position: "fixed",
-          top: "7rem",
-        };
-
-        imgStyle1 = { // cloud
-          width: "70rem",
-          height: "45rem",
-          zIndex: "102",
-          position: "fixed",
-        };
-
-        imgStyle2 = {  // ama
-          width: "70rem",
-          height: "45rem",
-          zIndex: "101",
-          position: "fixed",
-          animation: "slideUp 2.5s",
-          animationIterationCount: "1",
-          animationFillMode: "forwards",
-          overflow: "hidden",
-        };
-
-        imgStyle3 = { // background
-          width: "70rem",
-          height: "45rem",
-          zIndex: "100",
-          position: "fixed",
-        };
-      } else {
-        DivStyle = {
-          width: "37.5rem",
-          height: "24.1rem",
-          zIndex: "100",
-          position: "fixed",
-          top: "5.5rem",
-        };
-
-        imgStyle1 = { // cloud
-          width: "37.5rem",
-          height: "24.1rem",
-          zIndex: "102",
-          position: "fixed",
-        };
-
-        imgStyle2 = {  // ama
-          width: "37.5rem",
-          height: "24.1rem",
-          zIndex: "101",
-          position: "fixed",
-          animation: "slideUp 2.5s",
-          animationIterationCount: "1",
-          animationFillMode: "forwards",
-          overflow: "hidden",
-        };
-
-        imgStyle3 = { // background
-          width: "37.5rem",
-          height: "24.1rem",
-          zIndex: "100",
-          position: "fixed",
-        };
-      }
-      
-
-      if (props.index === 9) {
-        return (
-          <div style={DivStyle}>
-            <img style={imgStyle1} src={images(10)} />
-            <img style={imgStyle2} src={images(11)} />
-            <img style={imgStyle3} src={images(12)} />
-          </div>
-        );
-      }
-    }*/}
   }
 
   const fadeOutImg = (index) => {
@@ -317,6 +261,24 @@ const Conversation = (props) => {
   }
 
   const getImg = () => {
+    if (route === 3) { // route B
+      if (props.index === 9) {
+        return (
+          <img className="normal_img" src={img10_3_RouteB} />
+        );
+      }
+
+      if (props.index === 10) {
+        return (
+          <div className="combine_3_img">
+            <img className="combine_3_img combine_3_img-1" src={img10_1_RouteB} />
+            <img className="combine_3_img combine_3_img-2" src={img10_2_RouteB} />
+            <img className="combine_3_img combine_3_img-3" src={img10_3_RouteB} />
+          </div>
+        );
+      }
+    }
+
     if (props.index === 9) {
       return (
         <img 
@@ -324,7 +286,7 @@ const Conversation = (props) => {
           src={images(props.index - 2)} 
         />
       );
-    } else if (props.index === 10 && route) {
+    } else if (props.index === 10 && route === 2) {
       return (
         <img 
           className= "normal_img"
@@ -342,7 +304,7 @@ const Conversation = (props) => {
   };
 
   const preLoadImg = () => {
-    if (route && props.index === 8) {
+    if (route === 2 && props.index === 8) {
       return (
         <img src={img10RouteA} className="preload_img" />
       );
@@ -350,8 +312,7 @@ const Conversation = (props) => {
   };
 
   const showImg = () => {
-    if (!route && props.index === 10) {
-
+{/*
       let DivStyle = {};
       let imgStyle1 = {};
       let imgStyle2 = {};
@@ -359,14 +320,7 @@ const Conversation = (props) => {
 
       if (!isMobile) {
         DivStyle = {
-          width: "70rem",
-          height: "45rem",
-          zIndex: "100",
-          position: "fixed",
-          top: "7rem",
-          left: "0",
-          right: "0",
-          margin: "0 auto",
+          
         };
 
         imgStyle1 = { // cloud
@@ -456,16 +410,15 @@ const Conversation = (props) => {
           <img style={imgStyle3} src={images(12)} />
         </div>
       );
-  } else {
-      return (
-        <div className="conversation__img" >
-          {preLoadImg()}
-          {putGoToBtn()}
-          {getImg()}
-          {showPreImg10()}
-        </div>
-      );
-    }
+*/}
+  return (
+    <div className="conversation__img" >
+      {preLoadImg()}
+      {putGoToBtn()}
+      {getImg()}
+      {showPreImg10()}
+    </div>
+  );
   };
   
   return (

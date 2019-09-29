@@ -13,10 +13,9 @@ const Dialogue = (props) => {
   const [isMobile, setIsMobile] = useState(false);
   const [fromGotoPage, setFromGotoPage] = useState(false);
 
-  // 1-> routeA, 2-> routeB
+  // 2-> routeA, 3-> routeB
   const [route, setRoute] = useState(0);
   
-
   useEffect(() => {
     if (count === 0) {
       timerId = setTimeout(closeTheDay, 1500);
@@ -24,8 +23,14 @@ const Dialogue = (props) => {
       if (timerId) {
         clearTimeout(timerId);
       }
-
-      timerId = setTimeout(handleSetCountByTimer, 8000);
+      if (route === 3 && (count === 9 || count === 10 )) {
+        timerId = setTimeout(handleSetCountByTimer, 4000);
+      } else if (route === 2 && count === 10) {
+        timerId = setTimeout(handleSetCountByTimer, 4000);
+      } else if (count !== 7){
+        timerId = setTimeout(handleSetCountByTimer, 8000);
+      }
+      
     }
   }, [count]);
 
@@ -38,7 +43,7 @@ const Dialogue = (props) => {
   }
 
   const handleSetCountByClick = () => {
-    if (count < 7 || (count === 8 ||count === 9)) {
+    if (count < 7 || (count === 8 || count === 9)) {
       setCount(count + 1);
     } else if (count === 10) {
       setOpening(false);
@@ -68,9 +73,9 @@ const Dialogue = (props) => {
 
   const handleRoute = (r) => {
     if (r === "A") {
-      setRoute(0);
+      setRoute(2);
     } else {
-      setRoute(1);
+      setRoute(3);
     }
   }
 
