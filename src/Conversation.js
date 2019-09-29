@@ -315,6 +315,24 @@ const Conversation = (props) => {
     return (index === 8) ? "fadeout_img" : "normal_img";
   }
 
+  const getImg = () => {
+    if (props.index === 9) {
+      return (
+        <img 
+          className="fadeout_img" 
+          src={images(props.index - 2)} 
+        />
+      );
+    } else {
+      return (
+        <img 
+          className= "normal_img"
+          src={images(props.index - 1)} 
+        />
+      );
+    }
+  };
+
   const showImg = () => {
     if (!route && props.index === 10) {
 
@@ -426,10 +444,7 @@ const Conversation = (props) => {
       return (
         <div className="conversation__img" >
           {putGoToBtn()}
-          <img 
-            className={fadeOutImg(props.index - 1)} 
-            src={images(props.index - 1)} 
-          />
+          {getImg()}
           {showPreImg10()}
         </div>
       );
