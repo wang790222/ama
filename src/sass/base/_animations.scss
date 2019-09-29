@@ -49,12 +49,7 @@
 @keyframes showUp {
   0% {
     opacity: 0;
-    transform: translateY(30px);
-  }
-
-  50% {
-    opacity: .7;
-    transform: translateY(-10px);
+    transform: translateY(60px);
   }
 
   100% {

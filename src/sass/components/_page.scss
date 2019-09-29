@@ -6,10 +6,6 @@
 
   &__block {
     margin: 0 auto;
-    animation: showUp .8s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    overflow: hidden;
 
     &-1 {
       width: 51.3rem;
@@ -321,13 +317,14 @@
         border-radius: 2rem;
         border: .5rem solid white;
         margin-top: 5rem;
+        margin-bottom: 2rem;
         font-size: 2rem;
         letter-spacing: .1rem;
         line-height: 4rem;
         text-align: center;
         color: white;
         cursor: pointer;
-        box-shadow: .5rem 1rem 1rem rgba(black, .2);
+        box-shadow: .5rem .7rem .9rem rgba(black, .2);
 
         &:hover {
           background-color: #FF8622;
@@ -344,13 +341,13 @@
     }
 
     &-10 {
-      margin: 8rem auto;
+      margin: 6rem auto;
       width: 1220px;
       border-top: .3rem solid;
       color: #BDBDBD;
 
       @include respond(phone) {
-        margin: 6rem auto;
+        margin: 0 auto;
         width: 32rem;
       }
     }
@@ -454,7 +451,6 @@
         border-radius: 1rem;
         float: right;
         padding: 2.5rem 4rem;
-        margin-top: -.5rem;
 
         @include respond(phone) {
           float: none;
@@ -931,8 +927,6 @@
     }
 
     &-33 {
-      margin-top: 5rem;
-
       &-btn {
         width: 17rem;
         height: 5rem;
@@ -942,7 +936,7 @@
         text-align: center;
         line-height: 4.4rem;
         cursor: pointer;
-        box-shadow: .5rem 1rem 1rem rgba(black, .2);
+        box-shadow: .5rem .7rem .9rem rgba(black, .2);
         border-radius: 2rem;
         border: .3rem solid white;
 
@@ -1053,8 +1047,8 @@
 
     &-33-1 {
       width: 20rem;
-      height: 2.4rem;
-      padding-bottom: 4rem;
+      height: 2rem;
+      padding-bottom: 6rem;
       font-size: 1.7rem;
       line-height: 2.4rem;
       color: #86663C;
@@ -1194,7 +1188,7 @@
         text-align: center;
         line-height: 4.4rem;
         cursor: pointer;
-        box-shadow: .5rem 1rem 1rem rgba(black, .2);
+        box-shadow: .5rem .7rem .9rem rgba(black, .2);
         border-radius: 2rem;
         border: .3rem solid white;
         color: white;
@@ -1210,11 +1204,12 @@
     }
 
     &-41-1 {
-      width: 32rem;
+      width: 34rem;
       height: 44rem;
 
       @include respond(phone) {
         height: 48rem;
+        margin-bottom: 10rem;
       }
 
       &-row-2 {
@@ -1243,7 +1238,7 @@
         &-btn {
           width: 14.4rem;
           height: 4rem;
-          box-shadow: .5rem 1rem 1rem rgba(black, .2);
+          box-shadow: .5rem .7rem .9rem rgba(black, .2);
           border-radius: 1rem;
           border: .3rem solid white;
           line-height: 3.4rem;
@@ -1267,11 +1262,17 @@
     &-41-2 {
       width: 20rem;
       height: 2.4rem;
-      padding-bottom: 4rem;
+      padding-bottom: 6rem;
+      margin-top: -1.5rem;
       font-size: 1.7rem;
       line-height: 2.4rem;
       color: #86663C;
       margin-bottom: 4rem;
+
+      @include respond(phone) {
+        margin-top: 2rem;
+        padding-bottom: 8rem;
+      }
 
       & span {
         & ion-icon {
@@ -1357,7 +1358,6 @@
         border-radius: 1rem;
         float: right;
         padding: 2.5rem 4rem;
-        margin-top: -.5rem;
 
         @include respond(phone) {
           float: none;
@@ -1616,7 +1616,6 @@
           border-radius: 1rem;
           float: right;
           padding: 2rem 3.5rem;
-          margin-top: -.5rem;
 
           @include respond(phone) {
             float: none;
@@ -2499,4 +2498,11 @@
 
 .add_opacity {
   opacity: .3 !important;
+}
+
+.add_showup {
+  animation: showUp .8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  overflow: hidden;
 }

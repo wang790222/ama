@@ -1,10 +1,6 @@
 .row-4 {
   max-width: 86rem;
-  margin: 0 auto;
-  
-  &:not(:last-child) {
-    margin-bottom: $gutter-vertical;
-  }
+  margin: 0 auto 1.5rem;
 
   @include clearfix;
 

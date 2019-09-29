@@ -24,15 +24,8 @@ const Dialogue = (props) => {
       if (timerId) {
         clearTimeout(timerId);
       }
-      if (count < 9) {
-        timerId = setTimeout(handleSetCountByTimer, 8000);
-      } else if (count === 9) {
-        timerId = setTimeout(handleSetCountByTimer, 8000);
-      }
-      else {
-        timerId = setTimeout(handleSetCountByTimer, 8000);
-      }
-      
+
+      timerId = setTimeout(handleSetCountByTimer, 8000);
     }
   }, [count]);
 
@@ -45,7 +38,7 @@ const Dialogue = (props) => {
   }
 
   const handleSetCountByClick = () => {
-    if (count < 7 || count === 8) {
+    if (count < 7 || (count === 8 || count === 9)) {
       setCount(count + 1);
     } else if (count === 10) {
       setOpening(false);

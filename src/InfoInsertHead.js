@@ -17,6 +17,14 @@ const InfoInsertHead = (props) => {
   const s4Ref = useRef(null);
   const s5Ref = useRef(null);
   const s6Ref = useRef(null);
+  const s7Ref = useRef(null);
+  const s8Ref = useRef(null);
+  const s9Ref = useRef(null);
+  const s10Ref = useRef(null);
+  const s11Ref = useRef(null);
+  const s12Ref = useRef(null);
+
+
 
   const [intro, setIntro] = useState(!props.fromGotoPage);
   const [popup, setPopup] = useState(false);
@@ -31,7 +39,14 @@ const InfoInsertHead = (props) => {
   const [singleColor, setSingleColor] = useState(true);
   const [curSec, setCurSec] = useState(0);
   const [hambugerOn, setHambugerOn] = useState(false);
-  const [blockInPage, setBlockInPage] = useState([]);
+  
+
+  let totalBlocks = 59;
+  let temp = [];
+  for (let i = 0; i < totalBlocks; i++) {
+    temp.push(false);
+  }
+  const [blockInPage, setBlockInPage] = useState(temp);
 
   useEffect(() => {
     if(intro && !singleColor) {
@@ -362,21 +377,32 @@ const InfoInsertHead = (props) => {
     }
   };
 
-  const currentBlocksInPage = () => {
+  const animateShowUpBlock = (index, originClassName) => {
+    console.log("animateShowUpBlock:" + index);
+    if (blockInPage[index]) {
+      return `${originClassName} add_showup`;
+    } else {
+      return originClassName;
+    }
+  };
 
-    let topOffsetArr = [];
-    for (let i = 0; i < 50; i++) {
-      let snTop = (`s${i}Ref`.current) ? s1Ref.current.offsetTop : -1;
+  const currentBlocksInPage = () => {
+    
+    for (let i = 1; i <= 10; i++) {
+      let temp = eval(`s${i}Ref`);
+      let snTop = (temp.current) ? temp.current.offsetTop : -1;
       if (snTop !== -1 && (snTop >= window.pageYOffset && snTop < window.pageYOffset + window.innerHeight)) {
-        topOffsetArr.push(i);
+        if (i !== 6 && i !== 60) { // avoid popup blocks
+          if (!blockInPage[i]) {
+            console.log("i:" + i);
+
+            let temp = blockInPage.slice();
+            temp[i] = true;
+            setBlockInPage(temp);
+          }
+        }
       }
     }
-    
-    let i = 0;
-    for (; i < blockInPage.length; i++) {
-
-    }
-    
   }
 
   const showHamburger = () => {
@@ -459,11 +485,11 @@ const InfoInsertHead = (props) => {
   const group32_33 = () => {
     if (!props.isMobile) {
       return (
-        <div>
-          <div className="page__block page__block-32">
+        <div style={{height: "250px"}}>
+          <div className={animateShowUpBlock(32, "page__block page__block-32")}>
             <img src={getImg(5)} style={{width:"100%", height:"100%"}} />
           </div>
-          <div className="page__block page__block-33">
+          <div className={animateShowUpBlock(33, "page__block page__block-33")}>
             <div className="row-4">
               <div 
                 className="col-1-of-4 page__block-33-btn page__block-33-btn-1"
@@ -1323,7 +1349,7 @@ const InfoInsertHead = (props) => {
             onClick={handleOnClickFor4}
             className="page__block page__block-4">看研究方法
           </div>
-          <div className="page__block page__block-5" id="s2" ref={s2Ref}>
+          <div className={animateShowUpBlock(2, "page__block page__block-5")} id="s2" ref={s2Ref}>
             <div className="page__block page__block-5-content">
               <div className="page__block-5-content-cube">
               </div>
@@ -1333,7 +1359,7 @@ const InfoInsertHead = (props) => {
             </div>
           </div>
           {showPopup()}
-          <div className="page__block page__block-7">
+          <div className={animateShowUpBlock(7, "page__block page__block-7")} ref={s7Ref}>
             <div className="page__block-7-cube">
               &nbsp;
             </div>
@@ -1344,10 +1370,10 @@ const InfoInsertHead = (props) => {
               </div>
             </div>
           </div>
-          <div className="page__block page__block-8">
+          <div className={animateShowUpBlock(8, "page__block page__block-8")} ref={s8Ref}>
             <img src={getImg(1)} style={{width:"100%",height:"100%"}}/>
           </div>
-          <div className="page__block page__block-9">
+          <div className={animateShowUpBlock(9, "page__block page__block-9")} ref={s9Ref}>
             <div className="row-3">
               <div 
                 className="col-1-of-3 page__block-9-btn"
@@ -1384,6 +1410,7 @@ const InfoInsertHead = (props) => {
   }
 
   const handleOnWheel = () => {
+    currentBlocksInPage();
     if (hambugerOn) {
       let cur = getCurrentSection();
       if (cur !== curSec) {
