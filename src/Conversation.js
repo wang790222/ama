@@ -215,40 +215,17 @@ const Conversation = (props) => {
     }
   }
 
-  {/*const showImg10 = () => {
+  const showPreImg10 = () => {
+    console.log("props.index:" + props.index);
     if (route) {
-      let style = {};
-      if (!isMobile) {
-        style = {
-          width: "70rem",
-          height: "45rem",
-          animation: "fadeIn 5s",
-          animationIterationCount: "1",
-          animationFillMode: "forwards",
-          animationDelay: "5s",
-          zIndex: "500",
-          position: "fixed",
-          //transform: "translateX(-700px)"
-        };
-      } else {
-        style = {
-          width: "37.5rem",
-          height: "24.1rem",
-          animation: "fadeIn 5s",
-          animationIterationCount: "1",
-          animationFillMode: "forwards",
-          zIndex: "500",
-          position: "fixed",
-          //transform: "translateX(-375px)"
-        };
-      }
-
       if (props.index === 9) {
         return (
-          <img style={style} src={images(9)} />
+          <img className="pre_routeA_img10" src={images(9)} />
         );
       }
-    } else {
+    }
+    
+    {/* else { //route B
       let DivStyle = {};
       let imgStyle1 = {};
       let imgStyle2 = {};
@@ -332,39 +309,12 @@ const Conversation = (props) => {
           </div>
         );
       }
-    }
-  }*/}
+    }*/}
+  }
 
-  const animateImg = () => {
-    if (props.index === 9) {
-      {/*
-      return ({
-        animation: "fadeOut 3s",
-        animationIterationCount: "1",
-        animationFillMode: "forwards",
-      });
-      */}
-      return ({
-        width: "100%",
-        height: "100%",
-        animation: "fadeOut 12s",
-        animationIterationCount: "1",
-        animationFillMode: "forwards",
-      });
-    } else if (route && props.index === 10) {
-      return ({
-        width: "100%",
-        height: "100%",
-        animation: "fadeIn 6s",
-        animationIterationCount: "1",
-        animationFillMode: "forwards",
-      });
-    } else {
-      return ({
-        width: "100%",
-        height: "100%",
-      });
-    }
+  const fadeOutImg = (index) => {
+    console.log(index);
+    return (index === 8) ? "fadeout_img" : "normal_img";
   }
 
   const showImg = () => {
@@ -478,8 +428,11 @@ const Conversation = (props) => {
       return (
         <div className="conversation__img" >
           {putGoToBtn()}
-          {/*{showImg10()}*/}
-          <img style={animateImg()} src={images(props.index - 1)} />
+          <img 
+            className={fadeOutImg(props.index - 1)} 
+            src={images(props.index - 1)} 
+          />
+          {showPreImg10()}
         </div>
       );
     }

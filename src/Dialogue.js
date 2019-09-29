@@ -38,7 +38,7 @@ const Dialogue = (props) => {
   }
 
   const handleSetCountByClick = () => {
-    if (count < 7 || (count === 8 || count === 9)) {
+    if (count < 7 || (count === 8 ||count === 9)) {
       setCount(count + 1);
     } else if (count === 10) {
       setOpening(false);
