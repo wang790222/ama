@@ -1,9 +1,9 @@
 .row-3 {
-  max-width: 86rem;
+  max-width: 860;
   margin: 0 auto;
 
   @include respond(phone) {
-    margin: 4rem auto 6rem;
+    margin: 0 auto 20px;
   }
   
   &:not(:last-child) {
