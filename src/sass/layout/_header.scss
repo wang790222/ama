@@ -1,118 +1,133 @@
 .header {
-  background-color: #FFF5D8;
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-  overflow: scroll;
-  
-  &__img {
-    width: 64.2rem;
-    height: 34.2rem;
-    z-index: 2;
-    position: fixed;
-    top: 7rem;
-    left: 0;
-    right: 0;
+  &__block {
     margin: 0 auto;
 
-    @include respond(phone) {
-      width: 360px;
-      height: 191px;
-    }
-  }
-
-  &__shade {
-    display: inline-block;
-    width: 64.2rem;
-    height: 34.5rem;
-    background-color: #E8CF8F;
-    position: fixed;
-    transform: rotate(.8deg) translateX(2.5%);
-    top: 8.5rem;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-
-    @include respond(phone) {
-      width: 0;
-      height: 0;
-    }
-  }
-
-  &__tittle {
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    position: fixed;
-    top: 48rem;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-
-    @include respond(phone) {
-      top: 33.9rem;
-    }
-
-    &-main {
-      color: #5E3F15;
-      font-size: 3rem;
-      letter-spacing: .159rem;
+    &-1 {
+      width: 642px;
+      height: 342px;
+      position: relative;
+      margin-top: 70px;
 
       @include respond(phone) {
-        font-size: 2.0rem;
-        letter-spacing: .062rem;
-        margin: 0 3.9rem;
+        width: 370px;
+        height: 191px;
+        margin-top: 70px;
+      }
+
+      &__img {
+        width: 642px;
+        height: 342px;
+        z-index: 2;
+        position: absolute;
+
+        @include respond(phone) {
+          width: 370px;
+          height: 191px;
+        }
+      }
+    
+      &__shade {
+        width: 642px;
+        height: 342px;
+        z-index: 1;
+        background-color: #E8CF8F;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        transform: rotate(.8deg);
+
+        @include respond(phone) {
+          width: 0;
+          height: 0;
+        }
       }
     }
-    
-    &-sub {
-      padding-top: 2.895rem;
-      color: #86663C;
-      font-size: 2.3rem;
-      letter-spacing: .057rem;
+
+    &-2 {
+      width: 445px;
+      height: 34px;
+      margin-top: 50px;
 
       @include respond(phone) {
-        font-size: 1.8rem;
-        letter-spacing: .045rem;
-        margin: 0 6.85rem;
+        width: 289px;
+        height: 26px;
+        margin-top: 38px;
+      }
+
+      &__main {
+        color: #5E3F15;
+        font-size: 30px;
+        letter-spacing: 1px;
+
+        @include respond(phone) {
+          font-size: 20px;
+          letter-spacing: 0.62px;
+        }
       }
     }
-  }
 
-  &__btn {
-    position: fixed;
-    top: 60rem;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 27rem;
-    height: 7rem;
-    background-color: #F06F04;
-    border-radius: 2rem;
-    border: .5rem solid white;
-    display: inline-block;
-    font-size: 3.2rem;
-    letter-spacing: .08rem;
-    line-height: 6rem;
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: .5rem 1rem 1rem rgba(black, .2);
+    &-3 {
+      width: 779px;
+      height: 32px;
+      margin-top: 29px;
+      text-align: center;
 
-    &:hover {
-      background-color:#FF8622;
+      @include respond(phone) {
+        width: 223px;
+        height: 68px;
+      }
+
+      &__sub {
+        color: #86663C;
+        font-size: 23px;
+        letter-spacing: .57px;
+        
+
+        @include respond(phone) {
+          line-height: 24px;
+          font-size: 18px;
+          letter-spacing: .45px;
+        }
+      }
     }
 
-    &:active {
-      box-shadow: none;
-    }
-    
-    @include respond(phone) {
-      top: 50rem;
-      width: 21.5rem;
-      height: 5.6rem;
-      font-size: 2.5rem;
-      letter-spacing: .063rem;
-      line-height: 4.6rem;
+    &-4 {
+      width: 250px;
+      height: 70px;
+      margin-top: 28px;
+      text-align: center;
+
+      @include respond(phone) {
+        width: 215px;
+        height: 56px;
+      }
+
+      &__btn {
+        border-radius: 20px;
+        border: 3px solid white;
+        font-size: 28px;
+        letter-spacing: 0.93px;
+        line-height: 54px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #F06F04;
+        cursor: pointer;
+        box-shadow: 5px 7px 9px rgba(black, .2);
+
+        @include respond(phone) {
+          font-size: 25px;
+          letter-spacing: .63px;
+          line-height: 46px;
+        }
+
+        &:hover {
+          background-color:#FF8622;
+        }
+
+        &:active {
+          box-shadow: none;
+        }
+      }
     }
   }
 }

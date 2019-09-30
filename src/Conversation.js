@@ -123,16 +123,24 @@ const Conversation = (props) => {
   ];
 
   const showIdentity = (index) => {
+    if (route === 3 && index === 8) {
+      return null;
+    }
+    
     if (roles[index]) {
       if (index === 1 || index === 6) {
         return (
-          <div className="identity identity-main_role">
+          <div 
+            className="conversation__block-2__identity conversation__block-2__identity-main_role"
+          >
             {roles[index]}
           </div>
         );
       } else {
         return (
-          <div className="identity identity-ama">
+          <div
+            className="conversation__block-2__identity conversation__block-2__identity-ama"
+          >
             {roles[index]}
           </div>
         );
@@ -196,12 +204,9 @@ const Conversation = (props) => {
       let keyNum = Math.floor(Math.random() * (Number.MAX_SAFE_INTEGER - 1));
       return (
         <div key={keyNum}>
-          <p className={`conversation__box-text-${index + 1}-notyping`}>
+          <p className={`conversation__block-2__text conversation__box__text-${index + 1}-notyping`}>
             {setence}
           </p>
-          <div className="conversation-box__btn">
-            <ion-icon name="arrow-dropdown"></ion-icon>
-          </div>
         </div>
       );
     });
@@ -211,13 +216,10 @@ const Conversation = (props) => {
     return strArr.map((setence, index) => {
       let keyNum = Math.floor(Math.random() * (Number.MAX_SAFE_INTEGER - 1));
       return (
-        <div key={keyNum} >
-          <p className={`conversation__box-text-${index + 1}`}>
+        <div key={keyNum}>
+          <p className={`conversation__block-2__text conversation__block-2__text-${index + 1}`}>
             {setence}
           </p>
-          <div className="conversation-box__btn">
-            <ion-icon name="arrow-dropdown"></ion-icon>
-          </div>
         </div>
       );
     });
@@ -231,7 +233,7 @@ const Conversation = (props) => {
     if (props.index < 8) {
       return (
         <div 
-          className="conversation__img-goto-page"
+          className="conversation__block-1__goto"
           onClick={gotoPage}
         >
           跳轉報告頁
@@ -329,14 +331,25 @@ const Conversation = (props) => {
 
   const showImg = () => {
     return (
-      <div className="conversation__img" >
-        {preLoadImg()}
+      <div className="conversation__block conversation__block-1" >
         {putGoToBtn()}
         {getImg()}
         {showPreImgA2()}
       </div>
     );
   };
+
+  const showChangePageBtn = () => {
+    if (props.index === 7) {
+      return null;
+    } else {
+      return (
+        <div className="conversation__block-2__btn">
+          <ion-icon name="arrow-dropdown"></ion-icon>
+        </div>
+      );
+    }
+  }
   
   return (
     <div
@@ -347,9 +360,12 @@ const Conversation = (props) => {
       ref={thisDiv}
     >
       {showImg()}
-      <div className="conversation__box" >
+      <div className="conversation__block conversation__block-2" >
+        <div className="conversation__block-2__text-box">
+          {getLineOrBtn(props.index)}
+        </div>
         {showIdentity(props.index - 1)}
-        {getLineOrBtn(props.index)}
+        {showChangePageBtn()}
       </div>
     </div>
   );

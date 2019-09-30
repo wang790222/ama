@@ -1,42 +1,174 @@
 .conversation {
   width: 100vw;
   height: 100vh;
-  margin: 0 auto;
-  padding: 0;
-  background-color: #FFF5D8;
 
-  &__img {
+  &__block {
     margin: 0 auto;
-    display: block;
-    width: 70rem;
-    height: 45rem;
-    position: fixed;
-    top: 7rem;
-    left: 0;
-    right: 0;
 
-    @include respond(phone) {
-      top: 5.5rem;
-      width: 37.5rem;
-      height: 24.1rem;
-    }
-
-    &-goto-page {
-      width: 11.7rem;
-      height: 3.2rem;
-      color: white;
-      background-color: #828282;
-      border-radius: 1rem;
-      line-height: 3.2rem;
-      text-align: center;
-      font-size: 1.8rem;
-      z-index: 10;
-      position: absolute;
-      margin: 2rem;
-      cursor: pointer;
+    &-1 {
+      width: 700px;
+      height: 450px;
+      padding-top: 70px;
+      position: relative;
 
       @include respond(phone) {
-        margin: 1.5rem;
+        width: 375px;
+        height: 241px;
+        padding-top: 55px;
+      }
+
+      &__goto {
+        position: absolute;
+        width: 11.7rem;
+        height: 3.2rem;
+        color: white;
+        background-color: #828282;
+        border-radius: 1rem;
+        line-height: 3.2rem;
+        text-align: center;
+        font-size: 1.8rem;
+        z-index: 10;
+        position: absolute;
+        margin: 2rem;
+        cursor: pointer;
+
+        @include respond(phone) {
+          margin: 1.5rem;
+        }
+      }
+    }
+
+    &-2 {
+      width: 840px;
+      height: 170px;
+      margin-top: 70px;
+      background-color: black;
+      border: 5px solid #86663C;
+      border-radius: 20px;
+      background-color: white;
+      position: relative;
+
+      @include respond(phone) {
+        width: 320px;
+        height: 230px;
+        margin-top: 55px;
+      }
+
+      &__identity {
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        border-radius: 20px;
+        font-size: 2.5rem;
+        line-height: 50px;
+        color: white;
+        text-align: center;
+        z-index: 9999;
+        top: -25px;
+        left: 20px;
+
+        @include respond(phone) {
+          width: 75px;
+          height: 40px;
+          left: -20px;
+          font-size: 2rem;
+        }
+
+        &-ama {
+          background-color: #F06F04;
+        }
+
+        &-main_role {
+          background-color: #37CCFF;
+        }
+      }
+
+      &__text-box {
+        width: 72.5rem;
+        font-size: 2.5rem;
+        margin: 42px 67px 44px 47px;
+      }
+
+      &__text {
+        white-space: nowrap;
+        overflow: hidden;
+        color: #5E3F15;
+  
+        @include respond(phone) {
+          font-size: 1.8rem;
+          width: 27rem;
+        }
+  
+        &-1 {
+          opacity: 0;
+          -webkit-animation: type 1s steps(40, end);
+          -webkit-animation-fill-mode: forwards;
+          animation: type 1s steps(40, end);
+          animation-fill-mode: forwards;
+    
+          &-notyping {
+            opacity: 1 !important;
+            -webkit-animation: none;
+            animation: none;
+          }
+        }
+    
+        &-2 {
+          opacity: 0;
+    
+          -webkit-animation:type 1s steps(40, end);
+          -webkit-animation-delay: 1.2s;
+          -webkit-animation-fill-mode:forwards;
+          animation: type 1s steps(40, end);
+          animation-delay: 1.2s;
+          animation-fill-mode: forwards;
+    
+          &-notyping {
+            opacity: 1 !important;
+            -webkit-animation: none;
+            animation: none;
+          }
+        }
+    
+        &-3 {
+          opacity: 0;
+          -webkit-animation:type 1s steps(40, end);
+          -webkit-animation-delay:2.1s;
+          -webkit-animation-fill-mode:forwards;
+          animation: type 1s steps(40, end);
+          animation-delay: 2.1s;
+          animation-fill-mode: forwards;
+        }
+    
+        &-4 {
+          opacity: 0;
+          -webkit-animation:type .8s steps(40, end);
+          -webkit-animation-delay:3.2s;
+          -webkit-animation-fill-mode:forwards;
+          animation: type .8s steps(40, end);
+          animation-delay: 3.2s;
+          animation-fill-mode: forwards;
+        }
+      }
+
+      &__btn {
+        font-size: 7.2rem;
+        color: #F06F04;
+        position: absolute;
+        top: 9rem;
+        right: 1rem;
+        animation: flicker 1.2s infinite;
+
+        & ion-icon {
+          background-color: transparent;
+          cursor: pointer;
+        }
+
+        @include respond(phone) {
+          top: 16.5rem;
+          right: .5rem;
+          font-size: 6rem;
+        }
       }
     }
   }
@@ -44,10 +176,7 @@
   &__box {
     width: 84rem;
     height: 17rem;
-    border: .5rem solid #86663C;
-    border-radius: 2rem;
-    background-color: white;
-    color: #C89E67;
+    
     position: fixed;
     top: 52rem;
     left: 0;
@@ -63,72 +192,6 @@
       top: 35rem;
     }
 
-    & p {
-      width: 72.5rem;
-      font-size: 2.5rem;
-      white-space: nowrap;
-      overflow: hidden;
-      color: #5E3F15;
-      opacity: 0;
-
-      @include respond(phone) {
-        font-size: 1.8rem;
-        width: 27rem;
-      }
-    }
-
-    &-text-1 {
-      opacity: 0;
-
-      -webkit-animation: type 1s steps(40, end);
-      -webkit-animation-fill-mode: forwards;
-      animation: type 1s steps(40, end);
-      animation-fill-mode: forwards;
-
-      &-notyping {
-        opacity: 1 !important;
-        -webkit-animation: none;
-        animation: none;
-      }
-    }
-
-    &-text-2 {
-      opacity: 0;
-
-      -webkit-animation:type 1s steps(40, end);
-      -webkit-animation-delay: 1.2s;
-      -webkit-animation-fill-mode:forwards;
-      animation: type 1s steps(40, end);
-      animation-delay: 1.2s;
-      animation-fill-mode: forwards;
-
-      &-notyping {
-        opacity: 1 !important;
-        -webkit-animation: none;
-        animation: none;
-      }
-    }
-
-    &-text-3 {
-      opacity: 0;
-      -webkit-animation:type 1s steps(40, end);
-      -webkit-animation-delay:2.1s;
-      -webkit-animation-fill-mode:forwards;
-      animation: type 1s steps(40, end);
-      animation-delay: 2.1s;
-      animation-fill-mode: forwards;
-    }
-
-    &-text-4 {
-      opacity: 0;
-      -webkit-animation:type .8s steps(40, end);
-      -webkit-animation-delay:3.2s;
-      -webkit-animation-fill-mode:forwards;
-      animation: type .8s steps(40, end);
-      animation-delay: 3.2s;
-      animation-fill-mode: forwards;
-    }
-
     &-option {
       position: absolute;
       margin: auto 0;
@@ -136,7 +199,8 @@
       bottom: 0;
       background-color: #F06F04;
       width: 34rem;
-      height: 8.5rem;
+      height: 7.5rem;
+      line-height: 7rem;
       color: white;
       font-size: 1.9rem;
       text-align: center;
@@ -163,7 +227,6 @@
       
       &-1 {
         left: 5.5rem;
-        line-height: 7.5rem;
 
         @include respond(phone) {
           line-height: 2rem;
@@ -171,14 +234,12 @@
           color: white;
           text-align: left;
           padding: 1.2rem 3.8rem;
-          //margin: 3.7rem 0 0 3rem;
           transform: translateX(.7rem) translateY(-1.8rem);
         }
       }
 
       &-2 {
         left: 44.5rem;
-        line-height: 7.5rem;
 
         @include respond(phone) {
           line-height: 2rem;
@@ -193,120 +254,47 @@
   }
 }
 
-.conversation-box__btn {
-  font-size: 7.2rem;
-  color: #F06F04;
-  position: absolute;
-  top: 9rem;
-  right: 1rem;
-  animation: flicker 1.2s infinite;
-
-  & ion-icon {
-    background-color: transparent;
-    cursor: pointer;
-  }
-
-  @include respond(phone) {
-    top: 16.5rem;
-    right: .5rem;
-    font-size: 6rem;
-  }
-}
-
-.identity {
-  font-size: 2.5rem;
-  color: white;
-  padding: 1rem 2.2rem;
-  border-radius: 1rem;
-  position: absolute;
-  top: -18%;
-  left: 2%;
-  z-index: 9999;
-
-  &-ama {
-    background-color: #F06F04;
-  }
-
-  &-main_role {
-    background-color: #37CCFF;
-  }
-
-  @include respond(phone) {
-    font-size: 2rem;
-    padding: .6rem 1.7rem;
-    top: -10%;
-    left: 5%;
-  }
-}
-
 .pre_img_a2 {
-  width: 70rem;
-  height: 45rem;
-  position: fixed;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   -webkit-animation: fadeIn 7s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
   animation: fadeIn 7s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  //transform: translateX(-700px);
-
-  @include respond(phone) {
-    width: 37.5rem;
-    height: 24.1rem;
-    //transform: translateX(-375px);
-  }
 }
 
 .normal_img {
- 
-  width: 70rem;
-  height: 45rem;
-
-  @include respond(phone) {
-    width: 37.5rem;
-    height: 24.1rem;
-  }
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .fadeout_img {
-  width: 70rem;
-  height: 45rem;
-  position: fixed;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   -webkit-animation: fadeOut 7s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
   animation: fadeOut 7s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-
-  @include respond(phone) {
-    width: 37.5rem;
-    height: 24.1rem;
-  }
 }
 
 .preload_img {
-  position: fixed;
-  width: 70rem;
-  height: 45rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   visibility: hidden;
-
-  @include respond(phone) {
-    width: 37.5rem;
-    height: 24.1rem;
-  }
 }
 
 .combine_3_img {
-  width: 70rem;
-  height: 45rem;
-  position: fixed;
-
-  @include respond(phone) {
-    width: 37.5rem;
-    height: 24.1rem;
-  }
+  width: 100%;
+  height: 100%;
+  position: absolute;
 
   &-1 {
     z-index: 101;
