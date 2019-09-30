@@ -2523,7 +2523,7 @@ html {
         box-shadow: none; }
 
 .row-3 {
-  max-width: 860;
+  max-width: 860px;
   margin: 0 auto; }
   @media (max-width: 1100px) {
     .row-3 {
