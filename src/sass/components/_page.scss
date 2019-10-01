@@ -158,8 +158,10 @@
       top: 0;
       z-index: 9999;
       background-color: rgba($color-black, .5);
+      opacity: 1;
 
       &__content {
+        opacity: 1;
         width: 1000px;
         height: 800px;
         position: fixed;
@@ -179,6 +181,7 @@
         }
 
         &-close {
+          opacity: 1;
           position: absolute;
           top: 30px;
           left: 912px;
@@ -201,6 +204,7 @@
         }
 
         &-text {
+          opacity: 1;
           width: 750px;
 
           @include respond(phone) {
@@ -420,7 +424,7 @@
 
       @include respond(phone) {
         width: 100vw;
-        height: 350px;
+        height: 400px;
         margin-top: 60px;
       }
 
@@ -456,7 +460,7 @@
 
         & p {
           width: 600px;
-          height: 100px;
+          //height: 100px;
           font-size: 24px;
           line-height: 33px;
           text-align: left;
@@ -653,7 +657,7 @@
       margin-top: 100px;
 
       @include respond(phone) {
-        margin-top: 80px;
+        margin-top: 40px;
         width: 324px;
       }
 
@@ -892,6 +896,7 @@
       margin-top: 40px;
 
       @include respond(phone) {
+        opacity: 1;
         width: 360px;
         height: 500px;
         margin-top: 20px;
@@ -953,6 +958,10 @@
         width: 360px;
         height: 500px;
         position: relative;
+
+        @include respond(phone) {
+          height: 520px;
+        }
   
         &-left {
           margin: 0;
@@ -1284,8 +1293,8 @@
 
       @include respond(phone) {
         width: 100vw;
-        height: 350px;
-        margin: 60px auto;
+        height: 400px;
+        margin: 60px auto 30px;
       }
 
       &-cube {
@@ -1315,7 +1324,7 @@
           width: 340px;
           height: 250px;
           margin: 30px auto 0;
-          padding: 33px 26px 28px;
+          padding: 28px 26px 28px;
         }
 
         & p {
@@ -2216,8 +2225,10 @@
       left: 0;
       z-index: 9999;
       background-color: rgba($color-black, .5);
+      opacity: 1;
 
       &__content {
+        opacity: 1;
         margin: auto;
         width: 750px;
         height: 433px;
@@ -2235,6 +2246,7 @@
         }
 
         &-text {
+          opacity: 1;
           margin: 69px auto 0;
           width: 312px;
           height: 40px;
@@ -2252,6 +2264,7 @@
         }
   
         &-close {
+          opacity: 1;
           position: absolute;
           top: 15px;
           left: 675px;
@@ -2260,7 +2273,7 @@
           height: 50px;
           border-radius: 50%;
           text-align: center;
-          font-size: 50px;
+          font-size: 35px;
           color: white;
           line-height: 50px;
           margin: 0;
@@ -2274,6 +2287,7 @@
         }
   
         &-row-icon {
+          opacity: 1;
           //@include absCenter;
           width: 260px;
           height: 100px;

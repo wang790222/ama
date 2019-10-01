@@ -10,6 +10,7 @@ import Hamburger from './Hamburger';
 const InfoInsertHead = (props) => {
 
   const thisDiv = useRef(null);
+  const wholePageDiv = useRef(null);
   const s1Ref = useRef(null);
   const s2Ref = useRef(null);
   const s3Ref = useRef(null);
@@ -93,9 +94,8 @@ const InfoInsertHead = (props) => {
   const [blockInPage, setBlockInPage] = useState(temp);
 
   useEffect(() => {
-    if(intro && !singleColor) {
-      thisDiv.current.focus();
-    }
+    //wholePageDiv.current.focus();
+    thisDiv.current.focus();
 
     window.scrollTo(0, scrollY);
   }, [popup, share]);
@@ -434,8 +434,16 @@ const InfoInsertHead = (props) => {
     for (let i = 1; i <= totalBlocks; i++) {
       let temp = eval(`s${i}Ref`);
       let snTop = (temp.current) ? temp.current.offsetTop : -1;
-      if (snTop !== -1 && (snTop >= window.pageYOffset && snTop < window.pageYOffset + window.innerHeight)) {
+      if (
+           snTop !== -1 && 
+           (
+             (snTop >= window.pageYOffset && snTop < window.pageYOffset + window.innerHeight) || 
+             (false)
+           )
+         ) {
+        
         if (!blockInPage[i]) {
+          console.log("i:" + i + "," + snTop + ",pageYOffset:" + window.pageYOffset + ",scrollY:" + window.scrollY + ",innerHeight:" + window.innerHeight);
           let temp = blockInPage.slice();
           temp[i] = true;
           setBlockInPage(temp);
@@ -1275,12 +1283,9 @@ const InfoInsertHead = (props) => {
         );
       } else {
         return (
-          <div 
-            ref={thisDiv}
+          <div
             style={singleColorStyle()}
             onClick={skipIntro}
-            onKeyDown={skipIntro}
-            tabIndex="0"
           >
             {routeALineOrBLine()}
           </div>
@@ -1364,7 +1369,14 @@ const InfoInsertHead = (props) => {
     }
   }
 
-  const handleOnWheel = () => {
+  const handleOnWheelAndKeyDown = (e) => {
+    //let rect = thisDiv.current.getBoundingClientRect();
+    //console.log(rect);
+    console.log(e.charCode);
+    if (e.charCode === 32) {
+      e.preventDefault();
+    }
+
     currentBlocksInPage();
     if (hambugerOn) {
       let cur = getCurrentSection();
@@ -1375,7 +1387,14 @@ const InfoInsertHead = (props) => {
   };
 
   return (
-    <div style={fixBackground()} onWheel={handleOnWheel}>
+    <div
+      style={fixBackground()} 
+      onWheel={handleOnWheelAndKeyDown}
+      onKeyPress={handleOnWheelAndKeyDown}
+      onTouchMove={handleOnWheelAndKeyDown}
+      ref={thisDiv}
+      tabIndex="0"
+    >
       {showContent()}
     </div>
   );
