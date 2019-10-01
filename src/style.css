@@ -118,6 +118,9 @@ html {
   font-display: fallback;
   src: url("../src/font/NotoSansTC-Regular.otf"); }
 
+#root {
+  font-family: 'Noto Sans TC'; }
+
 .one-line {
   width: 100vw;
   height: 100vh;

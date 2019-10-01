@@ -459,6 +459,8 @@ const InfoInsertHead = (props) => {
       return (<Hamburger 
         isMobile={props.isMobile} 
         currentSection={curSec}
+        afterNine={afterNine}
+        openTheRest={handleOnClickFor9}
         isHamburgerOn={isHamburgerOn}
         />
       );

@@ -80,6 +80,10 @@ const Hamburger = (props) => {
   }
 
   const handleOnChange = (e) => {
+    if (!props.afterNine) {
+      props.openTheRest();
+    }
+
     if (e.target && e.target.checked) {
       props.isHamburgerOn(true);
     } else {
