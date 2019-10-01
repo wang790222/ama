@@ -435,13 +435,10 @@ const InfoInsertHead = (props) => {
       let temp = eval(`s${i}Ref`);
       let snTop = (temp.current) ? temp.current.offsetTop : -1;
       if (snTop !== -1 && (snTop >= window.pageYOffset && snTop < window.pageYOffset + window.innerHeight)) {
-        if (i !== 6 && i !== 60) { // avoid popup blocks
-          if (!blockInPage[i]) {
-
-            let temp = blockInPage.slice();
-            temp[i] = true;
-            setBlockInPage(temp);
-          }
+        if (!blockInPage[i]) {
+          let temp = blockInPage.slice();
+          temp[i] = true;
+          setBlockInPage(temp);
         }
       }
     }
@@ -610,7 +607,7 @@ const InfoInsertHead = (props) => {
       );
     } else {
       return (
-        <div className="page__block page__block-41-1">
+        <div className={animateShowUpBlock(40, "page__block page__block-41-1")} ref={s40Ref}>
           <div className="page__block-41-1-row-2">
             <div className="page__block-41-1-row-2-left">
               <div className="page__block-41-1-img__btn">
@@ -918,7 +915,7 @@ const InfoInsertHead = (props) => {
             <p>當我們講到台灣時，你認為以下哪個負面性形容詞適合描述你心理上感受？</p>
           </div>
           {group40_41()}
-          <div className="page__block page__block-43">
+          <div className={animateShowUpBlock(44, "page__block page__block-43")} ref={s44Ref}>
             <p>問完青少年是否會對自己的國家感到光榮後，問卷中進一步提問：「當我們講到台灣時，你認為以下哪個負面性形容詞適合描述你心理上感受？」。負面形容詞的選項包括：「沮喪的」、「難過的」、「憤怒的」、「擔心的」、以及「沒有」。
             </p>
             <br />
@@ -927,8 +924,8 @@ const InfoInsertHead = (props) => {
             結果顯示，有5成以上的受訪者認為講到台灣時，他們是「擔心的」。該題進一步請他們寫下擔心的原因時，答案則圍繞在「擔心台灣失去自由」以及「國際地位遭打壓」。
             </p>
           </div>
-          <div className="page__block page__block-44"></div>
-          <div className="page__block page__block-45">
+          <div className={animateShowUpBlock(45, "page__block page__block-44")} ref={s45Ref}></div>
+          <div className={animateShowUpBlock(46, "page__block page__block-45")} ref={s46Ref}>
             <div className="page__block-45-cube">
               <img src={require('./img/q7-head.png')} style={{width: "100%", height: "100%"}} alt="img_block45" />
             </div>
@@ -939,13 +936,13 @@ const InfoInsertHead = (props) => {
               </div>
             </div>
           </div>
-          <div className="page__block page__block-46">
+          <div className={animateShowUpBlock(47, "page__block page__block-46")} ref={s47Ref}>
             <img src={getImg(7)} style={{width:"100%", height:"100%"}} alt="img_block46" />
           </div>
-          <div className="page__block page__block-47">
+          <div className={animateShowUpBlock(48, "page__block page__block-47")} ref={s48Ref}>
             <p>談到未來，高中職生選擇務實：經濟繁榮最重要</p>
           </div>
-          <div className="page__block page__block-48">
+          <div className={animateShowUpBlock(49, "page__block page__block-48")} ref={s49Ref}>
             <p>這份問卷列出9項人們認為重要的社會目標，讓受訪者選擇。其中有32.7%受訪者認為「維持經濟繁榮」最重要，佔比最高。其次則是佔14.7%的「保障言論自由」、以及佔13.3%「讓人民對政府重大決策有更多表達意見的機會」。
             </p>
             <br />
@@ -954,7 +951,7 @@ const InfoInsertHead = (props) => {
             在這個數據中，第一高的「維持經濟繁榮」比第二高「保障言論自由」多了兩倍以上，可見年輕世代對於台灣未來的共識，還是著重在民生方面，相當務實。但從「保障言論自由」和「讓人民對政府重大決策有更多表達意見的機會」分據重要性的第二、第三來看，「民主自由」同樣是當前青少年們相當重視的社會發展目標。
             </p>
           </div>
-          <div className="page__block page__block-49">
+          <div className={animateShowUpBlock(50, "page__block page__block-49")} ref={s50Ref}>
             <div className="page__block-49-title">
               <p>政治立場不同的世代  有對話的可能嗎？</p>
             </div>
@@ -974,7 +971,7 @@ const InfoInsertHead = (props) => {
               />
             </div>
           </div>
-          <div className="page__block page__block-50" id="s5" ref={s5Ref}>
+          <div className={animateShowUpBlock(5, "page__block page__block-50")} id="s5" ref={s5Ref}>
             <div className="page__block page__block-50-content">
               <div className="page__block-50-content-cube">
                 <img src={require('./img/finger-4.png')} style={{width: "100%", height: "100%"}} alt="img_block50" />
@@ -984,7 +981,7 @@ const InfoInsertHead = (props) => {
               </div>
             </div>
           </div>
-          <div className="page__block page__block-51">
+          <div className={animateShowUpBlock(51, "page__block page__block-51")} ref={s51Ref}>
             <div className="page__block-51-content">
               <div className="page__block-51-content-cube">
                 <img src={require('./img/q8-head.png')} style={{width: "100%", height: "100%"}} alt="img_block51" />
@@ -998,10 +995,10 @@ const InfoInsertHead = (props) => {
             </div>
             <div className="page__block-51-img"></div>
           </div>
-          <div className="page__block page__block-52">
+          <div className={animateShowUpBlock(52, "page__block page__block-52")} ref={s52Ref}>
             <p>高中職生：關心政治與讀書都不可分割！</p>
           </div>
-          <div className="page__block page__block-53">
+          <div className={animateShowUpBlock(53, "page__block page__block-53")} ref={s53Ref}>
             <p>從以上三個問句的調查結果觀察，高中職生們其實高度認同民主參與，同時也捍衛自己說話的權利。不但高達95.6%的受訪者不同意「政府自然會為人民解決困難，我們人民不要發表太多的意見。」這句話，也有92%的受訪高中職生認為「學生仍需花時間關心政治」。可見對他們而言，現階段除了讀書以外，公民參與也是一件很重要的事。
             </p>
             <br />
@@ -1015,7 +1012,7 @@ const InfoInsertHead = (props) => {
             然而，做為青少年節目，策劃此問卷的製作單位特別想指出的是：在本次調查中，仍可以看到有39.4%的受訪者是「有點同意」自己「對政府的政策沒有什麼影響力的」。這個數字提醒我們，即便高中職生們對政治發聲有高度期盼，但仍有趨近四成的學生是感到無力，認為自己恐怕「沒有什麼影響力」。如何讓青少年們有機會為自己發聲，同時讓他們對參與民主、改變社會抱持正面態度，是身處社會共同體的我們應該努力思考並盡力達成的。
             </p>
           </div>
-          <div className="page__block page__block-54">
+          <div className={animateShowUpBlock(54, "page__block page__block-54")} ref={s54Ref}>
             <div className="page__block-54-title">
               <p>想瞭解更多青少年如何看待我們的國家、族群和文化嗎？</p>
             </div>
@@ -1025,7 +1022,7 @@ const InfoInsertHead = (props) => {
             </div>
             {showMutipleVideos()}
           </div>
-          <div className="page__block page__block-55" id="s6" ref={s6Ref}>
+          <div className={animateShowUpBlock(6, "page__block page__block-55")} id="s6" ref={s6Ref}>
             <div className="page__block-55-title">
               <p>他們怎麼看這份調查？</p>
             </div>
@@ -1145,7 +1142,7 @@ const InfoInsertHead = (props) => {
             </div>
           </div>
           {showReadAll()}
-          <div className="page__block page__block-57">
+          <div className={animateShowUpBlock(57, "page__block page__block-57")} ref={s57Ref}>
             <div className="page__block-57-content">
               <div className="page__block-57-content-cube">
                 &nbsp;
@@ -1167,7 +1164,7 @@ const InfoInsertHead = (props) => {
               下載報告
             </div>
           </div>
-          <div className="page__block page__block-58">
+          <div className={animateShowUpBlock(58, "page__block page__block-58")} ref={s58Ref}>
             <div className="page__block-58-pic">
             </div>
             <div className="page__block-58-share">
@@ -1177,7 +1174,7 @@ const InfoInsertHead = (props) => {
               分享
             </div>
           </div>
-          <div className="page__block page__block-59">
+          <div className={animateShowUpBlock(59, "page__block page__block-59")} ref={s59Ref}>
             <div className="page__block-59-pic">
             </div>
             <div className="page__block-59-icon">
