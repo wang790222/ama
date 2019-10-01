@@ -45,31 +45,78 @@
     opacity: 1;
     transform: translateY(0px); } }
 
+@-webkit-keyframes typing {
+  from {
+    width: 0; } }
+
+@-webkit-keyframes type {
+  0% {
+    width: 0; }
+  1% {
+    opacity: 1; }
+  100% {
+    width: 100%;
+    opacity: 1; } }
+
+@-webkit-keyframes flicker {
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+@-webkit-keyframes showUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
 *,
 *::before,
 *::after {
   margin: 0;
   border: 0;
-  box-sizing: border-box;
-  font-family: Arial,'Noto Sans TC', Arial,sans-serif;
-  font-weight: 400; }
+  box-sizing: border-box; }
 
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Arial,'Noto Sans TC', Arial,sans-serif;
-  font-weight: 600;
+  font-family: 'Noto Sans TC';
   background-color: #FFF5C5; }
 
 html {
   font-size: 10px;
-  box-sizing: border-box;
-  font-family: Arial,'Noto Sans TC', Arial,sans-serif;
-  font-weight: 600; }
+  box-sizing: border-box; }
 
 .hydrated {
   background-color: #FFF5C5; }
+
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-display: fallback;
+  src: url("../src/font/NotoSansTC-Regular.otf"); }
 
 .one-line {
   width: 100vw;
@@ -196,7 +243,8 @@ html {
         z-index: 10;
         position: absolute;
         margin: 20px;
-        cursor: pointer; }
+        cursor: pointer;
+        opacity: .6; }
         @media (max-width: 1100px) {
           .conversation__block-1__goto {
             margin: 15px; } }
@@ -423,7 +471,8 @@ html {
     z-index: 100; }
 
 .page__block {
-  margin: 0 auto; }
+  margin: 0 auto;
+  opacity: 0; }
   .page__block-1 {
     width: 513px;
     text-align: center;
@@ -490,6 +539,7 @@ html {
     position: relative;
     background-color: #1DAEDF; }
     .page__block-5-content {
+      opacity: 1;
       position: absolute;
       top: 0;
       bottom: 0;
@@ -568,7 +618,7 @@ html {
         height: 50px;
         border-radius: 50%;
         text-align: center;
-        font-size: 50px;
+        font-size: 35px;
         color: white;
         line-height: 50px;
         margin: 0;
@@ -583,7 +633,7 @@ html {
         @media (max-width: 1100px) {
           .page__block-6__content-text {
             width: 312px;
-            height: 80%;
+            height: 85%;
             overflow: scroll; } }
       .page__block-6__content p {
         display: inline-block;
@@ -1015,6 +1065,7 @@ html {
       .page__block-28 {
         margin-top: 60px; } }
     .page__block-28-content {
+      opacity: 1;
       position: absolute;
       top: 0;
       bottom: 0;
@@ -1090,22 +1141,6 @@ html {
         .page__block-30 p {
           font-size: 16px;
           line-height: 25px; } }
-  .page__block-31 {
-    width: 496px;
-    text-align: left;
-    margin-top: 15px; }
-    @media (max-width: 1100px) {
-      .page__block-31 {
-        width: 258px;
-        text-align: center;
-        margin-top: 16px; } }
-    .page__block-31 p {
-      font-size: 16px;
-      color: #828282; }
-      @media (max-width: 1100px) {
-        .page__block-31 p {
-          font-size: 14px;
-          line-height: 21px; } }
   .page__block-32 {
     width: 860px;
     height: 199px;
@@ -1187,14 +1222,14 @@ html {
           background-color: #54D0DD; }
           .page__block-33__two_col-right-btn-4:hover {
             background-color: #85E0EA; }
-  .page__block-33-1 {
+  .page__block-31 {
     width: 200px;
     height: 20px;
     padding-bottom: 60px;
     font-size: 17px;
     line-height: 24px;
     color: #86663C; }
-    .page__block-33-1 span ion-icon {
+    .page__block-31 span ion-icon {
       font-size: 55px;
       transform: translateY(20px); }
   .page__block-34 {
@@ -1261,20 +1296,6 @@ html {
         .page__block-38 p {
           font-size: 16px;
           line-height: 25px; } }
-  .page__block-39 {
-    width: 496px;
-    text-align: center;
-    margin-top: 15px; }
-    @media (max-width: 1100px) {
-      .page__block-39 {
-        width: 258px; } }
-    .page__block-39 p {
-      font-size: 16px;
-      color: #828282; }
-      @media (max-width: 1100px) {
-        .page__block-39 p {
-          font-size: 14px;
-          line-height: 21px; } }
   .page__block-40 {
     margin-top: 40px; }
     .page__block-40-img {

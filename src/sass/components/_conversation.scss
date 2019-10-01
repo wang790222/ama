@@ -31,6 +31,7 @@
         position: absolute;
         margin: 20px;
         cursor: pointer;
+        opacity: .6;
 
         @include respond(phone) {
           margin: 15px;

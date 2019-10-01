@@ -236,7 +236,7 @@ const Conversation = (props) => {
           className="conversation__block-1__goto"
           onClick={gotoPage}
         >
-          跳轉報告頁
+          Skip
         </div>
       );
     } else {

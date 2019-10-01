@@ -22,14 +22,59 @@ const InfoInsertHead = (props) => {
   const s10Ref = useRef(null);
   const s11Ref = useRef(null);
   const s12Ref = useRef(null);
-
-
+  const s13Ref = useRef(null);
+  const s14Ref = useRef(null);
+  const s15Ref = useRef(null);
+  const s16Ref = useRef(null);
+  const s17Ref = useRef(null);
+  const s18Ref = useRef(null);
+  const s19Ref = useRef(null);
+  const s20Ref = useRef(null);
+  const s21Ref = useRef(null);
+  const s22Ref = useRef(null);
+  const s23Ref = useRef(null);
+  const s24Ref = useRef(null);
+  const s25Ref = useRef(null);
+  const s26Ref = useRef(null);
+  const s27Ref = useRef(null);
+  const s28Ref = useRef(null);
+  const s29Ref = useRef(null);
+  const s30Ref = useRef(null);
+  const s31Ref = useRef(null);
+  const s32Ref = useRef(null);
+  const s33Ref = useRef(null);
+  const s34Ref = useRef(null);
+  const s35Ref = useRef(null);
+  const s36Ref = useRef(null);
+  const s37Ref = useRef(null);
+  const s38Ref = useRef(null);
+  const s39Ref = useRef(null);
+  const s40Ref = useRef(null);
+  const s41Ref = useRef(null);
+  const s42Ref = useRef(null);
+  const s43Ref = useRef(null);
+  const s44Ref = useRef(null);
+  const s45Ref = useRef(null);
+  const s46Ref = useRef(null);
+  const s47Ref = useRef(null);
+  const s48Ref = useRef(null);
+  const s49Ref = useRef(null);
+  const s50Ref = useRef(null);
+  const s51Ref = useRef(null);
+  const s52Ref = useRef(null);
+  const s53Ref = useRef(null);
+  const s54Ref = useRef(null);
+  const s55Ref = useRef(null);
+  const s56Ref = useRef(null);
+  const s57Ref = useRef(null);
+  const s58Ref = useRef(null);
+  const s59Ref = useRef(null);
+  const s60Ref = useRef(null);
 
   const [intro, setIntro] = useState(!props.fromGotoPage);
   const [popup, setPopup] = useState(false);
   const [afterNine, setAfterNine] = useState(false);
   const [videoIndex, setVideoIndex] = useState(0);
-  const [readMore, setReadMore] = useState(false);
   const [share, setShare] = useState(false);
   const [copied, setCopied] = useState(false);
   const [scrollY, setScrollY] = useState(0);
@@ -39,8 +84,8 @@ const InfoInsertHead = (props) => {
   const [curSec, setCurSec] = useState(0);
   const [hambugerOn, setHambugerOn] = useState(false);
   
-
   let totalBlocks = 59;
+
   let temp = [];
   for (let i = 0; i < totalBlocks; i++) {
     temp.push(false);
@@ -386,13 +431,12 @@ const InfoInsertHead = (props) => {
 
   const currentBlocksInPage = () => {
     
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= totalBlocks; i++) {
       let temp = eval(`s${i}Ref`);
       let snTop = (temp.current) ? temp.current.offsetTop : -1;
       if (snTop !== -1 && (snTop >= window.pageYOffset && snTop < window.pageYOffset + window.innerHeight)) {
         if (i !== 6 && i !== 60) { // avoid popup blocks
           if (!blockInPage[i]) {
-            console.log("i:" + i);
 
             let temp = blockInPage.slice();
             temp[i] = true;
@@ -416,50 +460,6 @@ const InfoInsertHead = (props) => {
     }
   };
 
-  const handleReadMore = () => {
-    setReadMore(true);
-  };
-
-  const showReadMoreContent = () => {
-    if (!props.isMobile || readMore) {
-      return (
-        <div className="page__block page__block-6__content-text">
-        <p>
-          一：本次問卷調查期間為2019年6月21日至7月14日，考量到時間與經費的限制，最後以滾雪球取樣的方法，邀請全國高中職生自行填答，總計回收2223份有效問卷。調查結果最後依受訪者性別、學校性質、以及學校地理區域進行加權，使與母體一致。母體參數依據教育統計查詢網─107學年度高級中等學校校別資料檔。
-        </p>
-        <br />
-        <br />
-          <p>
-            有關滾雪球方式的操作，我們發放了紙本與網路問卷。在紙本問卷上，我們先透過在高中職任教的老師，詢問是否願意協助發放且回收問卷，並且透過老師再介紹其他願意協助發放問卷的老師。網路問卷亦同，我們透過Facebook、PTT、親朋好友以及有意願協助的老師轉傳問卷連結，同時寄出e-mail給已填答完成的學生，請他們幫忙將問卷轉傳給朋友或是同學填寫。在最後的2223份有效問卷中，紙本回收1200份，網路回收1023份。
-          </p>
-          <br />
-          <br />
-          <p>
-            二：問卷調查期間，香港反送中運動爆發。
-          </p>
-          <br />
-          <p>
-            三：本份問卷設計參考美國杜克大學亞太安全研究中心《台灣國家安全調查》以及國立政治大學選舉研究中心《我國大學生政治社會化之研究》兩份問卷的題型。
-          </p>
-        </div>
-      );
-    } else {
-      return (
-        <div className="page__block page__block-6__content-text">
-          <p>
-            一：本次問卷調查期間為2019年6月21日至7月14日，考量到時間與經費的限制，最後以滾雪球取樣的方法，邀請全國高中職生自行填答，總計回收2223份有效問卷。調查結果最後依受訪者性別、學校性質、以及學校地理區域進行加權，使與母體一致。母體參數依據教育統計查詢網─107學年度高級中等學校校別資料檔。
-          </p>
-          <br />
-          <br />
-          <p>
-            有關滾雪球方式的操作，
-          </p>
-          <span onClick={handleReadMore}>...繼續閱讀</span>
-        </div>
-      );
-    }
-  };
-
   const showPopup = () => {
     if (popup) {
       return (
@@ -471,7 +471,25 @@ const InfoInsertHead = (props) => {
             >
               &times;
             </div>
-            {showReadMoreContent()}
+            <div className="page__block page__block-6__content-text">
+            <p>
+              一：本次問卷調查期間為2019年6月21日至7月14日，考量到時間與經費的限制，最後以滾雪球取樣的方法，邀請全國高中職生自行填答，總計回收2223份有效問卷。調查結果最後依受訪者性別、學校性質、以及學校地理區域進行加權，使與母體一致。母體參數依據教育統計查詢網─107學年度高級中等學校校別資料檔。
+            </p>
+            <br />
+            <br />
+              <p>
+                有關滾雪球方式的操作，我們發放了紙本與網路問卷。在紙本問卷上，我們先透過在高中職任教的老師，詢問是否願意協助發放且回收問卷，並且透過老師再介紹其他願意協助發放問卷的老師。網路問卷亦同，我們透過Facebook、PTT、親朋好友以及有意願協助的老師轉傳問卷連結，同時寄出e-mail給已填答完成的學生，請他們幫忙將問卷轉傳給朋友或是同學填寫。在最後的2223份有效問卷中，紙本回收1200份，網路回收1023份。
+              </p>
+              <br />
+              <br />
+              <p>
+                二：問卷調查期間，香港反送中運動爆發。
+              </p>
+              <br />
+              <p>
+                三：本份問卷設計參考美國杜克大學亞太安全研究中心《台灣國家安全調查》以及國立政治大學選舉研究中心《我國大學生政治社會化之研究》兩份問卷的題型。
+              </p>
+            </div>
           </div>
         </div>
       );
@@ -484,10 +502,10 @@ const InfoInsertHead = (props) => {
     if (!props.isMobile) {
       return (
         <div style={{height: "250px"}}>
-          <div className={animateShowUpBlock(32, "page__block page__block-32")}>
+          <div className={animateShowUpBlock(32, "page__block page__block-32")} ref={s32Ref}>
             <img src={getImg(5)} style={{width:"100%", height:"100%"}}         alt="img_block32" />
           </div>
-          <div className={animateShowUpBlock(33, "page__block page__block-33")}>
+          <div className={animateShowUpBlock(33, "page__block page__block-33")} ref={s33Ref}>
             <div className="row-4">
               <div 
                 className="col-1-of-4 page__block-33-btn page__block-33-btn-1"
@@ -515,7 +533,7 @@ const InfoInsertHead = (props) => {
       );
     } else {
       return (
-        <div className="page__block page__block-33__two_col">
+        <div className={animateShowUpBlock(33, "page__block page__block-33__two_col")} ref={s33Ref}>
           <div className="page__block-33__two_col-left">
             <div className="page__block page__block-32">
               <img src={getImg(5)} style={{width:"100%", height:"100%"}}       alt="img_block33" />
@@ -552,7 +570,7 @@ const InfoInsertHead = (props) => {
     if (!props.isMobile) {
       return (
         <div>
-          <div className="page__block page__block-40">
+          <div className={animateShowUpBlock(40, "page__block page__block-40")} ref={s40Ref}>
             <div className="row-4">
               <div className="col-1-of-4 page__block-40-img">
                 <img src={require('./img/q6-1.png')} style={{width:"100%", height:"100%"}} alt="img_block40" />
@@ -568,7 +586,7 @@ const InfoInsertHead = (props) => {
               </div>
             </div>
           </div>
-          <div className="page__block page__block-41">
+          <div className={animateShowUpBlock(41, "page__block page__block-41")} ref={s41Ref}>
             <div className="row-4">
               <div className="col-1-of-4 page__block-41-btn">
                 沮喪的
@@ -584,10 +602,10 @@ const InfoInsertHead = (props) => {
               </div>
             </div>
           </div>
-          <div className="page__block page__block-41-2">
+          <div className={animateShowUpBlock(42, "page__block page__block-41-2")} ref={s42Ref}>
             <span><ion-icon name="arrow-dropup"></ion-icon></span><span>點擊按鈕試試看！</span>
           </div>
-          <div className="page__block page__block-42"></div>
+          <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}></div>
         </div>
       );
     } else {
@@ -754,7 +772,7 @@ const InfoInsertHead = (props) => {
       };
 
       return (
-        <div className="page__block page__block-11">
+        <div className={animateShowUpBlock(11, "page__block page__block-11")} ref={s11Ref}>
           <div style={DivStyle}>
             <img className="imgStyle imgStyle-1" src={require('./img/q2-1.png')} alt="img_block11" />
             <img className="imgStyle imgStyle-2 delay3s" src={require('./img/q2-2.png')} alt="img_block11" />
@@ -764,7 +782,7 @@ const InfoInsertHead = (props) => {
       );
     } else {
       return (
-        <div className="page__block page__block-11">
+        <div className={animateShowUpBlock(11, "page__block page__block-11")} ref={s11Ref}>
           <img src={require('./img/q2-small.png')} style={{width:"100%",height:"100%"}} alt="img_block11" />
         </div>
       );
@@ -776,15 +794,15 @@ const InfoInsertHead = (props) => {
       return (
         <div>
           {showQuestion2()}
-          <div className="page__block page__block-12">
+          <div className={animateShowUpBlock(12, "page__block page__block-12")} ref={s12Ref}>
             <p>超過七成高中職生認為自己是「台灣人」</p>
           </div>
-          <div className="page__block page__block-13">
+          <div className={animateShowUpBlock(13, "page__block page__block-13")} ref={s13Ref}>
             <p>在這份問卷中，有78.7％的受訪者認為自己是「台灣人」，遠高於「中國人」(0.8%)與「兩者皆是」(20.1%)的選項，可見「台灣」這個名詞已成為大多高中生對「我是哪裡人」的直覺反應。此外，在美國杜克大學於2019年發布的《台灣國家安全調查》中，同樣一個問題，20歲以上的成年人認同自己是「台灣人」、「中國人」、或「兩者皆是」的比例依序是：50.6%、3.1%、42.6%。若將兩份調查的數據相對照，在認同自己是「台灣人」的部分，可看出一定的差距。</p>
           </div>
-          <div className="page__block page__block-14">
+          <div className={animateShowUpBlock(14, "page__block page__block-14")} ref={s14Ref}>
           </div>
-          <div className="page__block page__block-15">
+          <div className={animateShowUpBlock(15, "page__block page__block-15")} ref={s15Ref}>
             <div className="page__block-15-cube">
               <img src={require('./img/q2-head.png')} style={{width: "100%", height: "100%"}} alt="img_block13" />
             </div>
@@ -795,15 +813,15 @@ const InfoInsertHead = (props) => {
               </div>
             </div>
           </div>
-          <div className="page__block page__block-16">
+          <div className={animateShowUpBlock(16, "page__block page__block-16")} ref={s16Ref}>
           </div>
-          <div className="page__block page__block-17">
+          <div className={animateShowUpBlock(17, "page__block page__block-17")} ref={s17Ref}>
             <p>若從文化角度思考，認同「中國」的高中職生增加約16%</p>
           </div>
-          <div className="page__block page__block-18">
+          <div className={animateShowUpBlock(18, "page__block page__block-18")} ref={s18Ref}>
             <p>將「文化」納入考量後，雖然受訪者認同自己是「台灣人」的比例仍占最高（62.2%），但有趣的是，認同自己是「中國人」的比例從0.8%上升到8.2%，認為自己「兩者都是」則從20.1%變為29.4%，這似乎意味著在文化層面上，部分受訪者仍對「中國」有所認同。</p>
           </div>
-          <div className="page__block page__block-19">
+          <div className={animateShowUpBlock(19, "page__block page__block-19")} ref={s19Ref}>
             <div className="page__block-19-title">
               <p>12位台灣青少年 深談國家認同與未來</p>
             </div>
@@ -823,7 +841,7 @@ const InfoInsertHead = (props) => {
               />
             </div>
           </div>
-          <div className="page__block page__block-20" id="s3" ref={s3Ref}>
+          <div className={animateShowUpBlock(3, "page__block page__block-3")} id="s3" ref={s3Ref}>
             <div className="page__block page__block-20-content">
               <div className="page__block-20-content-cube">
                 <img src={require('./img/finger-2.png')} style={{width: "100%", height: "100%"}} alt="img_block20" />
@@ -833,21 +851,21 @@ const InfoInsertHead = (props) => {
               </div>
             </div>
           </div>
-          <div className="page__block page__block-21">
+          <div className={animateShowUpBlock(21, "page__block page__block-21")} ref={s21Ref}>
             <p>超過七成高中職生對兩岸關係的不確定性「感到焦慮」</p>
           </div>
-          <div className="page__block page__block-22">
+          <div className={animateShowUpBlock(22, "page__block page__block-22")} ref={s22Ref}>
           </div>
-          <div className="page__block page__block-23">
+          <div className={animateShowUpBlock(23, "page__block page__block-23")} ref={s23Ref}>
             <p>我們用0~10分量表的方式(0完全不焦慮、10非常焦慮)詢問高中職生：「你是否會因為兩岸關係的不確定性感到焦慮？」。結果，0分的選項無人選擇，但有76.1%的人集中選填4-8分。這可說明，充滿不確定性的兩岸關係，讓大多受訪者感到「焦慮」甚至接近「非常焦慮」的狀態。</p>
           </div>
-          <div className="page__block page__block-24"></div>
-          <div className="page__block page__block-25">
+          <div className={animateShowUpBlock(24, "page__block page__block-24")} ref={s24Ref}></div>
+          <div className={animateShowUpBlock(25, "page__block page__block-25")} ref={s25Ref}>
             <p>兩岸下一步怎麼走? 超過４０％高中職生：希望維持現狀，以後走向獨立
             </p>
           </div>
-          <div className="page__block page__block-26"></div>
-          <div className="page__block page__block-27">
+          <div className={animateShowUpBlock(26, "page__block page__block-26")} ref={s26Ref}></div>
+          <div className={animateShowUpBlock(27, "page__block page__block-27")} ref={s27Ref}>
             <p>關於兩岸未來的政治關係，在六個不同的選項中，有40.3%的受訪者希望：「維持現狀，以後走向獨立」。其次是「維持現狀，看情形再決定獨立或統一」(25.2％)，以及「永遠維持現狀」(14%)。
             </p>
             <br />
@@ -861,7 +879,7 @@ const InfoInsertHead = (props) => {
             若從這兩份調查來看，無論是高中職生或成年人，都有超過8成的人選擇與「維持現狀」有關的選項。但多數高中職生傾向『維持現狀，以後走向獨立』，成年人則以『維持現狀，看情形再決定獨立或統一』的意見佔多數。
             </p>
           </div>
-          <div className="page__block page__block-28" id="s4" ref={s4Ref}>
+          <div className={animateShowUpBlock(4, "page__block page__block-28")} id="s4" ref={s4Ref}>
             <div className="page__block page__block-28-content">
               <div className="page__block-28-content-cube">
                 <img src={require('./img/finger-3.png')} style={{width: "100%", height: "100%"}} alt="img_block28" />
@@ -871,22 +889,19 @@ const InfoInsertHead = (props) => {
               </div>
             </div>
           </div>
-          <div className="page__block page__block-29">
+          <div className={animateShowUpBlock(29, "page__block page__block-29")} ref={s29Ref}>
             <p>高中職生：擁有民主自由，我驕傲！</p>
           </div>
-          <div className="page__block page__block-30">
+          <div className={animateShowUpBlock(30, "page__block page__block-30")} ref={s30Ref}>
             <p>對於身為我們國家的一份子，你是否感到光榮？</p>
           </div>
-          <div className="page__block page__block-31">
-            <p>顯示統計結果，每個結果可以點按鈕，看看覺得光榮或不光榮的原因。</p>
-          </div>
           {group32_33()}
-          <div className="page__block page__block-33-1">
+          <div className={animateShowUpBlock(31, "page__block page__block-31")} ref={s31Ref}>
             <span><ion-icon name="arrow-dropup"></ion-icon></span><span>點擊按鈕試試看！</span>
           </div>
-          <div className="page__block page__block-34">
+          <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           </div>
-          <div className="page__block page__block-35">
+          <div className={animateShowUpBlock(35, "page__block page__block-35")} ref={s35Ref}>
             <p>為了多了解青少年對國家和這塊土地的情感，在這份問卷中，設計了這項提問：「對於身為我們國家的一份子，你是否感到光榮？」，結果有47.5%的受訪者認為「有時感到光榮」，33.9%選擇「時常感到光榮」，兩者合計共81.4%。
             </p>
             <br />
@@ -895,15 +910,12 @@ const InfoInsertHead = (props) => {
             此外，該題也進一步請同學們寫下對我們國家「感到光榮」或「不感到光榮」的原因。其中，「感到光榮」的理由，同學們的答案高度雷同，都是認為台灣的「自由民主」以及「社會安定」，是很值得驕傲的事。而「不感到光榮」的原因，則包括「國際地位低落」、「政治混亂」等。
             </p>
           </div>
-          <div className="page__block page__block-36"></div>
-          <div className="page__block page__block-37">
+          <div className={animateShowUpBlock(36, "page__block page__block-36")} ref={s36Ref}></div>
+          <div className={animateShowUpBlock(37, "page__block page__block-37")} ref={s37Ref}>
             <p>「擔心」是多數高中職生對台灣的感受</p>
           </div>
-          <div className="page__block page__block-38">
+          <div className={animateShowUpBlock(38, "page__block page__block-38")} ref={s38Ref}>
             <p>當我們講到台灣時，你認為以下哪個負面性形容詞適合描述你心理上感受？</p>
-          </div>
-          <div className="page__block page__block-39">
-            <p>顯示統計結果，每個結果可以點按鈕，看看覺得負面形容詞的原因。</p>
           </div>
           {group40_41()}
           <div className="page__block page__block-43">
@@ -1181,7 +1193,7 @@ const InfoInsertHead = (props) => {
       );
     } else {
       return (
-        <div className="page__block page__block-10">
+        <div className={animateShowUpBlock(10, "page__block page__block-10")} ref={s10Ref}>
         </div>
       );
     }
