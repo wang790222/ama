@@ -256,60 +256,22 @@ const InfoInsertHead = (props) => {
       return (
         <div className="page__block-54-video-grid">
           <div className="page__block-54-video-grid-img">
-            <Player
-              playsInline
-              src={require('./img/video/P1_1.mp4')}
-              width={"100%"}
-              height={"100%"}
-              fluid={false}
-              autoPlay={true}
-              muted={true}
-            />
+            
           </div>
           <div className="page__block-54-video-grid-img">
-            <Player
-              playsInline
-              src={require('./img/video/P1_1.mp4')}
-              width={"100%"}
-              height={"100%"}
-              fluid={false}
-            />
+            
           </div>
           <div className="page__block-54-video-grid-img">
-            <Player
-              playsInline
-              src={require('./img/video/P1_1.mp4')}
-              width={"100%"}
-              height={"100%"}
-              fluid={false}
-            />
+            
           </div>
           <div className="page__block-54-video-grid-img">
-            <Player
-              playsInline
-              src={require('./img/video/P1_1.mp4')}
-              width={"100%"}
-              height={"100%"}
-              fluid={false}
-            />
+            
           </div>
           <div className="page__block-54-video-grid-img">
-            <Player
-              playsInline
-              src={require('./img/video/P1_1.mp4')}
-              width={"100%"}
-              height={"100%"}
-              fluid={false}
-            />
+            
           </div>
           <div className="page__block-54-video-grid-img">
-            <Player
-              playsInline
-              src={require('./img/video/P1_1.mp4')}
-              width={"100%"}
-              height={"100%"}
-              fluid={false}
-            />
+            
           </div>
         </div>
       );
