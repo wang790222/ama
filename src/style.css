@@ -2390,18 +2390,23 @@ html {
   margin-top: 24px;
   font-size: 22px; }
 
-.hamburger__link:link, .hamburger__link:visited {
-  display: inline-block;
+.hamburger__link {
   font-size: 22px;
   color: #666;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer; }
-
-.hamburger__link:hover, .hamburger__link:active {
-  color: white; }
-  .hamburger__link:hover > .bull, .hamburger__link:active > .bull {
-    background-color: white; }
+  .hamburger__link:link, .hamburger__link:visited {
+    display: inline-block;
+    font-size: 22px;
+    color: #666;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer; }
+  .hamburger__link:hover, .hamburger__link:active {
+    color: white; }
+    .hamburger__link:hover > .bull, .hamburger__link:active > .bull {
+      background-color: white; }
 
 .hamburger__checkbox:checked ~ .hamburger__background {
   transform: scale(120); }

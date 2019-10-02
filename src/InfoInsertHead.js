@@ -587,7 +587,7 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
             playsInline
-            src={require('./img/video/P8-BAD1.mp4')}
+            src={require('./img/video/P8-1.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -601,7 +601,7 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
             playsInline
-            src={require('./img/video/P8-BAD1.mp4')}
+            src={require('./img/video/P8-2.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -615,7 +615,7 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
             playsInline
-            src={require('./img/video/P8-BAD2.mp4')}
+            src={require('./img/video/P8-3.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -629,7 +629,7 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
             playsInline
-            src={require('./img/video/P8-BAD3.mp4')}
+            src={require('./img/video/P8-4.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -647,7 +647,7 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
           <Player
             playsInline
-            src={require('./img/video/P8-BAD4.mp4')}
+            src={require('./img/video/P8-1-1.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -661,7 +661,7 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
           <Player
             playsInline
-            src={require('./img/video/P8-BAD4.mp4')}
+            src={require('./img/video/P8-1-2.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -675,7 +675,7 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
           <Player
             playsInline
-            src={require('./img/video/P8-BAD5.mp4')}
+            src={require('./img/video/P8-1-3.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -689,7 +689,7 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
           <Player
             playsInline
-            src={require('./img/video/P8-BAD6.mp4')}
+            src={require('./img/video/P8-1-4.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}

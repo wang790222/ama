@@ -55,6 +55,11 @@
   }
 
   &__link {
+    font-size: 22px;
+    color: #666; 
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
     &:link,
     &:visited {
       display: inline-block;
