@@ -1,4 +1,5 @@
 import React from 'react';
+import { Player } from 'video-react';
 
 const Home = (props) => {
   let imageAma = require('./img/ama.png');
@@ -7,13 +8,16 @@ const Home = (props) => {
     <div>
       <div className="header__block header__block-1">
         <div className="header__block-1__img">
-          <img 
-            src={imageAma} 
-            alt="img_ama" 
-            style={{width: "100%", height: "100%"}}
+          <Player
+            playsInline
+            src={require('./img/video/P1_1.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
           />
         </div>
-        <div className="header__block header__block-1__shade">&nbsp;</div>
       </div>
       <div className="header__block header__block-2">
         <div className="header__block-2__main">

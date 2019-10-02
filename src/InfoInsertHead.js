@@ -252,8 +252,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block-54-video-grid-img">
             <Player
               playsInline
-              poster={require('./img/video/v1.jpg')}
-              src={require('./img/video/v1.mp4')}
+              src={require('./img/video/P1_1.mp4')}
               width={"100%"}
               height={"100%"}
               fluid={false}
@@ -264,8 +263,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block-54-video-grid-img">
             <Player
               playsInline
-              poster={require('./img/video/v1.jpg')}
-              src={require('./img/video/v1.mp4')}
+              src={require('./img/video/P1_1.mp4')}
               width={"100%"}
               height={"100%"}
               fluid={false}
@@ -274,8 +272,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block-54-video-grid-img">
             <Player
               playsInline
-              poster={require('./img/video/v1.jpg')}
-              src={require('./img/video/v1.mp4')}
+              src={require('./img/video/P1_1.mp4')}
               width={"100%"}
               height={"100%"}
               fluid={false}
@@ -284,8 +281,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block-54-video-grid-img">
             <Player
               playsInline
-              poster={require('./img/video/v1.jpg')}
-              src={require('./img/video/v1.mp4')}
+              src={require('./img/video/P1_1.mp4')}
               width={"100%"}
               height={"100%"}
               fluid={false}
@@ -294,8 +290,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block-54-video-grid-img">
             <Player
               playsInline
-              poster={require('./img/video/v1.jpg')}
-              src={require('./img/video/v1.mp4')}
+              src={require('./img/video/P1_1.mp4')}
               width={"100%"}
               height={"100%"}
               fluid={false}
@@ -304,8 +299,7 @@ const InfoInsertHead = (props) => {
           <div className="page__block-54-video-grid-img">
             <Player
               playsInline
-              poster={require('./img/video/v1.jpg')}
-              src={require('./img/video/v1.mp4')}
+              src={require('./img/video/P1_1.mp4')}
               width={"100%"}
               height={"100%"}
               fluid={false}
@@ -580,16 +574,16 @@ const InfoInsertHead = (props) => {
           <div className={animateShowUpBlock(40, "page__block page__block-40")} ref={s40Ref}>
             <div className="row-4">
               <div className="col-1-of-4 page__block-40-img">
-                <img src={require('./img/q6-1.png')} style={{width:"100%", height:"100%"}} alt="img_block40" />
+                <img src={require('./img/q6-1.png')} style={{height:"100%"}} alt="img_block40" />
               </div>
               <div className="col-1-of-4 page__block-40-img">
-                <img src={require('./img/q6-2.png')} style={{width:"100%", height:"100%"}} alt="img_block40" />
+                <img src={require('./img/q6-2.png')} style={{height:"100%"}} alt="img_block40" />
               </div>
               <div className="col-1-of-4 page__block-40-img">
-                <img src={require('./img/q6-3.png')} style={{width:"100%", height:"100%"}} alt="img_block40" />
+                <img src={require('./img/q6-3.png')} style={{height:"100%"}} alt="img_block40" />
               </div>
               <div className="col-1-of-4 page__block-40-img">
-                <img src={require('./img/q6-4.png')} style={{width:"100%", height:"100%"}} alt="img_block40" />
+                <img src={require('./img/q6-4.png')} style={{height:"100%"}} alt="img_block40" />
               </div>
             </div>
           </div>
@@ -796,6 +790,38 @@ const InfoInsertHead = (props) => {
     }
   };
 
+  const showBlock22Video = () => {
+    if (!props.isMobile) {
+      return (
+        <div className={animateShowUpBlock(22, "page__block page__block-22")} ref={s22Ref}>
+          <Player
+            playsInline
+            src={require('./img/video/P7_PC.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
+          />
+        </div>
+      );
+    } else {
+      return (
+        <div className={animateShowUpBlock(22, "page__block page__block-22")} ref={s22Ref}>
+          <Player
+            playsInline
+            src={require('./img/video/P7_PHONE.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
+          />
+        </div>
+      );
+    }
+  };
+
   const showAfterNine = () => {
     if (afterNine) {
       return (
@@ -838,8 +864,7 @@ const InfoInsertHead = (props) => {
             <div className="page__block-19-video">
               <Player
                 playsInline
-                poster={require('./img/video/v1.jpg')}
-                src={require('./img/video/v1.mp4')}
+                src={require('./img/video/P1_1.mp4')}
                 width={"100%"}
                 height={"100%"}
                 fluid={false}
@@ -861,8 +886,7 @@ const InfoInsertHead = (props) => {
           <div className={animateShowUpBlock(21, "page__block page__block-21")} ref={s21Ref}>
             <p>超過七成高中職生對兩岸關係的不確定性「感到焦慮」</p>
           </div>
-          <div className={animateShowUpBlock(22, "page__block page__block-22")} ref={s22Ref}>
-          </div>
+          {showBlock22Video()}
           <div className={animateShowUpBlock(23, "page__block page__block-23")} ref={s23Ref}>
             <p>我們用0~10分量表的方式(0完全不焦慮、10非常焦慮)詢問高中職生：「你是否會因為兩岸關係的不確定性感到焦慮？」。結果，0分的選項無人選擇，但有76.1%的人集中選填4-8分。這可說明，充滿不確定性的兩岸關係，讓大多受訪者感到「焦慮」甚至接近「非常焦慮」的狀態。</p>
           </div>
@@ -971,8 +995,7 @@ const InfoInsertHead = (props) => {
             <div className="page__block-49-video">
               <Player
                 playsInline
-                poster={require('./img/video/v1.jpg')}
-                src={require('./img/video/v1.mp4')}
+                src={require('./img/video/P1_1.mp4')}
                 width={"100%"}
                 height={"100%"}
                 fluid={false}
@@ -1243,6 +1266,7 @@ const InfoInsertHead = (props) => {
   }
 
   const routeALineOrBLine = () => {
+    setTimeout(skipIntro, 4000);
     if (props.route === 2) {
       return (
         <div className="one-line__infoinsert">
@@ -1271,7 +1295,6 @@ const InfoInsertHead = (props) => {
   
   const showContent = () => {
     if (intro) {
-
       const finishSingleColor = () => {
         setSingleColor(false)
       };
@@ -1333,7 +1356,15 @@ const InfoInsertHead = (props) => {
             </div>
           </div>
           <div className={animateShowUpBlock(8, "page__block page__block-8")} ref={s8Ref}>
-            <img src={getImg(1)} style={{width:"100%",height:"100%"}} alt="img_block8" />
+            <Player
+              playsInline
+              src={require('./img/video/P5.mp4')}
+              width={"100%"}
+              height={"100%"}
+              fluid={false}
+              autoPlay={true}
+              muted={true}
+            />
           </div>
           <div className={animateShowUpBlock(9, "page__block page__block-9")} ref={s9Ref}>
             <div className="row-3">

@@ -1,5 +1,5 @@
 .row-3 {
-  max-width: 860px;
+  max-width: 740px;
   margin: 0 auto;
 
   @include respond(phone) {
@@ -20,7 +20,7 @@
     }
     
     &:not(:last-child) {
-      margin-right: $gutter-horizontal-3;
+      margin-right: 70px;
 
       @include respond(phone) {
         margin-right: inherit;
@@ -33,6 +33,6 @@
   }
 
   .col-1-of-3 {
-    width: calc((100% - 2 * #{$gutter-horizontal-3}) / 3);
+    width: 200px;
   }
 }

@@ -206,6 +206,7 @@
         &-text {
           opacity: 1;
           width: 750px;
+          text-align:justify;
 
           @include respond(phone) {
             width: 312px;
@@ -256,7 +257,7 @@
 
       &-text-box {
         width: 680px;
-        height: 150px;
+        height: 130px;
         border: 3px solid #86663C;
         border-radius: 10px;
         float: right;
@@ -391,7 +392,7 @@
 
     &-13 {
       width: 700px;
-      text-align: left;
+      text-align:justify;
       margin-top: 40px;
 
       @include respond(phone) {
@@ -512,7 +513,7 @@
 
     &-18 {
       width: 700px;
-      text-align: left;
+      text-align:justify;
       margin-top: 40px;
 
       @include respond(phone) {
@@ -675,8 +676,7 @@
 
     &-22 {
       width: 860px;
-      height: 500px;
-      background-color: #C8C8C8;
+      height: 520px;
       margin-top: 60px;
 
       @include respond(phone) {
@@ -688,7 +688,7 @@
 
     &-23 {
       width: 700px;
-      text-align: left;
+      text-align:justify;
       margin-top: 60px;
 
       @include respond(phone) {
@@ -757,7 +757,7 @@
 
     &-27 {
       width: 700px;
-      text-align: left;
+      text-align:justify;
       margin-top: 60px;
 
       @include respond(phone) {
@@ -1058,7 +1058,7 @@
 
     &-35 {
       width: 700px;
-      text-align: left;
+      text-align:justify;
       margin-top: 60px;
 
       @include respond(phone) {
@@ -1134,7 +1134,7 @@
       margin-top: 40px;
 
       &-img {
-        width: 170px;
+        width: 180px;
         height: 199px;
       }
     }
@@ -1258,7 +1258,7 @@
 
     &-43 {
       width: 700px;
-      text-align: left;
+      text-align:justify;
       margin-top: 60px;
 
       @include respond(phone) {
@@ -1379,7 +1379,7 @@
 
     &-48 {
       width: 700px;
-      text-align: left;
+      text-align:justify;
       margin-top: 40px;
 
       @include respond(phone) {
@@ -1434,7 +1434,7 @@
       
       &-text {
         width: 700px;
-        text-align: left;
+        text-align:justify;
         margin: 40px auto 0;
 
         @include respond(phone) {
@@ -1639,7 +1639,7 @@
 
     &-53 {
       width: 700px;
-      text-align: left;
+      text-align:justify;
       margin-top: 40px;
 
       @include respond(phone) {
@@ -1689,7 +1689,7 @@
       
       &-text {
         width: 700px;
-        text-align: left;
+        text-align:justify;
         margin: 40px auto 0;
 
         @include respond(phone) {
@@ -2004,7 +2004,7 @@
       
       &-text {
         width: 750px;
-        text-align: left;
+        text-align:justify;
         margin: 130px auto 0;
 
         @include respond(phone) {
