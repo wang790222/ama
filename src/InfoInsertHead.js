@@ -84,6 +84,8 @@ const InfoInsertHead = (props) => {
   const [singleColor, setSingleColor] = useState(true);
   const [curSec, setCurSec] = useState(0);
   const [hambugerOn, setHambugerOn] = useState(false);
+  const [q5Option, setQ5Option] = useState(0);
+  const [q6Option, setQ6Option] = useState(0);
   
   let totalBlocks = 59;
 
@@ -130,8 +132,12 @@ const InfoInsertHead = (props) => {
     setAfterNine(true);
   };
 
-  const handleOnClickFor33 = () => {
+  const handleOnClickFor33 = (index) => {
+    setQ5Option(index)
+  };
 
+  const handleOnClickFor41 = (index) => {
+    setQ6Option(index)
   };
 
   // 看全文
@@ -446,6 +452,13 @@ const InfoInsertHead = (props) => {
     }
   }
 
+  const handleNavToSection = (section) => {
+    let curSection = eval(`s${section}Ref`);
+    let snTop = (curSection.current) ? curSection.current.offsetTop : Number.MAX_SAFE_INTEGER;
+    window.scrollTo(0, snTop);
+    currentBlocksInPage();
+  }
+
   const showHamburger = () => {
     if (popup) {
       return null;
@@ -456,6 +469,7 @@ const InfoInsertHead = (props) => {
         afterNine={afterNine}
         openTheRest={handleOnClickFor9}
         isHamburgerOn={isHamburgerOn}
+        handleNavToSection={handleNavToSection}
         />
       );
     }
@@ -504,28 +518,28 @@ const InfoInsertHead = (props) => {
       return (
         <div style={{height: "250px"}}>
           <div className={animateShowUpBlock(32, "page__block page__block-32")} ref={s32Ref}>
-            <img src={getImg(5)} style={{width:"100%", height:"100%"}}         alt="img_block32" />
+            <img src={getImg(5)} style={{width:"100%", height:"100%"}} alt="img_block32" />
           </div>
           <div className={animateShowUpBlock(33, "page__block page__block-33")} ref={s33Ref}>
             <div className="row-4">
               <div 
                 className="col-1-of-4 page__block-33-btn page__block-33-btn-1"
-                onClick={handleOnClickFor33}>
+                onClick={() => handleOnClickFor33(0)}>
                 一點也不光榮
               </div>
               <div 
                 className="col-1-of-4 page__block-33-btn page__block-33-btn-2"
-                onClick={handleOnClickFor33}>
+                onClick={() => handleOnClickFor33(1)}>
                 很少感到光榮
               </div>
               <div 
                 className="col-1-of-4 page__block-33-btn page__block-33-btn-2"
-                onClick={handleOnClickFor33}>
+                onClick={() => handleOnClickFor33(2)}>
                 有時感到光榮
               </div>
               <div 
                 className="col-1-of-4 page__block-33-btn page__block-33-btn-4"
-                onClick={handleOnClickFor33}>
+                onClick={() => handleOnClickFor33(3)}>
                 時常感到光榮
               </div>
             </div>
@@ -543,25 +557,145 @@ const InfoInsertHead = (props) => {
           <div className="page__block-33__two_col-right">
             <div 
               className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-1"
-              onClick={handleOnClickFor33}>
+              onClick={() => handleOnClickFor33(0)}>
               一點也不光榮
             </div>
             <div 
               className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-2"
-              onClick={handleOnClickFor33}>
+              onClick={() => handleOnClickFor33(1)}>
               很少感到光榮
             </div>
             <div 
               className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-3"
-              onClick={handleOnClickFor33}>
+              onClick={() => handleOnClickFor33(2)}>
               有時感到光榮
             </div>
             <div 
               className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-4"
-              onClick={handleOnClickFor33}>
+              onClick={() => handleOnClickFor33(2)}>
               時常感到光榮
             </div>
           </div>
+        </div>
+      );
+    }
+  }
+
+  const showBlock34 = () => {
+    if (q5Option === 0) {
+      return (
+        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
+          <Player
+            playsInline
+            src={require('./img/video/P8-BAD1.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
+          />
+        </div>
+      );
+    } else if (q5Option === 1) {
+      return (
+        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
+          <Player
+            playsInline
+            src={require('./img/video/P8-BAD1.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
+          />
+        </div>
+      );
+    } else if (q5Option === 2) {
+      return (
+        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
+          <Player
+            playsInline
+            src={require('./img/video/P8-BAD2.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
+          />
+        </div>
+      );
+    } else if (q5Option === 3) {
+      return (
+        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
+          <Player
+            playsInline
+            src={require('./img/video/P8-BAD3.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
+          />
+        </div>
+      );
+    }
+  }
+
+  const showBlock43 = () => {
+    if (q6Option === 0) {
+      return (
+        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+          <Player
+            playsInline
+            src={require('./img/video/P8-BAD4.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
+          />
+        </div>
+      );
+    } else if (q6Option === 1) {
+      return (
+        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+          <Player
+            playsInline
+            src={require('./img/video/P8-BAD4.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
+          />
+        </div>
+      );
+    } else if (q6Option === 2) {
+      return (
+        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+          <Player
+            playsInline
+            src={require('./img/video/P8-BAD5.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
+          />
+        </div>
+      );
+    } else if (q6Option === 3) {
+      return (
+        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+          <Player
+            playsInline
+            src={require('./img/video/P8-BAD6.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
+          />
         </div>
       );
     }
@@ -589,16 +723,16 @@ const InfoInsertHead = (props) => {
           </div>
           <div className={animateShowUpBlock(41, "page__block page__block-41")} ref={s41Ref}>
             <div className="row-4">
-              <div className="col-1-of-4 page__block-41-btn">
+              <div className="col-1-of-4 page__block-41-btn" onClick={() => handleOnClickFor41(0)}>
                 沮喪的
               </div>
-              <div className="col-1-of-4 page__block-41-btn">
+              <div className="col-1-of-4 page__block-41-btn" onClick={() => handleOnClickFor41(1)}>
                 難過的
               </div>
-              <div className="col-1-of-4 page__block-41-btn">
+              <div className="col-1-of-4 page__block-41-btn" onClick={() => handleOnClickFor41(2)}>
                 憤怒的
               </div>
-              <div className="col-1-of-4 page__block-41-btn">
+              <div className="col-1-of-4 page__block-41-btn" onClick={() => handleOnClickFor41(3)}>
                 擔心的
               </div>
             </div>
@@ -606,7 +740,7 @@ const InfoInsertHead = (props) => {
           <div className={animateShowUpBlock(42, "page__block page__block-41-2")} ref={s42Ref}>
             <span><ion-icon name="arrow-dropup"></ion-icon></span><span>點擊按鈕試試看！</span>
           </div>
-          <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}></div>
+          {showBlock43()}
         </div>
       );
     } else {
@@ -862,15 +996,7 @@ const InfoInsertHead = (props) => {
               <p>高中職生的國族認同，跟你的想像一致嗎？「青春發言人」邀請12位來自台灣各地、不同家庭背景的青少年，深入訪問他們對國家、族群，以及台灣未來的想法。</p>
             </div>
             <div className="page__block-19-video">
-              <Player
-                playsInline
-                src={require('./img/video/P1_1.mp4')}
-                width={"100%"}
-                height={"100%"}
-                fluid={false}
-                autoPlay={true}
-                muted={true}
-              />
+              
             </div>
           </div>
           <div className={animateShowUpBlock(3, "page__block page__block-3")} id="s3" ref={s3Ref}>
@@ -930,8 +1056,7 @@ const InfoInsertHead = (props) => {
           <div className={animateShowUpBlock(31, "page__block page__block-31")} ref={s31Ref}>
             <span><ion-icon name="arrow-dropup"></ion-icon></span><span>點擊按鈕試試看！</span>
           </div>
-          <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
-          </div>
+          {showBlock34()}
           <div className={animateShowUpBlock(35, "page__block page__block-35")} ref={s35Ref}>
             <p>為了多了解青少年對國家和這塊土地的情感，在這份問卷中，設計了這項提問：「對於身為我們國家的一份子，你是否感到光榮？」，結果有47.5%的受訪者認為「有時感到光榮」，33.9%選擇「時常感到光榮」，兩者合計共81.4%。
             </p>
@@ -1404,8 +1529,14 @@ const InfoInsertHead = (props) => {
 
   const handleOnWheelAndKeyDown = (e) => {
     //let rect = thisDiv.current.getBoundingClientRect();
-    //console.log(rect);
-    console.log(e.charCode);
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+    }
+
+    if (e.key === "ArrowUp") {
+      e.preventDefault();
+    }
+
     if (e.charCode === 32) {
       e.preventDefault();
     }
@@ -1424,6 +1555,7 @@ const InfoInsertHead = (props) => {
       style={fixBackground()} 
       onWheel={handleOnWheelAndKeyDown}
       onKeyPress={handleOnWheelAndKeyDown}
+      onKeyDown={handleOnWheelAndKeyDown}
       onTouchMove={handleOnWheelAndKeyDown}
       ref={thisDiv}
       tabIndex="0"
