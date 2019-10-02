@@ -1118,15 +1118,7 @@ const InfoInsertHead = (props) => {
               <p>看到這裡，你有更理解高中職生們怎麼看待自己的國家和土地嗎？你是否有過因為國族立場的不同，導致世代衝突的經驗呢？「青春發言人」特別邀請政治立場有所差異的青少年和成年人一起坐下來對話，嘗試找尋彼此溝通的可能。</p>
             </div>
             <div className="page__block-49-video">
-              <Player
-                playsInline
-                src={require('./img/video/P1_1.mp4')}
-                width={"100%"}
-                height={"100%"}
-                fluid={false}
-                autoPlay={true}
-                muted={true}
-              />
+              
             </div>
           </div>
           <div className={animateShowUpBlock(5, "page__block page__block-50")} id="s5" ref={s5Ref}>
