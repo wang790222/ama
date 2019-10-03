@@ -393,6 +393,7 @@ const InfoInsertHead = (props) => {
 
   const currentBlocksInPage = () => {
     
+    let pages = [];
     for (let i = 1; i <= totalBlocks; i++) {
       let temp = eval(`s${i}Ref`);
       let snTop = (temp.current) ? temp.current.offsetTop : -1;
@@ -405,13 +406,17 @@ const InfoInsertHead = (props) => {
          ) {
         
         if (!blockInPage[i]) {
-          console.log("i:" + i + "," + snTop + ",pageYOffset:" + window.pageYOffset + ",scrollY:" + window.scrollY + ",innerHeight:" + window.innerHeight);
-          let temp = blockInPage.slice();
-          temp[i] = true;
-          setBlockInPage(temp);
+          pages.push(i);
         }
       }
     }
+
+    let temp = blockInPage.slice();
+    for (let i = 0; i < pages.length; i++) {
+      temp[pages[i]] = true;
+    }
+
+    setBlockInPage(temp);
   }
 
   const handleNavToSection = (section) => {
@@ -767,7 +772,7 @@ const InfoInsertHead = (props) => {
           return (
             <div>
               <div className="page__block-60__content-row-icon-fb">
-                <FacebookShareButton url={"https://www.google.com"}>
+                <FacebookShareButton url={"https://salty-cliffs-82898.herokuapp.com/"}>
                   <FacebookIcon borderRadius={10} size={100}/>
                 </FacebookShareButton>
               </div>
@@ -918,11 +923,27 @@ const InfoInsertHead = (props) => {
     }
   };
 
+  const showBlock16 = () => {
+    if (!props.isMobile) {
+      return (
+        <div className={animateShowUpBlock(16, "page__block page__block-16")} ref={s16Ref}>
+          <img src={require('./img/pie.png')} style={{width: "100%", height: "100%"}} alt="img_block13" />
+        </div>
+      );
+    } else {
+      return (
+        <div className={animateShowUpBlock(16, "page__block page__block-16")} ref={s16Ref}>
+          <img src={require('./img/pie-small.png')} style={{width: "100%", height: "100%"}} alt="img_block13" />
+        </div>
+      );
+    }
+  };
+
   const showAfterNine = () => {
     if (afterNine) {
       return (
         <div>
-          {showQuestion2()}
+          {showBlock16()}
           <div className={animateShowUpBlock(12, "page__block page__block-12")} ref={s12Ref}>
             <p>超過七成高中職生認為自己是「台灣人」</p>
           </div>
@@ -942,8 +963,7 @@ const InfoInsertHead = (props) => {
               </div>
             </div>
           </div>
-          <div className={animateShowUpBlock(16, "page__block page__block-16")} ref={s16Ref}>
-          </div>
+          {showQuestion2()}
           <div className={animateShowUpBlock(17, "page__block page__block-17")} ref={s17Ref}>
             <p>若從文化角度思考，認同「中國」的高中職生增加約16%</p>
           </div>
@@ -1404,6 +1424,15 @@ const InfoInsertHead = (props) => {
             <h2>青少年國族認同大調查</h2>
           </div>
           <div className="page__block page__block-2 add_showup">
+            <Player
+              playsInline
+              src={require('./img/video/P4.mp4')}
+              width={"100%"}
+              height={"100%"}
+              fluid={false}
+              autoPlay={true}
+              muted={true}
+            />
           </div>
           <div className="page__block page__block-3 add_showup">
             <p>2020總統大選將至，社會上對於總統選舉、國家認同和國家未來等議題，討論得沸沸揚揚。你會好奇代表著「未來」的青少年們究竟是怎麼想的嗎？公共電視青少年節目《青春發言人》委託政治大學「選舉研究中心」，針對全國高中職生進行國族認同 調查，分別從「你是哪裡人？」、「兩岸關係」、「對台灣的愛恨情仇？」、「高中職生對政治冷感嗎？」四大面向，帶你了解青少年如何看待自己的國家與土地。</p>

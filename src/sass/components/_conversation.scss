@@ -10,6 +10,7 @@
       height: 450px;
       padding-top: 70px;
       position: relative;
+      z-index: 1;
 
       @include respond(phone) {
         width: 375px;
@@ -48,6 +49,7 @@
       border-radius: 20px;
       background-color: white;
       position: relative;
+      z-index: 2;
 
       @include respond(phone) {
         width: 320px;
@@ -183,6 +185,7 @@
   &__box {
     width: 840px;
     height: 170px;
+    z-index: 105;
     
     position: fixed;
     top: 520px;

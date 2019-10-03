@@ -1,5 +1,5 @@
 import React from 'react';
-import { Player } from 'video-react';
+import { Player, ControlBar } from 'video-react';
 
 const Home = (props) => {
   let imageAma = require('./img/ama.png');
@@ -16,7 +16,9 @@ const Home = (props) => {
             fluid={false}
             autoPlay={true}
             muted={true}
-          />
+            controls={false}
+          >
+          </Player>
         </div>
       </div>
       <div className="header__block header__block-2">
