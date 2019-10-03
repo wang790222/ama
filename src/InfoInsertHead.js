@@ -981,7 +981,7 @@ const InfoInsertHead = (props) => {
               
             </div>
           </div>
-          <div className={animateShowUpBlock(3, "page__block page__block-3")} id="s3" ref={s3Ref}>
+          <div className={animateShowUpBlock(3, "page__block page__block-20")} id="s3" ref={s3Ref}>
             <div className="page__block page__block-20-content">
               <div className="page__block-20-content-cube">
                 <img src={require('./img/finger-2.png')} style={{width: "100%", height: "100%"}} alt="img_block20" />
@@ -1277,7 +1277,7 @@ const InfoInsertHead = (props) => {
           <div className={animateShowUpBlock(57, "page__block page__block-57")} ref={s57Ref}>
             <div className="page__block-57-content">
               <div className="page__block-57-content-cube">
-                &nbsp;
+                <img src={require('./img/q8-head.png')} style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-57-content-text-box">
                 <div className="page__block-57-content-box-text">

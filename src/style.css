@@ -503,7 +503,7 @@ html {
           letter-spacing: 1px; } }
   .page__block-2 {
     width: 750px;
-    height: 300px;
+    height: 500px;
     background-color: grey;
     margin-top: 60px; }
     @media (max-width: 1100px) {
@@ -705,7 +705,7 @@ html {
             font-size: 22px;
             line-height: 32px; } }
   .page__block-8 {
-    width: 860px;
+    width: 427px;
     height: 400px;
     margin-top: 60px; }
     @media (max-width: 1100px) {
@@ -930,6 +930,7 @@ html {
       .page__block-20 {
         margin-top: -100px; } }
     .page__block-20-content {
+      opacity: 1;
       position: absolute;
       top: 0;
       bottom: 0;
@@ -1251,7 +1252,7 @@ html {
       transform: translateY(20px); }
   .page__block-34 {
     width: 860px;
-    height: 400px;
+    height: 440px;
     background-color: #C8C8C8;
     margin-top: 60px; }
     @media (max-width: 1100px) {
@@ -1391,7 +1392,7 @@ html {
       transform: translateY(20px); }
   .page__block-42 {
     width: 860px;
-    height: 400px;
+    height: 440px;
     background-color: #C8C8C8;
     margin-top: 60px; }
     @media (max-width: 1100px) {
