@@ -99,8 +99,11 @@ const InfoInsertHead = (props) => {
   useEffect(() => {
     //wholePageDiv.current.focus();
     thisDiv.current.focus();
-
-    window.scrollTo(0, scrollY);
+    window.addEventListener('scroll', currentBlocksInPage);
+    
+    if (popup || share) {
+      window.scrollTo(0, scrollY);
+    }
   }, [popup, share]);
 
   const skipIntro = () => {
@@ -418,7 +421,7 @@ const InfoInsertHead = (props) => {
     for (let i = 0; i < pages.length; i++) {
       temp[pages[i]] = true;
     }
-
+    
     setBlockInPage(temp);
   }
 
@@ -1520,6 +1523,7 @@ const InfoInsertHead = (props) => {
   }
 
   const handleOnWheelAndKeyDown = (e) => {
+    console.log("handleOnWheelAndKeyDown");
     //let rect = thisDiv.current.getBoundingClientRect();
     if (e.key === "ArrowDown") {
       e.preventDefault();
@@ -1533,7 +1537,7 @@ const InfoInsertHead = (props) => {
       e.preventDefault();
     }
 
-    currentBlocksInPage();
+    //currentBlocksInPage();
     if (hambugerOn) {
       let cur = getCurrentSection();
       if (cur !== curSec) {
