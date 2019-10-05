@@ -94,6 +94,7 @@ const InfoInsertHead = (props) => {
   for (let i = 0; i < totalBlocks; i++) {
     temp.push(false);
   }
+
   const [blockInPage, setBlockInPage] = useState(temp);
 
   useEffect(() => {
@@ -421,7 +422,7 @@ const InfoInsertHead = (props) => {
     for (let i = 0; i < pages.length; i++) {
       temp[pages[i]] = true;
     }
-    
+
     setBlockInPage(temp);
   }
 
@@ -1454,14 +1455,12 @@ const InfoInsertHead = (props) => {
             className="page__block page__block-4 add_showup">看研究方法
           </div>
           <div className={animateShowUpBlock(2, "page__block page__block-5")} id="s2" ref={s2Ref}>
-            <div className="page__block page__block-5-content">
-              <div className="page__block-5-content-cube">
-                <img src={require('./img/finger-1.png')} style={{width: "100%", height: "100%"}} alt="img_block5" />
-              </div>
-              <div className="page__block-5-content-text">
-                <p>你是哪裡人？</p>
-              </div>
-            </div>
+            {
+              (props.isMobile) ? 
+              (<img src={require('./img/q-background-small.jpg')} style={{width: "100%", height: "250px"}} alt="q1" />) :
+              (<img src={require('./img/q-background.jpg')} style={{width: "100%", height: "120px"}} alt="q1" />)
+            }
+
           </div>
           {showPopup()}
           <div className={animateShowUpBlock(7, "page__block page__block-7")} ref={s7Ref}>
@@ -1553,8 +1552,6 @@ const InfoInsertHead = (props) => {
       onKeyPress={handleOnWheelAndKeyDown}
       onKeyDown={handleOnWheelAndKeyDown}
       onTouchMove={handleOnWheelAndKeyDown}
-      onTouchStart={handleOnWheelAndKeyDown}
-      onTouchEnd={handleOnWheelAndKeyDown}
       ref={thisDiv}
       tabIndex="0"
     >
