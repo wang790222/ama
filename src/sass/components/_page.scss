@@ -4,34 +4,14 @@
     opacity: 0;
 
     &-1 {
-      width: 513px;
-      text-align: center;
+      width: 426px;
+      height: 196px;
       padding-top: 100px;
-      color: #5E3F15;
 
       @include respond(phone) {
         width: 360px;
-      }
-
-      & h1 {
-        font-size: 48px;
-        
-
-        @include respond(phone) {
-          line-height: 48px;
-          font-size: 36px;
-          letter-spacing: 1px;
-        }
-      }
-
-      & h2 {
-        font-size: 30px;
-
-        @include respond(phone) {
-          line-height: 48px;
-          font-size: 26px;
-          letter-spacing: 1px;
-        }
+        height: 196px;
+        padding-top: 80px;
       }
     }
 

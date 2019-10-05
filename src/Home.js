@@ -1,29 +1,42 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Player, ControlBar } from 'video-react';
 
 const Home = (props) => {
-  let imageAma = require('./img/ama.png');
+
+  const homeDiv = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    homeDiv.current.focus();
+    if (homeDiv.current.clientWidth <= 1100) {
+      setIsMobile(true);
+    }
+  });
 
   return (
-    <div>
+    <div ref={homeDiv}>
       <div className="header__block header__block-1">
         <div className="header__block-1__img">
           <Player
             playsInline
-            src={require('./img/video/P1_1.mp4')}
+            src={require('./img/video/P1.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
             autoPlay={true}
             muted={true}
-            controls={false}
           >
+            <ControlBar disableCompletely={true}/>
           </Player>
         </div>
       </div>
       <div className="header__block header__block-2">
         <div className="header__block-2__main">
-          <p>高中職生青少年國族認同大調查</p>
+          {
+            (isMobile) ? 
+            (<img src={require('./img/title-small.png')} style={{width:"100%", height:"100%"}} alt="title" />) : 
+            (<img src={require('./img/title.png')} style={{width:"100%", height:"100%"}} alt="title" />)
+          }
         </div>
       </div>
       <div className="header__block header__block-3">

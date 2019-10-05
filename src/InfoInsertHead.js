@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FacebookShareButton, FacebookIcon, LineShareButton, LineIcon } from 'react-share';
-import { Player } from 'video-react';
+import { Player, ControlBar } from 'video-react';
 import "../node_modules/video-react/dist/video-react.css";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import ReactPlayer from 'react-player';
 
 import Hamburger from './Hamburger';
 
@@ -234,7 +235,8 @@ const InfoInsertHead = (props) => {
             >
             &nbsp;
             </div>
-            <div style={videoCssStyle(videoIndex)}>&nbsp;</div>
+            <div style={videoCssStyle(videoIndex)}>
+            </div>
             <div 
               className={addOpacityToArrowRight()}
               onClick={videoSlideRight}
@@ -256,7 +258,6 @@ const InfoInsertHead = (props) => {
       return (
         <div className="page__block-54-video-grid">
           <div className="page__block-54-video-grid-img">
-            
           </div>
           <div className="page__block-54-video-grid-img">
             
@@ -397,11 +398,13 @@ const InfoInsertHead = (props) => {
     for (let i = 1; i <= totalBlocks; i++) {
       let temp = eval(`s${i}Ref`);
       let snTop = (temp.current) ? temp.current.offsetTop : -1;
+      let snBottom = (temp.current) ? (snTop + temp.current.clientHeight) : -1;
       if (
-           snTop !== -1 && 
-           (
-             (snTop >= window.pageYOffset && snTop < window.pageYOffset + window.innerHeight) || 
-             (false)
+           (snTop !== -1) && (snBottom !== -1) && (
+            (
+              (snTop >= window.pageYOffset && snTop <= window.pageYOffset + window.innerHeight) 
+            ) ||
+              ((snBottom >= window.pageYOffset) && (snTop <= window.pageYOffset))
            )
          ) {
         
@@ -553,7 +556,7 @@ const InfoInsertHead = (props) => {
       return (
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
-            playsInline
+            playsInline={true}
             src={require('./img/video/P8-1.mp4')}
             width={"100%"}
             height={"100%"}
@@ -567,7 +570,7 @@ const InfoInsertHead = (props) => {
       return (
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
-            playsInline
+            playsInline={true}
             src={require('./img/video/P8-2.mp4')}
             width={"100%"}
             height={"100%"}
@@ -581,7 +584,7 @@ const InfoInsertHead = (props) => {
       return (
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
-            playsInline
+            playsInline={true}
             src={require('./img/video/P8-3.mp4')}
             width={"100%"}
             height={"100%"}
@@ -595,7 +598,7 @@ const InfoInsertHead = (props) => {
       return (
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
-            playsInline
+            playsInline={true}
             src={require('./img/video/P8-4.mp4')}
             width={"100%"}
             height={"100%"}
@@ -896,7 +899,7 @@ const InfoInsertHead = (props) => {
       return (
         <div className={animateShowUpBlock(22, "page__block page__block-22")} ref={s22Ref}>
           <Player
-            playsInline
+            playsInline={true}
             src={require('./img/video/P7_PC.mp4')}
             width={"100%"}
             height={"100%"}
@@ -1420,8 +1423,11 @@ const InfoInsertHead = (props) => {
         <div>
           {showHamburger()}
           <div className="page__block page__block-1 add_showup" id="#s1" ref={s1Ref}>
-            <h1>嘿！你是哪裡人？</h1>
-            <h2>青少年國族認同大調查</h2>
+            {
+              (props.isMobile) ? 
+              (<img src={require('./img/title2-small.png')} style={{width:"100%", height:"100%"}} alt="title2" />) : 
+              (<img src={require('./img/title2.png')} style={{width:"100%", height:"100%"}} alt="title2" />)
+            }
           </div>
           <div className="page__block page__block-2 add_showup">
             <Player
@@ -1432,7 +1438,10 @@ const InfoInsertHead = (props) => {
               fluid={false}
               autoPlay={true}
               muted={true}
-            />
+              loop={true}
+            >
+              <ControlBar disableCompletely={true} />
+            </Player>
           </div>
           <div className="page__block page__block-3 add_showup">
             <p>2020總統大選將至，社會上對於總統選舉、國家認同和國家未來等議題，討論得沸沸揚揚。你會好奇代表著「未來」的青少年們究竟是怎麼想的嗎？公共電視青少年節目《青春發言人》委託政治大學「選舉研究中心」，針對全國高中職生進行國族認同 調查，分別從「你是哪裡人？」、「兩岸關係」、「對台灣的愛恨情仇？」、「高中職生對政治冷感嗎？」四大面向，帶你了解青少年如何看待自己的國家與土地。</p>
@@ -1540,6 +1549,8 @@ const InfoInsertHead = (props) => {
       onKeyPress={handleOnWheelAndKeyDown}
       onKeyDown={handleOnWheelAndKeyDown}
       onTouchMove={handleOnWheelAndKeyDown}
+      onTouchStart={handleOnWheelAndKeyDown}
+      onTouchEnd={handleOnWheelAndKeyDown}
       ref={thisDiv}
       tabIndex="0"
     >

@@ -25,22 +25,6 @@
           height: 191px;
         }
       }
-    
-      &__shade {
-        width: 642px;
-        height: 342px;
-        z-index: 1;
-        background-color: #E8CF8F;
-        position: absolute;
-        top: 12px;
-        left: 12px;
-        transform: rotate(.8deg);
-
-        @include respond(phone) {
-          width: 0;
-          height: 0;
-        }
-      }
     }
 
     &-2 {
@@ -55,13 +39,12 @@
       }
 
       &__main {
-        color: #5E3F15;
-        font-size: 30px;
-        letter-spacing: 1px;
+        width: 445px;
+        height: 66px;
 
         @include respond(phone) {
-          font-size: 20px;
-          letter-spacing: 0.62px;
+          width: 282px;
+          height: 84px;
         }
       }
     }
@@ -73,6 +56,7 @@
       text-align: center;
 
       @include respond(phone) {
+        margin-top: 80px;
         width: 223px;
         height: 68px;
       }

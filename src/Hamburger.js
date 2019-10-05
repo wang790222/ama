@@ -30,27 +30,27 @@ const Hamburger = (props) => {
       return (
         <ul className="hamburger__list">
           <li className="hamburger__item">
-            <a href="#s1" className={addWhiteToLink(0)} onClick={handleOnClick}><span>首頁</span></a>
+            <div className={addWhiteToLink(0)} onClick={() => handleOnClick("s1")}><span>首頁</span></div>
           </li>
           <li className="hamburger__item">
-            <a href="#s2" className={addWhiteToLink(1)} onClick={handleOnClick}>
-              <span>你是哪裡人？</span></a>
+            <div className={addWhiteToLink(1)} onClick={() => handleOnClick("s2")}>
+              <span>你是哪裡人？</span></div>
           </li>
           <li className="hamburger__item">
-            <a href="#s3" className={addWhiteToLink(2)} onClick={handleOnClick}>
-              <span>你怎麼看兩岸關係？</span></a>
+            <div className={addWhiteToLink(2)} onClick={() => handleOnClick("s3")}>
+              <span>你怎麼看兩岸關係？</span></div>
           </li>
           <li className="hamburger__item">
-            <a href="#s4" className={addWhiteToLink(3)} onClick={handleOnClick}>
-              <span>對台灣的愛恨情仇？</span></a>
+            <div className={addWhiteToLink(3)} onClick={() => handleOnClick("s4")}>
+              <span>對台灣的愛恨情仇？</span></div>
           </li>
           <li className="hamburger__item">
-            <a href="#s5" className={addWhiteToLink(4)} onClick={handleOnClick}>
-              <span>高中職生對政治冷感嗎？</span></a>
+            <div className={addWhiteToLink(4)} onClick={() => handleOnClick("s5")}>
+              <span>高中職生對政治冷感嗎？</span></div>
           </li>
           <li className="hamburger__item">
-            <a href="#s6" className={addWhiteToLink(5)} onClick={handleOnClick}>
-              <span>調查結果，他們怎麼看？</span></a>
+            <div className={addWhiteToLink(5)} onClick={() => handleOnClick("s6")}>
+              <span>調查結果，他們怎麼看？</span></div>
           </li>
         </ul>
       );
