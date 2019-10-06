@@ -296,63 +296,7 @@ const DesktopPageContent = () => {
   };
 
   const question5Video = () => {
-    if (q5Option === 0) {
-      return (
-        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
-          <Player
-            playsInline={true}
-            src={require('./img/video/p8-1.mp4')}
-            width={"100%"}
-            height={"100%"}
-            fluid={false}
-            autoPlay={false}
-            muted={true}
-          />
-        </div>
-      );
-    } else if (q5Option === 1) {
-      return (
-        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
-          <Player
-            playsInline={true}
-            src={require('./img/video/p8-2.mp4')}
-            width={"100%"}
-            height={"100%"}
-            fluid={false}
-            autoPlay={false}
-            muted={true}
-          />
-        </div>
-      );
-    } else if (q5Option === 2) {
-      return (
-        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
-          <Player
-            playsInline={true}
-            src={require('./img/video/p8-3.mp4')}
-            width={"100%"}
-            height={"100%"}
-            fluid={false}
-            autoPlay={false}
-            muted={true}
-          />
-        </div>
-      );
-    } else if (q5Option === 3) {
-      return (
-        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
-          <Player
-            playsInline={true}
-            src={require('./img/video/p8-4.mp4')}
-            width={"100%"}
-            height={"100%"}
-            fluid={false}
-            autoPlay={false}
-            muted={true}
-          />
-        </div>
-      );
-    }
+    return null;
   };
 
   const quesion6Video = () => {
@@ -430,7 +374,7 @@ const DesktopPageContent = () => {
         return (
           <div>
             <div className="page__block-60__content-row-icon-fb">
-              <FacebookShareButton url={"https://salty-cliffs-82898.herokuapp.com/"}>
+              <FacebookShareButton url={"localhost:3000"}>
                 <FacebookIcon borderRadius={10} size={100}/>
               </FacebookShareButton>
             </div>

@@ -1700,7 +1700,7 @@
     &-57 {
       width: 100vw;
       height: 673px;
-      background-color: #F06F04;
+      background-image: url('./img/orange-background.jpg');
       color: white;
 
       @include respond(phone) {
@@ -1795,7 +1795,7 @@
         height: 70px;
         text-align: center;
         line-height: 64px;
-        background-color: #F2BB74;
+        background-color: #F4D0A1;
         margin: 57px auto 0;
         
         
