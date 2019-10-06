@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import DesktopPageContent from './DesktopPageContent';
 import MobilePageContent from './MobilePageContent';
 
 const InfoInsertHead = (props) => {
+
+  const wholePageDiv = useRef(null);
 
   const [intro, setIntro] = useState(!props.fromGotoPage);
   const [singleColor, setSingleColor] = useState(true);

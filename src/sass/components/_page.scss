@@ -1400,19 +1400,15 @@
     }
 
     &-52 {
-      width: 750px;
+      width: 840px;
+      height: 60px;
       text-align: center;
-      margin-top: 100px;
+      margin-top: 60px;
 
       @include respond(phone) {
-        width: 298px;
-        margin-top: 80px;
-      }
-
-      & p {
-        color: #5E3F15;
-        font-size: 30px;
-        letter-spacing: 1px;
+        width: 263px;
+        text-align: left;
+        margin-top: 40px;
       }
     }
 
@@ -1444,25 +1440,16 @@
       }
 
       &-title {
-        width: 558px;
-        text-align: left;
-        padding-top: 100px;
-        margin: 0 auto;
+        width: 840px;
+        height: 60px;
+        text-align: center;
+        margin: 60px auto 0;
+
 
         @include respond(phone) {
-          width: 288px;
-          padding-top: 80px;
-        }
-
-        & p {
-          color: #333333;
-          font-size: 30px;
-          letter-spacing: 1px;
-
-          @include respond(phone) {
-            font-size: 26px;
-            line-height: 40px;
-          }
+          width: 263px;
+          text-align: left;
+          margin-top: 40px;
         }
       } 
       
@@ -1485,7 +1472,7 @@
 
       &-video-grid {
         width: 1110px;
-        height: 422px;
+        height: 196px;
         color: black;
         margin: 60px auto 0;
 
@@ -1493,8 +1480,8 @@
         grid-template-columns: 350px 350px 350px;
         grid-gap: 30px;
 
-        &-img {
-          background-color: #BDBDBD;
+        &-row-2 {
+          margin: 30px auto 0;
         }
       }
 
