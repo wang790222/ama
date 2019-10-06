@@ -7,6 +7,7 @@ import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import { useBottomScrollListener } from 'react-bottom-scroll-listener';
 import YouTube from 'react-youtube';
 import Hamburger from './Hamburger';
+import getParagraph from './getParagraph';
 
 import PopupSurveyMethod from './PopupSurveyMethod';
 
@@ -91,6 +92,7 @@ const DesktopPageContent = () => {
   const [afterBlock51, setAfterBlock51] = useState(false);
   const [isBottom, setIsBottom] = useState(false);
   const [q8910Index, setQ8910Index] = useState(0);
+  const [navIndex, setNavIndex] = useState(0);
   
   let totalBlocks = 59;
 
@@ -107,7 +109,12 @@ const DesktopPageContent = () => {
     window.addEventListener('keyPress', currentBlocksInPage);
     
     window.scrollTo(0, scrollY);
-  }, [popup, share]);
+
+    if (navIndex) {
+      handleNavToSection(navIndex);
+    }
+    
+  }, [popup, share, navIndex]);
 
   const animateShowUpBlock = (index, originClassName) => {
     if (blockInPage[index]) {
@@ -161,7 +168,6 @@ const DesktopPageContent = () => {
     let curSection = eval(`s${section}Ref`);
     let snTop = (curSection.current) ? curSection.current.offsetTop : Number.MAX_SAFE_INTEGER;
     window.scrollTo(0, snTop);
-    currentBlocksInPage();
   }
 
   const popupSurveyMethod = () => {
@@ -173,17 +179,30 @@ const DesktopPageContent = () => {
     setPopup(false);
   };
 
+  const handleNavIndex = (sec) => {
+    if (sec === 6) {
+      setAfterBlockNine(true);
+      setAfterBlock51(true);
+      setNavIndex(6);
+    } else {
+      if (sec > 2) {
+        setAfterBlockNine(true);
+        setNavIndex(sec);
+      } else {
+        setNavIndex(sec);
+      }
+    }
+  };
+
   const showHamburger = () => {
     if (popup) {
       return null;
     } else {
       return (<Hamburger 
         isMobile={false} 
-        currentSection={curSec}
-        afterBlockNine={afterBlockNine}
-        openTheRest={openBlockTen}
         isHamburgerOn={isHamburgerOn}
-        handleNavToSection={handleNavToSection}
+        currentSection={curSec}
+        handleNavIndex={handleNavIndex}
         />
       );
     }
@@ -237,10 +256,6 @@ const DesktopPageContent = () => {
     }
   };
 
-  const openBlockTen = () => {
-    setAfterBlockNine(true);
-  };
-
   const onClickQ5Option = (index) => {
     setQ5Option(index)
   };
@@ -266,7 +281,12 @@ const DesktopPageContent = () => {
             >
               &times;
             </div>
-            {readAllIndex}
+
+            {
+               getParagraph(readAllIndex - 1).split("<br />").map((item) => {
+                return (<p className="page__block-61__content-text">{item}</p>);
+              })
+            }
           </div>
         </div>
       );
@@ -279,7 +299,15 @@ const DesktopPageContent = () => {
     if (q5Option === 0) {
       return (
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
-          
+          <Player
+            playsInline={true}
+            src={require('./img/video/p8-1.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={false}
+            muted={true}
+          />
         </div>
       );
     } else if (q5Option === 1) {
@@ -540,7 +568,7 @@ const DesktopPageContent = () => {
   const containerRef = useBottomScrollListener(reachBottom);
  
   const showAfterBlockNine = () => {
-    return ((afterBlockNine) ? 
+    return ((afterBlockNine || navIndex > 2) ? 
     <div>
       <div ref={scrollRef}>
           <div className={animateShowUpBlock(16, "page__block page__block-16")} ref={s16Ref}>
@@ -613,7 +641,7 @@ const DesktopPageContent = () => {
           </div>
           <div className={animateShowUpBlock(3, "page__block page__block-20")} id="s3" ref={s3Ref}>
             <img src={require('./img/q5-title.png')} alt="q5" className="page__block-20-front"/>
-            <img src={require('./img/q-background.jpg')} style={{width: "100%", height: "250px"}} alt="q1" className="page__block-5-background"/>
+            <img src={require('./img/green-background.jpg')} style={{width: "100%", height: "250px"}} alt="q1" className="page__block-5-background"/>
           </div>
           <div className={animateShowUpBlock(21, "page__block page__block-21")} ref={s21Ref}>
             <img src={require('./img/q6-title.png')} alt="q6" style={{width: "840px", height: "100px"}} />
@@ -667,7 +695,7 @@ const DesktopPageContent = () => {
           </div>
           <div className={animateShowUpBlock(4, "page__block page__block-28")} id="s4" ref={s4Ref}>
             <img src={require('./img/q8-title.png')} alt="q5" className="page__block-28-front"/>
-            <img src={require('./img/q-background.jpg')} style={{width: "100%", height: "250px"}} alt="q1" className="page__block-5-background"/>
+            <img src={require('./img/green-background.jpg')} style={{width: "100%", height: "250px"}} alt="q1" className="page__block-5-background"/>
           </div>
           <div className={animateShowUpBlock(29, "page__block page__block-29")} ref={s29Ref}>
             <img src={require('./img/q9-title.png')} alt="q9" style={{width: "100%", height: "100%"}} />
@@ -822,7 +850,7 @@ const DesktopPageContent = () => {
             </div>
             <div className={animateShowUpBlock(5, "page__block page__block-50")} id="s5" ref={s5Ref}>
               <img src={require('./img/q13-title.png')} alt="q13" className="page__block-50-front"/>
-              <img src={require('./img/q-background.jpg')} style={{width: "100%", height: "250px"}} alt="q13" className="page__block-50-background"/>
+              <img src={require('./img/green-background.jpg')} style={{width: "100%", height: "250px"}} alt="q13" className="page__block-50-background"/>
             </div>
             <div className={animateShowUpBlock(51, "page__block page__block-51")} ref={s51Ref}>
               <div className="page__block-51-content">
@@ -849,7 +877,7 @@ const DesktopPageContent = () => {
 
   const showAfterBlock51 = () => {
     return (
-      (afterBlock51) ?
+      (afterBlock51 || navIndex === 6) ?
       <div>
         <div className={animateShowUpBlock(52, "page__block page__block-52")} ref={s52Ref}>
           <img src={require('./img/q14-title.png')} alt="q14" style={{width: "100%", height: "100%"}} />
@@ -937,7 +965,7 @@ const DesktopPageContent = () => {
         </div>
         <div className={animateShowUpBlock(6, "page__block page__block-55")} id="s6" ref={s6Ref}>
           <div className="page__block-55-title">
-            <p>他們怎麼看這份調查？</p>
+            <img src={require('./img/q16-title.png')} alt="q16" style={{width: "860px", height: "62px"}} />
           </div>
           <div className="page__block-55-text">
             <p>我們邀請了五位政治界、媒體界的朋友，和大家分享他們看過這份青少年的國族調查後，有什麼觀察和思考！
@@ -946,6 +974,7 @@ const DesktopPageContent = () => {
           <div className="page__block-55-grid">
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
+                <img src={require('./img/profile-1.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
@@ -953,7 +982,7 @@ const DesktopPageContent = () => {
                   <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
-                  <p>在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。</p>
+                  <p>「若將這份報告視作目前青少年的準確圖像，對我來說，台灣正在走向正確的道路。」</p>
                 </div>
                 <div 
                   className="page__block-55-grid-person-right-btn"
@@ -965,6 +994,7 @@ const DesktopPageContent = () => {
             </div>
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
+                <img src={require('./img/profile-2.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
@@ -972,7 +1002,7 @@ const DesktopPageContent = () => {
                   <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
-                  <p>在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。</p>
+                  <p>「天然獨？天然台？中華民國派需要更有自信！這場可能被紅統、急獨派夾殺的詮釋權保衛戰，才是「中華民國派」真正的對手，而不是台灣的年輕人們。」</p>
                 </div>
                 <div 
                   className="page__block-55-grid-person-right-btn"
@@ -984,6 +1014,7 @@ const DesktopPageContent = () => {
             </div>
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
+                <img src={require('./img/profile-3.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
@@ -1004,6 +1035,7 @@ const DesktopPageContent = () => {
             </div>
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
+                <img src={require('./img/profile-4.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
@@ -1011,7 +1043,7 @@ const DesktopPageContent = () => {
                   <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
-                  <p>在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。</p>
+                  <p>「即便前世代不斷強調，「台灣、中國同文同種、血脈相連」等情感訴求，新世代認為自己是台灣人的比例，已與過去有明顯差異。」</p>
                 </div>
                 <div 
                   className="page__block-55-grid-person-right-btn"
@@ -1024,6 +1056,7 @@ const DesktopPageContent = () => {
             </div>
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
+                <img src={require('./img/profile-5.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
@@ -1031,7 +1064,7 @@ const DesktopPageContent = () => {
                   <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
-                  <p>在公共事務的討論、決策過程裡，青少年不應該總是「被代表」，而該是不折不扣的持分者，因為他們有能力改造出一個對所有人都好的新世界。</p>
+                  <p>「高中職生認為未來10年重要的社會目標中，「環境維護」敬陪末座，由此可粗略觀少年的價值觀，以及未來台灣將會面臨選擇衝突的問題。」</p>
                 </div>
                 <div 
                   className="page__block-55-grid-person-right-btn"
@@ -1063,7 +1096,7 @@ const DesktopPageContent = () => {
           <div 
             className="page__block-57-btn"
           >
-            下載報告
+            <a href='https://pse.is/KBUF6' target='_blanket'>下載報告</a>
           </div>
         </div>
         <div className={animateShowUpBlock(58, "page__block page__block-58")} ref={s58Ref}>
@@ -1142,7 +1175,7 @@ const DesktopPageContent = () => {
       </div>
       <div className={animateShowUpBlock(2, "page__block page__block-5")} id="s2" ref={s2Ref}>
         <img src={require('./img/q1-title.png')} alt="q1" className="page__block-5-front"/>
-        <img src={require('./img/q-background.jpg')} style={{width: "100%", height: "250px"}} alt="q1" className="page__block-5-background"/>
+        <img src={require('./img/green-background.jpg')} style={{width: "100%", height: "250px"}} alt="q1" className="page__block-5-background"/>
       </div>
       <PopupSurveyMethod 
         isPopup={popup} 
@@ -1176,17 +1209,17 @@ const DesktopPageContent = () => {
         <div className="row-3">
           <div 
             className="col-1-of-3 page__block-9-btn"
-            onClick={openBlockTen}>
+            onClick={() => {setAfterBlockNine(true)}}>
             中國人
           </div>
           <div 
             className="col-1-of-3 page__block-9-btn"
-            onClick={openBlockTen}>
+            onClick={() => {setAfterBlockNine(true)}}>
             台灣人
           </div>
           <div 
             className="col-1-of-3 page__block-9-btn"
-            onClick={openBlockTen}>
+            onClick={() => {setAfterBlockNine(true)}}>
             都是
           </div>
         </div>

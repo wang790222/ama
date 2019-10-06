@@ -1,12 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 const Hamburger = (props) => {
 
   const checkBoxRef = useRef(null);
 
+  const [after51, setAfter51] = useState(false);
+
   const handleOnClick = (sec) => {
+    let secNum = parseInt(sec[1], 10);
     checkBoxRef.current.checked = false;
-    props.handleNavToSection(parseInt(sec[1], 10));
+    props.handleNavIndex(secNum);
   };
 
   const addWhiteToLink = (index) => {
@@ -81,10 +84,6 @@ const Hamburger = (props) => {
   }
 
   const handleOnChange = (e) => {
-    if (!props.afterBlockNine) {
-      props.openTheRest();
-    }
-
     if (e.target && e.target.checked) {
       props.isHamburgerOn(true);
     } else {
