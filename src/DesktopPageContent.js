@@ -300,67 +300,7 @@ const DesktopPageContent = () => {
   };
 
   const quesion6Video = () => {
-    if (q6Option === 0) {
-      return (
-        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
-          <Player
-            playsInline
-            src={require('./img/video/p8-1-1.mp4')}
-            width={"100%"}
-            height={"100%"}
-            fluid={false}
-            muted={true}
-          >
-            <ControlBar disableCompletely={true} />
-          </Player>
-        </div>
-      );
-    } else if (q6Option === 1) {
-      return (
-        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
-          <Player
-            playsInline
-            src={require('./img/video/p8-1-2.mp4')}
-            width={"100%"}
-            height={"100%"}
-            fluid={false}
-            muted={true}
-          >
-            <ControlBar disableCompletely={true} />
-          </Player>
-        </div>
-      );
-    } else if (q6Option === 2) {
-      return (
-        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
-          <Player
-            playsInline
-            src={require('./img/video/p8-1-3.mp4')}
-            width={"100%"}
-            height={"100%"}
-            fluid={false}
-            muted={true}
-          >
-            <ControlBar disableCompletely={true} />
-          </Player>
-        </div>
-      );
-    } else if (q6Option === 3) {
-      return (
-        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
-          <Player
-            playsInline
-            src={require('./img/video/p8-1-4.mp4')}
-            width={"100%"}
-            height={"100%"}
-            fluid={false}
-            muted={true}
-          >
-            <ControlBar disableCompletely={true} />
-          </Player>
-        </div>
-      );
-    }
+    return null;
   };
 
   const handleShareBtn = () => {
