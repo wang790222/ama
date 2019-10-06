@@ -4,13 +4,12 @@ import { Player, ControlBar } from 'video-react';
 import "../node_modules/video-react/dist/video-react.css";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
-import ReactPlayer from 'react-player';
+import YouTube from 'react-youtube';
 
 import Hamburger from './Hamburger';
 
 const InfoInsertHead = (props) => {
 
-  const thisDiv = useRef(null);
   const wholePageDiv = useRef(null);
   const s1Ref = useRef(null);
   const s2Ref = useRef(null);
@@ -98,9 +97,9 @@ const InfoInsertHead = (props) => {
   const [blockInPage, setBlockInPage] = useState(temp);
 
   useEffect(() => {
-    //wholePageDiv.current.focus();
-    thisDiv.current.focus();
     window.addEventListener('scroll', currentBlocksInPage);
+    window.addEventListener('keyDown', currentBlocksInPage);
+    window.addEventListener('keyPress', currentBlocksInPage);
     
     if (popup || share) {
       window.scrollTo(0, scrollY);
@@ -561,11 +560,11 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
             playsInline={true}
-            src={require('./img/video/P8-1.mp4')}
+            src={require('./img/video/p8-1.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={true}
+            autoPlay={false}
             muted={true}
           />
         </div>
@@ -575,11 +574,11 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
             playsInline={true}
-            src={require('./img/video/P8-2.mp4')}
+            src={require('./img/video/p8-2.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={true}
+            autoPlay={false}
             muted={true}
           />
         </div>
@@ -589,11 +588,11 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
             playsInline={true}
-            src={require('./img/video/P8-3.mp4')}
+            src={require('./img/video/p8-3.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={true}
+            autoPlay={false}
             muted={true}
           />
         </div>
@@ -603,11 +602,11 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
             playsInline={true}
-            src={require('./img/video/P8-4.mp4')}
+            src={require('./img/video/p8-4.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={true}
+            autoPlay={false}
             muted={true}
           />
         </div>
@@ -621,13 +620,14 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
           <Player
             playsInline
-            src={require('./img/video/P8-1-1.mp4')}
+            src={require('./img/video/p8-1-1.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={true}
             muted={true}
-          />
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
         </div>
       );
     } else if (q6Option === 1) {
@@ -635,13 +635,14 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
           <Player
             playsInline
-            src={require('./img/video/P8-1-2.mp4')}
+            src={require('./img/video/p8-1-2.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={true}
             muted={true}
-          />
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
         </div>
       );
     } else if (q6Option === 2) {
@@ -649,13 +650,14 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
           <Player
             playsInline
-            src={require('./img/video/P8-1-3.mp4')}
+            src={require('./img/video/p8-1-3.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={true}
             muted={true}
-          />
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
         </div>
       );
     } else if (q6Option === 3) {
@@ -663,13 +665,14 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
           <Player
             playsInline
-            src={require('./img/video/P8-1-4.mp4')}
+            src={require('./img/video/p8-1-4.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={true}
             muted={true}
-          />
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
         </div>
       );
     }
@@ -680,34 +683,30 @@ const InfoInsertHead = (props) => {
       return (
         <div>
           <div className={animateShowUpBlock(40, "page__block page__block-40")} ref={s40Ref}>
-            <div className="row-4">
-              <div className="col-1-of-4 page__block-40-img">
-                <img src={require('./img/q6-1.png')} style={{height:"100%"}} alt="img_block40" />
+            <div className="row-4-2">
+              <div className="col-1-of-4 page__block-40-imgbtn">
+                <img src={require('./img/q6-1.png')} alt="img_block40" />
+                <div className="col-1-of-4 page__block-41-btn" onClick={() => handleOnClickFor41(0)}>
+                  沮喪的
+                </div>
               </div>
-              <div className="col-1-of-4 page__block-40-img">
-                <img src={require('./img/q6-2.png')} style={{height:"100%"}} alt="img_block40" />
-              </div>
-              <div className="col-1-of-4 page__block-40-img">
-                <img src={require('./img/q6-3.png')} style={{height:"100%"}} alt="img_block40" />
-              </div>
-              <div className="col-1-of-4 page__block-40-img">
-                <img src={require('./img/q6-4.png')} style={{height:"100%"}} alt="img_block40" />
-              </div>
-            </div>
-          </div>
-          <div className={animateShowUpBlock(41, "page__block page__block-41")} ref={s41Ref}>
-            <div className="row-4">
-              <div className="col-1-of-4 page__block-41-btn" onClick={() => handleOnClickFor41(0)}>
-                沮喪的
-              </div>
-              <div className="col-1-of-4 page__block-41-btn" onClick={() => handleOnClickFor41(1)}>
+              <div className="col-1-of-4 page__block-40-imgbtn">
+                <img src={require('./img/q6-2.png')} alt="img_block40" />
+                <div className="page__block-41-btn" onClick={() => handleOnClickFor41(1)}>
                 難過的
+                </div>  
               </div>
-              <div className="col-1-of-4 page__block-41-btn" onClick={() => handleOnClickFor41(2)}>
-                憤怒的
+              <div className="col-1-of-4 page__block-40-imgbtn">
+                <img src={require('./img/q6-3.png')} alt="img_block40" />
+                <div className="col-1-of-4 page__block-41-btn" onClick={() => handleOnClickFor41(2)}>
+                  憤怒的
+                </div>
               </div>
-              <div className="col-1-of-4 page__block-41-btn" onClick={() => handleOnClickFor41(3)}>
-                擔心的
+              <div className="col-1-of-4 page__block-40-imgbtn">
+                <img src={require('./img/q6-4.png')} alt="img_block40" />
+                <div className="col-1-of-4 page__block-41-btn" onClick={() => handleOnClickFor41(3)}>
+                  擔心的
+                </div>
               </div>
             </div>
           </div>
@@ -866,33 +865,35 @@ const InfoInsertHead = (props) => {
 
   const showQuestion2 = () => {
     if (!props.isMobile) {
-
-      let DivStyle = {};
-
-      DivStyle = {
-        width: "86rem",
-        height: "40rem",
-        zIndex: "100",
-        position: "absolute",
-        top: "0",
-        left: "0",
-        right: "0",
-        margin: "0 auto",
-      };
-
       return (
         <div className={animateShowUpBlock(11, "page__block page__block-11")} ref={s11Ref}>
-          <div style={DivStyle}>
-            <img className="imgStyle imgStyle-1" src={require('./img/q2-1.png')} alt="img_block11" />
-            <img className="imgStyle imgStyle-2 delay3s" src={require('./img/q2-2.png')} alt="img_block11" />
-            <img className="imgStyle imgStyle-3 delay6s" src={require('./img/q2-3.png')} alt="img_block11" />
-          </div>
+          <Player
+            playsInline
+            src={require('./img/video/q2.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
         </div>
       );
     } else {
       return (
         <div className={animateShowUpBlock(11, "page__block page__block-11")} ref={s11Ref}>
-          <img src={require('./img/q2-small.png')} style={{width:"100%",height:"100%"}} alt="img_block11" />
+          <Player
+            playsInline
+            src={require('./img/video/q2-small.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
         </div>
       );
     }
@@ -904,13 +905,15 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(22, "page__block page__block-22")} ref={s22Ref}>
           <Player
             playsInline={true}
-            src={require('./img/video/P7_PC.mp4')}
+            src={require('./img/video/q3.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
             autoPlay={true}
             muted={true}
-          />
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
         </div>
       );
     } else {
@@ -918,13 +921,15 @@ const InfoInsertHead = (props) => {
         <div className={animateShowUpBlock(22, "page__block page__block-22")} ref={s22Ref}>
           <Player
             playsInline
-            src={require('./img/video/P7_PHONE.mp4')}
+            src={require('./img/video/q3-small.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
             autoPlay={true}
             muted={true}
-          />
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
         </div>
       );
     }
@@ -934,13 +939,33 @@ const InfoInsertHead = (props) => {
     if (!props.isMobile) {
       return (
         <div className={animateShowUpBlock(16, "page__block page__block-16")} ref={s16Ref}>
-          <img src={require('./img/pie.png')} style={{width: "100%", height: "100%"}} alt="img_block13" />
+          <Player
+              playsInline
+              src={require('./img/video/q1.mp4')}
+              width={"100%"}
+              height={"100%"}
+              fluid={false}
+              autoPlay={true}
+              muted={true}
+            >
+              <ControlBar disableCompletely={true} />
+            </Player>
         </div>
       );
     } else {
       return (
         <div className={animateShowUpBlock(16, "page__block page__block-16")} ref={s16Ref}>
-          <img src={require('./img/pie-small.png')} style={{width: "100%", height: "100%"}} alt="img_block13" />
+          <Player
+              playsInline
+              src={require('./img/video/q1-small.mp4')}
+              width={"100%"}
+              height={"100%"}
+              fluid={false}
+              autoPlay={true}
+              muted={true}
+            >
+              <ControlBar disableCompletely={true} />
+            </Player>
         </div>
       );
     }
@@ -952,7 +977,11 @@ const InfoInsertHead = (props) => {
         <div>
           {showBlock16()}
           <div className={animateShowUpBlock(12, "page__block page__block-12")} ref={s12Ref}>
-            <p>超過七成高中職生認為自己是「台灣人」</p>
+            {
+              (props.isMobile) ? 
+              (<img src={require('./img/q2-title-small.png')} alt="q2" style={{width: "100%", height: "100%"}}/>):
+              (<img src={require('./img/q2-title.png')} alt="q2" style={{width: "100%", height: "100%"}} />)
+            }
           </div>
           <div className={animateShowUpBlock(13, "page__block page__block-13")} ref={s13Ref}>
             <p>在這份問卷中，有78.7％的受訪者認為自己是「台灣人」，遠高於「中國人」(0.8%)與「兩者皆是」(20.1%)的選項，可見「台灣」這個名詞已成為大多高中生對「我是哪裡人」的直覺反應。此外，在美國杜克大學於2019年發布的《台灣國家安全調查》中，同樣一個問題，20歲以上的成年人認同自己是「台灣人」、「中國人」、或「兩者皆是」的比例依序是：50.6%、3.1%、42.6%。若將兩份調查的數據相對照，在認同自己是「台灣人」的部分，可看出一定的差距。</p>
@@ -972,34 +1001,53 @@ const InfoInsertHead = (props) => {
           </div>
           {showQuestion2()}
           <div className={animateShowUpBlock(17, "page__block page__block-17")} ref={s17Ref}>
-            <p>若從文化角度思考，認同「中國」的高中職生增加約16%</p>
+            {
+              (props.isMobile) ? 
+              (<img src={require('./img/q3-title-small.png')} alt="q3" style={{width: "100%", height: "100%"}}/>):
+              (<img src={require('./img/q3-title.png')} alt="q3" style={{width: "100%", height: "100%"}} />)
+            }
           </div>
           <div className={animateShowUpBlock(18, "page__block page__block-18")} ref={s18Ref}>
             <p>將「文化」納入考量後，雖然受訪者認同自己是「台灣人」的比例仍占最高（62.2%），但有趣的是，認同自己是「中國人」的比例從0.8%上升到8.2%，認為自己「兩者都是」則從20.1%變為29.4%，這似乎意味著在文化層面上，部分受訪者仍對「中國」有所認同。</p>
           </div>
           <div className={animateShowUpBlock(19, "page__block page__block-19")} ref={s19Ref}>
             <div className="page__block-19-title">
-              <p>12位台灣青少年 深談國家認同與未來</p>
+              {
+                (props.isMobile) ? 
+                (<img src={require('./img/q4-title-small.png')} alt="q3" style={{width: "100%", height: "100%"}}/>):
+                (<img src={require('./img/q4-title.png')} alt="q3" style={{width: "860px", height: "62px"}} />)
+              }
             </div>
             <div className="page__block-19-text">
               <p>高中職生的國族認同，跟你的想像一致嗎？「青春發言人」邀請12位來自台灣各地、不同家庭背景的青少年，深入訪問他們對國家、族群，以及台灣未來的想法。</p>
             </div>
             <div className="page__block-19-video">
-              
+              <YouTube
+                videoId="ebRmX-5gPfU"
+                opts={{
+                  width: '650',
+                  height: '365',
+                  playerVars: {
+                    autoplay: 1
+                  }
+                }}
+              />
             </div>
           </div>
           <div className={animateShowUpBlock(3, "page__block page__block-20")} id="s3" ref={s3Ref}>
-            <div className="page__block page__block-20-content">
-              <div className="page__block-20-content-cube">
-                <img src={require('./img/finger-2.png')} style={{width: "100%", height: "100%"}} alt="img_block20" />
-              </div>
-              <div className="page__block-20-content-text">
-                <p>你怎麼看兩岸關係？</p>
-              </div>
-            </div>
+            <img src={require('./img/q5-title.png')} alt="q5" className="page__block-20-front"/>
+            {
+              (props.isMobile) ? 
+              (<img src={require('./img/q-background-small.jpg')} style={{width: "100%", height: "110px"}} alt="q1" className="page__block-5-background"/>) :
+              (<img src={require('./img/q-background.jpg')} style={{width: "100%", height: "250px"}} alt="q1" className="page__block-5-background"/>)
+            }
           </div>
           <div className={animateShowUpBlock(21, "page__block page__block-21")} ref={s21Ref}>
-            <p>超過七成高中職生對兩岸關係的不確定性「感到焦慮」</p>
+            {
+              (props.isMobile) ? 
+              (<img src={require('./img/q6-title-small.png')} alt="q6" style={{width: "100%", height: "100%"}}/>):
+              (<img src={require('./img/q6-title.png')} alt="q6" style={{width: "840px", height: "100px"}} />)
+            }
           </div>
           {showBlock22Video()}
           <div className={animateShowUpBlock(23, "page__block page__block-23")} ref={s23Ref}>
@@ -1007,10 +1055,43 @@ const InfoInsertHead = (props) => {
           </div>
           <div className={animateShowUpBlock(24, "page__block page__block-24")} ref={s24Ref}></div>
           <div className={animateShowUpBlock(25, "page__block page__block-25")} ref={s25Ref}>
-            <p>兩岸下一步怎麼走? 超過４０％高中職生：希望維持現狀，以後走向獨立
-            </p>
+            {
+              (props.isMobile) ? 
+              (<img src={require('./img/q7-title-small.png')} alt="q6" style={{width: "100%", height: "100%"}}/>):
+              (<img src={require('./img/q7-title.png')} alt="q6" style={{width: "840px", height: "100px"}} />)
+            }
           </div>
-          <div className={animateShowUpBlock(26, "page__block page__block-26")} ref={s26Ref}></div>
+          <div className={animateShowUpBlock(26, "page__block page__block-26")} ref={s26Ref}>
+            {
+              (props.isMobile) ? 
+                (
+                  <Player
+                    playsInline
+                    src={require('./img/video/q4-small.mp4')}
+                    width={"100%"}
+                    height={"100%"}
+                    fluid={false}
+                    autoPlay={true}
+                    muted={true}
+                  >
+                    <ControlBar disableCompletely={true} />
+                  </Player>
+                ) :
+              (
+                <Player
+                  playsInline
+                  src={require('./img/video/q4.mp4')}
+                  width={"100%"}
+                  height={"100%"}
+                  fluid={false}
+                  autoPlay={true}
+                  muted={true}
+                >
+                  <ControlBar disableCompletely={true} />
+                </Player>
+              )
+            }
+          </div>
           <div className={animateShowUpBlock(27, "page__block page__block-27")} ref={s27Ref}>
             <p>關於兩岸未來的政治關係，在六個不同的選項中，有40.3%的受訪者希望：「維持現狀，以後走向獨立」。其次是「維持現狀，看情形再決定獨立或統一」(25.2％)，以及「永遠維持現狀」(14%)。
             </p>
@@ -1026,17 +1107,19 @@ const InfoInsertHead = (props) => {
             </p>
           </div>
           <div className={animateShowUpBlock(4, "page__block page__block-28")} id="s4" ref={s4Ref}>
-            <div className="page__block page__block-28-content">
-              <div className="page__block-28-content-cube">
-                <img src={require('./img/finger-3.png')} style={{width: "100%", height: "100%"}} alt="img_block28" />
-              </div>
-              <div className="page__block-28-content-text">
-                <p>對台灣的愛恨情仇？</p>
-              </div>
-            </div>
+            <img src={require('./img/q8-title.png')} alt="q5" className="page__block-28-front"/>
+            {
+              (props.isMobile) ? 
+              (<img src={require('./img/q-background-small.jpg')} style={{width: "100%", height: "110px"}} alt="q1" className="page__block-5-background"/>) :
+              (<img src={require('./img/q-background.jpg')} style={{width: "100%", height: "250px"}} alt="q1" className="page__block-5-background"/>)
+            }
           </div>
           <div className={animateShowUpBlock(29, "page__block page__block-29")} ref={s29Ref}>
-            <p>高中職生：擁有民主自由，我驕傲！</p>
+            {
+              (props.isMobile) ? 
+              (<img src={require('./img/q9-title-small.png')} alt="q9" style={{width: "100%", height: "100%"}}/>):
+              (<img src={require('./img/q9-title.png')} alt="q9" style={{width: "100%", height: "100%"}} />)
+            }
           </div>
           <div className={animateShowUpBlock(30, "page__block page__block-30")} ref={s30Ref}>
             <p>對於身為我們國家的一份子，你是否感到光榮？</p>
@@ -1057,7 +1140,11 @@ const InfoInsertHead = (props) => {
           </div>
           <div className={animateShowUpBlock(36, "page__block page__block-36")} ref={s36Ref}></div>
           <div className={animateShowUpBlock(37, "page__block page__block-37")} ref={s37Ref}>
-            <p>「擔心」是多數高中職生對台灣的感受</p>
+            {
+              (props.isMobile) ? 
+              (<img src={require('./img/q10-title-small.png')} alt="q10" style={{width: "100%", height: "100%"}}/>):
+              (<img src={require('./img/q10-title.png')} alt="q10" style={{width: "100%", height: "100%"}} />)
+            }
           </div>
           <div className={animateShowUpBlock(38, "page__block page__block-38")} ref={s38Ref}>
             <p>當我們講到台灣時，你認為以下哪個負面性形容詞適合描述你心理上感受？</p>
@@ -1085,10 +1172,42 @@ const InfoInsertHead = (props) => {
             </div>
           </div>
           <div className={animateShowUpBlock(47, "page__block page__block-46")} ref={s47Ref}>
-            <img src={getImg(7)} style={{width:"100%", height:"100%"}} alt="img_block46" />
+            {
+              (props.isMobile) ? 
+              (
+                <Player
+                  playsInline
+                  src={require('./img/video/q7-small.mp4')}
+                  width={"100%"}
+                  height={"100%"}
+                  fluid={false}
+                  autoPlay={true}
+                  muted={true}
+                >
+                  <ControlBar disableCompletely={true} />
+                </Player>
+              ) :
+              (
+                <Player
+                  playsInline
+                  src={require('./img/video/q7.mp4')}
+                  width={"100%"}
+                  height={"100%"}
+                  fluid={false}
+                  autoPlay={true}
+                  muted={true}
+                >
+                  <ControlBar disableCompletely={true} />
+                </Player>
+              )
+            }
           </div>
           <div className={animateShowUpBlock(48, "page__block page__block-47")} ref={s48Ref}>
-            <p>談到未來，高中職生選擇務實：經濟繁榮最重要</p>
+            {
+              (props.isMobile) ? 
+              (<img src={require('./img/q11-title-small.png')} alt="q11" style={{width: "100%", height: "100%"}}/>):
+              (<img src={require('./img/q11-title.png')} alt="q11" style={{width: "100%", height: "100%"}} />)
+            }
           </div>
           <div className={animateShowUpBlock(49, "page__block page__block-48")} ref={s49Ref}>
             <p>這份問卷列出9項人們認為重要的社會目標，讓受訪者選擇。其中有32.7%受訪者認為「維持經濟繁榮」最重要，佔比最高。其次則是佔14.7%的「保障言論自由」、以及佔13.3%「讓人民對政府重大決策有更多表達意見的機會」。
@@ -1101,7 +1220,11 @@ const InfoInsertHead = (props) => {
           </div>
           <div className={animateShowUpBlock(50, "page__block page__block-49")} ref={s50Ref}>
             <div className="page__block-49-title">
-              <p>政治立場不同的世代  有對話的可能嗎？</p>
+              {
+                (props.isMobile) ? 
+                (<img src={require('./img/q12-title-small.png')} alt="q11" style={{width: "100%", height: "100%"}}/>):
+                (<img src={require('./img/q12-title.png')} alt="q11" style={{width: "100%", height: "100%"}} />)
+              }
             </div>
             <div className="page__block-49-text">
               <p>看到這裡，你有更理解高中職生們怎麼看待自己的國家和土地嗎？你是否有過因為國族立場的不同，導致世代衝突的經驗呢？「青春發言人」特別邀請政治立場有所差異的青少年和成年人一起坐下來對話，嘗試找尋彼此溝通的可能。</p>
@@ -1111,14 +1234,12 @@ const InfoInsertHead = (props) => {
             </div>
           </div>
           <div className={animateShowUpBlock(5, "page__block page__block-50")} id="s5" ref={s5Ref}>
-            <div className="page__block page__block-50-content">
-              <div className="page__block-50-content-cube">
-                <img src={require('./img/finger-4.png')} style={{width: "100%", height: "100%"}} alt="img_block50" />
-              </div>
-              <div className="page__block-50-content-text">
-                <p>高中職生對政治冷感嗎？</p>
-              </div>
-            </div>
+            <img src={require('./img/q13-title.png')} alt="q13" className="page__block-50-front"/>
+            {
+              (props.isMobile) ? 
+              (<img src={require('./img/q-background-small.jpg')} style={{width: "100%", height: "110px"}} alt="q13" className="page__block-50-background"/>) :
+              (<img src={require('./img/q-background.jpg')} style={{width: "100%", height: "250px"}} alt="q13" className="page__block-50-background"/>)
+            }
           </div>
           <div className={animateShowUpBlock(51, "page__block page__block-51")} ref={s51Ref}>
             <div className="page__block-51-content">
@@ -1355,7 +1476,6 @@ const InfoInsertHead = (props) => {
   const getImg = (index) => {
     if (!props.isMobile) {
       let img = {
-        1: require('./img/q1.png'),
         5: require('./img/q5.png'),
         7: require('./img/q7.png'),
       };
@@ -1363,7 +1483,6 @@ const InfoInsertHead = (props) => {
       return (img[index]);
     } else {
       let img = {
-        1: require('./img/q1-small.png'),
         5: require('./img/q5-small.png'),
         7: require('./img/q7-small.png'),
       };
@@ -1455,12 +1574,12 @@ const InfoInsertHead = (props) => {
             className="page__block page__block-4 add_showup">看研究方法
           </div>
           <div className={animateShowUpBlock(2, "page__block page__block-5")} id="s2" ref={s2Ref}>
+            <img src={require('./img/q1-title.png')} alt="q1" className="page__block-5-front"/>
             {
               (props.isMobile) ? 
-              (<img src={require('./img/q-background-small.jpg')} style={{width: "100%", height: "250px"}} alt="q1" />) :
-              (<img src={require('./img/q-background.jpg')} style={{width: "100%", height: "120px"}} alt="q1" />)
+              (<img src={require('./img/q-background-small.jpg')} style={{width: "100%", height: "110px"}} alt="q1" className="page__block-5-background"/>) :
+              (<img src={require('./img/q-background.jpg')} style={{width: "100%", height: "250px"}} alt="q1" className="page__block-5-background"/>)
             }
-
           </div>
           {showPopup()}
           <div className={animateShowUpBlock(7, "page__block page__block-7")} ref={s7Ref}>
@@ -1522,21 +1641,6 @@ const InfoInsertHead = (props) => {
   }
 
   const handleOnWheelAndKeyDown = (e) => {
-    console.log("handleOnWheelAndKeyDown");
-    //let rect = thisDiv.current.getBoundingClientRect();
-    if (e.key === "ArrowDown") {
-      e.preventDefault();
-    }
-
-    if (e.key === "ArrowUp") {
-      e.preventDefault();
-    }
-
-    if (e.charCode === 32) {
-      e.preventDefault();
-    }
-
-    //currentBlocksInPage();
     if (hambugerOn) {
       let cur = getCurrentSection();
       if (cur !== curSec) {
@@ -1547,13 +1651,7 @@ const InfoInsertHead = (props) => {
 
   return (
     <div
-      style={fixBackground()} 
-      onWheel={handleOnWheelAndKeyDown}
-      onKeyPress={handleOnWheelAndKeyDown}
-      onKeyDown={handleOnWheelAndKeyDown}
-      onTouchMove={handleOnWheelAndKeyDown}
-      ref={thisDiv}
-      tabIndex="0"
+      style={fixBackground()}
     >
       {showContent()}
     </div>
