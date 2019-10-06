@@ -279,15 +279,7 @@ const DesktopPageContent = () => {
     if (q5Option === 0) {
       return (
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
-          <Player
-            playsInline={true}
-            src={require('./img/video/p8-1.mp4')}
-            width={"100%"}
-            height={"100%"}
-            fluid={false}
-            autoPlay={false}
-            muted={true}
-          />
+          
         </div>
       );
     } else if (q5Option === 1) {
