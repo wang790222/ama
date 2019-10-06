@@ -81,7 +81,7 @@ const Hamburger = (props) => {
   }
 
   const handleOnChange = (e) => {
-    if (!props.afterNine) {
+    if (!props.afterBlockNine) {
       props.openTheRest();
     }
 
