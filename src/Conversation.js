@@ -332,7 +332,12 @@ const Conversation = (props) => {
   const showImg = () => {
     return (
       <div className="conversation__block conversation__block-1" >
-        {putGoToBtn()}
+        <div 
+          className="conversation__block-1__goto"
+          onClick={gotoPage}
+        >
+          Skip
+        </div>
         {getImg()}
         {showPreImgA2()}
       </div>
