@@ -301,7 +301,7 @@ const DesktopPageContent = () => {
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
             playsInline={true}
-            src={require('./img/video/p8-1.mp4')}
+            src={require('./img/video/p30.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -315,7 +315,7 @@ const DesktopPageContent = () => {
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
             playsInline={true}
-            src={require('./img/video/p8-2.mp4')}
+            src={require('./img/video/p31.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -329,7 +329,7 @@ const DesktopPageContent = () => {
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
             playsInline={true}
-            src={require('./img/video/p8-3.mp4')}
+            src={require('./img/video/p32.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -343,7 +343,7 @@ const DesktopPageContent = () => {
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
             playsInline={true}
-            src={require('./img/video/p8-4.mp4')}
+            src={require('./img/video/p33.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -361,7 +361,7 @@ const DesktopPageContent = () => {
         <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
           <Player
             playsInline
-            src={require('./img/video/p8-1-1.mp4')}
+            src={require('./img/video/p20.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -376,7 +376,7 @@ const DesktopPageContent = () => {
         <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
           <Player
             playsInline
-            src={require('./img/video/p8-1-2.mp4')}
+            src={require('./img/video/p21.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -391,7 +391,7 @@ const DesktopPageContent = () => {
         <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
           <Player
             playsInline
-            src={require('./img/video/p8-1-3.mp4')}
+            src={require('./img/video/p22.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
@@ -406,7 +406,7 @@ const DesktopPageContent = () => {
         <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
           <Player
             playsInline
-            src={require('./img/video/p8-1-4.mp4')}
+            src={require('./img/video/p23.mp4')}
             width={"100%"}
             height={"100%"}
             fluid={false}
