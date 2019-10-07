@@ -1103,7 +1103,7 @@ const DesktopPageContent = () => {
           <div className="page__block-58-pic">
           </div>
           <div className="page__block-58-share">
-            <p>分享這份報告給更多人知道！</p>
+            <img src={require('./img/q9-title.png')} alt="q9" style={{width: "100%", height: "100%"}} />
           </div>
           <div className="page__block-58-btn" onClick={handleShareBtn}>
             分享
