@@ -6,7 +6,7 @@
       width: 550px;
       height: 308px;
       position: relative;
-      margin-top: 70px;
+      margin-top: 88px;
 
       @include respond(phone) {
         width: 370px;
@@ -28,9 +28,7 @@
     }
 
     &-2 {
-      width: 445px;
-      height: 34px;
-      margin-top: 50px;
+      margin-top: 50px auto 0;
 
       @include respond(phone) {
         width: 289px;
@@ -39,8 +37,10 @@
       }
 
       &__main {
-        width: 445px;
+        width: 653px;
         height: 66px;
+        margin-top: 33px;
+        
 
         @include respond(phone) {
           width: 282px;
@@ -52,7 +52,7 @@
     &-3 {
       width: 779px;
       height: 32px;
-      margin-top: 29px;
+      margin-top: 10px;
       text-align: center;
 
       @include respond(phone) {
@@ -63,7 +63,7 @@
 
       &__sub {
         color: #86663C;
-        font-size: 23px;
+        font-size: 22px;
         letter-spacing: .57px;
         
 
@@ -76,9 +76,9 @@
     }
 
     &-4 {
-      width: 250px;
-      height: 70px;
-      margin-top: 28px;
+      width: 220px;
+      height: 50px;
+      margin-top: 40px;
       text-align: center;
 
       @include respond(phone) {
@@ -89,9 +89,10 @@
       &__btn {
         border-radius: 20px;
         border: 3px solid white;
-        font-size: 28px;
-        letter-spacing: 0.93px;
-        line-height: 54px;
+        font-size: 23px;
+        letter-spacing: 3px;
+        text-indent: 9px;
+        line-height: 44px;
         text-decoration: none;
         color: #fff;
         background-color: #F06F04;
