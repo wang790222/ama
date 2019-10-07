@@ -34,7 +34,7 @@ const Home = (props) => {
         <div className="header__block header__block-2__main">
           {
             (isMobile) ? 
-            (<img src={require('./img/title-small.png')} style={{width:"100%", height:"100%"}} alt="title" />) : 
+            (<img src={require('./img/title-small.png')} style={{width:"217px", height:"84px"}} alt="title" />) : 
             (<img src={require('./img/title.png')} style={{width:"653px", height:"66px"}} alt="title" />)
           }
         </div>
