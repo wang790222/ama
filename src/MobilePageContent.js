@@ -519,12 +519,60 @@ const MobilePageContent = () => {
     }
   };
 
+  const dotCssStyle = (dotIndex, vIndex) => {
+    if (dotIndex === vIndex) {
+      return ({
+        width: "1rem",
+        height: "1rem",         
+        borderRadius: "50%",
+        backgroundColor: "#F06F04",
+        display: "inline-block",
+        marginRight: "1rem"
+      });
+    } else {
+      return ({
+        width: "1rem",
+        height: "1rem",         
+        borderRadius: "50%",
+        backgroundColor: "white",
+        display: "inline-block",
+        marginRight: "1rem"
+      });
+    }
+  };
+
+  const videoSlideLeft = () => {
+    if (videoIndex > 0 ) {
+      let temp = videoIndex - 1;
+      setVideoIndex(temp);
+    }
+  };
+
+  const videoSlideRight = () => {
+    if (videoIndex < 5 ) {
+      let temp = videoIndex + 1;
+      setVideoIndex(temp);
+    }
+  };
+
+  const videoCssStyle = (index) => { 
+
+    const color = ["grey", "red", "orange", "yellow", "green", "blue"];
+    return ({
+      width: "29rem",
+      height: "16.2rem",
+      backgroundColor: color[index],
+      margin: "0 auto",
+      display: "inline-block",
+    });
+  };
+
   const selectVideo = () => {
     if (q8910Index < 20) {
       return (
         <Player
           playsInline
-          src={require('./img/video/q8.mp4')}
+          src={require('./img/video/q11.mp4')}
           width={"100%"}
           height={"100%"}
           fluid={false}
@@ -538,7 +586,7 @@ const MobilePageContent = () => {
       return (
         <Player
           playsInline
-          src={require('./img/video/q9.mp4')}
+          src={require('./img/video/q12.mp4')}
           width={"100%"}
           height={"100%"}
           fluid={false}
@@ -552,7 +600,7 @@ const MobilePageContent = () => {
       return (
         <Player
           playsInline
-          src={require('./img/video/q10.mp4')}
+          src={require('./img/video/q13.mp4')}
           width={"100%"}
           height={"100%"}
           fluid={false}
@@ -561,6 +609,70 @@ const MobilePageContent = () => {
         >
           <ControlBar disableCompletely={true} />
         </Player>
+      );
+    }
+  };
+
+  const getYoutubeVideo = (index) => {
+    if (index === 0) {
+      return (
+        <YouTube
+          videoId="XQ6AgHZ7uIU"
+          opts={{
+            width: '290px',
+            height: '162px',
+          }}
+        />
+      );
+    } else if (index === 1) {
+      return (
+        <YouTube
+          videoId="5qs1sVhjKWI"
+          opts={{
+            width: '290px',
+            height: '162px',
+          }}
+        />
+      );
+    } else if (index === 2) {
+      return (
+        <YouTube
+          videoId="JzH9WXQAjs"
+          opts={{
+            width: '290px',
+            height: '162px',
+          }}
+        />
+      );
+    } else if (index === 3) {
+      return (
+        <YouTube
+          videoId="__tP2CFToB8"
+          opts={{
+            width: '290px',
+            height: '162px',
+          }}
+        />
+      );
+    } else if (index === 4) {
+      return (
+        <YouTube
+          videoId="dzKGkTj3S5I"
+          opts={{
+            width: '290px',
+            height: '162px',
+          }}
+        />
+      );
+    } else if (index === 5) {
+      return (
+        <YouTube
+          videoId="x4kPXXt46MU"
+          opts={{
+            width: '290px',
+            height: '162px',
+          }}
+        />
       );
     }
   };
@@ -644,12 +756,12 @@ const MobilePageContent = () => {
             <img src={require('./img/green-background-small.jpg')} style={{width: "100%", height: "110px"}} alt="q1" className="page__block-20-background"/>
           </div>
           <div className={animateShowUpBlock(21, "page__block page__block-21")} ref={s21Ref}>
-            <img src={require('./img/q6-title.png')} alt="q6" style={{width: "840px", height: "100px"}} />
+            <img src={require('./img/q6-title-small.png')} alt="q6" style={{width: "360px", height: "116px"}} />
           </div>
           <div className={animateShowUpBlock(22, "page__block page__block-22")} ref={s22Ref}>
             <Player
               playsInline={true}
-              src={require('./img/video/q3.mp4')}
+              src={require('./img/video/q3-small.mp4')}
               width={"100%"}
               height={"100%"}
               fluid={false}
@@ -664,12 +776,12 @@ const MobilePageContent = () => {
           </div>
           <div className={animateShowUpBlock(24, "page__block page__block-24")} ref={s24Ref}></div>
           <div className={animateShowUpBlock(25, "page__block page__block-25")} ref={s25Ref}>
-            <img src={require('./img/q7-title.png')} alt="q6" style={{width: "840px", height: "100px"}} />
+            <img src={require('./img/q7-title-small.png')} alt="q6" style={{width: "100%", height: "100%"}} />
           </div>
           <div className={animateShowUpBlock(26, "page__block page__block-26")} ref={s26Ref}>
             <Player
               playsInline
-              src={require('./img/video/q4.mp4')}
+              src={require('./img/video/q4-small.mp4')}
               width={"100%"}
               height={"100%"}
               fluid={false}
@@ -698,37 +810,37 @@ const MobilePageContent = () => {
             <img src={require('./img/green-background.jpg')} style={{width: "100%", height: "250px"}} alt="q1" className="page__block-5-background"/>
           </div>
           <div className={animateShowUpBlock(29, "page__block page__block-29")} ref={s29Ref}>
-            <img src={require('./img/q9-title.png')} alt="q9" style={{width: "100%", height: "100%"}} />
+            <img src={require('./img/q9-title-small.png')} alt="q9" style={{width: "100%", height: "100%"}} />
           </div>
           <div className={animateShowUpBlock(30, "page__block page__block-30")} ref={s30Ref}>
             <p>對於身為我們國家的一份子，你是否感到光榮？</p>
           </div>
-          <div style={{height: "250px"}}>
-            <div className={animateShowUpBlock(32, "page__block page__block-32")} ref={s32Ref}>
-              <img src={require('./img/q5.png')} style={{width:"100%", height:"100%"}} alt="img_block32" />
+          <div className={animateShowUpBlock(33, "page__block page__block-33__two_col")} ref={s33Ref}>
+            <div className="page__block-33__two_col-left">
+              <div className="page__block page__block-32">
+                <img src={require('./img/q5-small.png')} style={{width:"100%", height:"100%"}} alt="img_block33" />
+              </div>
             </div>
-            <div className={animateShowUpBlock(33, "page__block page__block-33")} ref={s33Ref}>
-              <div className="row-4">
-                <div 
-                  className="col-1-of-4 page__block-33-btn page__block-33-btn-1"
-                  onClick={() => onClickQ5Option(0)}>
-                  一點也不光榮
-                </div>
-                <div 
-                  className="col-1-of-4 page__block-33-btn page__block-33-btn-2"
-                  onClick={() => onClickQ5Option(1)}>
-                  很少感到光榮
-                </div>
-                <div 
-                  className="col-1-of-4 page__block-33-btn page__block-33-btn-2"
-                  onClick={() => onClickQ5Option(2)}>
-                  有時感到光榮
-                </div>
-                <div 
-                  className="col-1-of-4 page__block-33-btn page__block-33-btn-4"
-                  onClick={() => onClickQ5Option(3)}>
-                  時常感到光榮
-                </div>
+            <div className="page__block-33__two_col-right">
+              <div 
+                className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-1"
+                onClick={() => onClickQ5Option(0)}>
+                一點也不光榮
+              </div>
+              <div 
+                className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-2"
+                onClick={() => onClickQ5Option(1)}>
+                很少感到光榮
+              </div>
+              <div 
+                className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-3"
+                onClick={() => onClickQ5Option(2)}>
+                有時感到光榮
+              </div>
+              <div 
+                className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-4"
+                onClick={() => onClickQ5Option(3)}>
+                時常感到光榮
               </div>
             </div>
           </div>
@@ -747,44 +859,59 @@ const MobilePageContent = () => {
           </div>
           <div className={animateShowUpBlock(36, "page__block page__block-36")} ref={s36Ref}></div>
           <div className={animateShowUpBlock(37, "page__block page__block-37")} ref={s37Ref}>
-            <img src={require('./img/q10-title.png')} alt="q10" style={{width: "100%", height: "100%"}} />
+            <img src={require('./img/q10-title-small.png')} alt="q10" style={{width: "100%", height: "100%"}} />
           </div>
           <div className={animateShowUpBlock(38, "page__block page__block-38")} ref={s38Ref}>
             <p>當我們講到台灣時，你認為以下哪個負面性形容詞適合描述你心理上感受？</p>
           </div>
-          <div>
-            <div className={animateShowUpBlock(40, "page__block page__block-40")} ref={s40Ref}>
-              <div className="row-4-2">
-                <div className="col-1-of-4 page__block-40-imgbtn">
-                  <img src={require('./img/q6-1.png')} alt="img_block40" />
-                  <div className="col-1-of-4 page__block-41-btn" onClick={() => onClickQ6Option(0)}>
+          <div className={animateShowUpBlock(40, "page__block page__block-41-1")} ref={s40Ref}>
+            <div className="page__block-41-1-row-2">
+              <div className="page__block-41-1-row-2-left">
+                <div className="page__block-41-1-img__btn">
+                  <div className="page__block-41-1-img__btn-img">
+                    <img src={require('./img/q6-1.png')} style={{width:"100%", height:"100%"}} alt="img_block41"/>
+                  </div>
+                  <div className="page__block-41-1-img__btn-btn">
                     沮喪的
                   </div>
                 </div>
-                <div className="col-1-of-4 page__block-40-imgbtn">
-                  <img src={require('./img/q6-2.png')} alt="img_block40" />
-                  <div className="page__block-41-btn" onClick={() => onClickQ6Option(1)}>
-                  難過的
-                  </div>  
+              </div>
+              <div className="page__block-41-1-row-2-right">
+                <div className="page__block-41-1-img__btn">
+                  <div className="page__block-41-1-img__btn-img">
+                    <img src={require('./img/q6-2.png')} style={{width:"100%", height:"100%"}} alt="img_block41" />
+                  </div>
+                  <div className="page__block-41-1-img__btn-btn">
+                    難過的
+                  </div>
                 </div>
-                <div className="col-1-of-4 page__block-40-imgbtn">
-                  <img src={require('./img/q6-3.png')} alt="img_block40" />
-                  <div className="col-1-of-4 page__block-41-btn" onClick={() => onClickQ6Option(2)}>
+              </div>
+            </div>
+            <div className="page__block-41-1-row-2">
+              <div className="page__block-41-1-row-2-left">
+                <div className="page__block-41-1-img__btn">
+                  <div className="page__block-41-1-img__btn-img">
+                    <img src={require('./img/q6-3.png')} style={{width:"100%", height:"100%"}} alt="img_block41" />
+                  </div>
+                  <div className="page__block-41-1-img__btn-btn">
                     憤怒的
                   </div>
                 </div>
-                <div className="col-1-of-4 page__block-40-imgbtn">
-                  <img src={require('./img/q6-4.png')} alt="img_block40" />
-                  <div className="col-1-of-4 page__block-41-btn" onClick={() => onClickQ6Option(3)}>
+              </div>
+              <div className="page__block-41-1-row-2-right">
+                <div className="page__block-41-1-img__btn">
+                  <div className="page__block-41-1-img__btn-img">
+                    <img src={require('./img/q6-4.png')} style={{width:"100%", height:"100%"}} alt="img_block41" />
+                  </div>
+                  <div className="page__block-41-1-img__btn-btn">
                     擔心的
                   </div>
                 </div>
               </div>
             </div>
-            <div className={animateShowUpBlock(42, "page__block page__block-41-2")} ref={s42Ref}>
+            <div className="page__block page__block-41-2">
               &#9650; 點擊按鈕試試看！
             </div>
-            {quesion6Video()}
           </div>
           <div className={animateShowUpBlock(44, "page__block page__block-43")} ref={s44Ref}>
             <p>問完青少年是否會對自己的國家感到光榮後，問卷中進一步提問：「當我們講到台灣時，你認為以下哪個負面性形容詞適合描述你心理上感受？」。負面形容詞的選項包括：「沮喪的」、「難過的」、「憤怒的」、「擔心的」、以及「沒有」。
@@ -810,7 +937,7 @@ const MobilePageContent = () => {
           <div className={animateShowUpBlock(47, "page__block page__block-46")} ref={s47Ref}>
             <Player
               playsInline
-              src={require('./img/video/q7.mp4')}
+              src={require('./img/video/q7-small.mp4')}
               width={"100%"}
               height={"100%"}
               fluid={false}
@@ -821,7 +948,7 @@ const MobilePageContent = () => {
             </Player>
           </div>
           <div className={animateShowUpBlock(48, "page__block page__block-47")} ref={s48Ref}>
-            <img src={require('./img/q11-title.png')} alt="q11" style={{width: "100%", height: "100%"}} />
+            <img src={require('./img/q11-title-small.png')} alt="q11" style={{width: "100%", height: "100%"}} />
           </div>
           
           <ReactScrollWheelHandler
@@ -839,7 +966,7 @@ const MobilePageContent = () => {
             </div>
             <div className={animateShowUpBlock(50, "page__block page__block-49")} ref={s50Ref}>
               <div className="page__block-49-title">
-                <img src={require('./img/q12-title.png')} alt="q11" style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/q12-title-small.png')} alt="q11" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-49-text">
                 <p>看到這裡，你有更理解高中職生們怎麼看待自己的國家和土地嗎？你是否有過因為國族立場的不同，導致世代衝突的經驗呢？「青春發言人」特別邀請政治立場有所差異的青少年和成年人一起坐下來對話，嘗試找尋彼此溝通的可能。</p>
@@ -880,7 +1007,7 @@ const MobilePageContent = () => {
       (afterBlock51 || navIndex === 6) ?
       <div>
         <div className={animateShowUpBlock(52, "page__block page__block-52")} ref={s52Ref}>
-          <img src={require('./img/q14-title.png')} alt="q14" style={{width: "100%", height: "100%"}} />
+          <img src={require('./img/q14-title-small.png')} alt="q14" style={{width: "100%", height: "100%"}} />
         </div>
         <div className={animateShowUpBlock(53, "page__block page__block-53")} ref={s53Ref}>
           <p>從以上三個問句的調查結果觀察，高中職生們其實高度認同民主參與，同時也捍衛自己說話的權利。不但高達95.6%的受訪者不同意「政府自然會為人民解決困難，我們人民不要發表太多的意見。」這句話，也有92%的受訪高中職生認為「學生仍需花時間關心政治」。可見對他們而言，現階段除了讀書以外，公民參與也是一件很重要的事。
@@ -898,74 +1025,41 @@ const MobilePageContent = () => {
         </div>
         <div className={animateShowUpBlock(54, "page__block page__block-54")} ref={s54Ref}>
           <div className="page__block-54-title">
-            <img src={require('./img/q15-title.png')} alt="q15" style={{width: "503px", height: "60px"}} />
+            <img src={require('./img/q16-title-small.png')} alt="q15" style={{width: "100%", height: "100%"}} />
           </div>
           <div className="page__block-54-text">
             <p>因為製作「嘿！你是哪裡人？─高中職生國族認同」的專題，「青春發言人」接觸許多來自不同家庭背景的台灣青少年，他們每個人對於自己的身分認同，或者台灣的族群、文化和未來，都各自有非常精采的思考。製作單位精選出幾位青少年的生命故事和想法，邀請你一起聽聽看台灣年輕世代的心聲。
             </p>
           </div>
-          <div className="page__block-54-video-grid">
-            <div className="page__block-54-video-grid-img">
-              <YouTube
-                videoId="XQ6AgHZ7uIU"
-                opts={{
-                  width: '350px',
-                  height: '196px',
-                }}
-              />
+          <div className="page__block-54-video-slides">
+            <div className="page__block-54-video-slides-window">
+              <div 
+                className={addOpacityToArrowLeft()}
+                onClick={videoSlideLeft}
+              >
+              &nbsp;
+              </div>
+              {getYoutubeVideo(videoIndex)}
+              <div 
+                className={addOpacityToArrowRight()}
+                onClick={videoSlideRight}
+              >
+              &nbsp;
+              </div>
             </div>
-            <div className="page__block-54-video-grid-img">
-              <YouTube
-                videoId="5qs1sVhjKWI"
-                opts={{
-                  width: '350px',
-                  height: '196px',
-                }}
-              />
-            </div>
-            <div className="page__block-54-video-grid-img">
-              <YouTube
-                videoId="-JzH9WXQAjs"
-                opts={{
-                  width: '350px',
-                  height: '196px',
-                }}
-              />
-            </div>
-          </div>
-          <div className="page__block-54-video-grid page__block-54-video-grid-row-2">
-            <div className="page__block-54-video-grid-img">
-              <YouTube
-                videoId="__tP2CFToB8"
-                opts={{
-                  width: '350px',
-                  height: '196px',
-                }}
-              />
-            </div>
-            <div className="page__block-54-video-grid-img">
-              <YouTube
-                videoId="dzKGkTj3S5I"
-                opts={{
-                  width: '350px',
-                  height: '196px',
-                }}
-              />
-            </div>
-            <div className="page__block-54-video-grid-img">
-              <YouTube
-                videoId="x4kPXXt46MU"
-                opts={{
-                  width: '350px',
-                  height: '196px',
-                }}
-              />
+            <div className="page__block-54-video-slides-dot-group">
+              <div style={dotCssStyle(0, videoIndex)}>&nbsp;</div>
+              <div style={dotCssStyle(1, videoIndex)}>&nbsp;</div>
+              <div style={dotCssStyle(2, videoIndex)}>&nbsp;</div>
+              <div style={dotCssStyle(3, videoIndex)}>&nbsp;</div>
+              <div style={dotCssStyle(4, videoIndex)}>&nbsp;</div>
+              <div style={dotCssStyle(5, videoIndex)}>&nbsp;</div>
             </div>
           </div>
         </div>
         <div className={animateShowUpBlock(6, "page__block page__block-55")} id="s6" ref={s6Ref}>
           <div className="page__block-55-title">
-            <img src={require('./img/q16-title.png')} alt="q16" style={{width: "860px", height: "62px"}} />
+            <img src={require('./img/q17-title-small.png')} alt="q16" style={{width: "100%", height: "100%"}} />
           </div>
           <div className="page__block-55-text">
             <p>我們邀請了五位政治界、媒體界的朋友，和大家分享他們看過這份青少年的國族調查後，有什麼觀察和思考！
@@ -978,8 +1072,8 @@ const MobilePageContent = () => {
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
-                  <span className="page__block-55-grid-person-right-span-1">李志德</span>
-                  <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
+                  <span className="page__block-55-grid-person-right-span-1">邱威傑（呱吉）</span>
+                  <span className="page__block-55-grid-person-right-span-2"> / 台北市議員</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
                   <p>「若將這份報告視作目前青少年的準確圖像，對我來說，台灣正在走向正確的道路。」</p>
@@ -998,8 +1092,8 @@ const MobilePageContent = () => {
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
-                  <span className="page__block-55-grid-person-right-span-1">李志德</span>
-                  <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
+                  <span className="page__block-55-grid-person-right-span-1">徐巧芯</span>
+                  <span className="page__block-55-grid-person-right-span-2"> / 台北市議員</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
                   <p>「天然獨？天然台？中華民國派需要更有自信！這場可能被紅統、急獨派夾殺的詮釋權保衛戰，才是「中華民國派」真正的對手，而不是台灣的年輕人們。」</p>
@@ -1039,8 +1133,8 @@ const MobilePageContent = () => {
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
-                  <span className="page__block-55-grid-person-right-span-1">李志德</span>
-                  <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
+                  <span className="page__block-55-grid-person-right-span-1">管中祥</span>
+                  <span className="page__block-55-grid-person-right-span-2"> / 中正大學傳播學系教授</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
                   <p>「即便前世代不斷強調，「台灣、中國同文同種、血脈相連」等情感訴求，新世代認為自己是台灣人的比例，已與過去有明顯差異。」</p>
@@ -1060,8 +1154,8 @@ const MobilePageContent = () => {
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
-                  <span className="page__block-55-grid-person-right-span-1">李志德</span>
-                  <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
+                  <span className="page__block-55-grid-person-right-span-1">于立平</span>
+                  <span className="page__block-55-grid-person-right-span-2"> / 公視《我們的島》製作人</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
                   <p>「高中職生認為未來10年重要的社會目標中，「環境維護」敬陪末座，由此可粗略觀少年的價值觀，以及未來台灣將會面臨選擇衝突的問題。」</p>
@@ -1103,7 +1197,7 @@ const MobilePageContent = () => {
           <div className="page__block-58-pic">
           </div>
           <div className="page__block-58-share">
-            <img src={require('./img/q17-title.png')} alt="q17" style={{width: "100%", height: "100%"}} />
+            <img src={require('./img/q18-title-small.png')} alt="q17" style={{width: "100%", height: "100%"}} />
           </div>
           <div className="page__block-58-btn" onClick={handleShareBtn}>
             分享

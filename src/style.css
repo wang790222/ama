@@ -911,7 +911,7 @@ html {
       @media (max-width: 1100px) {
         .page__block-20-front {
           height: 80px;
-          top: 40px; } }
+          top: 15px; } }
     .page__block-20-background {
       position: absolute;
       top: 0;
@@ -926,7 +926,8 @@ html {
     @media (max-width: 1100px) {
       .page__block-21 {
         margin-top: 40px;
-        width: 324px; } }
+        width: 360px;
+        height: 116px; } }
   .page__block-22 {
     width: 860px;
     height: 520px;
@@ -968,7 +969,8 @@ html {
     @media (max-width: 1100px) {
       .page__block-25 {
         margin-top: 40px;
-        width: 324px; } }
+        width: 324px;
+        height: 116px; } }
   .page__block-26 {
     width: 860px;
     height: 500px;
@@ -978,7 +980,7 @@ html {
       .page__block-26 {
         width: 360px;
         height: 580px;
-        margin-top: 40px; } }
+        margin-top: 80px; } }
   .page__block-27 {
     width: 700px;
     text-align: justify;
@@ -1016,7 +1018,7 @@ html {
       @media (max-width: 1100px) {
         .page__block-28-front {
           height: 80px;
-          top: 40px; } }
+          top: 15px; } }
     .page__block-28-background {
       position: absolute;
       top: 0;
@@ -1031,8 +1033,8 @@ html {
     margin-top: 60px; }
     @media (max-width: 1100px) {
       .page__block-29 {
-        width: 263px;
-        text-align: left;
+        width: 360px;
+        height: 80px;
         margin-top: 40px; } }
   .page__block-30 {
     width: 525px;
@@ -1190,8 +1192,8 @@ html {
     margin-top: 60px; }
     @media (max-width: 1100px) {
       .page__block-37 {
-        width: 263px;
-        text-align: left;
+        width: 360px;
+        height: 80px;
         margin-top: 40px; } }
   .page__block-38 {
     width: 825px;
@@ -1285,6 +1287,7 @@ html {
     text-align: center; }
     @media (max-width: 1100px) {
       .page__block-41-2 {
+        opacity: 1;
         margin-top: 20px;
         padding-bottom: 80px; } }
   .page__block-42 {
@@ -1379,8 +1382,8 @@ html {
     margin-top: 60px; }
     @media (max-width: 1100px) {
       .page__block-47 {
-        width: 263px;
-        text-align: left;
+        width: 360px;
+        height: 80px;
         margin-top: 40px; } }
   .page__block-48 {
     width: 700px;
@@ -1412,8 +1415,8 @@ html {
       margin: 60px auto 0; }
       @media (max-width: 1100px) {
         .page__block-49-title {
-          width: 263px;
-          text-align: left;
+          width: 360px;
+          height: 80px;
           margin-top: 40px; } }
     .page__block-49-text {
       width: 700px;
@@ -1461,7 +1464,7 @@ html {
       @media (max-width: 1100px) {
         .page__block-50-front {
           height: 80px;
-          top: 40px; } }
+          top: 15px; } }
     .page__block-50-background {
       position: absolute;
       top: 0;
@@ -1538,8 +1541,8 @@ html {
     margin-top: 40px; }
     @media (max-width: 1100px) {
       .page__block-52 {
-        width: 263px;
-        text-align: left;
+        width: 360px;
+        height: 80px;
         margin-top: 40px; } }
   .page__block-53 {
     width: 700px;
@@ -1568,8 +1571,8 @@ html {
       margin: 60px auto 0; }
       @media (max-width: 1100px) {
         .page__block-54-title {
-          width: 263px;
-          text-align: left;
+          width: 360px;
+          height: 80px;
           margin-top: 40px; } }
     .page__block-54-text {
       width: 700px;
@@ -1635,15 +1638,15 @@ html {
     color: #5E3F15; }
     @media (max-width: 1100px) {
       .page__block-55 {
-        height: 1182px; } }
+        height: 1400px; } }
     .page__block-55-title {
       width: 860px;
       height: 62px;
       margin: 60px auto 0; }
       @media (max-width: 1100px) {
         .page__block-55-title {
-          padding-top: 80px;
-          width: 263px; } }
+          width: 360px;
+          height: 48px; } }
       .page__block-55-title p {
         color: #5E3F15;
         font-size: 30px;
@@ -1751,7 +1754,8 @@ html {
     color: white; }
     @media (max-width: 1100px) {
       .page__block-57 {
-        height: 880px; } }
+        height: 880px;
+        margin-top: 100px; } }
     .page__block-57-content {
       width: 810px;
       height: 150px;
@@ -1866,8 +1870,8 @@ html {
       margin: 60px auto 0; }
       @media (max-width: 1100px) {
         .page__block-58-share {
-          width: 263px;
-          text-align: left;
+          width: 360px;
+          height: 48px;
           margin-top: 40px; } }
     .page__block-58-btn {
       cursor: pointer;

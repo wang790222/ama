@@ -529,7 +529,7 @@
 
         @include respond(phone) {
           height: 80px;
-          top: 40px;
+          top: 15px;
         }
       }
 
@@ -550,7 +550,8 @@
 
       @include respond(phone) {
         margin-top: 40px;
-        width: 324px;
+        width: 360px;
+        height: 116px;
       }
     }
 
@@ -608,6 +609,7 @@
       @include respond(phone) {
         margin-top: 40px;
         width: 324px;
+        height: 116px;
       }
     }
 
@@ -620,7 +622,7 @@
       @include respond(phone) {
         width: 360px;
         height: 580px;
-        margin-top: 40px;
+        margin-top: 80px;
       }
     }
 
@@ -669,7 +671,7 @@
 
         @include respond(phone) {
           height: 80px;
-          top: 40px;
+          top: 15px;
         }
       }
 
@@ -690,8 +692,8 @@
       margin-top: 60px;;
 
       @include respond(phone) {
-        width: 263px;
-        text-align: left;
+        width: 360px;
+        height: 80px;
         margin-top: 40px;
       }
     }
@@ -923,8 +925,8 @@
       margin-top: 60px;;
 
       @include respond(phone) {
-        width: 263px;
-        text-align: left;
+        width: 360px;
+        height: 80px;
         margin-top: 40px;
       }
     }
@@ -1058,8 +1060,8 @@
       margin-top: 15px;
       text-align: center;
 
-
       @include respond(phone) {
+        opacity: 1;
         margin-top: 20px;
         padding-bottom: 80px;
       }
@@ -1184,8 +1186,8 @@
       margin-top: 60px;
 
       @include respond(phone) {
-        width: 263px;
-        text-align: left;
+        width: 360px;
+        height: 80px;
         margin-top: 40px;
       }
     }
@@ -1228,8 +1230,8 @@
         margin: 60px auto 0;
 
         @include respond(phone) {
-          width: 263px;
-          text-align: left;
+          width: 360px;
+          height: 80px;
           margin-top: 40px;
         }
       } 
@@ -1292,7 +1294,7 @@
 
         @include respond(phone) {
           height: 80px;
-          top: 40px;
+          top: 15px;
         }
       }
 
@@ -1393,8 +1395,8 @@
       margin-top: 40px;
 
       @include respond(phone) {
-        width: 263px;
-        text-align: left;
+        width: 360px;
+        height: 80px;
         margin-top: 40px;
       }
     }
@@ -1434,8 +1436,8 @@
 
 
         @include respond(phone) {
-          width: 263px;
-          text-align: left;
+          width: 360px;
+          height: 80px;
           margin-top: 40px;
         }
       } 
@@ -1529,7 +1531,7 @@
       color: #5E3F15;
 
       @include respond(phone) {
-        height: 1182px;
+        height: 1400px;
       }
 
       &-title {
@@ -1538,8 +1540,8 @@
         margin: 60px auto 0;
 
         @include respond(phone) {
-          padding-top: 80px;
-          width: 263px;
+          width: 360px;
+          height: 48px;
         }
 
         & p {
@@ -1691,6 +1693,7 @@
 
       @include respond(phone) {
         height: 880px;
+        margin-top: 100px;
       }
 
       &-content {
@@ -1845,8 +1848,8 @@
         margin: 60px auto 0;
 
         @include respond(phone) {
-          width: 263px;
-          text-align: left;
+          width: 360px;
+          height: 48px;
           margin-top: 40px;
         }
       }
