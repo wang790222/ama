@@ -86,8 +86,8 @@ const DesktopPageContent = () => {
   const [readAllIndex, setReadAllIndex] = useState(false);
   const [curSec, setCurSec] = useState(0);
   const [hambugerOn, setHambugerOn] = useState(false);
-  const [q5Option, setQ5Option] = useState(0);
-  const [q6Option, setQ6Option] = useState(0);
+  const [q5Option, setQ5Option] = useState(-1);
+  const [q6Option, setQ6Option] = useState(-1);
   const [afterBlockNine, setAfterBlockNine] = useState(false);
   const [afterBlock51, setAfterBlock51] = useState(false);
   const [isBottom, setIsBottom] = useState(false);
@@ -257,10 +257,12 @@ const DesktopPageContent = () => {
   };
 
   const onClickQ5Option = (index) => {
+    console.log(index);
     setQ5Option(index)
   };
 
   const onClickQ6Option = (index) => {
+    console.log(index);
     setQ6Option(index)
   };
 
@@ -296,7 +298,7 @@ const DesktopPageContent = () => {
   };
 
   const question5Video = () => {
-    if (q5Option === 0) {
+    if (q5Option === -1) {
       return (
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
           <Player
@@ -310,6 +312,20 @@ const DesktopPageContent = () => {
           />
         </div>
       );
+    } else if (q5Option === 0) {
+      return (
+        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
+          <Player
+            playsInline={true}
+            src={require('./img/video/p30.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            autoPlay={true}
+            muted={true}
+          />
+        </div>
+      );
     } else if (q5Option === 1) {
       return (
         <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
@@ -319,7 +335,7 @@ const DesktopPageContent = () => {
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={false}
+            autoPlay={true}
             muted={true}
           />
         </div>
@@ -333,7 +349,7 @@ const DesktopPageContent = () => {
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={false}
+            autoPlay={true}
             muted={true}
           />
         </div>
@@ -347,7 +363,7 @@ const DesktopPageContent = () => {
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={false}
+            autoPlay={true}
             muted={true}
           />
         </div>
@@ -366,6 +382,23 @@ const DesktopPageContent = () => {
             height={"100%"}
             fluid={false}
             muted={true}
+            autoPlay={false}
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
+        </div>
+      );
+    } else if (q6Option === 0) {
+      return (
+        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+          <Player
+            playsInline
+            src={require('./img/video/p20.mp4')}
+            width={"100%"}
+            height={"100%"}
+            fluid={false}
+            muted={true}
+            autoPlay={true}
           >
             <ControlBar disableCompletely={true} />
           </Player>
@@ -381,6 +414,7 @@ const DesktopPageContent = () => {
             height={"100%"}
             fluid={false}
             muted={true}
+            autoPlay={true}
           >
             <ControlBar disableCompletely={true} />
           </Player>
@@ -396,6 +430,7 @@ const DesktopPageContent = () => {
             height={"100%"}
             fluid={false}
             muted={true}
+            autoPlay={true}
           >
             <ControlBar disableCompletely={true} />
           </Player>
@@ -411,6 +446,7 @@ const DesktopPageContent = () => {
             height={"100%"}
             fluid={false}
             muted={true}
+            autoPlay={true}
           >
             <ControlBar disableCompletely={true} />
           </Player>
@@ -1101,6 +1137,7 @@ const DesktopPageContent = () => {
         </div>
         <div className={animateShowUpBlock(58, "page__block page__block-58")} ref={s58Ref}>
           <div className="page__block-58-pic">
+            <img src={require('./img/share.png')} alt="share" style={{width: "100%", height: "100%"}} />
           </div>
           <div className="page__block-58-share">
             <img src={require('./img/q17-title.png')} alt="q17" style={{width: "100%", height: "100%"}} />

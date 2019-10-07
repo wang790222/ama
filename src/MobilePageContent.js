@@ -1039,7 +1039,9 @@ const MobilePageContent = () => {
               >
               &nbsp;
               </div>
+              <div style={{display: "inline-block"}}>
               {getYoutubeVideo(videoIndex)}
+              </div>
               <div 
                 className={addOpacityToArrowRight()}
                 onClick={videoSlideRight}
@@ -1195,6 +1197,7 @@ const MobilePageContent = () => {
         </div>
         <div className={animateShowUpBlock(58, "page__block page__block-58")} ref={s58Ref}>
           <div className="page__block-58-pic">
+            <img src={require('./img/share.png')} alt="share" style={{width: "100%", height: "100%"}} />
           </div>
           <div className="page__block-58-share">
             <img src={require('./img/q18-title-small.png')} alt="q17" style={{width: "100%", height: "100%"}} />
