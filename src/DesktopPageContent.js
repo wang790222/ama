@@ -733,7 +733,7 @@ const DesktopPageContent = () => {
             </div>
           </div>
           <div className={animateShowUpBlock(31, "page__block page__block-31")} ref={s31Ref}>
-            <span><ion-icon name="arrow-dropup"></ion-icon></span><span>點擊按鈕試試看！</span>
+            &#9650; 點擊按鈕試試看！
           </div>
           {question5Video()}
           <div className={animateShowUpBlock(35, "page__block page__block-35")} ref={s35Ref}>
@@ -782,7 +782,7 @@ const DesktopPageContent = () => {
               </div>
             </div>
             <div className={animateShowUpBlock(42, "page__block page__block-41-2")} ref={s42Ref}>
-              <span><ion-icon name="arrow-dropup"></ion-icon></span><span>點擊按鈕試試看！</span>
+              &#9650; 點擊按鈕試試看！
             </div>
             {quesion6Video()}
           </div>
@@ -1103,7 +1103,7 @@ const DesktopPageContent = () => {
           <div className="page__block-58-pic">
           </div>
           <div className="page__block-58-share">
-            <img src={require('./img/q9-title.png')} alt="q9" style={{width: "100%", height: "100%"}} />
+            <img src={require('./img/q17-title.png')} alt="q17" style={{width: "100%", height: "100%"}} />
           </div>
           <div className="page__block-58-btn" onClick={handleShareBtn}>
             分享
