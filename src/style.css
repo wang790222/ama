@@ -324,6 +324,9 @@ html {
             opacity: 1 !important;
             -webkit-animation: none;
             animation: none; }
+          @media (max-width: 1100px) {
+            .conversation__block-2__text-1 {
+              letter-spacing: 0; } }
         .conversation__block-2__text-2 {
           opacity: 0;
           letter-spacing: 1px;
@@ -339,6 +342,9 @@ html {
             opacity: 1 !important;
             -webkit-animation: none;
             animation: none; }
+          @media (max-width: 1100px) {
+            .conversation__block-2__text-2 {
+              letter-spacing: 0; } }
         .conversation__block-2__text-3 {
           opacity: 0;
           letter-spacing: 1px;
@@ -349,6 +355,9 @@ html {
           animation: type 1s steps(40, end);
           animation-delay: 2.1s;
           animation-fill-mode: forwards; }
+          @media (max-width: 1100px) {
+            .conversation__block-2__text-3 {
+              letter-spacing: 0; } }
         .conversation__block-2__text-4 {
           opacity: 0;
           letter-spacing: 1px;
@@ -359,6 +368,9 @@ html {
           animation: type 0.8s steps(40, end);
           animation-delay: 3.2s;
           animation-fill-mode: forwards; }
+          @media (max-width: 1100px) {
+            .conversation__block-2__text-4 {
+              letter-spacing: 0; } }
       .conversation__block-2__btn {
         font-size: 72px;
         color: #F06F04;
@@ -500,9 +512,8 @@ html {
     padding-top: 100px; }
     @media (max-width: 1100px) {
       .page__block-1 {
-        width: 360px;
-        height: 196px;
-        padding-top: 80px; } }
+        width: 340px;
+        height: 176px; } }
   .page__block-2 {
     width: 750px;
     height: 500px;
@@ -510,7 +521,8 @@ html {
     margin-top: 60px; }
     @media (max-width: 1100px) {
       .page__block-2 {
-        width: 360px; } }
+        width: 360px;
+        height: 250px; } }
   .page__block-3 {
     width: 700px;
     font-size: 18px;
@@ -561,7 +573,7 @@ html {
       @media (max-width: 1100px) {
         .page__block-5-front {
           height: 80px;
-          top: 40px; } }
+          top: 15px; } }
     .page__block-5-background {
       position: absolute;
       top: 0;
@@ -692,13 +704,13 @@ html {
       .page__block-8 {
         margin-top: 40px;
         width: 360px;
-        height: 400px; } }
+        height: 280px; } }
   .page__block-9 {
     margin-top: 25px;
     height: 160px; }
     @media (max-width: 1100px) {
       .page__block-9 {
-        margin-top: 0; } }
+        height: 450px; } }
     .page__block-9-btn {
       width: 200px;
       height: 50px;
@@ -748,7 +760,8 @@ html {
     margin-top: 60px; }
     @media (max-width: 1100px) {
       .page__block-12 {
-        width: 263px;
+        width: 360px;
+        height: 80px;
         text-align: left;
         margin-top: 40px; } }
   .page__block-13 {
@@ -825,13 +838,14 @@ html {
       .page__block-16 {
         margin-top: 65px;
         width: 360px;
-        height: 400px; } }
+        height: 200px; } }
   .page__block-17 {
     width: 800px;
     margin-top: 12px; }
     @media (max-width: 1100px) {
       .page__block-17 {
-        width: 298px;
+        width: 360px;
+        height: 116px;
         margin-top: 40px; } }
   .page__block-18 {
     width: 700px;
@@ -855,8 +869,8 @@ html {
       margin: 60px auto 0; }
       @media (max-width: 1100px) {
         .page__block-19-title {
-          padding-top: 80px;
-          width: 263px; } }
+          width: 360px;
+          height: 80px; } }
     .page__block-19-text {
       width: 700px;
       text-align: left;
@@ -1387,7 +1401,7 @@ html {
     width: 100vw;
     height: 793px;
     margin-top: 60px;
-    background-color: #F2F2F2; }
+    background-color: #EAE7CE; }
     @media (max-width: 1100px) {
       .page__block-49 {
         margin-top: 60px; } }
@@ -1543,7 +1557,7 @@ html {
     width: 100vw;
     height: 928px;
     margin-top: 60px;
-    background-color: #9DDDE3; }
+    background-color: #EAE7CE; }
     @media (max-width: 1100px) {
       .page__block-54 {
         height: 776px; } }

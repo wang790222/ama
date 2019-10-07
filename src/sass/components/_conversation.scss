@@ -128,7 +128,7 @@
           }
 
           @include respond(phone) {
-            
+            letter-spacing: 0;
           }
         }
     
@@ -149,6 +149,10 @@
             -webkit-animation: none;
             animation: none;
           }
+
+          @include respond(phone) {
+            letter-spacing: 0;
+          }
         }
     
         &-3 {
@@ -161,6 +165,10 @@
           animation: type 1s steps(40, end);
           animation-delay: 2.1s;
           animation-fill-mode: forwards;
+
+          @include respond(phone) {
+            letter-spacing: 0;
+          }
         }
     
         &-4 {
@@ -173,6 +181,10 @@
           animation: type .8s steps(40, end);
           animation-delay: 3.2s;
           animation-fill-mode: forwards;
+
+          @include respond(phone) {
+            letter-spacing: 0;
+          }
         }
       }
 

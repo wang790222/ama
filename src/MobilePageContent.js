@@ -585,7 +585,7 @@ const MobilePageContent = () => {
             </Player>
           </div>
           <div className={animateShowUpBlock(12, "page__block page__block-12")} ref={s12Ref}>
-            <img src={require('./img/q2-title.png')} alt="q2" style={{width: "100%", height: "100%"}} />
+            <img src={require('./img/q2-title-small.png')} alt="q2" style={{width: "100%", height: "100%"}} />
           </div>
           <div className={animateShowUpBlock(13, "page__block page__block-13")} ref={s13Ref}>
             <p>在這份問卷中，有78.7％的受訪者認為自己是「台灣人」，遠高於「中國人」(0.8%)與「兩者皆是」(20.1%)的選項，可見「台灣」這個名詞已成為大多高中生對「我是哪裡人」的直覺反應。此外，在美國杜克大學於2019年發布的《台灣國家安全調查》中，同樣一個問題，20歲以上的成年人認同自己是「台灣人」、「中國人」、或「兩者皆是」的比例依序是：50.6%、3.1%、42.6%。若將兩份調查的數據相對照，在認同自己是「台灣人」的部分，可看出一定的差距。</p>
@@ -606,7 +606,7 @@ const MobilePageContent = () => {
           <div className={animateShowUpBlock(11, "page__block page__block-11")} ref={s11Ref}>
             <Player
               playsInline
-              src={require('./img/video/q2.mp4')}
+              src={require('./img/video/q2-small.mp4')}
               width={"100%"}
               height={"100%"}
               fluid={false}
@@ -617,14 +617,14 @@ const MobilePageContent = () => {
             </Player>
           </div>
           <div className={animateShowUpBlock(17, "page__block page__block-17")} ref={s17Ref}>
-            <img src={require('./img/q3-title.png')} alt="q3" style={{width: "100%", height: "100%"}} />
+            <img src={require('./img/q3-title-small.png')} alt="q3" style={{width: "100%", height: "100%"}} />
           </div>
           <div className={animateShowUpBlock(18, "page__block page__block-18")} ref={s18Ref}>
             <p>將「文化」納入考量後，雖然受訪者認同自己是「台灣人」的比例仍占最高（62.2%），但有趣的是，認同自己是「中國人」的比例從0.8%上升到8.2%，認為自己「兩者都是」則從20.1%變為29.4%，這似乎意味著在文化層面上，部分受訪者仍對「中國」有所認同。</p>
           </div>
           <div className={animateShowUpBlock(19, "page__block page__block-19")} ref={s19Ref}>
             <div className="page__block-19-title">
-              <img src={require('./img/q4-title.png')} alt="q3" style={{width: "860px", height: "62px"}} />
+              <img src={require('./img/q4-title-small.png')} alt="q3" style={{width: "360px", height: "80px"}} />
             </div>
             <div className="page__block-19-text">
               <p>高中職生的國族認同，跟你的想像一致嗎？「青春發言人」邀請12位來自台灣各地、不同家庭背景的青少年，深入訪問他們對國家、族群，以及台灣未來的想法。</p>
@@ -633,15 +633,15 @@ const MobilePageContent = () => {
               <YouTube
                 videoId="ebRmX-5gPfU"
                 opts={{
-                  width: '650',
-                  height: '365',
+                  width: '360',
+                  height: '202',
                 }}
               />
             </div>
           </div>
           <div className={animateShowUpBlock(3, "page__block page__block-20")} id="s3" ref={s3Ref}>
             <img src={require('./img/q5-title.png')} alt="q5" className="page__block-20-front"/>
-            <img src={require('./img/green-background.jpg')} style={{width: "100%", height: "250px"}} alt="q1" className="page__block-5-background"/>
+            <img src={require('./img/green-background-small.jpg')} style={{width: "100%", height: "110px"}} alt="q1" className="page__block-20-background"/>
           </div>
           <div className={animateShowUpBlock(21, "page__block page__block-21")} ref={s21Ref}>
             <img src={require('./img/q6-title.png')} alt="q6" style={{width: "840px", height: "100px"}} />
@@ -1177,7 +1177,7 @@ const MobilePageContent = () => {
       </div>
       <div className={animateShowUpBlock(2, "page__block page__block-5")} id="s2" ref={s2Ref}>
         <img src={require('./img/q1-title.png')} alt="q1" className="page__block-5-front"/>
-        <img src={require('./img/green-background.jpg')} style={{width: "100%", height: "250px"}} alt="q1" className="page__block-5-background"/>
+        <img src={require('./img/green-background-small.jpg')} style={{width: "100%", height: "100%"}} alt="q1" className="page__block-5-background"/>
       </div>
       <PopupSurveyMethod 
         isPopup={popup} 
