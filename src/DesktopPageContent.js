@@ -898,7 +898,7 @@ const DesktopPageContent = () => {
         </div>
         <div className={animateShowUpBlock(54, "page__block page__block-54")} ref={s54Ref}>
           <div className="page__block-54-title">
-            <img src={require('./img/q15-title.png')} alt="q15" style={{width: "503px", height: "60px"}} />
+            <img src={require('./img/q15-title.png')} alt="q15" style={{width: "100%", height: "100%"}} />
           </div>
           <div className="page__block-54-text">
             <p>因為製作「嘿！你是哪裡人？─高中職生國族認同」的專題，「青春發言人」接觸許多來自不同家庭背景的台灣青少年，他們每個人對於自己的身分認同，或者台灣的族群、文化和未來，都各自有非常精采的思考。製作單位精選出幾位青少年的生命故事和想法，邀請你一起聽聽看台灣年輕世代的心聲。
@@ -974,12 +974,12 @@ const DesktopPageContent = () => {
           <div className="page__block-55-grid">
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
-                <img src={require('./img/profile-1.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/profile-1.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
-                  <span className="page__block-55-grid-person-right-span-1">李志德</span>
-                  <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
+                  <span className="page__block-55-grid-person-right-span-1">邱威傑（呱吉）</span>
+                  <span className="page__block-55-grid-person-right-span-2"> / 台北市議員</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
                   <p>「若將這份報告視作目前青少年的準確圖像，對我來說，台灣正在走向正確的道路。」</p>
@@ -994,12 +994,12 @@ const DesktopPageContent = () => {
             </div>
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
-                <img src={require('./img/profile-2.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/profile-2.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
-                  <span className="page__block-55-grid-person-right-span-1">李志德</span>
-                  <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
+                  <span className="page__block-55-grid-person-right-span-1">徐巧芯</span>
+                  <span className="page__block-55-grid-person-right-span-2"> / 台北市議員</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
                   <p>「天然獨？天然台？中華民國派需要更有自信！這場可能被紅統、急獨派夾殺的詮釋權保衛戰，才是「中華民國派」真正的對手，而不是台灣的年輕人們。」</p>
@@ -1014,7 +1014,7 @@ const DesktopPageContent = () => {
             </div>
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
-                <img src={require('./img/profile-3.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/profile-3.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
@@ -1035,12 +1035,12 @@ const DesktopPageContent = () => {
             </div>
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
-                <img src={require('./img/profile-4.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/profile-4.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
-                  <span className="page__block-55-grid-person-right-span-1">李志德</span>
-                  <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
+                  <span className="page__block-55-grid-person-right-span-1">管中祥</span>
+                  <span className="page__block-55-grid-person-right-span-2"> / 中正大學傳播學系教授</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
                   <p>「即便前世代不斷強調，「台灣、中國同文同種、血脈相連」等情感訴求，新世代認為自己是台灣人的比例，已與過去有明顯差異。」</p>
@@ -1056,12 +1056,12 @@ const DesktopPageContent = () => {
             </div>
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
-                <img src={require('./img/profile-5.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/profile-5.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
-                  <span className="page__block-55-grid-person-right-span-1">李志德</span>
-                  <span className="page__block-55-grid-person-right-span-2"> / 端傳媒總編輯</span>
+                  <span className="page__block-55-grid-person-right-span-1">于立平</span>
+                  <span className="page__block-55-grid-person-right-span-2"> / 公視《我們的島》製作人</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
                   <p>「高中職生認為未來10年重要的社會目標中，「環境維護」敬陪末座，由此可粗略觀少年的價值觀，以及未來台灣將會面臨選擇衝突的問題。」</p>

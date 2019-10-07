@@ -974,7 +974,7 @@ const MobilePageContent = () => {
           <div className="page__block-55-grid">
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
-                <img src={require('./img/profile-1.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/profile-1.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
@@ -994,7 +994,7 @@ const MobilePageContent = () => {
             </div>
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
-                <img src={require('./img/profile-2.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/profile-2.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
@@ -1014,7 +1014,7 @@ const MobilePageContent = () => {
             </div>
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
-                <img src={require('./img/profile-3.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/profile-3.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
@@ -1035,7 +1035,7 @@ const MobilePageContent = () => {
             </div>
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
-                <img src={require('./img/profile-4.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/profile-4.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
@@ -1056,7 +1056,7 @@ const MobilePageContent = () => {
             </div>
             <div className="page__block-55-grid-person">
               <div className="page__block-55-grid-person-left">
-                <img src={require('./img/profile-5.jpg')} alt="profile-1" style={{width: "100%", height: "100%"}} />
+                <img src={require('./img/profile-5.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
               <div className="page__block-55-grid-person-right">
                 <div>
