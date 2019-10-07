@@ -1951,14 +1951,14 @@ html {
       opacity: 1;
       margin: auto;
       width: 750px;
-      height: 433px;
+      height: 500px;
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       z-index: 10;
-      background-color: #FFF5C5; }
+      background-color: url("./img/share.png"); }
       @media (max-width: 1100px) {
         .page__block-60__content {
           width: 360px;
