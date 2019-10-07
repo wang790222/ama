@@ -257,12 +257,10 @@ const DesktopPageContent = () => {
   };
 
   const onClickQ5Option = (index) => {
-    console.log(index);
     setQ5Option(index)
   };
 
   const onClickQ6Option = (index) => {
-    console.log(index);
     setQ6Option(index)
   };
 
@@ -300,7 +298,7 @@ const DesktopPageContent = () => {
   const question5Video = () => {
     if (q5Option === -1) {
       return (
-        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
+        <div className="page__block page__block-34" ref={s34Ref} key="q5v1">
           <Player
             playsInline={true}
             src={require('./img/video/p30.mp4')}
@@ -312,9 +310,9 @@ const DesktopPageContent = () => {
           />
         </div>
       );
-    } else if (q5Option === 0) {
+    } else if (q5Option === 1) {
       return (
-        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
+        <div className="page__block page__block-34" ref={s34Ref} key="q5v2">
           <Player
             playsInline={true}
             src={require('./img/video/p30.mp4')}
@@ -326,9 +324,9 @@ const DesktopPageContent = () => {
           />
         </div>
       );
-    } else if (q5Option === 1) {
+    } else if (q5Option === 2) {
       return (
-        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
+        <div className="page__block page__block-34" ref={s34Ref} key="q5v3">
           <Player
             playsInline={true}
             src={require('./img/video/p31.mp4')}
@@ -340,9 +338,9 @@ const DesktopPageContent = () => {
           />
         </div>
       );
-    } else if (q5Option === 2) {
+    } else if (q5Option === 3) {
       return (
-        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
+        <div className="page__block page__block-34" ref={s34Ref} key="q5v4">
           <Player
             playsInline={true}
             src={require('./img/video/p32.mp4')}
@@ -354,9 +352,9 @@ const DesktopPageContent = () => {
           />
         </div>
       );
-    } else if (q5Option === 3) {
+    } else if (q5Option === 4) {
       return (
-        <div className={animateShowUpBlock(34, "page__block page__block-34")} ref={s34Ref}>
+        <div className="page__block page__block-34" ref={s34Ref} key="q5v5">
           <Player
             playsInline={true}
             src={require('./img/video/p33.mp4')}
@@ -372,9 +370,9 @@ const DesktopPageContent = () => {
   };
 
   const quesion6Video = () => {
-    if (q6Option === 0) {
+    if (q6Option === -1) {
       return (
-        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+        <div className="page__block page__block-42" ref={s43Ref} key="q6v1">
           <Player
             playsInline
             src={require('./img/video/p20.mp4')}
@@ -388,9 +386,9 @@ const DesktopPageContent = () => {
           </Player>
         </div>
       );
-    } else if (q6Option === 0) {
+    } else if (q6Option === 1) {
       return (
-        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+        <div className="page__block page__block-42" ref={s43Ref} key="q6v2">
           <Player
             playsInline
             src={require('./img/video/p20.mp4')}
@@ -404,9 +402,9 @@ const DesktopPageContent = () => {
           </Player>
         </div>
       );
-    } else if (q6Option === 1) {
+    } else if (q6Option === 2) {
       return (
-        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+        <div className="page__block page__block-42" ref={s43Ref} key="q6v3">
           <Player
             playsInline
             src={require('./img/video/p21.mp4')}
@@ -420,9 +418,9 @@ const DesktopPageContent = () => {
           </Player>
         </div>
       );
-    } else if (q6Option === 2) {
+    } else if (q6Option === 3) {
       return (
-        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+        <div className="page__block page__block-42" ref={s43Ref} key="q6v4">
           <Player
             playsInline
             src={require('./img/video/p22.mp4')}
@@ -436,9 +434,9 @@ const DesktopPageContent = () => {
           </Player>
         </div>
       );
-    } else if (q6Option === 3) {
+    } else if (q6Option === 4) {
       return (
-        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+        <div className="page__block page__block-42" ref={s43Ref} key="q6v5">
           <Player
             playsInline
             src={require('./img/video/p23.mp4')}
@@ -747,22 +745,22 @@ const DesktopPageContent = () => {
               <div className="row-4">
                 <div 
                   className="col-1-of-4 page__block-33-btn page__block-33-btn-1"
-                  onClick={() => onClickQ5Option(0)}>
+                  onClick={() => onClickQ5Option(1)}>
                   一點也不光榮
                 </div>
                 <div 
                   className="col-1-of-4 page__block-33-btn page__block-33-btn-2"
-                  onClick={() => onClickQ5Option(1)}>
+                  onClick={() => onClickQ5Option(2)}>
                   很少感到光榮
                 </div>
                 <div 
                   className="col-1-of-4 page__block-33-btn page__block-33-btn-2"
-                  onClick={() => onClickQ5Option(2)}>
+                  onClick={() => onClickQ5Option(3)}>
                   有時感到光榮
                 </div>
                 <div 
                   className="col-1-of-4 page__block-33-btn page__block-33-btn-4"
-                  onClick={() => onClickQ5Option(3)}>
+                  onClick={() => onClickQ5Option(4)}>
                   時常感到光榮
                 </div>
               </div>
@@ -793,25 +791,25 @@ const DesktopPageContent = () => {
               <div className="row-4-2">
                 <div className="col-1-of-4 page__block-40-imgbtn">
                   <img src={require('./img/q6-1.png')} alt="img_block40" />
-                  <div className="col-1-of-4 page__block-41-btn" onClick={() => onClickQ6Option(0)}>
+                  <div className="col-1-of-4 page__block-41-btn" onClick={() => onClickQ6Option(1)}>
                     沮喪的
                   </div>
                 </div>
                 <div className="col-1-of-4 page__block-40-imgbtn">
                   <img src={require('./img/q6-2.png')} alt="img_block40" />
-                  <div className="page__block-41-btn" onClick={() => onClickQ6Option(1)}>
+                  <div className="col-1-of-4 page__block-41-btn" onClick={() => onClickQ6Option(2)}>
                   難過的
                   </div>  
                 </div>
                 <div className="col-1-of-4 page__block-40-imgbtn">
                   <img src={require('./img/q6-3.png')} alt="img_block40" />
-                  <div className="col-1-of-4 page__block-41-btn" onClick={() => onClickQ6Option(2)}>
+                  <div className="col-1-of-4 page__block-41-btn" onClick={() => onClickQ6Option(3)}>
                     憤怒的
                   </div>
                 </div>
                 <div className="col-1-of-4 page__block-40-imgbtn">
                   <img src={require('./img/q6-4.png')} alt="img_block40" />
-                  <div className="col-1-of-4 page__block-41-btn" onClick={() => onClickQ6Option(3)}>
+                  <div className="col-1-of-4 page__block-41-btn" onClick={() => onClickQ6Option(4)}>
                     擔心的
                   </div>
                 </div>

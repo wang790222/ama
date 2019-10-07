@@ -1155,6 +1155,7 @@ html {
     color: #86663C;
     text-align: center; }
   .page__block-34 {
+    opacity: 1;
     width: 860px;
     height: 440px;
     background-color: #C8C8C8;
@@ -1292,6 +1293,7 @@ html {
         margin-top: 20px;
         padding-bottom: 80px; } }
   .page__block-42 {
+    opacity: 1;
     width: 860px;
     height: 440px;
     background-color: #C8C8C8;

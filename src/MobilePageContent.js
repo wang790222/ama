@@ -358,7 +358,7 @@ const MobilePageContent = () => {
   const quesion6Video = () => {
     if (q6Option === 0) {
       return (
-        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+        <div className="page__block page__block-42" ref={s43Ref}>
           <Player
             playsInline
             src={require('./img/video/p20.mp4')}
@@ -373,7 +373,7 @@ const MobilePageContent = () => {
       );
     } else if (q6Option === 1) {
       return (
-        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+        <div className="page__block page__block-42" ref={s43Ref}>
           <Player
             playsInline
             src={require('./img/video/p21.mp4')}
@@ -388,7 +388,7 @@ const MobilePageContent = () => {
       );
     } else if (q6Option === 2) {
       return (
-        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+        <div className="page__block page__block-42" ref={s43Ref}>
           <Player
             playsInline
             src={require('./img/video/p22.mp4')}
@@ -403,7 +403,7 @@ const MobilePageContent = () => {
       );
     } else if (q6Option === 3) {
       return (
-        <div className={animateShowUpBlock(43, "page__block page__block-42")} ref={s43Ref}>
+        <div className="page__block page__block-42" ref={s43Ref}>
           <Player
             playsInline
             src={require('./img/video/p23.mp4')}
