@@ -309,17 +309,21 @@ html {
             font-size: 18px;
             width: 270px; } }
         .conversation__block-2__text-1 {
+          letter-spacing: 1px;
           opacity: 0;
           -webkit-animation: type 1s steps(40, end);
           -webkit-animation-fill-mode: forwards;
           animation: type 1s steps(40, end);
           animation-fill-mode: forwards; }
           .conversation__block-2__text-1-notyping {
+            letter-spacing: 1px;
             opacity: 1 !important;
             -webkit-animation: none;
             animation: none; }
         .conversation__block-2__text-2 {
           opacity: 0;
+          letter-spacing: 1px;
+          margin-top: 2px;
           -webkit-animation: type 1s steps(40, end);
           -webkit-animation-delay: 1.2s;
           -webkit-animation-fill-mode: forwards;
@@ -327,11 +331,14 @@ html {
           animation-delay: 1.2s;
           animation-fill-mode: forwards; }
           .conversation__block-2__text-2-notyping {
+            letter-spacing: 1px;
             opacity: 1 !important;
             -webkit-animation: none;
             animation: none; }
         .conversation__block-2__text-3 {
           opacity: 0;
+          letter-spacing: 1px;
+          margin-top: 2px;
           -webkit-animation: type 1s steps(40, end);
           -webkit-animation-delay: 2.1s;
           -webkit-animation-fill-mode: forwards;
@@ -340,6 +347,8 @@ html {
           animation-fill-mode: forwards; }
         .conversation__block-2__text-4 {
           opacity: 0;
+          letter-spacing: 1px;
+          margin-top: 2px;
           -webkit-animation: type 0.8s steps(40, end);
           -webkit-animation-delay: 3.2s;
           -webkit-animation-fill-mode: forwards;
@@ -563,17 +572,19 @@ html {
     top: 0;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-    opacity: 1; }
+    opacity: 1;
+    overflow: scroll; }
     .page__block-6__content {
       opacity: 1;
       width: 1000px;
-      height: 800px;
+      height: 1000px;
+      overflow: scroll;
       position: fixed;
       top: 100px;
       left: 0;
       right: 0;
       bottom: 0;
-      padding: 150px 0 170px 0;
+      padding: 150px 0 270px 0;
       z-index: 10;
       background-color: #FFF5C5; }
       @media (max-width: 1100px) {
@@ -590,14 +601,13 @@ html {
         background-color: #F06F04;
         width: 50px;
         height: 50px;
-        border-radius: 50%;
         text-align: center;
-        font-size: 35px;
+        border-radius: 50%;
+        font-size: 30px;
         color: white;
         line-height: 50px;
-        margin: 0;
-        padding: 0;
-        cursor: pointer; }
+        cursor: pointer;
+        padding: 0 0 0 1px; }
         @media (max-width: 1100px) {
           .page__block-6__content-close {
             top: 20px;
@@ -612,7 +622,7 @@ html {
             height: 100%;
             padding-bottom: 30px;
             overflow: scroll; } }
-      .page__block-6__content p {
+      .page__block-6__content ol {
         display: inline-block;
         font-size: 18px;
         line-height: 35px;
@@ -1190,7 +1200,7 @@ html {
         width: 162px;
         height: 180px; }
   .page__block-41-btn {
-    width: 170px;
+    width: 180px;
     height: 50px;
     background-color: #FF8622;
     color: black;
@@ -1199,7 +1209,7 @@ html {
     text-align: center;
     line-height: 44px;
     letter-spacing: 3px;
-    text-indent: 3px;
+    text-indent: 8px;
     cursor: pointer;
     box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
@@ -1707,7 +1717,7 @@ html {
         .page__block-55-grid-person-right-btn {
           width: 166px;
           height: 41px;
-          background-color: #1DAEDF;
+          background-color: #FF8622;
           color: white;
           border-radius: 20px;
           font-size: 20px;
@@ -1715,7 +1725,7 @@ html {
           line-height: 41px;
           cursor: pointer; }
           .page__block-55-grid-person-right-btn:hover {
-            background-color: #71D8E1; }
+            background-color: #FB9643; }
           @media (max-width: 1100px) {
             .page__block-55-grid-person-right-btn {
               width: 102px;
@@ -1871,7 +1881,7 @@ html {
           margin: 20px auto 0; } }
   .page__block-59 {
     width: 100vw;
-    height: 650px;
+    height: 700px;
     background-color: #1DAEDF;
     padding-top: 60px; }
     @media (max-width: 1100px) {
@@ -1903,12 +1913,13 @@ html {
     .page__block-59-name {
       width: 440px; }
     .page__block-59-textbox {
-      font-size: 20px;
-      line-height: 22px;
+      height: 90px;
+      font-size: 19px;
+      line-height: 30px;
       color: white;
       margin: 0;
       padding: 0;
-      text-align: center; }
+      text-align: left; }
     .page__block-59-text {
       color: white;
       text-align: center; }
@@ -1916,7 +1927,7 @@ html {
         font-size: 20px;
         margin-bottom: 80px; }
       .page__block-59-text-2 {
-        font-size: 18px; }
+        font-size: 16px; }
         @media (max-width: 1100px) {
           .page__block-59-text-2 {
             text-align: left;
@@ -1958,7 +1969,7 @@ html {
       right: 0;
       bottom: 0;
       z-index: 10;
-      background-color: url("./img/share.png"); }
+      background-color: #FFF5C5; }
       @media (max-width: 1100px) {
         .page__block-60__content {
           width: 360px;
@@ -2235,19 +2246,22 @@ html {
 
 .hamburger__link {
   font-size: 22px;
-  color: #666;
+  color: white;
+  opacity: .5;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer; }
   .hamburger__link:link, .hamburger__link:visited {
     display: inline-block;
     font-size: 22px;
-    color: #666;
+    color: white;
+    opacity: .5;
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer; }
   .hamburger__link:hover, .hamburger__link:active {
-    color: white; }
+    color: white;
+    opacity: 1; }
     .hamburger__link:hover > .bull, .hamburger__link:active > .bull {
       background-color: white; }
 
@@ -2261,7 +2275,7 @@ html {
 
 .hamburger__icon {
   position: relative;
-  margin-top: 25px; }
+  margin-top: 24px; }
   .hamburger__icon, .hamburger__icon::before, .hamburger__icon::after {
     width: 25px;
     height: 2.5px;
@@ -2296,7 +2310,7 @@ html {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #666;
+  background-color: white;
   margin-right: 50px;
   margin-left: 15px;
   display: inline-block;
@@ -2423,23 +2437,25 @@ html {
     width: 200px; }
 
 .row-3-2 {
-  max-width: 49rem;
-  height: 4.8rem;
+  max-width: 522px;
+  height: 90px;
   margin: 4.5rem auto 2rem; }
   .row-3-2:after {
     content: "";
     display: table;
     clear: both; }
-  .row-3-2 [class^="col-"] {
-    float: left; }
-    .row-3-2 [class^="col-"]:not(:last-child) {
-      margin-right: 4rem; }
   .row-3-2 .col-1-of-3-1 {
-    width: 12rem; }
+    width: 122px;
+    margin-right: 38px;
+    float: left; }
   .row-3-2 .col-1-of-3-2 {
-    width: 16.2rem; }
+    width: 176px;
+    margin-right: 26px;
+    float: left; }
   .row-3-2 .col-1-of-3-3 {
-    width: 12rem; }
+    width: 160px;
+    margin-right: 0;
+    float: left; }
 
 .row-4 {
   max-width: 840px;

@@ -1,27 +1,25 @@
 .row-3-2 {
-  max-width: 49rem;
-  height: 4.8rem;
+  max-width: 522px;
+  height: 90px;
   margin: 4.5rem auto 2rem;
 
   @include clearfix;
 
-  [class^="col-"] {
-    float: left;
-    
-    &:not(:last-child) {
-      margin-right: 4rem;
-    }
-  }
-
   .col-1-of-3-1 {
-    width: 12rem;
+    width: 122px;
+    margin-right: 38px;
+    float: left;
   }
 
   .col-1-of-3-2 {
-    width: 16.2rem;
+    width: 176px;
+    margin-right: 26px;
+    float: left;
   }
 
   .col-1-of-3-3 {
-    width: 12rem;
+    width: 160px;
+    margin-right: 0;
+    float: left;
   }
 }

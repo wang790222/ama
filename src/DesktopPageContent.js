@@ -429,15 +429,15 @@ const DesktopPageContent = () => {
       const socialMediaIcon = () => {
         return (
           <div>
-            <div className="page__block-60__content-row-icon-fb">
-              <FacebookShareButton url={"https://ama-test.herokuapp.com/"}>
-                <FacebookIcon borderRadius={10} size={100}/>
-              </FacebookShareButton>
-            </div>
             <div className="page__block-60__content-row-icon-line">
               <LineShareButton url={"https://www.google.com"}>
                 <LineIcon borderRadius={10} size={100}/>
               </LineShareButton>
+            </div>
+            <div className="page__block-60__content-row-icon-fb">
+              <FacebookShareButton url={"https://ama-test.herokuapp.com/"}>
+                <FacebookIcon borderRadius={10} size={100}/>
+              </FacebookShareButton>
             </div>
           </div>
         );
@@ -1123,18 +1123,20 @@ const DesktopPageContent = () => {
               <div className="col-1-of-3-1 page__block-59-textbox">
                 <p>監製：於蓓華</p>
                 <p>督導：舒逸琪</p>
+                <p>社群：林孟勳</p>
               </div>
               <div className="col-1-of-3-2 page__block-59-textbox">
                 <p>製作人：賴彥如</p>
                 <p>影音導演：朱孝權</p>
+                <p>網頁設計：通點設計</p>
               </div>
               <div className="col-1-of-3-3 page__block-59-textbox">
                 <p>企劃：王柔婷</p>
-                <p>社群：林孟勳</p>
+                <p>執行製作：詹惠茹</p>
               </div>
             </div>
             <div className="page__block-59-text page__block-59-text-1">
-                <p>網頁設計工程：通點設計</p>
+                
             </div>
             <div className="page__block-59-text page__block-59-text-2">
                 <p>財團法人公共電視文化事業基金會 版權所有 All Contents Copyright, Taiwan Public Television Service.</p>

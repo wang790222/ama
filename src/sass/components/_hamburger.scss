@@ -56,7 +56,8 @@
 
   &__link {
     font-size: 22px;
-    color: #666; 
+    color: white;
+    opacity: .5;
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
@@ -64,7 +65,8 @@
     &:visited {
       display: inline-block;
       font-size: 22px;
-      color: #666; 
+      color: white;
+      opacity: .5;
       text-decoration: none;
       text-transform: uppercase;
       cursor: pointer;
@@ -73,6 +75,7 @@
     &:hover,
     &:active {
       color: white;
+      opacity: 1;
       
       & > .bull {
         background-color: white;
@@ -92,7 +95,7 @@
 
   &__icon {
     position: relative;
-    margin-top: 25px;
+    margin-top: 24px;
 
     &,
     &::before,
@@ -139,7 +142,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #666;
+  background-color: white;
   margin-right: 50px;
   margin-left: 15px;
   display: inline-block;

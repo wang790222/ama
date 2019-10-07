@@ -109,17 +109,19 @@
       z-index: 9999;
       background-color: rgba($color-black, .5);
       opacity: 1;
+      overflow: scroll;
 
       &__content {
         opacity: 1;
         width: 1000px;
-        height: 800px;
+        height: 1000px;
+        overflow: scroll;
         position: fixed;
         top: 100px;
         left: 0;
         right: 0;
         bottom: 0;
-        padding: 150px 0 170px 0;
+        padding: 150px 0 270px 0;
         z-index: 10;
         background-color: #FFF5C5;
 
@@ -138,14 +140,13 @@
           background-color: #F06F04;
           width: 50px;
           height: 50px;
-          border-radius: 50%;
           text-align: center;
-          font-size: 35px;
+          border-radius: 50%;
+          font-size: 30px;
           color: white;
           line-height: 50px;
-          margin: 0;
-          padding: 0;
           cursor: pointer;
+          padding: 0 0 0 1px;
 
           @include respond(phone) {
             top: 20px;
@@ -166,7 +167,7 @@
           }
         }
         
-        & p {
+        & ol {
           display: inline-block;
           font-size: 18px;
           line-height: 35px;
@@ -968,7 +969,7 @@
 
     &-41 {
       &-btn {
-        width: 170px;
+        width: 180px;
         height: 50px;
         background-color: #FF8622;
         color: black;
@@ -977,7 +978,7 @@
         text-align: center;
         line-height: 44px;
         letter-spacing: 3px;
-        text-indent: 3px;
+        text-indent: 8px;
         cursor: pointer;
         box-shadow: 5px 7px 9px rgba(black, .2);
         border-radius: 20px;
@@ -1672,7 +1673,7 @@
             &-btn {
               width: 166px;
               height: 41px;
-              background-color: #1DAEDF;
+              background-color: #FF8622;
               color: white;
               border-radius: 20px;
               font-size: 20px;
@@ -1681,7 +1682,7 @@
               cursor: pointer;
 
               &:hover {
-                background-color: #71D8E1;
+                background-color: #FB9643;
               }
 
               @include respond(phone) {
@@ -1896,7 +1897,7 @@
 
     &-59 {
       width: 100vw;
-      height: 650px;
+      height: 700px;
       background-color: #1DAEDF;
       padding-top: 60px;
 
@@ -1943,12 +1944,13 @@
       }
 
       &-textbox {
-        font-size: 20px;
-        line-height: 22px;
+        height: 90px;
+        font-size: 19px;
+        line-height: 30px;
         color: white;
         margin: 0;
         padding: 0;
-        text-align: center;
+        text-align: left;
       }
 
       &-text {
@@ -1961,7 +1963,7 @@
         }
 
         &-2 {
-          font-size: 18px;
+          font-size: 16px;
 
           @include respond(phone) {
             text-align: left;
@@ -2015,7 +2017,7 @@
         right: 0;
         bottom: 0;
         z-index: 10;
-        background-color: url('./img/share.png');
+        background-color: #FFF5C5;
 
         @include respond(phone) {
           width: 360px;

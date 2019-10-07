@@ -109,6 +109,7 @@
         }
   
         &-1 {
+          letter-spacing: 1px;
           opacity: 0;
           -webkit-animation: type 1s steps(40, end);
           -webkit-animation-fill-mode: forwards;
@@ -116,6 +117,7 @@
           animation-fill-mode: forwards;
     
           &-notyping {
+            letter-spacing: 1px;
             opacity: 1 !important;
             -webkit-animation: none;
             animation: none;
@@ -124,7 +126,8 @@
     
         &-2 {
           opacity: 0;
-    
+          letter-spacing: 1px;
+          margin-top: 2px;
           -webkit-animation:type 1s steps(40, end);
           -webkit-animation-delay: 1.2s;
           -webkit-animation-fill-mode:forwards;
@@ -133,6 +136,7 @@
           animation-fill-mode: forwards;
     
           &-notyping {
+            letter-spacing: 1px;
             opacity: 1 !important;
             -webkit-animation: none;
             animation: none;
@@ -141,6 +145,8 @@
     
         &-3 {
           opacity: 0;
+          letter-spacing: 1px;
+          margin-top: 2px;
           -webkit-animation:type 1s steps(40, end);
           -webkit-animation-delay:2.1s;
           -webkit-animation-fill-mode:forwards;
@@ -151,6 +157,8 @@
     
         &-4 {
           opacity: 0;
+          letter-spacing: 1px;
+          margin-top: 2px;
           -webkit-animation:type .8s steps(40, end);
           -webkit-animation-delay:3.2s;
           -webkit-animation-fill-mode:forwards;
