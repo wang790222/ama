@@ -10,7 +10,9 @@
 
       @include respond(phone) {
         width: 340px;
-        height: 176px;
+        height: 196px;
+        padding-top: 120px;
+        margin-bottom: 20px;
       }
     }
 
