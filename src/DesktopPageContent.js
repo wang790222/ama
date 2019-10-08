@@ -737,7 +737,7 @@ const DesktopPageContent = () => {
             <br />
             <br />
             <p>
-            相比美國杜克大學於2019年發布的《台灣國家安全調查》，同樣一個問題，20歲以上的成年人對兩岸關係的期望，前四高依序是：「維持現狀，看情形再決定獨立或統一」(33.4%)、「永遠維持現狀」(23.7%)、「維持現狀，以後走向獨立(16.2%)」、「維持現狀，以後走向統一」(10.8%)。
+            相比美國杜克大學於2019年發布的《台灣國家安全調查》，同樣一個問題，20歲以上的成年人對兩岸關係的期望，前四高依序是：「維持現狀，看情形再決定獨立或統一」(33.4%)、「永遠維持現狀」(23.7%)、「維持現狀，以後走向獨立」(16.2%)、「維持現狀，以後走向統一」(10.8%)。
             </p>
             <br />
             <br />
@@ -1129,7 +1129,7 @@ const DesktopPageContent = () => {
                   <span className="page__block-55-grid-person-right-span-2"> / 公視《我們的島》製作人</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
-                  <p>高中職生認為未來10年重要的社會目標中，「環境維護」敬陪末座，由此可粗略觀少年的價值觀，以及未來台灣將會面臨選擇衝突的問題。</p>
+                  <p>高中職生認為未來10年重要的社會目標中，「環境維護」敬陪末座，由此可粗略觀見少年的價值觀，以及未來台灣將會面臨選擇衝突的問題。</p>
                 </div>
                 <div 
                   className="page__block-55-grid-person-right-btn"
@@ -1179,10 +1179,15 @@ const DesktopPageContent = () => {
           <div className="page__block-59-pic">
           </div>
             <div className="page__block-59-icon">
-              <ion-icon name="logo-facebook" className="page__block-59-icon-1"></ion-icon>
-              <ion-icon name="logo-
-" className="page__block-59-icon-2"></ion-icon>
-              <ion-icon name="logo-instagram" className="page__block-59-icon-3"></ion-icon>
+              <a href="https://pse.is/M6GD7" target="_blank">
+                <ion-icon name="logo-facebook" className="page__block-59-icon"></ion-icon>
+              </a>
+              <a href="https://pse.is/K95ZR" target="_blank">
+                <ion-icon name="logo-youtube" className="page__block-59-icon"></ion-icon>
+              </a>
+              <a href="https://pse.is/K95ZR" target="_blank">
+                <ion-icon name="logo-instagram" className="page__block-59-icon"></ion-icon>
+              </a>
             </div>
             <div className="page__block-59-line">&nbsp;</div>
             <div>
@@ -1224,7 +1229,7 @@ const DesktopPageContent = () => {
       <div className="page__block page__block-2 add_showup">
         <Player
           playsInline
-          src={require('./img/video/P4.mp4')}
+          src={require('./img/video/p4.mp4')}
           width={"100%"}
           height={"100%"}
           fluid={false}

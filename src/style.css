@@ -411,13 +411,11 @@ html {
       background-color: #F06F04;
       width: 340px;
       height: 75px;
-      line-height: 69px;
+      line-height: 75px;
       color: white;
       font-size: 19px;
       text-align: center;
       border-radius: 20px;
-      border: 3px solid white;
-      box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
       cursor: pointer; }
       .conversation__box-option:hover {
         background-color: #FF8622; }
@@ -542,16 +540,14 @@ html {
     height: 50px;
     background-color: #F06F04;
     border-radius: 20px;
-    border: 3px solid white;
     margin-top: 50px;
     font-size: 20px;
     letter-spacing: 3px;
     text-indent: 3px;
-    line-height: 44px;
+    line-height: 50px;
     text-align: center;
     color: white;
-    cursor: pointer;
-    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2); }
+    cursor: pointer; }
     .page__block-4:hover {
       background-color: #FF8622; }
     .page__block-4:active {
@@ -723,17 +719,15 @@ html {
       height: 50px;
       background-color: #F06F04;
       border-radius: 20px;
-      border: 3px solid white;
       margin-top: 50px;
       margin-bottom: 20px;
       font-size: 20px;
       letter-spacing: 3px;
       text-indent: 3px;
-      line-height: 44px;
+      line-height: 50px;
       text-align: center;
       color: white;
-      cursor: pointer;
-      box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.2); }
+      cursor: pointer; }
       .page__block-9-btn:hover {
         background-color: #FF8622; }
       .page__block-9-btn:active {
@@ -1081,13 +1075,11 @@ html {
       color: white;
       font-size: 20px;
       text-align: center;
-      line-height: 44px;
+      line-height: 50px;
       letter-spacing: 1px;
       text-indent: 1px;
       cursor: pointer;
-      box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.2);
-      border-radius: 20px;
-      border: 3px solid white; }
+      border-radius: 20px; }
       .page__block-33-btn:active {
         box-shadow: none; }
       .page__block-33-btn-1 {
@@ -1129,10 +1121,8 @@ html {
           height: 34px;
           color: white;
           text-align: center;
-          line-height: 28px;
-          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+          line-height: 34px;
           border-radius: 15px;
-          border: 3px solid white;
           font-size: 20px;
           z-index: 3; }
           @media (max-width: 1100px) {
@@ -1244,13 +1234,11 @@ html {
     border-radius: 10px;
     font-size: 20px;
     text-align: center;
-    line-height: 44px;
+    line-height: 50px;
     letter-spacing: 3px;
     text-indent: 8px;
     cursor: pointer;
-    box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    border: 3px solid white;
     color: white; }
     .page__block-41-btn:active {
       box-shadow: none; }
@@ -1280,10 +1268,8 @@ html {
       .page__block-41-1-img__btn-btn {
         width: 144px;
         height: 40px;
-        box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
-        border: 3px solid white;
-        line-height: 34px;
+        line-height: 40px;
         color: white;
         background-color: #FF8622;
         text-align: center;
@@ -1872,12 +1858,10 @@ html {
       width: 220px;
       height: 50px;
       text-align: center;
-      line-height: 44px;
+      line-height: 50px;
       background-color: #F4D0A1;
       margin: 43px auto 0;
-      box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
-      border-radius: 20px;
-      border: 3px solid white; }
+      border-radius: 20px; }
       .page__block-57-btn a {
         text-decoration: none;
         font-size: 23px;
@@ -1924,15 +1908,13 @@ html {
       width: 220px;
       height: 50px;
       border-radius: 20px;
-      border: 3px solid white;
       text-align: center;
-      line-height: 44px;
+      line-height: 50px;
       background-color: #F06F04;
       margin: 30px auto 0;
       color: white;
       font-size: 23px;
-      letter-spacing: 1px;
-      box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2); }
+      letter-spacing: 1px; }
       .page__block-58-btn:hover {
         background-color: #FF8622; }
       .page__block-58-btn:active {
@@ -1959,6 +1941,7 @@ html {
       color: white;
       text-align: center; }
       .page__block-59-icon ion-icon {
+        color: white;
         background-color: transparent;
         cursor: pointer; }
       .page__block-59-icon :not(:last-child) {
@@ -2486,21 +2469,19 @@ html {
         height: 40px; } }
     .header__block-4__btn {
       border-radius: 20px;
-      border: 3px solid white;
       font-size: 23px;
       letter-spacing: 3px;
       text-indent: 9px;
-      line-height: 44px;
+      line-height: 50px;
       text-decoration: none;
       color: #fff;
       background-color: #F06F04;
-      cursor: pointer;
-      box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.2); }
+      cursor: pointer; }
       @media (max-width: 1100px) {
         .header__block-4__btn {
           font-size: 19px;
           letter-spacing: .63px;
-          line-height: 34px;
+          line-height: 40px;
           border-radius: 10px; } }
       .header__block-4__btn:hover {
         background-color: #FF8622; }
