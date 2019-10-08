@@ -3,8 +3,6 @@ import { FacebookShareButton, FacebookIcon, LineShareButton, LineIcon } from 're
 import { Player, ControlBar } from 'video-react';
 import "../node_modules/video-react/dist/video-react.css";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
-import { useBottomScrollListener } from 'react-bottom-scroll-listener';
 import YouTube from 'react-youtube';
 import Hamburger from './Hamburger';
 import getParagraph from './getParagraph';
@@ -89,7 +87,6 @@ const MobilePageContent = () => {
   const [q5Option, setQ5Option] = useState(0);
   const [q6Option, setQ6Option] = useState(0);
   const [afterBlockNine, setAfterBlockNine] = useState(false);
-  const [afterBlock51, setAfterBlock51] = useState(false);
   const [isBottom, setIsBottom] = useState(false);
   const [q8910Index, setQ8910Index] = useState(0);
   const [navIndex, setNavIndex] = useState(0);
@@ -180,17 +177,11 @@ const MobilePageContent = () => {
   };
 
   const handleNavIndex = (sec) => {
-    if (sec === 6) {
+    if (sec > 2) {
       setAfterBlockNine(true);
-      setAfterBlock51(true);
-      setNavIndex(6);
+      setNavIndex(sec);
     } else {
-      if (sec > 2) {
-        setAfterBlockNine(true);
-        setNavIndex(sec);
-      } else {
-        setNavIndex(sec);
-      }
+      setNavIndex(sec);
     }
   };
 
@@ -479,43 +470,26 @@ const MobilePageContent = () => {
     };
   };
 
-  const addOpacityToArrowLeft = () => {
-    if (videoIndex === 0) {
+  const addOpacityToArrowLeft = (type) => {
+    // 1 -> youtube
+    // 2 -> video
+    let index = (type === 1) ? videoIndex : q8910Index;
+    if (index === 0) {
       return "page__block-54-video-slides-window-left add_opacity";
     } else {
       return "page__block-54-video-slides-window-left";
     }
   };
 
-  const addOpacityToArrowRight = () => {
-    if (videoIndex === 5) {
+  const addOpacityToArrowRight = (type) => {
+    // 1 -> youtube -> total 6
+    // 2 -> video -> total 3
+    let total = (type === 1) ? 5 : 2;
+    let index = (type === 1) ? videoIndex : q8910Index;
+    if (index === total) {
       return "page__block-54-video-slides-window-right add_opacity";
     } else {
       return "page__block-54-video-slides-window-right";
-    }
-  };
-
-  const reachBottom = () => {
-    
-  };
-
-  const handleUp = () => {
-    if (q8910Index === 25) {
-      setQ8910Index(0);
-    } else if (q8910Index === 30) {
-      setQ8910Index(25);
-    }
-  };
-
-  const handleDown = () => {
-    if (q8910Index < 20) {
-      setQ8910Index(25);
-    } else if (q8910Index === 25) {
-      setQ8910Index(30);
-    } else if (q8910Index === 30) {
-      if (!afterBlock51) {
-        setAfterBlock51(true);
-      }
     }
   };
 
@@ -542,14 +516,28 @@ const MobilePageContent = () => {
   };
 
   const videoSlideLeft = () => {
+    if (q8910Index > 0 ) {
+      let temp = q8910Index - 1;
+      setQ8910Index(temp);
+    }
+  };
+
+  const videoSlideRight = () => {
+    if (q8910Index < 2) {
+      let temp = q8910Index + 1;
+      setQ8910Index(temp);
+    }
+  };
+
+  const youtubeSlideLeft = () => {
     if (videoIndex > 0 ) {
       let temp = videoIndex - 1;
       setVideoIndex(temp);
     }
   };
 
-  const videoSlideRight = () => {
-    if (videoIndex < 5 ) {
+  const youtubeSlideRight = () => {
+    if (videoIndex < 5) {
       let temp = videoIndex + 1;
       setVideoIndex(temp);
     }
@@ -567,8 +555,8 @@ const MobilePageContent = () => {
     });
   };
 
-  const selectVideo = () => {
-    if (q8910Index < 20) {
+  const selectQ8910Video = () => {
+    if (q8910Index === 0) {
       return (
         <Player
           playsInline
@@ -582,7 +570,7 @@ const MobilePageContent = () => {
           <ControlBar disableCompletely={true} />
         </Player>
       );
-    } else if (q8910Index === 25) {
+    } else if (q8910Index === 1) {
       return (
         <Player
           playsInline
@@ -596,7 +584,7 @@ const MobilePageContent = () => {
           <ControlBar disableCompletely={true} />
         </Player>
       );
-    } else if (q8910Index === 30){
+    } else if (q8910Index === 2){
       return (
         <Player
           playsInline
@@ -676,8 +664,6 @@ const MobilePageContent = () => {
       );
     }
   };
-
-  const containerRef = useBottomScrollListener(reachBottom);
  
   const showAfterBlockNine = () => {
     return ((afterBlockNine || navIndex > 2) ? 
@@ -951,11 +937,7 @@ const MobilePageContent = () => {
             <img src={require('./img/q11-title-small.png')} alt="q11" style={{width: "100%", height: "100%"}} />
           </div>
           
-          <ReactScrollWheelHandler
-              upHandler={handleUp}
-              downHandler={handleDown}
-          >
-            <div className={animateShowUpBlock(49, "page__block page__block-48")} ref={s49Ref}>
+          <div className={animateShowUpBlock(49, "page__block page__block-48")} ref={s49Ref}>
               <p>這份問卷列出9項人們認為重要的社會目標，讓受訪者選擇。其中有32.7%受訪者認為「維持經濟繁榮」最重要，佔比最高。其次則是佔14.7%的「保障言論自由」、以及佔13.3%「讓人民對政府重大決策有更多表達意見的機會」。
               </p>
               <br />
@@ -991,22 +973,33 @@ const MobilePageContent = () => {
                   </div>
                 </div>
               </div>
-              <div className="page__block-51-img">
-                {selectVideo()}
+              <div className="page__block-54-video-slides">
+                <div className="page__block-54-video-slides-window">
+                  <div 
+                    className={addOpacityToArrowLeft(2)}
+                    onClick={videoSlideLeft}
+                  >
+                  &nbsp;
+                  </div>
+                  <div style={{display: "inline-block", width:"280px",height:"580px"}}>
+                  {selectQ8910Video(q8910Index)}
+                  </div>
+                  <div 
+                    className={addOpacityToArrowRight(2)}
+                    onClick={videoSlideRight}
+                  >
+                  &nbsp;
+                  </div>
+                </div>
+                <div className="page__block-54-video-slides-dot-group">
+                  <div style={dotCssStyle(0, q8910Index)}>&nbsp;</div>
+                  <div style={dotCssStyle(1, q8910Index)}>&nbsp;</div>
+                  <div style={dotCssStyle(2, q8910Index)}>&nbsp;</div>
+                </div>
               </div>
             </div>
-          </ReactScrollWheelHandler>
         </div>
-      {showAfterBlock51()}
-    </div>
-    : null);
-  };
-
-  const showAfterBlock51 = () => {
-    return (
-      (afterBlock51 || navIndex === 6) ?
-      <div>
-        <div className={animateShowUpBlock(52, "page__block page__block-52")} ref={s52Ref}>
+      <div className={animateShowUpBlock(52, "page__block page__block-52")} ref={s52Ref}>
           <img src={require('./img/q14-title-small.png')} alt="q14" style={{width: "100%", height: "100%"}} />
         </div>
         <div className={animateShowUpBlock(53, "page__block page__block-53")} ref={s53Ref}>
@@ -1034,8 +1027,8 @@ const MobilePageContent = () => {
           <div className="page__block-54-video-slides">
             <div className="page__block-54-video-slides-window">
               <div 
-                className={addOpacityToArrowLeft()}
-                onClick={videoSlideLeft}
+                className={addOpacityToArrowLeft(1)}
+                onClick={youtubeSlideLeft}
               >
               &nbsp;
               </div>
@@ -1043,8 +1036,8 @@ const MobilePageContent = () => {
               {getYoutubeVideo(videoIndex)}
               </div>
               <div 
-                className={addOpacityToArrowRight()}
-                onClick={videoSlideRight}
+                className={addOpacityToArrowRight(1)}
+                onClick={youtubeSlideRight}
               >
               &nbsp;
               </div>
@@ -1241,8 +1234,8 @@ const MobilePageContent = () => {
           </div>
         </div>
         {shareBtnPopup()}
-      </div> : null
-    );
+    </div>
+    : null);
   };
 
   return (
