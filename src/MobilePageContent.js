@@ -1275,7 +1275,9 @@ const MobilePageContent = () => {
     <div style={fixBackground()}>
       {showHamburger()}
       <div className="page__block page__block-1 add_showup" id="#s1" ref={s1Ref}>
-        <img src={require('./img/title2.png')} style={{width:"100%", height:"80%"}} alt="title2" />
+        <div>
+          <img src={require('./img/title2.png')} style={{width:"100%", height:"80%"}} alt="title2" />
+        </div>
       </div>
       <div className="page__block page__block-2 add_showup">
         <Player
