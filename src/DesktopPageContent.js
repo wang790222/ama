@@ -1182,7 +1182,7 @@ const DesktopPageContent = () => {
                 
             </div>
             <div className="page__block-59-text page__block-59-text-2">
-                <p>財團法人公共電視文化事業基金會 版權所有 All Contents Copyright, Taiwan Public Television Service.</p>
+                <p>財團法人公共電視文化事業基金會 版權所有, Taiwan Public Television Service Foundation. © All Rights Reserved.</p>
             </div>
           </div>
         </div>
