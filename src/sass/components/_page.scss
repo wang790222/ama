@@ -730,8 +730,8 @@
 
       @include respond(phone) {
         opacity: 1;
-        width: 360px;
-        height: 500px;
+        width: 310px;
+        height: 430px;
         margin-top: 20px;
       }
     }
@@ -791,41 +791,41 @@
       }
 
       &__two_col {
-        width: 360px;
+        width: 375px;
         height: 500px;
         position: relative;
-
-        @include respond(phone) {
-          height: 520px;
-        }
   
         &-left {
           margin: 0;
           position: absolute;
           top: 0;
-          left: 0;
+          left: 33.5px;
+          z-index: 1;
         }
   
         &-right {
+          position: absolute;
+          left: 150px;
           margin-top: 125px;
           width: 200px;
           height: 300px;
-          float: right;
+          z-index: 10;
 
           &-btn {
-            margin: 0 auto 30px;
-            width: 144px;
-            height: 40px;
+            margin: 0 auto 28px;
+            width: 130px;
+            height: 34px;
             color: white;
             text-align: center;
-            line-height: 34px;
+            line-height: 28px;
             box-shadow: 5px 10px 10px rgba(black, .2);
             border-radius: 15px;
             border: 3px solid white;
             font-size: 20px;
+            z-index: 3;
 
             @include respond(phone) {
-              font-size: 17px;
+              font-size: 15px;
             }
 
             &:active {
@@ -833,6 +833,7 @@
             }
   
             &-1 {
+              z-index: 3;
               background-color: #007AA5;
 
               &:hover {
@@ -841,6 +842,7 @@
             }
   
             &-2 {
+              z-index: 3;
               background-color: #009DBB;
 
               &:hover {
@@ -849,6 +851,7 @@
             }
   
             &-3 {
+              z-index: 3;
               background-color: #00B9D9;
 
               &:hover {
@@ -857,6 +860,7 @@
             }
   
             &-4 {
+              z-index: 3;
               background-color: #54D0DD;
   
               &:hover {
@@ -2259,6 +2263,50 @@
           line-height: 35px;
           color: #F06F04;
           cursor: pointer;
+        }
+      }
+    }
+
+    &-62 {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 5000;
+      background-color: rgba($color-black, .5);
+      opacity: 1;
+
+      &__content {
+        opacity: 1;
+        margin: auto;
+        width: 360px;
+        height: 640px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background-color: #FFF5C5;
+  
+        &-close {
+          opacity: 1;
+          position: absolute;
+          top: 15px;
+          left: 295px;
+          background-color: #FF8622;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          text-align: center;
+          font-size: 35px;
+          color: white;
+          line-height: 50px;
+          margin: 0;
+          padding: 0;
+          cursor: pointer;
+          z-index: 5001;
         }
       }
     }

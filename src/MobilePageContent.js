@@ -90,6 +90,7 @@ const MobilePageContent = () => {
   const [isBottom, setIsBottom] = useState(false);
   const [q8910Index, setQ8910Index] = useState(0);
   const [navIndex, setNavIndex] = useState(0);
+  const [playPopupVideo, setPlayPopupVideo] = useState(false);
   
   let totalBlocks = 59;
 
@@ -248,10 +249,14 @@ const MobilePageContent = () => {
   };
 
   const onClickQ5Option = (index) => {
+    console.log(index);
+    setPlayPopupVideo(true);
     setQ5Option(index)
   };
 
   const onClickQ6Option = (index) => {
+    console.log(index);
+    setPlayPopupVideo(true);
     setQ6Option(index)
   };
 
@@ -296,7 +301,7 @@ const MobilePageContent = () => {
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={false}
+            autoPlay={true}
             muted={true}
           />
         </div>
@@ -310,7 +315,7 @@ const MobilePageContent = () => {
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={false}
+            autoPlay={true}
             muted={true}
           />
         </div>
@@ -324,7 +329,7 @@ const MobilePageContent = () => {
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={false}
+            autoPlay={true}
             muted={true}
           />
         </div>
@@ -338,7 +343,7 @@ const MobilePageContent = () => {
             width={"100%"}
             height={"100%"}
             fluid={false}
-            autoPlay={false}
+            autoPlay={true}
             muted={true}
           />
         </div>
@@ -346,7 +351,7 @@ const MobilePageContent = () => {
     }
   };
 
-  const quesion6Video = () => {
+  const question6Video = () => {
     if (q6Option === 0) {
       return (
         <div className="page__block page__block-42" ref={s43Ref}>
@@ -356,6 +361,7 @@ const MobilePageContent = () => {
             width={"100%"}
             height={"100%"}
             fluid={false}
+            autoPlay={true}
             muted={true}
           >
             <ControlBar disableCompletely={true} />
@@ -371,6 +377,7 @@ const MobilePageContent = () => {
             width={"100%"}
             height={"100%"}
             fluid={false}
+            autoPlay={true}
             muted={true}
           >
             <ControlBar disableCompletely={true} />
@@ -386,6 +393,7 @@ const MobilePageContent = () => {
             width={"100%"}
             height={"100%"}
             fluid={false}
+            autoPlay={true}
             muted={true}
           >
             <ControlBar disableCompletely={true} />
@@ -401,6 +409,7 @@ const MobilePageContent = () => {
             width={"100%"}
             height={"100%"}
             fluid={false}
+            autoPlay={true}
             muted={true}
           >
             <ControlBar disableCompletely={true} />
@@ -462,6 +471,29 @@ const MobilePageContent = () => {
                 </button>
               </CopyToClipboard>
             </div>
+          </div>
+        </div>
+      );
+    } else {
+      return null;
+    };
+  };
+
+  const videoPopup = (type) => {
+
+    const video = (type === 1) ? question5Video() : question6Video();
+
+    if (playPopupVideo) {
+      return (
+        <div className="page__block-62">
+          <div className="page__block-62__content">
+            <div 
+              className="page__block page__block-62__content-close"
+              onClick={() => {setPlayPopupVideo(false)}}
+            >
+              &times;
+            </div>
+            {video}
           </div>
         </div>
       );
@@ -625,7 +657,7 @@ const MobilePageContent = () => {
     } else if (index === 2) {
       return (
         <YouTube
-          videoId="JzH9WXQAjs"
+          videoId="-JzH9WXQAjs"
           opts={{
             width: '290px',
             height: '162px',
@@ -810,30 +842,30 @@ const MobilePageContent = () => {
             <div className="page__block-33__two_col-right">
               <div 
                 className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-1"
-                onClick={() => onClickQ5Option(0)}>
+                onClick={() => onClickQ5Option(0)} key="q5b1">
                 一點也不光榮
               </div>
               <div 
                 className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-2"
-                onClick={() => onClickQ5Option(1)}>
+                onClick={() => onClickQ5Option(1)} key="q5b2">
                 很少感到光榮
               </div>
               <div 
                 className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-3"
-                onClick={() => onClickQ5Option(2)}>
+                onClick={() => onClickQ5Option(2)} key="q5b3">
                 有時感到光榮
               </div>
               <div 
                 className="page__block-33__two_col-right-btn page__block-33__two_col-right-btn-4"
-                onClick={() => onClickQ5Option(3)}>
+                onClick={() => onClickQ5Option(3)} key="q5b4">
                 時常感到光榮
               </div>
             </div>
           </div>
+          {videoPopup(1)}
           <div className={animateShowUpBlock(31, "page__block page__block-31")} ref={s31Ref}>
             &#9650; 點擊按鈕試試看！
           </div>
-          {question5Video()}
           <div className={animateShowUpBlock(35, "page__block page__block-35")} ref={s35Ref}>
             <p>為了多了解青少年對國家和這塊土地的情感，在這份問卷中，設計了這項提問：「對於身為我們國家的一份子，你是否感到光榮？」，結果有47.5%的受訪者認為「有時感到光榮」，33.9%選擇「時常感到光榮」，兩者合計共81.4%。
             </p>
@@ -857,7 +889,8 @@ const MobilePageContent = () => {
                   <div className="page__block-41-1-img__btn-img">
                     <img src={require('./img/q6-1.png')} style={{width:"100%", height:"100%"}} alt="img_block41"/>
                   </div>
-                  <div className="page__block-41-1-img__btn-btn">
+                  <div className="page__block-41-1-img__btn-btn"
+                    onClick={() => onClickQ6Option(0)} key="q6b1">
                     沮喪的
                   </div>
                 </div>
@@ -867,7 +900,8 @@ const MobilePageContent = () => {
                   <div className="page__block-41-1-img__btn-img">
                     <img src={require('./img/q6-2.png')} style={{width:"100%", height:"100%"}} alt="img_block41" />
                   </div>
-                  <div className="page__block-41-1-img__btn-btn">
+                  <div className="page__block-41-1-img__btn-btn"
+                    onClick={() => onClickQ6Option(1)} key="q6b2">
                     難過的
                   </div>
                 </div>
@@ -879,7 +913,8 @@ const MobilePageContent = () => {
                   <div className="page__block-41-1-img__btn-img">
                     <img src={require('./img/q6-3.png')} style={{width:"100%", height:"100%"}} alt="img_block41" />
                   </div>
-                  <div className="page__block-41-1-img__btn-btn">
+                  <div className="page__block-41-1-img__btn-btn"
+                    onClick={() => onClickQ6Option(2)} key="q6b3">
                     憤怒的
                   </div>
                 </div>
@@ -889,12 +924,14 @@ const MobilePageContent = () => {
                   <div className="page__block-41-1-img__btn-img">
                     <img src={require('./img/q6-4.png')} style={{width:"100%", height:"100%"}} alt="img_block41" />
                   </div>
-                  <div className="page__block-41-1-img__btn-btn">
+                  <div className="page__block-41-1-img__btn-btn"
+                    onClick={() => onClickQ6Option(3)} key="q6b4">
                     擔心的
                   </div>
                 </div>
               </div>
             </div>
+            {videoPopup(2)}
             <div className="page__block page__block-41-2">
               &#9650; 點擊按鈕試試看！
             </div>
@@ -1032,8 +1069,8 @@ const MobilePageContent = () => {
               >
               &nbsp;
               </div>
-              <div style={{display: "inline-block"}}>
-              {getYoutubeVideo(videoIndex)}
+              <div style={{display: "inline-block"}} key={`youtube-${videoIndex}`}>
+                {getYoutubeVideo(videoIndex)}
               </div>
               <div 
                 className={addOpacityToArrowRight(1)}
