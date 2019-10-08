@@ -735,7 +735,7 @@ const DesktopPageContent = () => {
             <img src={require('./img/q9-title.png')} alt="q9" style={{width: "100%", height: "100%"}} />
           </div>
           <div className={animateShowUpBlock(30, "page__block page__block-30")} ref={s30Ref}>
-            <p>對於身為我們國家的一份子，你是否感到光榮？</p>
+            <p>對於身為我們國家的一分子，你是否感到光榮？</p>
           </div>
           <div style={{height: "250px"}}>
             <div className={animateShowUpBlock(32, "page__block page__block-32")} ref={s32Ref}>
@@ -767,11 +767,11 @@ const DesktopPageContent = () => {
             </div>
           </div>
           <div className={animateShowUpBlock(31, "page__block page__block-31")} ref={s31Ref}>
-            &#9650; 點擊按鈕試試看！
+            &#9650; 點擊按鈕看理由！
           </div>
           {question5Video()}
           <div className={animateShowUpBlock(35, "page__block page__block-35")} ref={s35Ref}>
-            <p>為了多了解青少年對國家和這塊土地的情感，在這份問卷中，設計了這項提問：「對於身為我們國家的一份子，你是否感到光榮？」，結果有47.5%的受訪者認為「有時感到光榮」，33.9%選擇「時常感到光榮」，兩者合計共81.4%。
+            <p>為了多了解青少年對國家和這塊土地的情感，在這份問卷中，設計了這項提問：「對於身為我們國家的一分子，你是否感到光榮？」，結果有47.5%的受訪者認為「有時感到光榮」，33.9%選擇「時常感到光榮」，兩者合計共81.4%。
             </p>
             <br />
             <br />
@@ -784,7 +784,7 @@ const DesktopPageContent = () => {
             <img src={require('./img/q10-title.png')} alt="q10" style={{width: "100%", height: "100%"}} />
           </div>
           <div className={animateShowUpBlock(38, "page__block page__block-38")} ref={s38Ref}>
-            <p>當我們講到台灣時，你認為以下哪個負面性形容詞適合描述你心理上感受？</p>
+            <p>當我們講到台灣時，你認為以下哪個負面形容詞適合描述你心理上的感受？</p>
           </div>
           <div>
             <div className={animateShowUpBlock(40, "page__block page__block-40")} ref={s40Ref}>
@@ -816,12 +816,12 @@ const DesktopPageContent = () => {
               </div>
             </div>
             <div className={animateShowUpBlock(42, "page__block page__block-41-2")} ref={s42Ref}>
-              &#9650; 點擊按鈕試試看！
+              &#9650; 點擊按鈕看理由！
             </div>
             {quesion6Video()}
           </div>
           <div className={animateShowUpBlock(44, "page__block page__block-43")} ref={s44Ref}>
-            <p>問完青少年是否會對自己的國家感到光榮後，問卷中進一步提問：「當我們講到台灣時，你認為以下哪個負面性形容詞適合描述你心理上感受？」。負面形容詞的選項包括：「沮喪的」、「難過的」、「憤怒的」、「擔心的」、以及「沒有」。
+            <p>問完青少年是否會對自己的國家感到光榮後，問卷中進一步提問：「當我們講到台灣時，你認為以下哪個負面形容詞適合描述你心理上的感受？」。負面形容詞的選項包括：「沮喪的」、「難過的」、「憤怒的」、「擔心的」、以及「沒有」。
             </p>
             <br />
             <br />
@@ -1002,7 +1002,7 @@ const DesktopPageContent = () => {
             <img src={require('./img/q16-title.png')} alt="q16" style={{width: "860px", height: "62px"}} />
           </div>
           <div className="page__block-55-text">
-            <p>我們邀請了五位政治界、媒體界的朋友，和大家分享他們看過這份青少年的國族調查後，有什麼觀察和思考！
+            <p>我們邀請了五位政治界、媒體界的朋友，和大家分享他們看過這份<br>青少年的國族調查後，有什麼觀察和思考！
             </p>
           </div>
           <div className="page__block-55-grid">
@@ -1204,7 +1204,7 @@ const DesktopPageContent = () => {
         </Player>
       </div>
       <div className="page__block page__block-3 add_showup">
-        <p>2020總統大選將至，社會上對於總統選舉、國家認同和國家未來等議題，討論得沸沸揚揚。你會好奇代表著「未來」的青少年們究竟是怎麼想的嗎？公共電視青少年節目《青春發言人》委託政治大學「選舉研究中心」，針對全國高中職生進行國族認同 調查，分別從「你是哪裡人？」、「兩岸關係」、「對台灣的愛恨情仇？」、「高中職生對政治冷感嗎？」四大面向，帶你了解青少年如何看待自己的國家與土地。</p>
+        <p>2020總統大選將至，社會上對於總統選舉、國家認同和國家未來等議題，討論得沸沸揚揚。你會好奇代表著「未來」的青少年們究竟是怎麼想的嗎？公共電視青少年節目《青春發言人》委託政治大學「選舉研究中心」，針對全國高中職生進行國族認同調查，分別從「你是哪裡人？」、「兩岸關係」、「對台灣的愛恨情仇？」、「高中職生對政治冷感嗎？」四大面向，帶你了解青少年如何看待自己的國家與土地。</p>
       </div>
       <div 
         onClick={popupSurveyMethod}
