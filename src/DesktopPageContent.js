@@ -712,7 +712,7 @@ const DesktopPageContent = () => {
             </Player>
           </div>
           <div className={animateShowUpBlock(23, "page__block page__block-23")} ref={s23Ref}>
-            <p>我們用0~10分量表的方式(0完全不焦慮、10非常焦慮)詢問高中職生：「你是否會因為兩岸關係的不確定性感到焦慮？」。結果，0分的選項無人選擇，但有76.1%的人集中選填4-8分。這可說明，充滿不確定性的兩岸關係，讓大多受訪者感到「焦慮」甚至接近「非常焦慮」的狀態。</p>
+            <p>我們用0~10分量表的方式(0完全不焦慮、10非常焦慮)詢問高中職生：「你是否會因為兩岸關係的不確定性感到焦慮？」。結果，0分的選項無人選擇，但有76.4%的人集中選填5-10分。這可說明，充滿不確定性的兩岸關係，讓大多受訪者感到「焦慮」甚至接近「非常焦慮」的狀態。</p>
           </div>
           <div className={animateShowUpBlock(24, "page__block page__block-24")} ref={s24Ref}></div>
           <div className={animateShowUpBlock(25, "page__block page__block-25")} ref={s25Ref}>
@@ -753,7 +753,7 @@ const DesktopPageContent = () => {
             <img src={require('./img/q9-title.png')} alt="q9" style={{width: "100%", height: "100%"}} />
           </div>
           <div className={animateShowUpBlock(30, "page__block page__block-30")} ref={s30Ref}>
-            <p>對於身為我們國家的一份子，你是否感到光榮？</p>
+            <p>對於身為我們國家的一分子，你是否感到光榮？</p>
           </div>
           <div style={{height: "250px"}}>
             <div className={animateShowUpBlock(32, "page__block page__block-32")} ref={s32Ref}>
@@ -785,11 +785,11 @@ const DesktopPageContent = () => {
             </div>
           </div>
           <div className={animateShowUpBlock(31, "page__block page__block-31")} ref={s31Ref}>
-            &#9650; 點擊按鈕試試看！
+            &#9650; 點擊按鈕看理由！
           </div>
           {question5Video()}
           <div className={animateShowUpBlock(35, "page__block page__block-35")} ref={s35Ref}>
-            <p>為了多了解青少年對國家和這塊土地的情感，在這份問卷中，設計了這項提問：「對於身為我們國家的一份子，你是否感到光榮？」，結果有47.5%的受訪者認為「有時感到光榮」，33.9%選擇「時常感到光榮」，兩者合計共81.4%。
+            <p>為了多了解青少年對國家和這塊土地的情感，在這份問卷中，設計了這項提問：「對於身為我們國家的一分子，你是否感到光榮？」，結果有47.5%的受訪者認為「有時感到光榮」，33.9%選擇「時常感到光榮」，兩者合計共81.4%。
             </p>
             <br />
             <br />
@@ -802,7 +802,7 @@ const DesktopPageContent = () => {
             <img src={require('./img/q10-title.png')} alt="q10" style={{width: "100%", height: "100%"}} />
           </div>
           <div className={animateShowUpBlock(38, "page__block page__block-38")} ref={s38Ref}>
-            <p>當我們講到台灣時，你認為以下哪個負面性形容詞適合描述你心理上感受？</p>
+            <p>當我們講到台灣時，你認為以下哪個負面形容詞適合描述你心理上的感受？</p>
           </div>
           <div>
             <div className={animateShowUpBlock(40, "page__block page__block-40")} ref={s40Ref}>
@@ -834,12 +834,12 @@ const DesktopPageContent = () => {
               </div>
             </div>
             <div className={animateShowUpBlock(42, "page__block page__block-41-2")} ref={s42Ref}>
-              &#9650; 點擊按鈕試試看！
+              &#9650; 點擊按鈕看理由！
             </div>
             {quesion6Video()}
           </div>
           <div className={animateShowUpBlock(44, "page__block page__block-43")} ref={s44Ref}>
-            <p>問完青少年是否會對自己的國家感到光榮後，問卷中進一步提問：「當我們講到台灣時，你認為以下哪個負面性形容詞適合描述你心理上感受？」。負面形容詞的選項包括：「沮喪的」、「難過的」、「憤怒的」、「擔心的」、以及「沒有」。
+            <p>問完青少年是否會對自己的國家感到光榮後，問卷中進一步提問：「當我們講到台灣時，你認為以下哪個負面形容詞適合描述你心理上的感受？」。負面形容詞的選項包括：「沮喪的」、「難過的」、「憤怒的」、「擔心的」、以及「沒有」。
             </p>
             <br />
             <br />
@@ -893,7 +893,14 @@ const DesktopPageContent = () => {
                 <p>看到這裡，你有更理解高中職生們怎麼看待自己的國家和土地嗎？你是否有過因為國族立場的不同，導致世代衝突的經驗呢？「青春發言人」特別邀請政治立場有所差異的青少年和成年人一起坐下來對話，嘗試找尋彼此溝通的可能。</p>
               </div>
               <div className="page__block-49-video">
-                
+                <YouTube
+                videoId="N66r9FKvpxg"
+                opts={{
+                  width: '650',
+                  height: '365',
+                }}
+               />
+            </div>  
               </div>
             </div>
             <div className={animateShowUpBlock(5, "page__block page__block-50")} id="s5" ref={s5Ref}>
@@ -1027,7 +1034,7 @@ const DesktopPageContent = () => {
             <img src={require('./img/q16-title.png')} alt="q16" style={{width: "860px", height: "62px"}} />
           </div>
           <div className="page__block-55-text">
-            <p>我們邀請了五位政治界、媒體界的朋友，和大家分享他們看過這份青少年的國族調查後，有什麼觀察和思考！
+            <p>我們邀請了五位政治界、媒體界的朋友，和大家分享他們看過這份<br/>青少年的國族調查後，有什麼觀察和思考！
             </p>
           </div>
           <div className="page__block-55-grid">
@@ -1155,7 +1162,7 @@ const DesktopPageContent = () => {
           <div 
             className="page__block-57-btn"
           >
-            <a href='https://pse.is/KBUF6' target='_blanket'>下載報告</a>
+            <a href='https://pse.is/MMTN4' target='_blanket'>下載報告</a>
           </div>
         </div>
         <div className={animateShowUpBlock(58, "page__block page__block-58")} ref={s58Ref}>
@@ -1174,7 +1181,8 @@ const DesktopPageContent = () => {
           </div>
             <div className="page__block-59-icon">
               <ion-icon name="logo-facebook" className="page__block-59-icon-1"></ion-icon>
-              <ion-icon name="logo-youtube" className="page__block-59-icon-2"></ion-icon>
+              <ion-icon name="logo-
+" className="page__block-59-icon-2"></ion-icon>
               <ion-icon name="logo-instagram" className="page__block-59-icon-3"></ion-icon>
             </div>
             <div className="page__block-59-line">&nbsp;</div>
@@ -1229,7 +1237,7 @@ const DesktopPageContent = () => {
         </Player>
       </div>
       <div className="page__block page__block-3 add_showup">
-        <p>2020總統大選將至，社會上對於總統選舉、國家認同和國家未來等議題，討論得沸沸揚揚。你會好奇代表著「未來」的青少年們究竟是怎麼想的嗎？公共電視青少年節目《青春發言人》委託政治大學「選舉研究中心」，針對全國高中職生進行國族認同 調查，分別從「你是哪裡人？」、「兩岸關係」、「對台灣的愛恨情仇？」、「高中職生對政治冷感嗎？」四大面向，帶你了解青少年如何看待自己的國家與土地。</p>
+        <p>2020總統大選將至，社會上對於總統選舉、國家認同和國家未來等議題，討論得沸沸揚揚。你會好奇代表著「未來」的青少年們究竟是怎麼想的嗎？公共電視青少年節目《青春發言人》委託政治大學「選舉研究中心」，針對全國高中職生進行國族認同調查，分別從「你是哪裡人？」、「兩岸關係」、「對台灣的愛恨情仇？」、「高中職生對政治冷感嗎？」四大面向，帶你了解青少年如何看待自己的國家與土地。</p>
       </div>
       <div 
         onClick={popupSurveyMethod}
