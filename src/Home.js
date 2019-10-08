@@ -22,7 +22,7 @@ const Home = (props) => {
             src={require('./img/video/P1.mp4')}
             width={"100%"}
             height={"100%"}
-            fluid={true}
+            fluid={false}
             autoPlay={true}
             muted={true}
           >
