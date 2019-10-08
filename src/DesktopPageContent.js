@@ -1002,7 +1002,7 @@ const DesktopPageContent = () => {
             <img src={require('./img/q16-title.png')} alt="q16" style={{width: "860px", height: "62px"}} />
           </div>
           <div className="page__block-55-text">
-            <p>我們邀請了五位政治界、媒體界的朋友，和大家分享他們看過這份<br>青少年的國族調查後，有什麼觀察和思考！
+            <p>我們邀請了五位政治界、媒體界的朋友，和大家分享他們看過這份<br/>青少年的國族調查後，有什麼觀察和思考！
             </p>
           </div>
           <div className="page__block-55-grid">
