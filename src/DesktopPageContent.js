@@ -247,11 +247,21 @@ const DesktopPageContent = () => {
   };
 
   const onClickQ5Option = (index) => {
-    setQ5Option(index)
+    setQ5Option(index);
+    let s31Top = (s31Ref.current) ? s31Ref.current.offsetTop : -1;
+    let s31Bottom = (s31Ref.current) ? (s31Top + s31Ref.current.clientHeight) : -1;
+    if (s31Bottom !== -1) {
+      window.scrollTo(0, s31Bottom);
+    }
   };
 
   const onClickQ6Option = (index) => {
-    setQ6Option(index)
+    setQ6Option(index);
+    let s42Top = (s42Ref.current) ? s42Ref.current.offsetTop : -1;
+    let s42Bottom = (s42Ref.current) ? (s42Top + s42Ref.current.clientHeight) : -1;
+    if (s42Bottom !== -1) {
+      window.scrollTo(0, s42Bottom);
+    }
   };
 
   // 看全文
@@ -525,8 +535,8 @@ const DesktopPageContent = () => {
         <Player
           playsInline
           src={require('./img/video/q8.mp4')}
-          width={"100%"}
-          height={"100%"}
+          width={700}
+          height={600}
           fluid={false}
           autoPlay={true}
           muted={true}
@@ -539,8 +549,8 @@ const DesktopPageContent = () => {
         <Player
           playsInline
           src={require('./img/video/q9.mp4')}
-          width={"100%"}
-          height={"100%"}
+          width={700}
+          height={600}
           fluid={false}
           autoPlay={true}
           muted={true}
@@ -553,8 +563,8 @@ const DesktopPageContent = () => {
         <Player
           playsInline
           src={require('./img/video/q10.mp4')}
-          width={"100%"}
-          height={"100%"}
+          width={700}
+          height={600}
           fluid={false}
           autoPlay={true}
           muted={true}
@@ -902,7 +912,7 @@ const DesktopPageContent = () => {
                   >
                   &nbsp;
                   </div>
-                  <div style={{display: "inline-block",width:"800px",height:"600px"}}>
+                  <div style={{display: "inline-block",width:"700px",height:"600px", margin: "0 auto"}}>
                   {selectQ8910Video(q8910Index)}
                   </div>
                   <div 
@@ -1023,7 +1033,7 @@ const DesktopPageContent = () => {
                   <span className="page__block-55-grid-person-right-span-2"> / 台北市議員</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
-                  <p>「若將這份報告視作目前青少年的準確圖像，對我來說，台灣正在走向正確的道路。」</p>
+                  <p>若將這份報告視作目前青少年的準確圖像，對我來說，台灣正在走向正確的道路。</p>
                 </div>
                 <div 
                   className="page__block-55-grid-person-right-btn"
@@ -1043,7 +1053,7 @@ const DesktopPageContent = () => {
                   <span className="page__block-55-grid-person-right-span-2"> / 台北市議員</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
-                  <p>「天然獨？天然台？中華民國派需要更有自信！這場可能被紅統、急獨派夾殺的詮釋權保衛戰，才是「中華民國派」真正的對手，而不是台灣的年輕人們。」</p>
+                  <p>這場可能被紅統、急獨派夾殺的詮釋權保衛戰，才是「中華民國派」真正的對手，而不是台灣的年輕人。</p>
                 </div>
                 <div 
                   className="page__block-55-grid-person-right-btn"
@@ -1084,7 +1094,7 @@ const DesktopPageContent = () => {
                   <span className="page__block-55-grid-person-right-span-2"> / 中正大學傳播學系教授</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
-                  <p>「即便前世代不斷強調，「台灣、中國同文同種、血脈相連」等情感訴求，新世代認為自己是台灣人的比例，已與過去有明顯差異。」</p>
+                  <p>即便前世代不斷強調，「台灣、中國同文同種、血脈相連」等情感訴求，新世代認為自己是台灣人的比例，已與過去有明顯差異。</p>
                 </div>
                 <div 
                   className="page__block-55-grid-person-right-btn"
@@ -1105,7 +1115,7 @@ const DesktopPageContent = () => {
                   <span className="page__block-55-grid-person-right-span-2"> / 公視《我們的島》製作人</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
-                  <p>「高中職生認為未來10年重要的社會目標中，「環境維護」敬陪末座，由此可粗略觀少年的價值觀，以及未來台灣將會面臨選擇衝突的問題。」</p>
+                  <p>高中職生認為未來10年重要的社會目標中，「環境維護」敬陪末座，由此可粗略觀少年的價值觀，以及未來台灣將會面臨選擇衝突的問題。</p>
                 </div>
                 <div 
                   className="page__block-55-grid-person-right-btn"
@@ -1131,7 +1141,7 @@ const DesktopPageContent = () => {
             </div>
           </div>
           <div className="page__block-57-text">
-            <p>這份「高中職生國族認同調查」的問卷，總共包含36個問題，我們僅挑選其中10個問題呈現於網頁中。若您對整份問卷結果有興趣，歡迎直接下載。另外，我們也邀請了五位政治界、媒體界的朋友，和大家分享他們看過這份青少年的國族調查後，有什麼觀察和思考。
+            <p>這份「高中職生國族認同調查」的問卷，總共包含41個問題，我們僅挑選其中10個問題呈現於網頁中。若您對整份問卷結果有興趣，歡迎直接下載。
             </p>
           </div>
           <div 

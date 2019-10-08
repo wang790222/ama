@@ -1389,7 +1389,7 @@
 
         &-window {
           margin: 0 auto;
-          width: 1000px;
+          width: 900px;
           height: 600px;
 
           &-left {
@@ -1641,8 +1641,8 @@
 
           @include respond(phone) {
             width: 312px;
-            height: 114px;
-            margin: 50px auto 0;
+            height: 180px;
+            margin: 35px auto 0;
           }
 
           &-left {
@@ -2218,15 +2218,15 @@
         }
 
         &-close {
-          position: absolute;
-          top: 30px;
-          left: 912px;
+          position: fixed;
+          top: 125px;
+          left: 1050px;
           background-color: #F06F04;
           width: 50px;
           height: 50px;
           border-radius: 50%;
           text-align: center;
-          font-size: 50px;
+          font-size: 35px;
           color: white;
           line-height: 50px;
           margin: 0;
@@ -2246,7 +2246,6 @@
 
           @include respond(phone) {
             width: 312px;
-            height: 100%;
             overflow: scroll;
           }
         }
