@@ -2582,3 +2582,8 @@ html {
       margin-right: 40px; }
   .row-4-2 .col-1-of-4 {
     width: 180px; }
+
+
+  .video-react{
+    background-color:unset !important;
+  }

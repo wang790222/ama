@@ -20,9 +20,9 @@ const Home = (props) => {
           <Player
             playsInline
             src={require('./img/video/P1.mp4')}
-            width={"552"}
-            height={"308"}
-            fluid={false}
+            width={"100%"}
+            height={"100%"}
+            fluid={true}
             autoPlay={true}
             muted={true}
           >
