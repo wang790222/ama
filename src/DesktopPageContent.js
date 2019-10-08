@@ -1161,7 +1161,7 @@ const DesktopPageContent = () => {
           <div 
             className="page__block-57-btn"
           >
-            <a href='https://pse.is/MMTN4' target='_blanket'>下載報告</a>
+            <a href='https://pse.is/KBUF6' target='_blanket'>下載報告</a>
           </div>
         </div>
         <div className={animateShowUpBlock(58, "page__block page__block-58")} ref={s58Ref}>
