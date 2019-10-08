@@ -694,7 +694,7 @@ const DesktopPageContent = () => {
             </Player>
           </div>
           <div className={animateShowUpBlock(23, "page__block page__block-23")} ref={s23Ref}>
-            <p>我們用0~10分量表的方式(0完全不焦慮、10非常焦慮)詢問高中職生：「你是否會因為兩岸關係的不確定性感到焦慮？」。結果，0分的選項無人選擇，但有76.1%的人集中選填4-8分。這可說明，充滿不確定性的兩岸關係，讓大多受訪者感到「焦慮」甚至接近「非常焦慮」的狀態。</p>
+            <p>我們用0~10分量表的方式(0完全不焦慮、10非常焦慮)詢問高中職生：「你是否會因為兩岸關係的不確定性感到焦慮？」。結果，0分的選項無人選擇，但有76.4%的人集中選填5-10分。這可說明，充滿不確定性的兩岸關係，讓大多受訪者感到「焦慮」甚至接近「非常焦慮」的狀態。</p>
           </div>
           <div className={animateShowUpBlock(24, "page__block page__block-24")} ref={s24Ref}></div>
           <div className={animateShowUpBlock(25, "page__block page__block-25")} ref={s25Ref}>
