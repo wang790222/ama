@@ -704,7 +704,7 @@ const MobilePageContent = () => {
           <div className={animateShowUpBlock(16, "page__block page__block-16")} ref={s16Ref}>
             <Player
               playsInline
-              src={require('./img/video/q1.mp4')}
+              src={require('./img/video/q1-small.mp4')}
               width={"100%"}
               height={"100%"}
               fluid={false}
