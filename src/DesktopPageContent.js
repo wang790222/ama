@@ -900,7 +900,6 @@ const DesktopPageContent = () => {
                   height: '365',
                 }}
                />
-            </div>  
               </div>
             </div>
             <div className={animateShowUpBlock(5, "page__block page__block-50")} id="s5" ref={s5Ref}>
