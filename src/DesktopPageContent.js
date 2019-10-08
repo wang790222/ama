@@ -109,8 +109,16 @@ const DesktopPageContent = () => {
     if (navIndex) {
       handleNavToSection(navIndex);
     }
-    
   }, [popup, share, navIndex]);
+
+  const goToS9RefBottom = () => {
+    let s9Top = (s9Ref.current) ? s9Ref.current.offsetTop : -1;
+    let s9Bottom = (s9Ref.current) ? (s9Top + s9Ref.current.clientHeight) : -1;
+    console.log(s9Bottom);
+    if (s9Bottom !== -1) {
+      window.scrollTo(0, s9Bottom);
+    }
+  };
 
   const animateShowUpBlock = (index, originClassName) => {
     if (blockInPage[index]) {
@@ -1263,17 +1271,17 @@ const DesktopPageContent = () => {
         <div className="row-3">
           <div 
             className="col-1-of-3 page__block-9-btn"
-            onClick={() => {setAfterBlockNine(true)}}>
+            onClick={() => {setAfterBlockNine(true);goToS9RefBottom();}}>
             中國人
           </div>
           <div 
             className="col-1-of-3 page__block-9-btn"
-            onClick={() => {setAfterBlockNine(true)}}>
+            onClick={() => {setAfterBlockNine(true);goToS9RefBottom();}}>
             台灣人
           </div>
           <div 
             className="col-1-of-3 page__block-9-btn"
-            onClick={() => {setAfterBlockNine(true)}}>
+            onClick={() => {setAfterBlockNine(true);goToS9RefBottom();}}>
             都是
           </div>
         </div>
