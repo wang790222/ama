@@ -723,10 +723,10 @@ const MobilePageContent = () => {
           <div className={animateShowUpBlock(14, "page__block page__block-14")} ref={s14Ref}>
           </div>
           <div className={animateShowUpBlock(15, "page__block page__block-15")} ref={s15Ref}>
-            <div className="page__block-15-cube">
-              <img src={require('./img/q2-head.png')} style={{width: "100%", height: "100%"}} alt="img_block13" />
-            </div>
             <div className="page__block-15-text-box">
+              <div className="page__block-15-cube">
+                <img src={require('./img/q2-head.png')} style={{width: "100%", height: "100%"}} alt="img_block7" />
+              </div>
               <div className="page__block-15-box-text">
                 <p>延續上一題，如果問題的問法改為：從「文化」角度來看，請問你認為自己是台灣人、中國人還是都是？你覺得高中職生的答案會有改變嗎？
                 </p>
@@ -945,12 +945,13 @@ const MobilePageContent = () => {
             結果顯示，有5成以上的受訪者認為講到台灣時，他們是「擔心的」。該題進一步請他們寫下擔心的原因時，答案則圍繞在「擔心台灣失去自由」以及「國際地位遭打壓」。
             </p>
           </div>
-          <div className={animateShowUpBlock(45, "page__block page__block-44")} ref={s45Ref}></div>
+          <div className={animateShowUpBlock(45, "page__block page__block-44")} ref={s45Ref}>
+          </div>
           <div className={animateShowUpBlock(46, "page__block page__block-45")} ref={s46Ref}>
-            <div className="page__block-45-cube">
-              <img src={require('./img/q7-head.png')} style={{width: "100%", height: "100%"}} alt="img_block45" />
-            </div>
             <div className="page__block-45-text-box">
+              <div className="page__block-45-cube">
+                <img src={require('./img/q7-head.png')} style={{width: "100%", height: "100%"}} alt="img_block7" />
+              </div>
               <div className="page__block-45-box-text">
                 <p>高中職生沒有選票，但他們代表的卻是台灣的未來。阿嬤我很好奇，當討論到國家未來10年的目標時，高中職生會認為哪一項社會目標是最重要的呢？
                 </p>
@@ -999,43 +1000,38 @@ const MobilePageContent = () => {
               <img src={require('./img/green-background.jpg')} style={{width: "100%", height: "250px"}} alt="q13" className="page__block-50-background"/>
             </div>
             <div className={animateShowUpBlock(51, "page__block page__block-51")} ref={s51Ref}>
-              <div className="page__block-51-content">
+              <div className="page__block-51-content-text-box">
                 <div className="page__block-51-content-cube">
-                  <img src={require('./img/q8-head.png')} style={{width: "100%", height: "100%"}} alt="img_block51" />
+                  <img src={require('./img/q8-head.png')} style={{width: "100%", height: "100%"}} alt="img_block7" />
                 </div>
-                <div className="page__block-51-content-text-box">
-                  <div className="page__block-51-content-box-text">
-                    <p>了解青少年如何看待國族認同的問題後，你想不想知道，高中職生們對於民主政治參與的態度和想法呢？
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="page__block-54-video-slides">
-                <div className="page__block-54-video-slides-window">
-                  <div 
-                    className={addOpacityToArrowLeft(2)}
-                    onClick={videoSlideLeft}
-                  >
-                  &nbsp;
-                  </div>
-                  <div style={{display: "inline-block", width:"280px",height:"580px"}}>
-                  {selectQ8910Video(q8910Index)}
-                  </div>
-                  <div 
-                    className={addOpacityToArrowRight(2)}
-                    onClick={videoSlideRight}
-                  >
-                  &nbsp;
-                  </div>
-                </div>
-                <div className="page__block-54-video-slides-dot-group">
-                  <div style={dotCssStyle(0, q8910Index)}>&nbsp;</div>
-                  <div style={dotCssStyle(1, q8910Index)}>&nbsp;</div>
-                  <div style={dotCssStyle(2, q8910Index)}>&nbsp;</div>
-                </div>
+                <p>了解青少年如何看待國族認同的問題後，你想不想知道，高中職生們對於民主政治參與的態度和想法呢？</p>
               </div>
             </div>
-        </div>
+            <div className="page__block-54-video-slides">
+              <div className="page__block-54-video-slides-window">
+                <div 
+                  className={addOpacityToArrowLeft(2)}
+                  onClick={videoSlideLeft}
+                >
+                &nbsp;
+                </div>
+                <div style={{display: "inline-block", width:"280px",height:"580px"}}>
+                {selectQ8910Video(q8910Index)}
+                </div>
+                <div 
+                  className={addOpacityToArrowRight(2)}
+                  onClick={videoSlideRight}
+                >
+                &nbsp;
+                </div>
+              </div>
+              <div className="page__block-54-video-slides-dot-group">
+                <div style={dotCssStyle(0, q8910Index)}>&nbsp;</div>
+                <div style={dotCssStyle(1, q8910Index)}>&nbsp;</div>
+                <div style={dotCssStyle(2, q8910Index)}>&nbsp;</div>
+              </div>
+            </div>
+          </div>
       <div className={animateShowUpBlock(52, "page__block page__block-52")} ref={s52Ref}>
           <img src={require('./img/q14-title-small.png')} alt="q14" style={{width: "100%", height: "100%"}} />
         </div>
@@ -1311,10 +1307,10 @@ const MobilePageContent = () => {
         closePopupSurveyMethod={closePopupSurveyMethod}
       />
       <div className={animateShowUpBlock(7, "page__block page__block-7")} ref={s7Ref}>
-        <div className="page__block-7-cube">
-          <img src={require('./img/q1-head.png')} style={{width: "100%", height: "100%"}} alt="img_block7" />
-        </div>
         <div className="page__block-7-text-box">
+          <div className="page__block-7-cube">
+            <img src={require('./img/q1-head.png')} style={{width: "100%", height: "100%"}} alt="img_block7" />
+          </div>
           <div className="page__block-7-box-text">
             <p>在台灣，有人說自己是「台灣人」，也有人說自己是「中國人」，也有人說都是。你猜多數高中職生是怎麼想的？
             </p>
