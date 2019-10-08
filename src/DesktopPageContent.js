@@ -1227,16 +1227,7 @@ const DesktopPageContent = () => {
         <img src={require('./img/title2.png')} style={{width:"100%", height:"100%"}} alt="title2" />
       </div>
       <div className="page__block page__block-2 add_showup">
-        <Player
-          playsInline
-          src={require('./img/video/p4.mp4')}
-          width={"100%"}
-          height={"100%"}
-          fluid={false}
-          autoPlay={true}
-          muted={true}
-          loop={true}
-        >
+        
           <ControlBar disableCompletely={true} />
         </Player>
       </div>
