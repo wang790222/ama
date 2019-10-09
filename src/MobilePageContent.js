@@ -704,7 +704,7 @@ const MobilePageContent = () => {
           <div className={animateShowUpBlock(16, "page__block page__block-16")} ref={s16Ref}>
             <Player
               playsInline
-              src={require('./img/video/q1-small.mp4')}
+              src={require('./img/video/q1.mp4')}
               width={"100%"}
               height={"100%"}
               fluid={false}
@@ -815,7 +815,7 @@ const MobilePageContent = () => {
             <br />
             <br />
             <p>
-            相比美國杜克大學於2019年發布的《台灣國家安全調查》，同樣一個問題，20歲以上的成年人對兩岸關係的期望，前四高依序是：「維持現狀，看情形再決定獨立或統一」(33.4%)、「永遠維持現狀」(23.7%)、「維持現狀，以後走向獨立」(16.2%)、「維持現狀，以後走向統一」(10.8%)。
+            相比美國杜克大學於2019年發布的《台灣國家安全調查》，同樣一個問題，20歲以上的成年人對兩岸關係的期望，前四高依序是：「維持現狀，看情形再決定獨立或統一」(33.4%)、「永遠維持現狀」(23.7%)、「維持現狀，以後走向獨立(16.2%)」、「維持現狀，以後走向統一」(10.8%)。
             </p>
             <br />
             <br />
@@ -1186,7 +1186,7 @@ const MobilePageContent = () => {
                   <span className="page__block-55-grid-person-right-span-2"> / 公視《我們的島》製作人</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
-                  <p>高中職生認為未來10年重要的社會目標中，「環境維護」敬陪末座，由此可粗略觀見少年的價值觀，以及未來台灣將會面臨選擇衝突的問題。</p>
+                  <p>高中職生認為未來10年重要的社會目標中，「環境維護」敬陪末座，由此可粗略觀少年的價值觀，以及未來台灣將會面臨選擇衝突的問題。</p>
                 </div>
                 <div 
                   className="page__block-55-grid-person-right-btn"
@@ -1275,14 +1275,12 @@ const MobilePageContent = () => {
     <div style={fixBackground()}>
       {showHamburger()}
       <div className="page__block page__block-1 add_showup" id="#s1" ref={s1Ref}>
-        <div>
-          <img src={require('./img/title2.png')} style={{width:"100%", height:"80%"}} alt="title2" />
-        </div>
+        <img src={require('./img/title2.png')} style={{width:"100%", height:"100%"}} alt="title2" />
       </div>
       <div className="page__block page__block-2 add_showup">
         <Player
           playsInline
-          src={require('./img/video/p4.mp4')}
+          src={require('./img/video/P4.mp4')}
           width={"100%"}
           height={"100%"}
           fluid={false}

@@ -10,7 +10,7 @@
 
       @include respond(phone) {
         width: 340px;
-        height: auto;
+        height: 196px;
         padding-top: 120px;
         margin-bottom: 20px;
       }
@@ -47,17 +47,19 @@
       height: 50px;
       background-color: #F06F04;
       border-radius: 20px;
+      border: 3px solid white;
       margin-top: 50px;
       font-size: 20px;
       letter-spacing: 3px;
       text-indent: 3px;
-      line-height: 50px;
+      line-height: 44px;
       text-align: center;
       color: white;
       cursor: pointer;
+      box-shadow: 5px 10px 10px rgba(black, .2);
 
       &:hover {
-        background-color: #ff8622;
+        background-color: #FF8622;
       }
 
       &:active {
@@ -103,25 +105,28 @@
     }
 
     &-6 {
-      height: 100%;
+      height: 100vh;
       width: 100%;
       position: fixed;
       top: 0;
-      z-index: 100;
-      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      background-color: rgba($color-black, .5);
       opacity: 1;
-      overflow: auto;
+      overflow: scroll;
 
       &__content {
         opacity: 1;
-        width: 70%;
-        height: 90vh;
-        padding: 50px 0;
+        width: 1000px;
+        height: 1000px;
+        overflow: scroll;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 150px 0 270px 0;
+        z-index: 10;
         background-color: #FFF5C5;
-        margin: 15px auto;
-        position: relative;
-        overflow: hidden;
-        background: transparent;
 
         @include respond(phone) {
           width: 360px;
@@ -133,8 +138,8 @@
         &-close {
           opacity: 1;
           position: absolute;
-          top: 10px;
-          right: 20px;
+          top: 30px;
+          left: 912px;
           background-color: #F06F04;
           width: 50px;
           height: 50px;
@@ -154,12 +159,8 @@
 
         &-text {
           opacity: 1;
-          width: 85%;
-          height: 100%;
-          text-align: justify;
-          overflow: auto;
-          padding: 150px 50px;
-          background: #FFF5C5;
+          width: 750px;
+          text-align:justify;
 
           @include respond(phone) {
             width: 312px;
@@ -278,15 +279,17 @@
         height: 50px;
         background-color: #F06F04;
         border-radius: 20px;
+        border: 3px solid white;
         margin-top: 50px;
         margin-bottom: 20px;
         font-size: 20px;
         letter-spacing: 3px;
         text-indent: 3px;
-        line-height: 50px;
+        line-height: 44px;
         text-align: center;
         color: white;
         cursor: pointer;
+        box-shadow: 5px 7px 9px rgba(black, .2);
 
         &:hover {
           background-color: #FF8622;
@@ -305,8 +308,8 @@
     &-10 {
       margin: 60px auto;
       width: 1220px;
-      border-top: 2px solid;
-      color: #DFD4B1;
+      border-top: 3px solid;
+      color: #BDBDBD;
 
       @include respond(phone) {
         margin: 0 auto;
@@ -360,8 +363,8 @@
     &-14 {
       margin: 80px auto 0;
       width: 1220px;
-      border-top: 2px solid;
-      color: #DFD4B1;
+      border-top: 3px solid;
+      color: #BDBDBD;
 
       @include respond(phone) {
         width: 320px;
@@ -601,8 +604,8 @@
     &-24 {
       margin: 80px auto 0;
       width: 1220px;
-      border-top: 2px solid;
-      color: #DFD4B1;
+      border-top: 3px solid;
+      color: #BDBDBD;
 
       @include respond(phone) {
         width: 320px;
@@ -751,11 +754,13 @@
         color: white;
         font-size: 20px;
         text-align: center;
-        line-height: 50px;
+        line-height: 44px;
         letter-spacing: 1px;
         text-indent: 1px;
         cursor: pointer;
+        box-shadow: 5px 7px 9px rgba(black, .2);
         border-radius: 20px;
+        border: 3px solid white;
 
         &:active {
           box-shadow: none;
@@ -821,8 +826,10 @@
             height: 34px;
             color: white;
             text-align: center;
-            line-height: 40px;
+            line-height: 28px;
+            box-shadow: 5px 10px 10px rgba(black, .2);
             border-radius: 15px;
+            border: 3px solid white;
             font-size: 20px;
             z-index: 3;
 
@@ -919,8 +926,8 @@
     &-36 {
       margin: 80px auto 0;
       width: 1220px;
-      border-top: 2px solid;
-      color: #DFD4B1;
+      border-top: 3px solid;
+      color: #BDBDBD;
 
       @include respond(phone) {
         width: 320px;
@@ -986,11 +993,13 @@
         border-radius: 10px;
         font-size: 20px;
         text-align: center;
-        line-height: 50px;
+        line-height: 44px;
         letter-spacing: 3px;
         text-indent: 8px;
         cursor: pointer;
+        box-shadow: 5px 7px 9px rgba(black, .2);
         border-radius: 20px;
+        border: 3px solid white;
         color: white;
 
         &:active {
@@ -1038,8 +1047,10 @@
         &-btn {
           width: 144px;
           height: 40px;
+          box-shadow: 5px 7px 9px rgba(black, .2);
           border-radius: 10px;
-          line-height: 40px;
+          border: 3px solid white;
+          line-height: 34px;
           color: white;
           background-color: #FF8622;
           text-align: center;
@@ -1107,8 +1118,8 @@
     &-44 {
       margin: 80px auto 0;
       width: 1220px;
-      border-top: 2px solid;
-      color: #DFD4B1;
+      border-top: 3px solid;
+      color: #BDBDBD;
 
       @include respond(phone) {
         margin: 60px auto 0;
@@ -1830,10 +1841,14 @@
         width: 220px;
         height: 50px;
         text-align: center;
-        line-height: 50px;
+        line-height: 44px;
         background-color: #F4D0A1;
         margin: 43px auto 0;
+        
+        
+        box-shadow: 5px 10px 10px rgba(black, .2);
         border-radius: 20px;
+        border: 3px solid white;
 
         & a {
           text-decoration: none;
@@ -1901,13 +1916,15 @@
         width: 220px;
         height: 50px;
         border-radius: 20px;
+        border: 3px solid white;
         text-align: center;
-        line-height: 50px;
+        line-height: 44px;
         background-color: #F06F04;
         margin: 30px auto 0;
         color: white;
         font-size: 23px;
         letter-spacing: 1px;
+        box-shadow: 5px 10px 10px rgba(black, .2);
 
         &:hover {
           background-color: #FF8622;
@@ -2187,25 +2204,28 @@
     }
 
     &-61 {
-      height: 100%;
+      height: 100vh;
       width: 100%;
       position: fixed;
       top: 0;
-      z-index: 100;
-      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      background-color: rgba(black, .5);
       opacity: 1;
-      overflow: auto;
 
       &__content {
-        opacity: 1;
-        width: 70%;
-        height: 90vh;
-        padding: 50px 0;
+        width: 1000px;
+        height: 95vh;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 150px 0 170px 0;
+        z-index: 1000;
         background-color: #FFF5C5;
-        margin: 15px auto;
-        position: relative;
-        overflow: hidden;
-        background: transparent;
+        opacity: 1;
+        text-align: center;
+        overflow: scroll;
 
         @include respond(phone) {
           width: 360px;
@@ -2215,20 +2235,21 @@
         }
 
         &-close {
-          opacity: 1;
-          position: absolute;
-          top: 10px;
-          right: 20px;
+          position: fixed;
+          top: 125px;
+          left: 1050px;
           background-color: #F06F04;
           width: 50px;
           height: 50px;
-          text-align: center;
           border-radius: 50%;
-          font-size: 30px;
+          text-align: center;
+          font-size: 35px;
           color: white;
           line-height: 50px;
+          margin: 0;
+          padding: 0;
           cursor: pointer;
-          padding: 0 0 0 1px;
+          opacity: 1;
 
           @include respond(phone) {
             top: 20px;
@@ -2237,14 +2258,8 @@
         }
 
         &-text {
-          opacity: 1;
-          width: 85%;
-          height: 100%;
-          text-align: justify;
-          overflow: auto;
-          padding: 150px 50px;
-          background: #FFF5C5;
-          margin: 0 auto;
+          width: 750px;
+          text-align:justify;
 
           @include respond(phone) {
             width: 312px;
@@ -2257,7 +2272,6 @@
           font-size: 18px;
           line-height: 35px;
           color: #5E3F15;
-          margin-bottom: 1em;
         }
 
         & span {
