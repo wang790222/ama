@@ -1232,7 +1232,7 @@ const DesktopPageContent = () => {
       <div className="page__block page__block-2 add_showup">
         <Player
           playsInline
-          src={require('./img/video/P4.mp4')}
+          src={require('./img/video/p2.mp4')}
           width={"100%"}
           height={"100%"}
           fluid={false}

@@ -1123,8 +1123,8 @@
 
       @include respond(phone) {
         width: 100vw;
-        height: 400px;
-        margin-top: 60px;
+        height: 350px;
+        margin-top: 30px;
         padding-top: 60px;
       }
 
@@ -1184,8 +1184,8 @@
 
       @include respond(phone) {
         width: 360px;
-        height: 1159px;
-        margin-top: 80px;
+        height: 1038px;
+        margin-top: 30px;
       }
     }
 
@@ -1324,8 +1324,8 @@
 
       @include respond(phone) {
         width: 100vw;
-        height: 400px;
-        margin-top: 60px;
+        height: 285px;
+        margin-top: 30px;
         padding-top: 60px;
       }
 
@@ -1444,7 +1444,7 @@
       @include respond(phone) {
         width: 360px;
         height: 80px;
-        margin-top: 40px;
+        margin-top: 10px;
       }
     }
 
@@ -1472,7 +1472,7 @@
       background-color: #EAE7CE;
 
       @include respond(phone) {
-        height: 776px;
+        height: 665px;
       }
 
       &-title {
@@ -1522,7 +1522,6 @@
       }
 
       &-video-slides {
-        margin-top: 40px;
         text-align: center;
 
         &-window {
@@ -1641,13 +1640,44 @@
         @include respond(phone) {
           display: block;
           width: 100vw;
+          margin: 30px auto 0;
         }
 
         &-person {
 
+          &-1 {
+            width: 312px;
+            height: 190px;
+            margin: 35px auto 0;
+          }
+
+          &-2 {
+            width: 312px;
+            height: 190px;
+            margin: 0 auto;
+          }
+
+          &-3 {
+            width: 312px;
+            height: 212px;
+            margin: 0 auto;
+          }
+
+          &-4 {
+            width: 312px;
+            height: 235px;
+            margin: 0 auto;
+          }
+
+          &-5 {
+            width: 312px;
+            height: 230px;
+            margin: 0 auto;
+          }
+
           @include respond(phone) {
             width: 312px;
-            height: 200px;
+            height: 230px;
             margin: 35px auto 0;
           }
 
@@ -1739,8 +1769,8 @@
       color: white;
 
       @include respond(phone) {
-        height: 880px;
-        margin-top: 100px;
+        height: 750px;
+        margin-top: 30px;
       }
 
       &-content {
@@ -1871,6 +1901,12 @@
       padding: 100px 0;
       text-align: center;
 
+      @include respond(phone) {
+        padding: 100px 0;
+        width: 375px;
+        height: 750px;
+      }
+
       &-pic {
         width: 750px;
         margin: 0 auto;
@@ -1977,6 +2013,26 @@
         margin: 0;
         padding: 0;
         text-align: left;
+
+        &-left {
+          margin-top: 20px;
+          width: 120px;
+          height: 118px;
+          float: left;
+          color: white;
+          font-size: 18px;
+          line-height: 26px;
+        }
+
+        &-right {
+          margin-top: 20px;
+          width: 170px;
+          height: 118px;
+          float: right;
+          color: white;
+          font-size: 18px;
+          line-height: 26px;
+        }
       }
 
       &-text {
@@ -1995,7 +2051,7 @@
             text-align: left;
             width: 312px;
             font-size: 16px;
-            margin: 50px 24px 0;
+            margin: 50px auto 0;
           }
         }
       }

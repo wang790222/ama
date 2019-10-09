@@ -1015,7 +1015,7 @@ const MobilePageContent = () => {
                 >
                 &nbsp;
                 </div>
-                <div style={{display: "inline-block", width:"280px",height:"580px"}}>
+                <div style={{display: "inline-block", width:"360px",height:"640px"}}>
                 {selectQ8910Video(q8910Index)}
                 </div>
                 <div 
@@ -1094,7 +1094,7 @@ const MobilePageContent = () => {
             </p>
           </div>
           <div className="page__block-55-grid">
-            <div className="page__block-55-grid-person">
+            <div className="page__block-55-grid-person-1">
               <div className="page__block-55-grid-person-left">
                 <img src={require('./img/profile-1.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
@@ -1114,7 +1114,7 @@ const MobilePageContent = () => {
                 </div>
               </div>
             </div>
-            <div className="page__block-55-grid-person">
+            <div className="page__block-55-grid-person-2">
               <div className="page__block-55-grid-person-left">
                 <img src={require('./img/profile-2.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
@@ -1134,7 +1134,7 @@ const MobilePageContent = () => {
                 </div>
               </div>
             </div>
-            <div className="page__block-55-grid-person">
+            <div className="page__block-55-grid-person-3">
               <div className="page__block-55-grid-person-left">
                 <img src={require('./img/profile-3.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
@@ -1155,7 +1155,7 @@ const MobilePageContent = () => {
                 </div>
               </div>
             </div>
-            <div className="page__block-55-grid-person">
+            <div className="page__block-55-grid-person-4">
               <div className="page__block-55-grid-person-left">
                 <img src={require('./img/profile-4.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
@@ -1176,7 +1176,7 @@ const MobilePageContent = () => {
                 </div>
               </div>
             </div>
-            <div className="page__block-55-grid-person">
+            <div className="page__block-55-grid-person-5">
               <div className="page__block-55-grid-person-left">
                 <img src={require('./img/profile-5.png')} alt="profile-1" style={{width: "100%", height: "100%"}} />
               </div>
@@ -1242,24 +1242,19 @@ const MobilePageContent = () => {
             </div>
             <div className="page__block-59-line">&nbsp;</div>
             <div>
-            <div className="row-3-2">
-              <div className="col-1-of-3-1 page__block-59-textbox">
+            <div style={{width:"312px", height:"118px", margin: "0 auto"}}>
+              <div className="page__block-59-textbox-left">
+                <p>企劃：王柔婷</p>
+                <p>社群：林孟勳</p>
                 <p>監製：於蓓華</p>
                 <p>督導：舒逸琪</p>
-                <p>社群：林孟勳</p>
               </div>
-              <div className="col-1-of-3-2 page__block-59-textbox">
+              <div className="page__block-59-textbox-right">
                 <p>製作人：賴彥如</p>
                 <p>影音導演：朱孝權</p>
+                <p>執行製作：詹惠茹</p>
                 <p>網頁設計：通點設計</p>
               </div>
-              <div className="col-1-of-3-3 page__block-59-textbox">
-                <p>企劃：王柔婷</p>
-                <p>執行製作：詹惠茹</p>
-              </div>
-            </div>
-            <div className="page__block-59-text page__block-59-text-1">
-                
             </div>
             <div className="page__block-59-text page__block-59-text-2">
                 <p>財團法人公共電視文化事業基金會 版權所有 All Contents Copyright, Taiwan Public Television Service.</p>
@@ -1280,7 +1275,7 @@ const MobilePageContent = () => {
       <div className="page__block page__block-2 add_showup">
         <Player
           playsInline
-          src={require('./img/video/P4.mp4')}
+          src={require('./img/video/p2.mp4')}
           width={"100%"}
           height={"100%"}
           fluid={false}

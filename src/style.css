@@ -1332,8 +1332,8 @@ html {
     @media (max-width: 1100px) {
       .page__block-45 {
         width: 100vw;
-        height: 400px;
-        margin-top: 60px;
+        height: 350px;
+        margin-top: 30px;
         padding-top: 60px; } }
     .page__block-45-cube {
       margin: auto;
@@ -1381,8 +1381,8 @@ html {
     @media (max-width: 1100px) {
       .page__block-46 {
         width: 360px;
-        height: 1159px;
-        margin-top: 80px; } }
+        height: 1038px;
+        margin-top: 30px; } }
   .page__block-47 {
     width: 840px;
     height: 60px;
@@ -1486,8 +1486,8 @@ html {
     @media (max-width: 1100px) {
       .page__block-51 {
         width: 100vw;
-        height: 400px;
-        margin-top: 60px;
+        height: 285px;
+        margin-top: 30px;
         padding-top: 60px; } }
     .page__block-51-content {
       width: 875px;
@@ -1578,7 +1578,7 @@ html {
       .page__block-52 {
         width: 360px;
         height: 80px;
-        margin-top: 40px; } }
+        margin-top: 10px; } }
   .page__block-53 {
     width: 700px;
     text-align: justify;
@@ -1598,7 +1598,7 @@ html {
     background-color: #EAE7CE; }
     @media (max-width: 1100px) {
       .page__block-54 {
-        height: 776px; } }
+        height: 665px; } }
     .page__block-54-title {
       width: 840px;
       height: 100px;
@@ -1632,7 +1632,6 @@ html {
       .page__block-54-video-grid-row-2 {
         margin: 30px auto 0; }
     .page__block-54-video-slides {
-      margin-top: 40px;
       text-align: center; }
       .page__block-54-video-slides-window {
         margin: 0 auto;
@@ -1720,11 +1719,32 @@ html {
       @media (max-width: 1100px) {
         .page__block-55-grid {
           display: block;
-          width: 100vw; } }
+          width: 100vw;
+          margin: 30px auto 0; } }
+      .page__block-55-grid-person-1 {
+        width: 312px;
+        height: 190px;
+        margin: 35px auto 0; }
+      .page__block-55-grid-person-2 {
+        width: 312px;
+        height: 190px;
+        margin: 0 auto; }
+      .page__block-55-grid-person-3 {
+        width: 312px;
+        height: 212px;
+        margin: 0 auto; }
+      .page__block-55-grid-person-4 {
+        width: 312px;
+        height: 235px;
+        margin: 0 auto; }
+      .page__block-55-grid-person-5 {
+        width: 312px;
+        height: 230px;
+        margin: 0 auto; }
       @media (max-width: 1100px) {
         .page__block-55-grid-person {
           width: 312px;
-          height: 200px;
+          height: 230px;
           margin: 35px auto 0; } }
       .page__block-55-grid-person-left {
         width: 180px;
@@ -1789,8 +1809,8 @@ html {
     color: white; }
     @media (max-width: 1100px) {
       .page__block-57 {
-        height: 880px;
-        margin-top: 100px; } }
+        height: 750px;
+        margin-top: 30px; } }
     .page__block-57-content {
       width: 810px;
       height: 150px;
@@ -1886,6 +1906,11 @@ html {
     background-color: #FFF5D8;
     padding: 100px 0;
     text-align: center; }
+    @media (max-width: 1100px) {
+      .page__block-58 {
+        padding: 100px 0;
+        width: 375px;
+        height: 750px; } }
     .page__block-58-pic {
       width: 750px;
       margin: 0 auto; }
@@ -1963,6 +1988,22 @@ html {
       margin: 0;
       padding: 0;
       text-align: left; }
+      .page__block-59-textbox-left {
+        margin-top: 20px;
+        width: 120px;
+        height: 118px;
+        float: left;
+        color: white;
+        font-size: 18px;
+        line-height: 26px; }
+      .page__block-59-textbox-right {
+        margin-top: 20px;
+        width: 170px;
+        height: 118px;
+        float: right;
+        color: white;
+        font-size: 18px;
+        line-height: 26px; }
     .page__block-59-text {
       color: white;
       text-align: center; }
@@ -1976,7 +2017,7 @@ html {
             text-align: left;
             width: 312px;
             font-size: 16px;
-            margin: 50px 24px 0; } }
+            margin: 50px auto 0; } }
     .page__block-59-row {
       width: 302px;
       height: 48px;
