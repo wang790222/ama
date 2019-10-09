@@ -277,12 +277,15 @@ const MobilePageContent = () => {
             >
               &times;
             </div>
-
+            <div className="page__block page__block-61__content-container">
+            <div className="page__block-61__content-container_2">
             {
                getParagraph(readAllIndex - 1).split("<br />").map((item) => {
                 return (<p className="page__block-61__content-text">{item}</p>);
               })
             }
+            </div>
+            </div>
           </div>
         </div>
       );

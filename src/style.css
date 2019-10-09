@@ -522,7 +522,7 @@ html {
     @media (max-width: 1100px) {
       .page__block-2 {
         width: 360px;
-        height: 250px;
+        height: 240px;
         margin-top: 40px; } }
   .page__block-3 {
     width: 700px;
@@ -593,10 +593,10 @@ html {
     .page__block-6__content {
       opacity: 1;
       width: 1000px;
-      height: 1000px;
+      height: 90%;
       overflow: scroll;
       position: fixed;
-      top: 100px;
+      top: 5%;
       left: 0;
       right: 0;
       bottom: 0;
@@ -606,9 +606,13 @@ html {
       @media (max-width: 1100px) {
         .page__block-6__content {
           width: 360px;
-          height: 667px;
-          padding: 100px 24px;
-          top: 0; } }
+          height: 90%;
+          padding: 100px 24px 24px;
+          top: 5%; } 
+        .page__block-6__content ol {
+          margin-left: -20px;
+          }
+        }
       .page__block-6__content-close {
         opacity: 1;
         position: absolute;
@@ -990,7 +994,7 @@ html {
     @media (max-width: 1100px) {
       .page__block-26 {
         width: 360px;
-        height: 580px;
+        height: 360px;
         margin-top: 0px; } }
   .page__block-27 {
     width: 700px;
@@ -2193,12 +2197,12 @@ html {
     top: 0;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-    opacity: 1; }
+    opacity: 1; overflow: scroll;}
     .page__block-61__content {
       width: 1000px;
-      height: 95vh;
+      height: 90%;
       position: fixed;
-      top: 100px;
+      top: 5%;
       left: 0;
       right: 0;
       bottom: 0;
@@ -2208,16 +2212,26 @@ html {
       opacity: 1;
       text-align: center;
       overflow: scroll; }
+      .page__block-61__content-container {
+          height: 100%;
+          opacity: 1;
+          overflow: hidden;
+        }
+      .page__block-61__content-container_2 {
+        overflow-y: scroll;
+        height: 100%;
+        padding-bottom: 30px;
+      }
       @media (max-width: 1100px) {
         .page__block-61__content {
           width: 360px;
-          height: 667px;
-          padding: 100px 24px;
-          top: 0; } }
+          height: 90%;
+          padding: 100px 24px 24px;
+          top: 5%; } }
       .page__block-61__content-close {
-        position: fixed;
-        top: 125px;
-        left: 1050px;
+        position: absolute;
+        top: 30px;
+        left: 912px;
         background-color: #F06F04;
         width: 50px;
         height: 50px;
@@ -2226,8 +2240,7 @@ html {
         font-size: 35px;
         color: white;
         line-height: 50px;
-        margin: 0;
-        padding: 0;
+        padding: 0 0 0 1px;
         cursor: pointer;
         opacity: 1; }
         @media (max-width: 1100px) {
