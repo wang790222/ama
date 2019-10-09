@@ -3,10 +3,12 @@ import React from 'react';
 const PopupSurveyMethod = (props) => {
   return (props.isPopup) ? 
   (
-    <div className="page__block page__block-6 closable" onClick={props.closePopupSurveyMethod}>
-      <div className="page__block page__block-6__content closable">
+    <div className="page__block page__block-6">
+      <div className="page__block page__block-6__content">
         <div 
-          className="page__block page__block-6__content-close closable">
+          className="page__block page__block-6__content-close"
+          onClick={props.closePopupSurveyMethod}
+        >
           &times;
         </div>
         <div className="page__block page__block-6__content-text">

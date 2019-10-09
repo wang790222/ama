@@ -430,7 +430,7 @@ const MobilePageContent = () => {
         return (
           <div>
             <div className="page__block-60__content-row-icon-line">
-              <LineShareButton url={"https://www.google.com"}>
+              <LineShareButton url={"https://pse.is/MMTN4"}>
                 <LineIcon borderRadius={10} size={100}/>
               </LineShareButton>
             </div>
@@ -460,11 +460,11 @@ const MobilePageContent = () => {
             </div>
             <div className="page__block-60__content-row-copied">
               <input 
-                value="https://www.google.com" 
+                value="https://pse.is/MMTN4" 
                 className="page__block-60__content-row-copied-input" />
         
               <CopyToClipboard 
-                text="https://www.google.com"
+                text="https://pse.is/MMTN4"
                 onCopy={() => setCopied(true)}>
                 <button className="page__block-60__content-row-copied-btn">
                   複製連結
@@ -704,7 +704,7 @@ const MobilePageContent = () => {
           <div className={animateShowUpBlock(16, "page__block page__block-16")} ref={s16Ref}>
             <Player
               playsInline
-              src={require('./img/video/q1.mp4')}
+              src={require('./img/video/q1-small.mp4')}
               width={"100%"}
               height={"100%"}
               fluid={false}
@@ -723,14 +723,8 @@ const MobilePageContent = () => {
           <div className={animateShowUpBlock(14, "page__block page__block-14")} ref={s14Ref}>
           </div>
           <div className={animateShowUpBlock(15, "page__block page__block-15")} ref={s15Ref}>
-            <div className="page__block-15-text-box">
-              <div className="page__block-15-cube">
-                <img src={require('./img/q2-head.png')} style={{width: "100%", height: "100%"}} alt="img_block7" />
-              </div>
-              <div className="page__block-15-box-text">
-                <p>延續上一題，如果問題的問法改為：從「文化」角度來看，請問你認為自己是台灣人、中國人還是都是？你覺得高中職生的答案會有改變嗎？
-                </p>
-              </div>
+            <div className="page__block-15-img">
+              <img src={require('./img/ama2.png')} alt="ama2" style={{width: "100%", height:"100%"}} />
             </div>
           </div>
           <div className={animateShowUpBlock(11, "page__block page__block-11")} ref={s11Ref}>
@@ -815,7 +809,7 @@ const MobilePageContent = () => {
             <br />
             <br />
             <p>
-            相比美國杜克大學於2019年發布的《台灣國家安全調查》，同樣一個問題，20歲以上的成年人對兩岸關係的期望，前四高依序是：「維持現狀，看情形再決定獨立或統一」(33.4%)、「永遠維持現狀」(23.7%)、「維持現狀，以後走向獨立(16.2%)」、「維持現狀，以後走向統一」(10.8%)。
+            相比美國杜克大學於2019年發布的《台灣國家安全調查》，同樣一個問題，20歲以上的成年人對兩岸關係的期望，前四高依序是：「維持現狀，看情形再決定獨立或統一」(33.4%)、「永遠維持現狀」(23.7%)、「維持現狀，以後走向獨立」(16.2%)、「維持現狀，以後走向統一」(10.8%)。
             </p>
             <br />
             <br />
@@ -948,14 +942,8 @@ const MobilePageContent = () => {
           <div className={animateShowUpBlock(45, "page__block page__block-44")} ref={s45Ref}>
           </div>
           <div className={animateShowUpBlock(46, "page__block page__block-45")} ref={s46Ref}>
-            <div className="page__block-45-text-box">
-              <div className="page__block-45-cube">
-                <img src={require('./img/q7-head.png')} style={{width: "100%", height: "100%"}} alt="img_block7" />
-              </div>
-              <div className="page__block-45-box-text">
-                <p>高中職生沒有選票，但他們代表的卻是台灣的未來。阿嬤我很好奇，當討論到國家未來10年的目標時，高中職生會認為哪一項社會目標是最重要的呢？
-                </p>
-              </div>
+            <div className="page__block-45-img">
+              <img src={require('./img/ama3.png')} alt="ama3" style={{width: "100%", height:"100%"}} />
             </div>
           </div>
           <div className={animateShowUpBlock(47, "page__block page__block-46")} ref={s47Ref}>
@@ -992,7 +980,13 @@ const MobilePageContent = () => {
                 <p>看到這裡，你有更理解高中職生們怎麼看待自己的國家和土地嗎？你是否有過因為國族立場的不同，導致世代衝突的經驗呢？「青春發言人」特別邀請政治立場有所差異的青少年和成年人一起坐下來對話，嘗試找尋彼此溝通的可能。</p>
               </div>
               <div className="page__block-49-video">
-                
+                <YouTube
+                videoId="N66r9FKvpxg"
+                opts={{
+                  width: '360',
+                  height: '202',
+                }}
+               />
               </div>
             </div>
             <div className={animateShowUpBlock(5, "page__block page__block-50")} id="s5" ref={s5Ref}>
@@ -1000,11 +994,8 @@ const MobilePageContent = () => {
               <img src={require('./img/green-background.jpg')} style={{width: "100%", height: "250px"}} alt="q13" className="page__block-50-background"/>
             </div>
             <div className={animateShowUpBlock(51, "page__block page__block-51")} ref={s51Ref}>
-              <div className="page__block-51-content-text-box">
-                <div className="page__block-51-content-cube">
-                  <img src={require('./img/q8-head.png')} style={{width: "100%", height: "100%"}} alt="img_block7" />
-                </div>
-                <p>了解青少年如何看待國族認同的問題後，你想不想知道，高中職生們對於民主政治參與的態度和想法呢？</p>
+              <div className="page__block-51-img">
+                <img src={require('./img/ama4.png')} alt="ama4" style={{width: "100%", height:"100%"}} />
               </div>
             </div>
             <div className="page__block-54-video-slides">
@@ -1186,7 +1177,7 @@ const MobilePageContent = () => {
                   <span className="page__block-55-grid-person-right-span-2"> / 公視《我們的島》製作人</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
-                  <p>高中職生認為未來10年重要的社會目標中，「環境維護」敬陪末座，由此可粗略觀少年的價值觀，以及未來台灣將會面臨選擇衝突的問題。</p>
+                  <p>高中職生認為未來10年重要的社會目標中，「環境維護」敬陪末座，由此可粗略觀見少年的價值觀，以及未來台灣將會面臨選擇衝突的問題。</p>
                 </div>
                 <div 
                   className="page__block-55-grid-person-right-btn"
@@ -1201,11 +1192,8 @@ const MobilePageContent = () => {
         </div>
         {showReadAll()}
         <div className={animateShowUpBlock(57, "page__block page__block-57")} ref={s57Ref}>
-          <div className="page__block-57-content-text-box">
-            <div className="page__block-57-content-cube">
-              <img src={require('./img/q8-head.png')} style={{width: "100%", height: "100%"}} alt="img_block7" />
-            </div>
-            <p>想了解更多，趕緊來下載完整版問卷吧！</p>
+          <div className="page__block-57-img">
+            <img src={require('./img/ama5.png')} alt="ama5" style={{width: "100%", height:"100%"}} />
           </div>
           <div className="page__block-57-text">
             <p>這份「高中職生國族認同調查」的問卷，總共包含41個問題，我們僅挑選其中10個問題呈現於網頁中。若您對整份問卷結果有興趣，歡迎直接下載。
@@ -1232,9 +1220,15 @@ const MobilePageContent = () => {
           <div className="page__block-59-pic">
           </div>
             <div className="page__block-59-icon">
-              <ion-icon name="logo-facebook" className="page__block-59-icon-1"></ion-icon>
-              <ion-icon name="logo-youtube" className="page__block-59-icon-2"></ion-icon>
-              <ion-icon name="logo-instagram" className="page__block-59-icon-3"></ion-icon>
+              <a href="https://pse.is/M6GD7" target="_blank">
+                <ion-icon name="logo-facebook" className="page__block-59-icon"></ion-icon>
+              </a>
+              <a href="https://pse.is/K6QBU" target="_blank">
+                <ion-icon name="logo-youtube" className="page__block-59-icon"></ion-icon>
+              </a>
+              <a href="https://pse.is/K95ZR" target="_blank">
+                <ion-icon name="logo-instagram" className="page__block-59-icon"></ion-icon>
+              </a>
             </div>
             <div className="page__block-59-line">&nbsp;</div>
             <div>
@@ -1266,7 +1260,9 @@ const MobilePageContent = () => {
     <div style={fixBackground()}>
       {showHamburger()}
       <div className="page__block page__block-1 add_showup" id="#s1" ref={s1Ref}>
-        <img src={require('./img/title2.png')} style={{width:"100%", height:"100%"}} alt="title2" />
+        <div>
+          <img src={require('./img/title2.png')} style={{width:"100%", height:"80%"}} alt="title2" />
+        </div>
       </div>
       <div className="page__block page__block-2 add_showup">
         <Player
@@ -1298,14 +1294,8 @@ const MobilePageContent = () => {
         closePopupSurveyMethod={closePopupSurveyMethod}
       />
       <div className={animateShowUpBlock(7, "page__block page__block-7")} ref={s7Ref}>
-        <div className="page__block-7-text-box">
-          <div className="page__block-7-cube">
-            <img src={require('./img/q1-head.png')} style={{width: "100%", height: "100%"}} alt="img_block7" />
-          </div>
-          <div className="page__block-7-box-text">
-            <p>在台灣，有人說自己是「台灣人」，也有人說自己是「中國人」，也有人說都是。你猜多數高中職生是怎麼想的？
-            </p>
-          </div>
+        <div className="page__block-7-img">
+          <img src={require('./img/ama1.png')} alt="ama1" style={{width: "100%", height:"100%"}} />
         </div>
       </div>
       <div className={animateShowUpBlock(8, "page__block page__block-8")} ref={s8Ref}>
