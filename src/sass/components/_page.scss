@@ -1867,14 +1867,12 @@
 
     &-58 {
       width: 100vw;
-      height: 800px;
       background-color: #FFF5D8;
       padding: 100px 0;
       text-align: center;
 
       &-pic {
         width: 750px;
-        height: 409px;
         margin: 0 auto;
 
         @include respond(phone) {
