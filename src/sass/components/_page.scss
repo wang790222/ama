@@ -1792,9 +1792,11 @@
           float: left;
 
           @include respond(phone) {
-            float: none;
             width: 120px;
             height: 120px;
+            -webkit-shape-outside: ellipse(50px 20px at 30% 0%);
+            shape-outside: ellipse(50px 20px at 30% 0%);
+            transform: translateY(-100px) translateX(-20px);
           }
         }
 
@@ -1809,11 +1811,13 @@
           margin-top: 35px;
 
           @include respond(phone) {
+            padding-top: 60px;
+            margin-top: 60px;
             float: none;
             width: 340px;
-            height: 130px;
+            height: 180px;
             margin: 30px auto 0;
-            padding: 29px 26px;
+            padding: 22px 25px;
           }
 
           & p {

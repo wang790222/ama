@@ -1201,15 +1201,11 @@ const MobilePageContent = () => {
         </div>
         {showReadAll()}
         <div className={animateShowUpBlock(57, "page__block page__block-57")} ref={s57Ref}>
-          <div className="page__block-57-content">
+          <div className="page__block-57-content-text-box">
             <div className="page__block-57-content-cube">
-              <img src={require('./img/q8-head.png')} style={{width: "100%", height: "100%"}} />
+              <img src={require('./img/q8-head.png')} style={{width: "100%", height: "100%"}} alt="img_block7" />
             </div>
-            <div className="page__block-57-content-text-box">
-              <div className="page__block-57-content-box-text">
-                <p>想了解更多，趕緊來下載完整版問卷吧！</p>
-              </div>
-            </div>
+            <p>想了解更多，趕緊來下載完整版問卷吧！</p>
           </div>
           <div className="page__block-57-text">
             <p>這份「高中職生國族認同調查」的問卷，總共包含41個問題，我們僅挑選其中10個問題呈現於網頁中。若您對整份問卷結果有興趣，歡迎直接下載。
