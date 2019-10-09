@@ -179,10 +179,8 @@ const DesktopPageContent = () => {
     setPopup(true);
   };
 
-  const closePopupSurveyMethod = (e) => {
-    if(e.target.className.indexOf('closable') > -1) {
-      setPopup(false);
-    }
+  const closePopupSurveyMethod = () => {
+    setPopup(false);
   };
 
   const handleNavIndex = (sec) => {
@@ -280,28 +278,25 @@ const DesktopPageContent = () => {
     setReadAllIndex(e.target.id);
   };
 
-  // 關閉看全文
-  const onClickCloseReadAll = (e) => {
-    if(e.target.className.indexOf('closable') > -1) {
-      setReadAll(false);
-    }
-  };  
-
   const showReadAll = () => {
     if (readAll) {
       return (
-        <div className="page__block page__block-61 closable" onClick={onClickCloseReadAll}>
-          <div className="page__block page__block-61__content closable">
+        <div className="page__block page__block-61">
+          <div className="page__block page__block-61__content">
             <div 
-              className="page__block page__block-61__content-close closable">
+              className="page__block page__block-61__content-close"
+              onClick={() => { setReadAll(false) }}
+            >
               &times;
             </div>
-            <div className="page__block-61__content-text">
-              {
-                getParagraph(readAllIndex - 1).split("<br />").map((item) => {
-                  return (<p>{item}</p>);
-                })
-              }
+            <div className="page__block page__block-61__content-container">
+            <div className="page__block-61__content-container_2">
+            {
+               getParagraph(readAllIndex - 1).split("<br />").map((item) => {
+                return (<p className="page__block-61__content-text">{item}</p>);
+              })
+            }
+            </div>
             </div>
           </div>
         </div>
@@ -323,7 +318,9 @@ const DesktopPageContent = () => {
             fluid={false}
             autoPlay={false}
             muted={true}
-          />
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
         </div>
       );
     } else if (q5Option === 1) {
@@ -337,7 +334,9 @@ const DesktopPageContent = () => {
             fluid={false}
             autoPlay={true}
             muted={true}
-          />
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
         </div>
       );
     } else if (q5Option === 2) {
@@ -351,7 +350,9 @@ const DesktopPageContent = () => {
             fluid={false}
             autoPlay={true}
             muted={true}
-          />
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
         </div>
       );
     } else if (q5Option === 3) {
@@ -365,7 +366,9 @@ const DesktopPageContent = () => {
             fluid={false}
             autoPlay={true}
             muted={true}
-          />
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
         </div>
       );
     } else if (q5Option === 4) {
@@ -379,7 +382,9 @@ const DesktopPageContent = () => {
             fluid={false}
             autoPlay={true}
             muted={true}
-          />
+          >
+            <ControlBar disableCompletely={true} />
+          </Player>
         </div>
       );
     }
@@ -480,12 +485,12 @@ const DesktopPageContent = () => {
         return (
           <div>
             <div className="page__block-60__content-row-icon-line">
-              <LineShareButton url={"https://www.google.com"}>
+              <LineShareButton url={"https://pse.is/MMTN4"}>
                 <LineIcon borderRadius={10} size={100}/>
               </LineShareButton>
             </div>
             <div className="page__block-60__content-row-icon-fb">
-              <FacebookShareButton url={"https://ama-test.herokuapp.com/"}>
+              <FacebookShareButton url={"https://pse.is/MMTN4"}>
                 <FacebookIcon borderRadius={10} size={100}/>
               </FacebookShareButton>
             </div>
@@ -510,11 +515,11 @@ const DesktopPageContent = () => {
             </div>
             <div className="page__block-60__content-row-copied">
               <input 
-                value="https://www.google.com" 
+                value="https://pse.is/MMTN4" 
                 className="page__block-60__content-row-copied-input" />
         
               <CopyToClipboard 
-                text="https://www.google.com"
+                text="https://pse.is/MMTN4"
                 onCopy={() => setCopied(true)}>
                 <button className="page__block-60__content-row-copied-btn">
                   複製連結
@@ -745,7 +750,7 @@ const DesktopPageContent = () => {
             <br />
             <br />
             <p>
-            相比美國杜克大學於2019年發布的《台灣國家安全調查》，同樣一個問題，20歲以上的成年人對兩岸關係的期望，前四高依序是：「維持現狀，看情形再決定獨立或統一」(33.4%)、「永遠維持現狀」(23.7%)、「維持現狀，以後走向獨立(16.2%)」、「維持現狀，以後走向統一」(10.8%)。
+            相比美國杜克大學於2019年發布的《台灣國家安全調查》，同樣一個問題，20歲以上的成年人對兩岸關係的期望，前四高依序是：「維持現狀，看情形再決定獨立或統一」(33.4%)、「永遠維持現狀」(23.7%)、「維持現狀，以後走向獨立」(16.2%)、「維持現狀，以後走向統一」(10.8%)。
             </p>
             <br />
             <br />
@@ -1137,7 +1142,7 @@ const DesktopPageContent = () => {
                   <span className="page__block-55-grid-person-right-span-2"> / 公視《我們的島》製作人</span>
                 </div>
                 <div className="page__block-55-grid-person-right-text">
-                  <p>高中職生認為未來10年重要的社會目標中，「環境維護」敬陪末座，由此可粗略觀少年的價值觀，以及未來台灣將會面臨選擇衝突的問題。</p>
+                  <p>高中職生認為未來10年重要的社會目標中，「環境維護」敬陪末座，由此可粗略觀見少年的價值觀，以及未來台灣將會面臨選擇衝突的問題。</p>
                 </div>
                 <div 
                   className="page__block-55-grid-person-right-btn"
@@ -1169,7 +1174,7 @@ const DesktopPageContent = () => {
           <div 
             className="page__block-57-btn"
           >
-            <a href='https://pse.is/MMTN4' target='_blanket'>下載報告</a>
+            <a href='https://pse.is/KBUF6' target='_blanket'>下載報告</a>
           </div>
         </div>
         <div className={animateShowUpBlock(58, "page__block page__block-58")} ref={s58Ref}>
@@ -1187,10 +1192,15 @@ const DesktopPageContent = () => {
           <div className="page__block-59-pic">
           </div>
             <div className="page__block-59-icon">
-              <ion-icon name="logo-facebook" className="page__block-59-icon-1"></ion-icon>
-              <ion-icon name="logo-
-" className="page__block-59-icon-2"></ion-icon>
-              <ion-icon name="logo-instagram" className="page__block-59-icon-3"></ion-icon>
+              <a href="https://pse.is/M6GD7" target="_blank">
+                <ion-icon name="logo-facebook" className="page__block-59-icon"></ion-icon>
+              </a>
+              <a href="https://pse.is/K6QBU" target="_blank">
+                <ion-icon name="logo-youtube" className="page__block-59-icon"></ion-icon>
+              </a>
+              <a href="https://pse.is/K95ZR" target="_blank">
+                <ion-icon name="logo-instagram" className="page__block-59-icon"></ion-icon>
+              </a>
             </div>
             <div className="page__block-59-line">&nbsp;</div>
             <div>
@@ -1214,7 +1224,7 @@ const DesktopPageContent = () => {
                 
             </div>
             <div className="page__block-59-text page__block-59-text-2">
-                <p>財團法人公共電視文化事業基金會 版權所有 All Contents Copyright, Taiwan Public Television Service.</p>
+                <p>財團法人公共電視文化事業基金會 版權所有, Taiwan Public Television Service Foundation. © All Rights Reserved.</p>
             </div>
           </div>
         </div>
