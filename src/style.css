@@ -1907,7 +1907,6 @@ html {
           width: 255px; } }
   .page__block-58 {
     width: 100vw;
-    height: 800px;
     background-color: #FFF5D8;
     padding: 100px 0;
     text-align: center; }
@@ -1918,7 +1917,6 @@ html {
         height: 750px; } }
     .page__block-58-pic {
       width: 750px;
-      height: 409px;
       margin: 0 auto; }
       @media (max-width: 1100px) {
         .page__block-58-pic {
